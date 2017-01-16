@@ -310,6 +310,7 @@
 				B9F3C45C1E2C78C8005945F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
