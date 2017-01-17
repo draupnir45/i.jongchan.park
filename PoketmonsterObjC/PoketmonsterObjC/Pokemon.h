@@ -69,7 +69,7 @@
 //
 
 
-- (void)attackEnemy:(Skill *)Skill
+- (void)attackEnemy:(Skill *)skill
          attacker:(Pokemon *)attacker
            target:(Pokemon *)target;
 //- (void)run;
