@@ -43,10 +43,23 @@
 @property id specialAttack;
 @property id specialDefense;
 
-//진화관련
+//진화관련 상황
 @property id evolveStatus;
 @property id appearance;
 @property id evolutionable;
+
+//일러스트
+@property Appearance *rootAppearance;
+
+//첫 번째 진화 관련
+@property id ev2Level;
+@property Appearance *ev2Appearance;
+@property EvolutionGain *ev2Gain;
+
+//두 번째 진화 관련
+@property id ev3Level;
+@property Appearance *ev3Appearance;
+@property EvolutionGain *ev3Gain;
 
 - (void)evolve;
 - (void)gainExp;

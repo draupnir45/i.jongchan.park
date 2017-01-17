@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		B94F92C51E2DFAF9006A928E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F92C41E2DFAF9006A928E /* main.m */; };
 		B94F92D01E2DFB41006A928E /* Pokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F92CF1E2DFB41006A928E /* Pokemon.m */; };
-		B94F92D31E2DFDCB006A928E /* Hitokage.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F92D21E2DFDCB006A928E /* Hitokage.m */; };
 		B9AC61981E2E05780071BE72 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AC61971E2E05780071BE72 /* Person.m */; };
 		B9AC619B1E2E07800071BE72 /* Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AC619A1E2E07800071BE72 /* Appearance.m */; };
 		B9AC61A41E2E09F90071BE72 /* EvolutionGain.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AC61A31E2E09F90071BE72 /* EvolutionGain.m */; };
+		B9D2F13E1E2E38E300AD27CA /* Trainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D2F13D1E2E38E300AD27CA /* Trainer.m */; };
+		B9D2F1411E2E396900AD27CA /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D2F1401E2E396900AD27CA /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,14 +33,16 @@
 		B94F92C41E2DFAF9006A928E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B94F92CE1E2DFB41006A928E /* Pokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pokemon.h; sourceTree = "<group>"; };
 		B94F92CF1E2DFB41006A928E /* Pokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pokemon.m; sourceTree = "<group>"; };
-		B94F92D11E2DFDCB006A928E /* Hitokage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hitokage.h; sourceTree = "<group>"; };
-		B94F92D21E2DFDCB006A928E /* Hitokage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hitokage.m; sourceTree = "<group>"; };
 		B9AC61961E2E05780071BE72 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		B9AC61971E2E05780071BE72 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		B9AC61991E2E07800071BE72 /* Appearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appearance.h; sourceTree = "<group>"; };
 		B9AC619A1E2E07800071BE72 /* Appearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appearance.m; sourceTree = "<group>"; };
 		B9AC61A21E2E09F90071BE72 /* EvolutionGain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvolutionGain.h; sourceTree = "<group>"; };
 		B9AC61A31E2E09F90071BE72 /* EvolutionGain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvolutionGain.m; sourceTree = "<group>"; };
+		B9D2F13C1E2E38E300AD27CA /* Trainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trainer.h; sourceTree = "<group>"; };
+		B9D2F13D1E2E38E300AD27CA /* Trainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trainer.m; sourceTree = "<group>"; };
+		B9D2F13F1E2E396900AD27CA /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		B9D2F1401E2E396900AD27CA /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +78,12 @@
 				B94F92C41E2DFAF9006A928E /* main.m */,
 				B94F92CE1E2DFB41006A928E /* Pokemon.h */,
 				B94F92CF1E2DFB41006A928E /* Pokemon.m */,
-				B94F92D11E2DFDCB006A928E /* Hitokage.h */,
-				B94F92D21E2DFDCB006A928E /* Hitokage.m */,
+				B9D2F13F1E2E396900AD27CA /* Player.h */,
+				B9D2F1401E2E396900AD27CA /* Player.m */,
 				B9AC61961E2E05780071BE72 /* Person.h */,
 				B9AC61971E2E05780071BE72 /* Person.m */,
+				B9D2F13C1E2E38E300AD27CA /* Trainer.h */,
+				B9D2F13D1E2E38E300AD27CA /* Trainer.m */,
 				B9AC61991E2E07800071BE72 /* Appearance.h */,
 				B9AC619A1E2E07800071BE72 /* Appearance.m */,
 				B9AC61A21E2E09F90071BE72 /* EvolutionGain.h */,
@@ -148,8 +153,9 @@
 				B9AC61A41E2E09F90071BE72 /* EvolutionGain.m in Sources */,
 				B94F92C51E2DFAF9006A928E /* main.m in Sources */,
 				B94F92D01E2DFB41006A928E /* Pokemon.m in Sources */,
+				B9D2F13E1E2E38E300AD27CA /* Trainer.m in Sources */,
 				B9AC61981E2E05780071BE72 /* Person.m in Sources */,
-				B94F92D31E2DFDCB006A928E /* Hitokage.m in Sources */,
+				B9D2F1411E2E396900AD27CA /* Player.m in Sources */,
 				B9AC619B1E2E07800071BE72 /* Appearance.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
