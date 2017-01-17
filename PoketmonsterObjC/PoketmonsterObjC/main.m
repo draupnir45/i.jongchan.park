@@ -1,6 +1,6 @@
 //
 //  main.m
-//  Day2
+//  PoketmonsterObjC
 //
 //  Created by 박종찬 on 2017. 1. 17..
 //  Copyright © 2017년 Jongchan Park. All rights reserved.
@@ -15,4 +15,3 @@ int main(int argc, const char * argv[]) {
     }
     return 0;
 }
-
