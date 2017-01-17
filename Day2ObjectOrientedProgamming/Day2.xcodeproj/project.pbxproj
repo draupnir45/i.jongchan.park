@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		B9B52A4F1E2DB3C100865E56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B52A4E1E2DB3C100865E56 /* main.m */; };
 		B9B52A571E2DB47B00865E56 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B52A561E2DB47B00865E56 /* Person.m */; };
+		B9B52A5A1E2DBF1600865E56 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B52A591E2DBF1600865E56 /* Company.m */; };
+		B9B52A5D1E2DC02F00865E56 /* BirthdayCalender.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B52A5C1E2DC02F00865E56 /* BirthdayCalender.m */; };
+		B9B52A601E2DC15700865E56 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B52A5F1E2DC15700865E56 /* Controller.m */; };
+		B9B52A631E2DC25600865E56 /* SpecialContact.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B52A621E2DC25600865E56 /* SpecialContact.m */; };
+		B9B52A661E2DC40F00865E56 /* ShortCutList.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B52A651E2DC40F00865E56 /* ShortCutList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +33,16 @@
 		B9B52A4E1E2DB3C100865E56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9B52A551E2DB47B00865E56 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		B9B52A561E2DB47B00865E56 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		B9B52A581E2DBF1600865E56 /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
+		B9B52A591E2DBF1600865E56 /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
+		B9B52A5B1E2DC02F00865E56 /* BirthdayCalender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirthdayCalender.h; sourceTree = "<group>"; };
+		B9B52A5C1E2DC02F00865E56 /* BirthdayCalender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirthdayCalender.m; sourceTree = "<group>"; };
+		B9B52A5E1E2DC15700865E56 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		B9B52A5F1E2DC15700865E56 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
+		B9B52A611E2DC25600865E56 /* SpecialContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialContact.h; sourceTree = "<group>"; };
+		B9B52A621E2DC25600865E56 /* SpecialContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialContact.m; sourceTree = "<group>"; };
+		B9B52A641E2DC40F00865E56 /* ShortCutList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortCutList.h; sourceTree = "<group>"; };
+		B9B52A651E2DC40F00865E56 /* ShortCutList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortCutList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +78,16 @@
 				B9B52A4E1E2DB3C100865E56 /* main.m */,
 				B9B52A551E2DB47B00865E56 /* Person.h */,
 				B9B52A561E2DB47B00865E56 /* Person.m */,
+				B9B52A581E2DBF1600865E56 /* Company.h */,
+				B9B52A591E2DBF1600865E56 /* Company.m */,
+				B9B52A5B1E2DC02F00865E56 /* BirthdayCalender.h */,
+				B9B52A5C1E2DC02F00865E56 /* BirthdayCalender.m */,
+				B9B52A5E1E2DC15700865E56 /* Controller.h */,
+				B9B52A5F1E2DC15700865E56 /* Controller.m */,
+				B9B52A611E2DC25600865E56 /* SpecialContact.h */,
+				B9B52A621E2DC25600865E56 /* SpecialContact.m */,
+				B9B52A641E2DC40F00865E56 /* ShortCutList.h */,
+				B9B52A651E2DC40F00865E56 /* ShortCutList.m */,
 			);
 			path = Day2;
 			sourceTree = "<group>";
@@ -126,6 +151,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9B52A571E2DB47B00865E56 /* Person.m in Sources */,
+				B9B52A601E2DC15700865E56 /* Controller.m in Sources */,
+				B9B52A5A1E2DBF1600865E56 /* Company.m in Sources */,
+				B9B52A5D1E2DC02F00865E56 /* BirthdayCalender.m in Sources */,
+				B9B52A661E2DC40F00865E56 /* ShortCutList.m in Sources */,
+				B9B52A631E2DC25600865E56 /* SpecialContact.m in Sources */,
 				B9B52A4F1E2DB3C100865E56 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +285,7 @@
 				B9B52A541E2DB3C100865E56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

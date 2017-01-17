@@ -1,5 +1,5 @@
 //
-//  Person.h
+//  Company.h
 //  Day2
 //
 //  Created by 박종찬 on 2017. 1. 17..
@@ -8,25 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Person : NSObject
+@interface Company : NSObject
 
 @property id name;
-@property id yearOfBirth;
-@property id occupation;
-@property id sex;
 @property id phoneNumber1;
 @property id phoneNumber2;
-@property id birthday;
-@property id lunaOrSolar;
-@property id lunaBirthday;
 @property id address;
-@property id profilePhoto;
+@property id companyIdentity;
 @property id oneLineDescription;
-@property id mailAdress;
+@property id mailAdress1;
+@property id mailAdress2;
 
 - (void)callBy:(id)PhoneNumber;
-- (void)mailBy:(id)mailAdress;
-- (void)setProfilePhoto:(id)photo;
+- (void)mailBy:(id)mailAdress1
+          ccTo:(id)mailAdress2;
+- (void)setCompanyIdentity:(id)photo;
 - (void)setOneLineDescription:(id)descriptionText;
 
 @end
