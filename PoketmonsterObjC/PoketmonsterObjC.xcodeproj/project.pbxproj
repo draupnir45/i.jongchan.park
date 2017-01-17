@@ -14,6 +14,8 @@
 		B9AC61A41E2E09F90071BE72 /* EvolutionGain.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AC61A31E2E09F90071BE72 /* EvolutionGain.m */; };
 		B9D2F13E1E2E38E300AD27CA /* Trainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D2F13D1E2E38E300AD27CA /* Trainer.m */; };
 		B9D2F1411E2E396900AD27CA /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D2F1401E2E396900AD27CA /* Player.m */; };
+		B9D2F1441E2E3A3700AD27CA /* Skill.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D2F1431E2E3A3700AD27CA /* Skill.m */; };
+		B9D4626D1E2E405700AF6F43 /* SynastryCalc.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D4626C1E2E405700AF6F43 /* SynastryCalc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +45,10 @@
 		B9D2F13D1E2E38E300AD27CA /* Trainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trainer.m; sourceTree = "<group>"; };
 		B9D2F13F1E2E396900AD27CA /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		B9D2F1401E2E396900AD27CA /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		B9D2F1421E2E3A3700AD27CA /* Skill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skill.h; sourceTree = "<group>"; };
+		B9D2F1431E2E3A3700AD27CA /* Skill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skill.m; sourceTree = "<group>"; };
+		B9D4626B1E2E405700AF6F43 /* SynastryCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynastryCalc.h; sourceTree = "<group>"; };
+		B9D4626C1E2E405700AF6F43 /* SynastryCalc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynastryCalc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +88,12 @@
 				B9D2F1401E2E396900AD27CA /* Player.m */,
 				B9AC61961E2E05780071BE72 /* Person.h */,
 				B9AC61971E2E05780071BE72 /* Person.m */,
+				B9D4626B1E2E405700AF6F43 /* SynastryCalc.h */,
+				B9D4626C1E2E405700AF6F43 /* SynastryCalc.m */,
 				B9D2F13C1E2E38E300AD27CA /* Trainer.h */,
 				B9D2F13D1E2E38E300AD27CA /* Trainer.m */,
+				B9D2F1421E2E3A3700AD27CA /* Skill.h */,
+				B9D2F1431E2E3A3700AD27CA /* Skill.m */,
 				B9AC61991E2E07800071BE72 /* Appearance.h */,
 				B9AC619A1E2E07800071BE72 /* Appearance.m */,
 				B9AC61A21E2E09F90071BE72 /* EvolutionGain.h */,
@@ -151,12 +161,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9AC61A41E2E09F90071BE72 /* EvolutionGain.m in Sources */,
+				B9D2F1441E2E3A3700AD27CA /* Skill.m in Sources */,
 				B94F92C51E2DFAF9006A928E /* main.m in Sources */,
 				B94F92D01E2DFB41006A928E /* Pokemon.m in Sources */,
 				B9D2F13E1E2E38E300AD27CA /* Trainer.m in Sources */,
 				B9AC61981E2E05780071BE72 /* Person.m in Sources */,
 				B9D2F1411E2E396900AD27CA /* Player.m in Sources */,
 				B9AC619B1E2E07800071BE72 /* Appearance.m in Sources */,
+				B9D4626D1E2E405700AF6F43 /* SynastryCalc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
