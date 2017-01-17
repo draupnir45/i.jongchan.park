@@ -34,7 +34,7 @@
 //@property id status;
 
 //기술
-@property Skill *skill1;
+@property NSMutableArray *skills;
 //@property id skill2;
 //@property id skill3;
 //@property id skill4;
@@ -73,5 +73,8 @@
          attacker:(Pokemon *)attacker
            target:(Pokemon *)target;
 //- (void)run;
+- (Pokemon *)initWithName:(id)specificName
+              health:(int)health
+                type:(id)type;
 
 @end

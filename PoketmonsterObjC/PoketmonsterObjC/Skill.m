@@ -10,4 +10,14 @@
 
 @implementation Skill
 
+-(Skill *)initWithName:(id)name
+                 type:(id)type
+               damage:(int)damage {
+    self = [self init];
+    self.name = name;
+    self.type = type;
+    self.damage = damage;
+    return self;
+}
+
 @end

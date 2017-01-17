@@ -15,4 +15,9 @@
 @property int damage;
 @property id effect;
 
+-(Skill*)initWithName:(id)name
+                 type:(id)type
+               damage:(int)damage;
+
+
 @end

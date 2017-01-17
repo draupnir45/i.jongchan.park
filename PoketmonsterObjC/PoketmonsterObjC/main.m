@@ -12,23 +12,17 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        Pokemon *hitokage = [[Pokemon alloc] init];
-        hitokage.type = @"fire";
-        hitokage.specificName = @"파이리";
-        hitokage.skill1 = [[Skill alloc] init];
-        hitokage.skill1.name = @"불꽃세례";
-        hitokage.skill1.type = @"fire";
-        hitokage.skill1.damage = 20;
-        hitokage.currentHealth = 100;
+
+        Pokemon *hitokage = [[Pokemon alloc] initWithName:@"파이리" health:100 type:@"fire"];
         
-        Pokemon *hoosigidane = [[Pokemon alloc] init];
-        hoosigidane.type = @"leaf";
-        hoosigidane.specificName = @"이상해씨";
-        hoosigidane.skill1 = [[Skill alloc] init];
-        hoosigidane.skill1.name = @"덩굴채찍";
-        hoosigidane.skill1.type = @"leaf";
-        hoosigidane.skill1.damage = 20;
-        hoosigidane.currentHealth = 100;
+        Skill *ember =[[Skill alloc] initWithName:@"불꽃세례" type:@"fire" damage:20];
+        hitokage.skills[0] = ember;
+        
+
+        Pokemon *hoosigidane = [[Pokemon alloc] initWithName:@"이상해씨" health:100 type:@"leaf"];
+        
+        Skill *vineWhip =[[Skill alloc] initWithName:@"덩굴채찍" type:@"leaf" damage:20];
+        hoosigidane.skills[0] = vineWhip;
         
         
         
@@ -40,7 +34,7 @@ int main(int argc, const char * argv[]) {
             NSLog(@"파이리는 무엇을 할까요? 1 : 공격, 2 : 도망");
             scanf("%d", &command);
             if (command == 1) {
-                [hitokage attackEnemy:hitokage.skill1 attacker:hitokage target:hoosigidane];
+                [hitokage attackEnemy:hitokage.skills[0] attacker:hitokage target:hoosigidane];
             } else if (command == 2) {
                 NSLog(@"파이리가 도망쳤습니다.");
                 hitokage.currentHealth = 0;
@@ -58,7 +52,7 @@ int main(int argc, const char * argv[]) {
             scanf("%d", &command);
             
             if (command == 1) {
-                [hoosigidane attackEnemy:hoosigidane.skill1 attacker:hoosigidane target:hitokage];
+                [hoosigidane attackEnemy:hoosigidane.skills[0] attacker:hoosigidane target:hitokage];
             } else if (command == 2) {
                 NSLog(@"이상해씨가 도망쳤습니다.");
                 hoosigidane.currentHealth = 0;
@@ -81,7 +75,6 @@ int main(int argc, const char * argv[]) {
         } else {
             NSLog(@"문제가 생겼습니다!");
         }
-        
         
     }
     return 0;
