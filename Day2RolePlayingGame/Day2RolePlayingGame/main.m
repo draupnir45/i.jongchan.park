@@ -15,8 +15,10 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         Person *jongchan;
-        
         jongchan = [[Person alloc] init];
+        
+        jongchan.money=346;
+        
         
         [jongchan setName:@"종찬"];
         
@@ -83,6 +85,9 @@ int main(int argc, const char * argv[]) {
         [youngjin physicalAttackTo:mijung];
         NSLog(@"====================================");
         [donghee physicalAttackTo:youngjin];
+        
+
+        
 
     }
     return 0;

@@ -12,7 +12,7 @@
 
 -(void)damaged:(NSInteger)damage {
     damage -= self.defensePoint;
-    self.health -= damage;
+    self.health = self.health - damage;
 
     if (self.health <= 0) {
         NSLog(@"------------------------------------");

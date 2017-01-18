@@ -17,6 +17,7 @@
 @property NSInteger physicalPower;
 @property NSInteger magicalPower;
 @property NSInteger defensePoint;
+@property NSInteger money;
 
 -(void)damaged:(NSInteger)damage;
 
