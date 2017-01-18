@@ -6,17 +6,16 @@
 //  Copyright © 2017년 Jongchan Park. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Person.h"
+@class Wizard;
 
-@interface Warrior : NSObject
+@interface Warrior : Person
 
-@property id health;
-@property id mana;
-@property id physicalPower;
-@property id magicalPower;
-@property id weapon;
 
-- (id)physicalAttack;
-- (id)magicalAttack;
+@property NSString *weapon;
+@property BOOL haveWeapon;
+
+- (void)physicalAttackTo:(Wizard *)target;
+- (void)magicalAttackWith:(NSString *)weapon to:(Wizard *)target;
 
 @end

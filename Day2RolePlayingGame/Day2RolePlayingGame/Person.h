@@ -10,10 +10,14 @@
 
 @interface Person : NSObject
 
-@property id name;
+@property NSString *name;
+@property NSString *className;
+@property NSInteger health;
+@property NSInteger mana;
+@property NSInteger physicalPower;
+@property NSInteger magicalPower;
+@property NSInteger defensePoint;
 
--(id)eat;
--(id)run;
--(id)walk;
+-(void)damaged:(NSInteger)damage;
 
 @end

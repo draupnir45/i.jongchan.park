@@ -7,17 +7,48 @@
 //
 
 #import "Wizard.h"
+#import "Warrior.h"
 
 @implementation Wizard
 
-- (id)physicalAttack {
-    NSLog(@"마법사가 %@만큼의 데미지를 줍니다.",self.physicalPower);
-    return nil;
+-(Wizard *)init {
+    self = [super init];
+    self.className = @"마법사";
+    return self;
 }
 
-- (id)magicalAttack {
-    NSLog(@"마법사가 %@만큼의 데미지를 줍니다.",self.magicalPower);
-    return nil;
+- (void)physicalAttackTo:(Person *)target {
+    NSLog(@"%@가 %@에게 %lu만큼의 데미지를 줍니다.",self.name, target.name,(unsigned long)self.physicalPower);
+    [target damaged:self.physicalPower];
+}
+
+- (void)fireBallTo:(Person *)target {
+    NSLog(@"%@가 %@에게 %lu만큼의 데미지를 줍니다.",self.name, target.name,(unsigned long)self.magicalPower);
+    [target damaged:self.physicalPower];
+
+}
+
+- (void)meteorAt:(NSMutableArray *)field {
+    NSInteger numberOfCharacterInField = [field count];
+    NSInteger i;
+    NSLog(@"%@가 메테오를 사용합니다!", self.name);
+    NSLog(@"%@을(를) 제외한 모두가 데미지를 받습니다!", self.name);
+    for (i=0; i<numberOfCharacterInField; i++) {
+        Person *target = ((Person *)field[i]);
+        
+        if (field[i] != self) {
+            [target damaged:self.magicalPower];
+        }
+        
+    }
+}
+- (void)lightningBoltTo:(Person *)target SecondTarget:(Person *)target2 andThirdTarget:(Person *)target3 {
+
+}
+
+- (void)expelliarmusTo:(Warrior *)target{
+    NSLog(@"%@가 전사를 무장해제합니다!", self.name);
+    target.haveWeapon = NO;
 }
 
 @end

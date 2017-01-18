@@ -9,24 +9,18 @@
 #import "Person.h"
 
 @implementation Person
-/**
- *퀵헬프 설명을 테스트합니다.
- *그러합니다요.
- *@Author 종찬
-*/
--(id)eat {
-    NSLog(@"%@이(가) 밥을 먹는다.", self.name);
-    return nil;
-}
 
--(id)run {
-    NSLog(@"%@이(가) 뛴다.", self.name);
-    return nil;
-}
+-(void)damaged:(NSInteger)damage {
+    damage -= self.defensePoint;
+    self.health -= damage;
 
--(id)walk {
-    NSLog(@"%@이(가) 걷는다.", self.name);
-    return nil;
+    if (self.health <= 0) {
+        NSLog(@"------------------------------------");
+        NSLog(@"%@이(가) 기절했습니다!",self.name);
+        NSLog(@"------------------------------------");
+    } else {
+        NSLog(@"%@의 HP가 %ld가 되었습니다!",self.name,(long)self.health);
+    }
 }
 
 @end
