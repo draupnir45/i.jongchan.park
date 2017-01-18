@@ -7,14 +7,15 @@
 //
 
 #import "Person.h"
+@class Pokemon;
 
 @interface Player : Person
 
-@property id pokemonSlot1;
-@property id pokemonSlot2;
-@property id pokemonSlot3;
-@property id pokemonSlot4;
-@property id pokemonSlot5;
-@property id pokemonSlot6;
+@property Pokemon *pokemonSlot1;
+@property Pokemon *pokemonSlot2;
+@property Pokemon *pokemonSlot3;
+@property Pokemon *pokemonSlot4;
+@property Pokemon *pokemonSlot5;
+@property Pokemon *pokemonSlot6;
 
 @end

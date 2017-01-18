@@ -15,11 +15,11 @@
 @interface Pokemon : NSObject
 
 //기본정보
-@property id specificName;
+@property NSString *specificName;
 @property id appearance;
 
 //트레이너관련
-@property id nickName;
+@property NSString *nickName;
 @property id trainer;
 //@property id firstTrainer;
 
@@ -29,8 +29,8 @@
 //- (void)gainExp;
 
 //전투에 의한 현 상태
-@property int currentHealth;
-@property int health;
+@property NSInteger currentHealth;
+@property NSInteger health;
 //@property id status;
 
 //기술
@@ -44,10 +44,10 @@
 //@property id type2;
 
 //능력치
-@property id attack;
-@property id defense;
-@property id specialAttack;
-@property id specialDefense;
+@property NSInteger attack;
+@property NSInteger defense;
+@property NSInteger specialAttack;
+@property NSInteger specialDefense;
 
 //진화관련 상황
 //@property id evolveStatus;
@@ -73,8 +73,8 @@
          attacker:(Pokemon *)attacker
            target:(Pokemon *)target;
 //- (void)run;
-- (Pokemon *)initWithName:(id)specificName
-              health:(int)health
+- (Pokemon *)initWithName:(NSString *)specificName
+              health:(NSInteger)health
                 type:(id)type;
 
 @end

@@ -18,4 +18,6 @@
 - (void)physicalAttackTo:(Wizard *)target;
 - (void)magicalAttackWith:(NSString *)weapon to:(Wizard *)target;
 
+- (void)attack:(NSString*)money to:(Person *)kahjgafkdsjfg;
+
 @end

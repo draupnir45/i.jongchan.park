@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Pokemon.h"
+#import "Type.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -75,6 +76,9 @@ int main(int argc, const char * argv[]) {
         } else {
             NSLog(@"문제가 생겼습니다!");
         }
+        
+        
+        Type *type = [[Type alloc]init];
         
     }
     return 0;

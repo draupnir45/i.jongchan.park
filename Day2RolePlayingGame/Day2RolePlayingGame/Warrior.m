@@ -40,6 +40,7 @@
 
 }
 
+
 - (void)magicalAttackWith:(id)weapon to:(Person *)target {
     NSLog(@"%@이(가) %lu만큼의 데미지를 줍니다.",self.name, (unsigned long)self.physicalPower);
 }

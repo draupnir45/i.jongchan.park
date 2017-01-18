@@ -10,4 +10,22 @@
 
 @interface Type : NSObject
 
+@property NSDictionary *normal;
+@property NSDictionary *fire;
+@property NSDictionary *water;
+@property NSDictionary *electricity;
+@property NSDictionary *leaf;
+@property NSDictionary *ice;
+@property NSDictionary *combat;
+@property NSDictionary *poison;
+@property NSDictionary *land;
+@property NSDictionary *flying;
+@property NSDictionary *esper;
+@property NSDictionary *bug;
+@property NSDictionary *rock;
+@property NSDictionary *ghost;
+@property NSDictionary *dragon;
+@property NSDictionary *evil;
+@property NSDictionary *iron;
+
 @end

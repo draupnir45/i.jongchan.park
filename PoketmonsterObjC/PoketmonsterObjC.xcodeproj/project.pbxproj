@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9078C791E2F93F1004C11CA /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = B9078C781E2F93F1004C11CA /* Type.m */; };
 		B94F92C51E2DFAF9006A928E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F92C41E2DFAF9006A928E /* main.m */; };
 		B94F92D01E2DFB41006A928E /* Pokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F92CF1E2DFB41006A928E /* Pokemon.m */; };
 		B9AC61981E2E05780071BE72 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AC61971E2E05780071BE72 /* Person.m */; };
@@ -31,6 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B9078C771E2F93F1004C11CA /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
+		B9078C781E2F93F1004C11CA /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
 		B94F92C11E2DFAF9006A928E /* PoketmonsterObjC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PoketmonsterObjC; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94F92C41E2DFAF9006A928E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B94F92CE1E2DFB41006A928E /* Pokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pokemon.h; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				B9AC619A1E2E07800071BE72 /* Appearance.m */,
 				B9AC61A21E2E09F90071BE72 /* EvolutionGain.h */,
 				B9AC61A31E2E09F90071BE72 /* EvolutionGain.m */,
+				B9078C771E2F93F1004C11CA /* Type.h */,
+				B9078C781E2F93F1004C11CA /* Type.m */,
 			);
 			path = PoketmonsterObjC;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 				B94F92C51E2DFAF9006A928E /* main.m in Sources */,
 				B94F92D01E2DFB41006A928E /* Pokemon.m in Sources */,
 				B9D2F13E1E2E38E300AD27CA /* Trainer.m in Sources */,
+				B9078C791E2F93F1004C11CA /* Type.m in Sources */,
 				B9AC61981E2E05780071BE72 /* Person.m in Sources */,
 				B9D2F1411E2E396900AD27CA /* Player.m in Sources */,
 				B9AC619B1E2E07800071BE72 /* Appearance.m in Sources */,

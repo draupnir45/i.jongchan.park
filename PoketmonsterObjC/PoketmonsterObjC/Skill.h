@@ -10,9 +10,9 @@
 
 @interface Skill : NSObject
 
-@property id name;
+@property NSString *name;
 @property id type;
-@property int damage;
+@property NSInteger damage;
 @property id effect;
 
 -(Skill*)initWithName:(id)name

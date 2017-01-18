@@ -10,11 +10,11 @@
 
 @interface EvolutionGain : NSObject
 
-@property id specificNameToChange;
-@property id currentHealthGain;
-@property id attackGain;
-@property id defenseGain;
-@property id specialAttackGain;
-@property id specialDefenseGain;
+@property NSString *specificNameToChange;
+@property NSInteger currentHealthGain;
+@property NSInteger attackGain;
+@property NSInteger defenseGain;
+@property NSInteger specialAttackGain;
+@property NSInteger specialDefenseGain;
 
 @end

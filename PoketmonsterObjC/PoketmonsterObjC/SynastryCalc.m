@@ -7,6 +7,7 @@
 //
 
 #import "SynastryCalc.h"
+#import "Pokemon.h"
 
 @implementation SynastryCalc
 
@@ -18,12 +19,12 @@
  @date 2017. 1. 17
  @return int
  */
-- (float)calcSynastryFrom:(id)attacker
-                     to:(id)target {
-    if (attacker == target) {
+- (float)calcSynastryFrom:(id)skillType
+                     to:(id)targetType {
+    if (skillType == targetType) {
         return 1.0;
     } else if (
-               ([attacker isEqual:@"fire"] && [target isEqual:@"leaf"])|| ([attacker isEqual:@"fire"] && [target isEqual:@"leaf"]) || ([attacker isEqual:@"fire"] && [target isEqual:@"leaf"])
+               ([skillType isEqual:@"fire"] && [targetType isEqual:@"leaf"])|| ([skillType isEqual:@"fire"] && [targetType isEqual:@"leaf"]) || ([skillType isEqual:@"fire"] && [targetType isEqual:@"leaf"])
                )
     {
         return 2.0;
