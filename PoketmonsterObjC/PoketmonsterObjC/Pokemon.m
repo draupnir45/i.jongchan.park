@@ -34,7 +34,7 @@
          attacker:(Pokemon *)attacker
            target:(Pokemon *)target {
     
-    SynastryCalc *calculator = [[SynastryCalc alloc] init];
+    SynastryCalculator *calculator = [[SynastryCalculator alloc] init];
     
     float synastryWeight = [calculator calcSynastryFrom:skill.type to:target.type];
     

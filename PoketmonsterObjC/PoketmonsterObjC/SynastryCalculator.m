@@ -6,10 +6,10 @@
 //  Copyright © 2017년 Jongchan Park. All rights reserved.
 //
 
-#import "SynastryCalc.h"
+#import "SynastryCalculator.h"
 #import "Pokemon.h"
 
-@implementation SynastryCalc
+@implementation SynastryCalculator
 
 
 /** 상성을 통해서 데미지에 곱할 가중치를 구하는 부분입니다.

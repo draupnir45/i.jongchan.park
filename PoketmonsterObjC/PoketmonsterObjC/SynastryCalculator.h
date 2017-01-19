@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @class Pokemon;
 
-@interface SynastryCalc : NSObject
+@interface SynastryCalculator : NSObject
 
 
 - (float)calcSynastryFrom:(id)skillType

@@ -16,7 +16,7 @@
 		B9D2F13E1E2E38E300AD27CA /* Trainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D2F13D1E2E38E300AD27CA /* Trainer.m */; };
 		B9D2F1411E2E396900AD27CA /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D2F1401E2E396900AD27CA /* Player.m */; };
 		B9D2F1441E2E3A3700AD27CA /* Skill.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D2F1431E2E3A3700AD27CA /* Skill.m */; };
-		B9D4626D1E2E405700AF6F43 /* SynastryCalc.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D4626C1E2E405700AF6F43 /* SynastryCalc.m */; };
+		B9D4626D1E2E405700AF6F43 /* SynastryCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D4626C1E2E405700AF6F43 /* SynastryCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,7 +34,7 @@
 /* Begin PBXFileReference section */
 		B9078C771E2F93F1004C11CA /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
 		B9078C781E2F93F1004C11CA /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
-		B94F92C11E2DFAF9006A928E /* PoketmonsterObjC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PoketmonsterObjC; sourceTree = BUILT_PRODUCTS_DIR; };
+		B94F92C11E2DFAF9006A928E /* PokemonByObjectiveC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PokemonByObjectiveC; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94F92C41E2DFAF9006A928E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B94F92CE1E2DFB41006A928E /* Pokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pokemon.h; sourceTree = "<group>"; };
 		B94F92CF1E2DFB41006A928E /* Pokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pokemon.m; sourceTree = "<group>"; };
@@ -50,8 +50,8 @@
 		B9D2F1401E2E396900AD27CA /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		B9D2F1421E2E3A3700AD27CA /* Skill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skill.h; sourceTree = "<group>"; };
 		B9D2F1431E2E3A3700AD27CA /* Skill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skill.m; sourceTree = "<group>"; };
-		B9D4626B1E2E405700AF6F43 /* SynastryCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynastryCalc.h; sourceTree = "<group>"; };
-		B9D4626C1E2E405700AF6F43 /* SynastryCalc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynastryCalc.m; sourceTree = "<group>"; };
+		B9D4626B1E2E405700AF6F43 /* SynastryCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynastryCalculator.h; sourceTree = "<group>"; };
+		B9D4626C1E2E405700AF6F43 /* SynastryCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynastryCalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 		B94F92C21E2DFAF9006A928E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B94F92C11E2DFAF9006A928E /* PoketmonsterObjC */,
+				B94F92C11E2DFAF9006A928E /* PokemonByObjectiveC */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,8 +91,8 @@
 				B9D2F1401E2E396900AD27CA /* Player.m */,
 				B9AC61961E2E05780071BE72 /* Person.h */,
 				B9AC61971E2E05780071BE72 /* Person.m */,
-				B9D4626B1E2E405700AF6F43 /* SynastryCalc.h */,
-				B9D4626C1E2E405700AF6F43 /* SynastryCalc.m */,
+				B9D4626B1E2E405700AF6F43 /* SynastryCalculator.h */,
+				B9D4626C1E2E405700AF6F43 /* SynastryCalculator.m */,
 				B9D2F13C1E2E38E300AD27CA /* Trainer.h */,
 				B9D2F13D1E2E38E300AD27CA /* Trainer.m */,
 				B9D2F1421E2E3A3700AD27CA /* Skill.h */,
@@ -110,9 +110,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B94F92C01E2DFAF9006A928E /* PoketmonsterObjC */ = {
+		B94F92C01E2DFAF9006A928E /* PokemonByObjectiveC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B94F92C81E2DFAF9006A928E /* Build configuration list for PBXNativeTarget "PoketmonsterObjC" */;
+			buildConfigurationList = B94F92C81E2DFAF9006A928E /* Build configuration list for PBXNativeTarget "PokemonByObjectiveC" */;
 			buildPhases = (
 				B94F92BD1E2DFAF9006A928E /* Sources */,
 				B94F92BE1E2DFAF9006A928E /* Frameworks */,
@@ -122,9 +122,9 @@
 			);
 			dependencies = (
 			);
-			name = PoketmonsterObjC;
+			name = PokemonByObjectiveC;
 			productName = PoketmonsterObjC;
-			productReference = B94F92C11E2DFAF9006A928E /* PoketmonsterObjC */;
+			productReference = B94F92C11E2DFAF9006A928E /* PokemonByObjectiveC */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -143,7 +143,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B94F92BC1E2DFAF9006A928E /* Build configuration list for PBXProject "PoketmonsterObjC" */;
+			buildConfigurationList = B94F92BC1E2DFAF9006A928E /* Build configuration list for PBXProject "PokemonByObjectiveC" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -155,7 +155,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B94F92C01E2DFAF9006A928E /* PoketmonsterObjC */,
+				B94F92C01E2DFAF9006A928E /* PokemonByObjectiveC */,
 			);
 		};
 /* End PBXProject section */
@@ -174,7 +174,7 @@
 				B9AC61981E2E05780071BE72 /* Person.m in Sources */,
 				B9D2F1411E2E396900AD27CA /* Player.m in Sources */,
 				B9AC619B1E2E07800071BE72 /* Appearance.m in Sources */,
-				B9D4626D1E2E405700AF6F43 /* SynastryCalc.m in Sources */,
+				B9D4626D1E2E405700AF6F43 /* SynastryCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +287,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B94F92BC1E2DFAF9006A928E /* Build configuration list for PBXProject "PoketmonsterObjC" */ = {
+		B94F92BC1E2DFAF9006A928E /* Build configuration list for PBXProject "PokemonByObjectiveC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B94F92C61E2DFAF9006A928E /* Debug */,
@@ -296,7 +296,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B94F92C81E2DFAF9006A928E /* Build configuration list for PBXNativeTarget "PoketmonsterObjC" */ = {
+		B94F92C81E2DFAF9006A928E /* Build configuration list for PBXNativeTarget "PokemonByObjectiveC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B94F92C91E2DFAF9006A928E /* Debug */,
