@@ -68,7 +68,7 @@
 		B94F92B81E2DFAF9006A928E = {
 			isa = PBXGroup;
 			children = (
-				B94F92C31E2DFAF9006A928E /* PoketmonsterObjC */,
+				B94F92C31E2DFAF9006A928E /* PokemonByObjectiveC */,
 				B94F92C21E2DFAF9006A928E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,7 +81,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B94F92C31E2DFAF9006A928E /* PoketmonsterObjC */ = {
+		B94F92C31E2DFAF9006A928E /* PokemonByObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
 				B94F92C41E2DFAF9006A928E /* main.m */,
@@ -104,6 +104,7 @@
 				B9078C771E2F93F1004C11CA /* Type.h */,
 				B9078C781E2F93F1004C11CA /* Type.m */,
 			);
+			name = PokemonByObjectiveC;
 			path = PoketmonsterObjC;
 			sourceTree = "<group>";
 		};
