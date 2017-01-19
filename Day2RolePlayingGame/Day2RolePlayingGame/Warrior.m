@@ -18,7 +18,7 @@
     return self;
 }
 
-- (void)physicalAttackTo:(Person *)target {
+- (void)physicalAttackTo:(GameCharacter *)target {
     NSInteger damage = self.physicalPower;
     if (self.haveWeapon) {
         damage = self.physicalPower + 50;
@@ -41,7 +41,7 @@
 }
 
 
-- (void)magicalAttackWith:(id)weapon to:(Person *)target {
+- (void)magicalAttackWith:(id)weapon to:(GameCharacter *)target {
     NSLog(@"%@이(가) %lu만큼의 데미지를 줍니다.",self.name, (unsigned long)self.physicalPower);
 }
 

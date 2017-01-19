@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B94F92A01E2DE5DB006A928E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F929F1E2DE5DB006A928E /* main.m */; };
-		B94F92A81E2DE5EA006A928E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F92A71E2DE5EA006A928E /* Person.m */; };
+		B94F92A81E2DE5EA006A928E /* GameCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F92A71E2DE5EA006A928E /* GameCharacter.m */; };
 		B94F92B11E2DE65B006A928E /* Warrior.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F92B01E2DE65B006A928E /* Warrior.m */; };
 		B94F92B41E2DE71C006A928E /* Wizard.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F92B31E2DE71C006A928E /* Wizard.m */; };
 /* End PBXBuildFile section */
@@ -28,8 +28,8 @@
 /* Begin PBXFileReference section */
 		B94F929C1E2DE5DB006A928E /* Day2RolePlayingGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Day2RolePlayingGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94F929F1E2DE5DB006A928E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B94F92A61E2DE5EA006A928E /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		B94F92A71E2DE5EA006A928E /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		B94F92A61E2DE5EA006A928E /* GameCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCharacter.h; sourceTree = "<group>"; };
+		B94F92A71E2DE5EA006A928E /* GameCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCharacter.m; sourceTree = "<group>"; };
 		B94F92AF1E2DE65B006A928E /* Warrior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Warrior.h; sourceTree = "<group>"; };
 		B94F92B01E2DE65B006A928E /* Warrior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Warrior.m; sourceTree = "<group>"; };
 		B94F92B21E2DE71C006A928E /* Wizard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wizard.h; sourceTree = "<group>"; };
@@ -67,8 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				B94F929F1E2DE5DB006A928E /* main.m */,
-				B94F92A61E2DE5EA006A928E /* Person.h */,
-				B94F92A71E2DE5EA006A928E /* Person.m */,
+				B94F92A61E2DE5EA006A928E /* GameCharacter.h */,
+				B94F92A71E2DE5EA006A928E /* GameCharacter.m */,
 				B94F92AF1E2DE65B006A928E /* Warrior.h */,
 				B94F92B01E2DE65B006A928E /* Warrior.m */,
 				B94F92B21E2DE71C006A928E /* Wizard.h */,
@@ -137,7 +137,7 @@
 			files = (
 				B94F92B41E2DE71C006A928E /* Wizard.m in Sources */,
 				B94F92B11E2DE65B006A928E /* Warrior.m in Sources */,
-				B94F92A81E2DE5EA006A928E /* Person.m in Sources */,
+				B94F92A81E2DE5EA006A928E /* GameCharacter.m in Sources */,
 				B94F92A01E2DE5DB006A928E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +267,7 @@
 				B94F92A51E2DE5DB006A928E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

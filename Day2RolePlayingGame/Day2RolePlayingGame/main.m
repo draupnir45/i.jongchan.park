@@ -7,15 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Person.h"
+#import "GameCharacter.h"
 #import "Warrior.h"
 #import "Wizard.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        Person *jongchan;
-        jongchan = [[Person alloc] init];
+        GameCharacter *jongchan;
+        jongchan = [[GameCharacter alloc] init];
         
         jongchan.money=346;
         
@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
         Warrior *junmin = [[Warrior alloc] init];
         Wizard *donghee = [[Wizard alloc] init];
         Wizard *mijung = [[Wizard alloc] init];
-        Person *byungjun = [[Person alloc] init];
+        GameCharacter *byungjun = [[GameCharacter alloc] init];
         
         jongchan.name = @"종찬";
         byungjun.name = @"병준";

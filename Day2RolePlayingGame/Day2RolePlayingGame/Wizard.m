@@ -17,12 +17,12 @@
     return self;
 }
 
-- (void)physicalAttackTo:(Person *)target {
+- (void)physicalAttackTo:(GameCharacter *)target {
     NSLog(@"%@가 %@에게 %lu만큼의 데미지를 줍니다.",self.name, target.name,(unsigned long)self.physicalPower);
     [target damaged:self.physicalPower];
 }
 
-- (void)fireBallTo:(Person *)target {
+- (void)fireBallTo:(GameCharacter *)target {
     NSLog(@"%@가 %@에게 %lu만큼의 데미지를 줍니다.",self.name, target.name,(unsigned long)self.magicalPower);
     [target damaged:self.physicalPower];
 
@@ -34,7 +34,7 @@
     NSLog(@"%@가 메테오를 사용합니다!", self.name);
     NSLog(@"%@을(를) 제외한 모두가 데미지를 받습니다!", self.name);
     for (i=0; i<numberOfCharacterInField; i++) {
-        Person *target = ((Person *)field[i]);
+        GameCharacter *target = ((GameCharacter *)field[i]);
         
         if (field[i] != self) {
             [target damaged:self.magicalPower];
@@ -42,7 +42,7 @@
         
     }
 }
-- (void)lightningBoltTo:(Person *)target SecondTarget:(Person *)target2 andThirdTarget:(Person *)target3 {
+- (void)lightningBoltTo:(GameCharacter *)target SecondTarget:(GameCharacter *)target2 andThirdTarget:(GameCharacter *)target3 {
 
 }
 

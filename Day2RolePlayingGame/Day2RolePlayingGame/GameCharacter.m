@@ -1,14 +1,14 @@
 //
-//  Person.m
+//  GameCharacter.m
 //  Day2RolePlayingGame
 //
 //  Created by 박종찬 on 2017. 1. 17..
 //  Copyright © 2017년 Jongchan Park. All rights reserved.
 //
 
-#import "Person.h"
+#import "GameCharacter.h"
 
-@implementation Person
+@implementation GameCharacter
 
 -(void)damaged:(NSInteger)damage {
     damage -= self.defensePoint;

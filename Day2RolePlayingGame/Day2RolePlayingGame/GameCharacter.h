@@ -1,5 +1,5 @@
 //
-//  Person.h
+//  GameCharacter.h
 //  Day2RolePlayingGame
 //
 //  Created by 박종찬 on 2017. 1. 17..
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Person : NSObject
+@interface GameCharacter : NSObject
 
 @property NSString *name;
 @property NSString *className;

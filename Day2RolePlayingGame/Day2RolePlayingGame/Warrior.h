@@ -5,11 +5,11 @@
 //  Created by 박종찬 on 2017. 1. 17..
 //  Copyright © 2017년 Jongchan Park. All rights reserved.
 //
-
-#import "Person.h"
+#import <Foundation/Foundation.h>
+#import "GameCharacter.h"
 @class Wizard;
 
-@interface Warrior : Person
+@interface Warrior : GameCharacter
 
 
 @property NSString *weapon;
@@ -17,7 +17,5 @@
 
 - (void)physicalAttackTo:(Wizard *)target;
 - (void)magicalAttackWith:(NSString *)weapon to:(Wizard *)target;
-
-- (void)attack:(NSString*)money to:(Person *)kahjgafkdsjfg;
 
 @end
