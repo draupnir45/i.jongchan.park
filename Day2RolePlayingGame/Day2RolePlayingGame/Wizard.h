@@ -8,17 +8,15 @@
 #import <Foundation/Foundation.h>
 #import "GameCharacter.h"
 @class Warrior;
+@class DemonicWarrior;
 //#import "Warrior.h"
 
 @interface Wizard : GameCharacter
 
-
-@property NSString *weapon;
-
-- (void)physicalAttackTo:(Warrior *)target;
+- (instancetype)initWithName:(NSString *)name;
 - (void)fireBallTo:(id)target;
 - (void)meteorAt:(NSMutableArray *)field;
-- (void)lightningBoltTo:(id)target SecondTarget:(id)target2 andThirdTarget:(id)target3;
 - (void)expelliarmusTo:(Warrior *)target;
+- (DemonicWarrior *)makeWeaponOfWarriorMagical:(Warrior*)warrior;
 
 @end

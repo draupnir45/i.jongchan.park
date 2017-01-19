@@ -10,15 +10,21 @@
 
 @interface GameCharacter : NSObject
 
-@property NSString *name;
-@property NSString *className;
-@property NSInteger health;
-@property NSInteger mana;
-@property NSInteger physicalPower;
-@property NSInteger magicalPower;
-@property NSInteger defensePoint;
-@property NSInteger money;
+@property (readonly) NSString *name;
+@property (readonly) NSInteger health;
+@property (readonly) NSInteger physicalPower;
+@property (readonly) NSInteger magicalPower;
+@property (readonly) NSInteger defensePoint;
+@property (readonly) NSString *className;
+@property (readonly) BOOL isFainted;
 
 -(void)damaged:(NSInteger)damage;
+-(instancetype)initWithName:(NSString *)name;
+-(void)setDefaultWithClassName:(NSString *) className
+                        health:(NSInteger)  health
+                 physicalPower:(NSInteger)  physicalPower
+                  magicalPower:(NSInteger)  magicalPower
+                  defensePoint:(NSInteger)  defensePoint;
+
 
 @end

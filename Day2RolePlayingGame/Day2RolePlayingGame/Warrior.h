@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "GameCharacter.h"
 @class Wizard;
+@class DemonicWarrior;
 
 @interface Warrior : GameCharacter
 
@@ -15,7 +16,7 @@
 @property NSString *weapon;
 @property BOOL haveWeapon;
 
-- (void)physicalAttackTo:(Wizard *)target;
-- (void)magicalAttackWith:(NSString *)weapon to:(Wizard *)target;
+- (instancetype)initWithName:(NSString *)name;
+- (void)physicalAttackTo:(GameCharacter *)target;
 
 @end

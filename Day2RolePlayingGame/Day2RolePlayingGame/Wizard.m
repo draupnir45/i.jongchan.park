@@ -8,47 +8,80 @@
 
 #import "Wizard.h"
 #import "Warrior.h"
+#import "DemonicWarrior.h"
 
 @implementation Wizard
 
--(Wizard *)init {
+- (instancetype)init
+{
     self = [super init];
-    self.className = @"마법사";
+    if (self) {
+        [self setDefaultWithClassName:@"마법사" health:200 physicalPower:30 magicalPower:70 defensePoint:10];
+    }
     return self;
 }
 
-- (void)physicalAttackTo:(GameCharacter *)target {
-    NSLog(@"%@가 %@에게 %lu만큼의 데미지를 줍니다.",self.name, target.name,(unsigned long)self.physicalPower);
-    [target damaged:self.physicalPower];
+
+- (instancetype)initWithName:(NSString *)name {
+    self = [[super initWithName:name] init];
+    return self;
 }
 
+
 - (void)fireBallTo:(GameCharacter *)target {
-    NSLog(@"%@가 %@에게 %lu만큼의 데미지를 줍니다.",self.name, target.name,(unsigned long)self.magicalPower);
-    [target damaged:self.physicalPower];
+    if (self.isFainted) {
+        NSLog(@"%@ %@이(가) 기절해서 움직일 수 없습니다!",self.className ,self.name);
+    } else {
+        NSLog(@"%@ %@이(가) %@ %@에게 파이어볼로 %lu만큼의 데미지를 줍니다.",self.className, self.name, target.className, target.name,(unsigned long)self.magicalPower);
+        [target damaged:self.magicalPower];
+    }
 
 }
 
 - (void)meteorAt:(NSMutableArray *)field {
-    NSInteger numberOfCharacterInField = [field count];
-    NSInteger i;
-    NSLog(@"%@가 메테오를 사용합니다!", self.name);
-    NSLog(@"%@을(를) 제외한 모두가 데미지를 받습니다!", self.name);
-    for (i=0; i<numberOfCharacterInField; i++) {
-        GameCharacter *target = ((GameCharacter *)field[i]);
-        
-        if (field[i] != self) {
-            [target damaged:self.magicalPower];
+    if (self.isFainted) {
+        NSLog(@"%@ %@이(가) 기절해서 움직일 수 없습니다!",self.className ,self.name);
+    } else {
+        NSInteger numberOfCharacterInField = [field count];
+        NSInteger i;
+        NSLog(@"%@ %@이(가) 메테오를 사용합니다!", self.className, self.name);
+        NSLog(@"%@을(를) 제외한 모두가 데미지를 받습니다!", self.name);
+        for (i=0; i<numberOfCharacterInField; i++) {
+            GameCharacter *target = ((GameCharacter *)field[i]);
+            
+            if (field[i] != self) {
+                if (target.health > 0 ) {
+                    [target damaged:self.magicalPower];
+                }
+            }
         }
-        
     }
 }
-- (void)lightningBoltTo:(GameCharacter *)target SecondTarget:(GameCharacter *)target2 andThirdTarget:(GameCharacter *)target3 {
 
-}
 
 - (void)expelliarmusTo:(Warrior *)target{
-    NSLog(@"%@가 전사를 무장해제합니다!", self.name);
-    target.haveWeapon = NO;
+    if (self.isFainted) {
+        NSLog(@"%@ %@이(가) 기절해서 움직일 수 없습니다!",self.className ,self.name);
+    } else {
+        NSLog(@"%@ %@이(가) %@ %@을(를) 무장해제합니다!",self.className, self.name, target.className, target.name);
+        target.haveWeapon = NO;
+    }
+}
+
+- (DemonicWarrior *)makeWeaponOfWarriorMagical:(Warrior*)warrior {
+    if (self.isFainted) {
+        NSLog(@"%@ %@이(가) 기절해서 움직일 수 없습니다!",self.className ,self.name);
+        return nil;
+    } else {
+        if (warrior.isFainted) {
+            NSLog(@"%@ %@이(가) 기절해서 움직일 수 없습니다!", warrior.className, warrior.name);
+            return nil;
+        } else {
+            NSLog(@"%@ %@이(가) %@ %@의 무기에 마법을 걸어줍니다.",self.className,self.name, warrior.className, warrior.name);
+            DemonicWarrior * newDemonic = [[DemonicWarrior alloc] initWithWarrior:warrior];
+            return newDemonic;
+        }
+    }
 }
 
 @end
