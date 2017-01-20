@@ -1,10 +1,11 @@
 # About Git
 
+![Git logo](images/git.png)
 ##Git이란?
 - VCS 시스템의 하나로, 2005년 [리누스 토발즈](https://namu.wiki/w/리누스%20토르발스)가 만들었다.
 ~~Subversion을 쓰다가 엄청나게 빡쳐서 개발한 분산형 버전 관리 프로그램.~~
 - GitHub와 Git을 한몸으로 착각하지 않아야 한다. GitHub는 원격 Repositary의 대표적인 서비스일 뿐, Git은 다른 서비스에서도 사용할 수 있는 버전 관리 시스템(VCS)이다.
-![Git logo](images/git.png)
+
 ##VCS(Version Control System)란?
 - 드류 휴스턴이 [드롭박스](https://namu.wiki/w/Dropbox)를 만들 때, 개발자들이 쓰는 Git과 같은 버전을 파일 관리용으로 일반인들도 쉽게 이용할 수 있으면 어떨까 하는 생각에서 출발했다고 합니다. 일반인 입장에서는 오히려 VCS를 드롭박스의 개발자 버전이라고 생각하면 편할 것 같다.
 - 주요기능으로는 로컬 및 원격 버전 관리(Git), 협업 지원 기능, 브랜치를 통한 병렬 관리 등이 있다.
