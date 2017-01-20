@@ -8,6 +8,65 @@
 
 #import "Pokemon.h"
 
+@interface Pokemon ()
+
+//기본정보
+@property (readwrite) NSString *specificName;
+@property (readwrite) id appearance;
+
+//트레이너관련
+@property (readwrite) NSString *nickName;
+@property (readwrite) id trainer;
+//@property id firstTrainer;
+
+////레벨 관련
+//@property id exp;
+//@property id level;
+//- (void)gainExp;
+
+//전투에 의한 현 상태
+@property (readwrite)NSInteger currentHealth;
+@property (readwrite)NSInteger health;
+//@property id status;
+
+//기술
+@property (readwrite)NSMutableArray *skills;
+//@property id skill2;
+//@property id skill3;
+//@property id skill4;
+
+//타입
+@property (readwrite) id type;
+//@property id type2;
+
+//능력치
+@property (readwrite) NSInteger attack;
+@property (readwrite) NSInteger defense;
+@property (readwrite) NSInteger specialAttack;
+@property (readwrite) NSInteger specialDefense;
+
+//진화관련 상황
+//@property id evolveStatus;
+//@property id evolvable;
+//- (void)evolve;
+
+//일러스트
+@property (readwrite) Appearance *rootAppearance;
+
+////첫 번째 진화 관련
+//@property id ev2Level;
+//@property Appearance *ev2Appearance;
+//@property EvolutionGain *ev2Gain;
+//
+////두 번째 진화 관련
+//@property id ev3Level;
+//@property Appearance *ev3Appearance;
+//@property EvolutionGain *ev3Gain;
+
+@end
+
+
+
 @implementation Pokemon
 
 - (Pokemon *)initWithName:(NSString *)specificName
@@ -19,6 +78,7 @@
     self.currentHealth = health;
     self.type = type;
     self.skills = [NSMutableArray array];
+    
 //    for (int i = 0; i < 4; i++) {
 //        self.skills = [self.skills arrayByAddingObject:[[Skill alloc] init]];
 //    }

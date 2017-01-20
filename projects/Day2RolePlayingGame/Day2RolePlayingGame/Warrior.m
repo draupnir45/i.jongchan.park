@@ -23,10 +23,10 @@
 }
 
 - (instancetype)initWithName:(NSString *)name {
-    self = [[super initWithName:name] init];
+    self = [super initWithName:name];
+    [self setDefaultWithClassName:@"전사" health:220 physicalPower:70 magicalPower:30 defensePoint:20];
     return self;
 }
-
 
 - (void)physicalAttackTo:(GameCharacter *)target {
     if (self.isFainted) {

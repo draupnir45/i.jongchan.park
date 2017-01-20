@@ -21,6 +21,7 @@ int main(int argc, const char * argv[]) {
         Wizard *donghee = [[Wizard alloc] initWithName:@"동희"];
         Wizard *mijung = [[Wizard alloc] initWithName:@"미정"];
         
+        
         NSLog(@"%@",youngjin.className);
         
         NSMutableArray *field = [[NSMutableArray alloc] init];

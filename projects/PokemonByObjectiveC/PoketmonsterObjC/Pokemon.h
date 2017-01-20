@@ -15,12 +15,12 @@
 @interface Pokemon : NSObject
 
 //기본정보
-@property NSString *specificName;
-@property id appearance;
+@property (readonly) NSString *specificName;
+@property (readonly) id appearance;
 
 //트레이너관련
-@property NSString *nickName;
-@property id trainer;
+@property (readonly) NSString *nickName;
+@property (readonly) id trainer;
 //@property id firstTrainer;
 
 ////레벨 관련
@@ -29,25 +29,25 @@
 //- (void)gainExp;
 
 //전투에 의한 현 상태
-@property NSInteger currentHealth;
-@property NSInteger health;
+@property (readonly)NSInteger currentHealth;
+@property (readonly)NSInteger health;
 //@property id status;
 
 //기술
-@property NSMutableArray *skills;
+@property (readonly)NSMutableArray *skills;
 //@property id skill2;
 //@property id skill3;
 //@property id skill4;
 
 //타입
-@property id type;
+@property (readonly) id type;
 //@property id type2;
 
 //능력치
-@property NSInteger attack;
-@property NSInteger defense;
-@property NSInteger specialAttack;
-@property NSInteger specialDefense;
+@property (readonly) NSInteger attack;
+@property (readonly) NSInteger defense;
+@property (readonly) NSInteger specialAttack;
+@property (readonly) NSInteger specialDefense;
 
 //진화관련 상황
 //@property id evolveStatus;
@@ -55,7 +55,7 @@
 //- (void)evolve;
 
 //일러스트
-@property Appearance *rootAppearance;
+@property (readonly) Appearance *rootAppearance;
 
 ////첫 번째 진화 관련
 //@property id ev2Level;
@@ -76,5 +76,5 @@
 - (Pokemon *)initWithName:(NSString *)specificName
               health:(NSInteger)health
                 type:(id)type;
-
+- (void)setCurrentHealth:(NSInteger)currentHealth;
 @end
