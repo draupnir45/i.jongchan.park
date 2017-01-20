@@ -20,3 +20,5 @@
 - [연습] 클래스 연습 / 술마시기 게임([DringkingGame](https://github.com/draupnir45/i.jongchan.park/tree/master/projects/DringkingGame))
 - [개인작업] 포켓몬을 오브젝티브로 짜보자! ([PokemonByObjectiveC](https://github.com/draupnir45/i.jongchan.park/tree/master/projects/PokemonByObjectiveC))
 
+###짧은 생각들
+- [title](learning/ShortThinking1.md) [title](learning/ShortThinking2.md)

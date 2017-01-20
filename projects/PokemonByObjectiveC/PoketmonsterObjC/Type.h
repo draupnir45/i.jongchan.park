@@ -27,5 +27,6 @@
 @property NSDictionary *dragon;
 @property NSDictionary *evil;
 @property NSDictionary *iron;
+@property NSDictionary *index;
 
 @end

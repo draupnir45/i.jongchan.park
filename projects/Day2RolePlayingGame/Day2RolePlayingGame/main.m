@@ -15,8 +15,12 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
+        char str[50] = {0};
+        scanf("%s", str);
+        NSString *lastName = [NSString stringWithUTF8String:str];
+
+        Warrior *youngjin = [[Warrior alloc] initWithName:lastName];
         
-        Warrior *youngjin = [[Warrior alloc] initWithName:@"영진"];
         Warrior *junmin = [[Warrior alloc] initWithName:@"준민"];
         Wizard *donghee = [[Wizard alloc] initWithName:@"동희"];
         Wizard *mijung = [[Wizard alloc] initWithName:@"미정"];
@@ -30,6 +34,7 @@ int main(int argc, const char * argv[]) {
         [field addObject:junmin];
         [field addObject:mijung];
         [field addObject:donghee];
+        
         
         
         DemonicWarrior *demonicYoungjin = [donghee makeWeaponOfWarriorMagical:youngjin];

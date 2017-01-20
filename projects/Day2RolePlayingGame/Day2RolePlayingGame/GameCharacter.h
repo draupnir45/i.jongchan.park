@@ -25,6 +25,6 @@
                  physicalPower:(NSInteger)  physicalPower
                   magicalPower:(NSInteger)  magicalPower
                   defensePoint:(NSInteger)  defensePoint;
--(void)setName:(NSString *)name;
+//-(void)setName:(NSString *)name;
 
 @end

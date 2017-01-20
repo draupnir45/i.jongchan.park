@@ -52,10 +52,10 @@
 }
 
 -(void)setDefaultWithClassName:(NSString *) className
-                        health:(NSInteger)  health
-                 physicalPower:(NSInteger)  physicalPower
-                  magicalPower:(NSInteger)  magicalPower
-                  defensePoint:(NSInteger)  defensePoint{
+                        health:(NSInteger) health
+                 physicalPower:(NSInteger) physicalPower
+                  magicalPower:(NSInteger) magicalPower
+                  defensePoint:(NSInteger) defensePoint{
     self.className = className;
     self.health = health;
     self.physicalPower = physicalPower;
