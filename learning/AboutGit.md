@@ -28,3 +28,11 @@
 - commit : 반영하기로 결정된 파일(Staged files)을 Repository에 반영하는 것을 말한다. 로컬이나 원격이나 둘 다 같은 용어를 사용하는데, 로컬 Repository에 이미 커밋된 내용을 원격에 반영하는 경우는 'push'라고 한다.
 - pull : 원격 Repository에 저장된 버전을 로컬에 동기화하는 것을 말한다. 이 과정에서 만약 내가 수정해놓은 부분과 같은 부분에 수정이 있었던 것이 확인되면 충돌이 일어난다.
 - merge : 같은 파일이 수정되었지만 서로 수정한 부분이 다른 경우로, Git이 이를 판단해서 작업 폴더의 파일과 섞어 준다.
+
+##자주 쓰는 git 명령어
+- ```git status```
+- ```git add . ```
+- ```git commit -m "updated contents"```
+- ```git pull```
+- ```git push```
+- ```git --help```
