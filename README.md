@@ -1,8 +1,6 @@
 # 안녕하세요! iOS 앱 만드는 박종찬입니다.
 
-##학습관련
-
-###내용정리
+###학습내용정리
 ####1주차
 - [Git](learning/AboutGit.md)
 - [RAM](learning/RAM.md)
