@@ -3,8 +3,8 @@
 ###학습관련
 
 ####내용정리
-- 1주차 : Git, 컴퓨터 기초
-- 2주차 : 객체 지향 프로그래밍 기초
+- 1주차 : [Git에 대하여](learning/AboutGit.md), [컴퓨터 기초]
+- 2주차 : [객체 지향 프로그래밍 기초](https://github.com/draupnir45/i.jongchan.park/blob/master/learning/Object-Oriented%20Programming.md)
 
 ####프로젝트
 - [연습] 스토리보드 연습 ([Day1TextChange](https://github.com/draupnir45/i.jongchan.park/tree/master/projects/Day1TextChange))
