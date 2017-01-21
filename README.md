@@ -21,4 +21,4 @@
 - [개인작업] 포켓몬을 오브젝티브로 짜보자! ([PokemonByObjectiveC](https://github.com/draupnir45/i.jongchan.park/tree/master/projects/PokemonByObjectiveC))
 
 ###짧은 생각들
-- [title](learning/ShortThinking1.md) [title](learning/ShortThinking2.md)
+- [프로그래머](learning/ShortThinking1.md) [진공관, 트랜지스터, IC회로](learning/ShortThinking2.md)
