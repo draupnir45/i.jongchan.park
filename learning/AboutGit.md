@@ -1,6 +1,7 @@
 # About Git
 
-![Git logo](images/git.png)
+<a href="url"><img src="images/git.png" align="left" height="48" width="48" ></a>
+
 ##Git이란?
 - VCS 시스템의 하나로, 2005년 [리누스 토발즈](https://namu.wiki/w/리누스%20토르발스)가 만들었다.
 ~~Subversion을 쓰다가 엄청나게 빡쳐서 개발한 분산형 버전 관리 프로그램.~~
