@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Pokemon.h"
 #import "Type.h"
+#import "Controller.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -25,7 +26,7 @@ int main(int argc, const char * argv[]) {
         Skill *vineWhip =[[Skill alloc] initWithName:@"덩굴채찍" type:@"leaf" damage:20];
         hoosigidane.skills[0] = vineWhip;
         
-        
+        Controller *controller = [[Controller alloc]init];
         
         NSLog(@"전투가 시작됩니다.");
         
@@ -35,10 +36,10 @@ int main(int argc, const char * argv[]) {
             NSLog(@"파이리는 무엇을 할까요? 1 : 공격, 2 : 도망");
             scanf("%d", &command);
             if (command == 1) {
-                [hitokage attackEnemy:hitokage.skills[0] attacker:hitokage target:hoosigidane];
+                [controller attackWith:hitokage.skills[0] attacker:hitokage target:hoosigidane];
             } else if (command == 2) {
                 NSLog(@"파이리가 도망쳤습니다.");
-                hitokage.currentHealth = 0;
+//                hitokage.currentHealth = 0;
                 break;
             } else {
                 NSLog(@"잘못된 입력입니다.");
@@ -53,10 +54,10 @@ int main(int argc, const char * argv[]) {
             scanf("%d", &command);
             
             if (command == 1) {
-                [hoosigidane attackEnemy:hoosigidane.skills[0] attacker:hoosigidane target:hitokage];
+                [controller attackWith:hoosigidane.skills[0] attacker:hoosigidane target:hitokage];
             } else if (command == 2) {
                 NSLog(@"이상해씨가 도망쳤습니다.");
-                hoosigidane.currentHealth = 0;
+//                hoosigidane.currentHealth = 0;
                 break;
             } else {
                 NSLog(@"잘못된 입력입니다.");
@@ -76,9 +77,6 @@ int main(int argc, const char * argv[]) {
         } else {
             NSLog(@"문제가 생겼습니다!");
         }
-        
-        
-        Type *type = [[Type alloc]init];
         
     }
     return 0;

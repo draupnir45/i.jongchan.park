@@ -36,7 +36,7 @@
 //@property id skill4;
 
 //타입
-@property (readwrite) id type;
+@property (readwrite) NSString *type;
 //@property id type2;
 
 //능력치
@@ -71,7 +71,7 @@
 
 - (Pokemon *)initWithName:(NSString *)specificName
               health:(NSInteger)health
-                type:(id)type {
+                type:(NSString *)type {
     self = [self init];
     self.specificName = specificName;
     self.health = health;
@@ -84,34 +84,39 @@
 //    }
     return self;
 }
+
+- (void)damaged:(NSInteger)damage {
+    self.currentHealth -= damage;
+}
+
 /** 포켓몬으로 하여금 다른 포켓몬을 공격하도록 하는 함수입니다.
 현재 Controller 클래스를 아직 만들지 않아 Pokemon 클래스에 있지만, 추후 옮길 예정입니다.
 
  @author Jongchan Park
  @date 2017. 1. 17
  */
-- (void)attackEnemy:(Skill *)skill
-         attacker:(Pokemon *)attacker
-           target:(Pokemon *)target {
-    
-    SynastryCalculator *calculator = [[SynastryCalculator alloc] init];
-    
-    float synastryWeight = [calculator calcSynastryFrom:skill.type to:target.type];
-    
-    if (attacker.type == skill.type) {
-        synastryWeight = synastryWeight * 1.5;
-    }
-    
-    int damage = roundf(synastryWeight) * skill.damage;
-    
-    target.currentHealth = target.currentHealth - damage;
-    
-    if (target.currentHealth <= 0) {
-        NSLog(@"%@가 %@에게 %@ 공격! %@가 기절했습니다.",attacker.specificName, target.specificName, skill.name, target.specificName);
-    } else {
-        NSLog(@"%@가 %@에게 %@ 공격! HP가 %ld으로 깍였습니다.", attacker.specificName, target.specificName, skill.name, (long)target.currentHealth );
-    }
-    
-}
+//- (void)attackEnemy:(Skill *)skill
+//         attacker:(Pokemon *)attacker
+//           target:(Pokemon *)target {
+//    
+//    SynastryCalculator *calculator = [[SynastryCalculator alloc] init];
+//    
+//    float synastryWeight = [calculator calcSynastryFrom:skill.type to:target.type];
+//    
+//    if (attacker.type == skill.type) {
+//        synastryWeight = synastryWeight * 1.5;
+//    }
+//    
+//    int damage = roundf(synastryWeight) * skill.damage;
+//    
+//    target.currentHealth = target.currentHealth - damage;
+//    
+//    if (target.currentHealth <= 0) {
+//        NSLog(@"%@가 %@에게 %@ 공격! %@가 기절했습니다.",attacker.specificName, target.specificName, skill.name, target.specificName);
+//    } else {
+//        NSLog(@"%@가 %@에게 %@ 공격! HP가 %ld으로 깍였습니다.", attacker.specificName, target.specificName, skill.name, (long)target.currentHealth );
+//    }
+//    
+//}
 
 @end

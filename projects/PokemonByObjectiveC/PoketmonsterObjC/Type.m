@@ -7,23 +7,30 @@
 //
 
 #import "Type.h"
-//, @"normal" :
-//, @"fire" :
-//, @"water" :
-//, @"electricity" :
-//, @"leaf" :
-//, @"ice" :
-//, @"combat" :
-//, @"poison" :
-//, @"land" :
-//, @"flying" :
-//, @"esper" :
-//, @"bug" :
-//, @"rock" :
-//, @"ghost" :
-//, @"dragon" :
-//, @"evil" :
-//, @"iron" :
+@interface Type()
+
+@property (readwrite)NSDictionary *normal;
+@property (readwrite)NSDictionary *fire;
+@property (readwrite)NSDictionary *water;
+@property (readwrite)NSDictionary *electricity;
+@property (readwrite)NSDictionary *leaf;
+@property (readwrite)NSDictionary *ice;
+@property (readwrite)NSDictionary *combat;
+@property (readwrite)NSDictionary *poison;
+@property (readwrite)NSDictionary *land;
+@property (readwrite)NSDictionary *flying;
+@property (readwrite)NSDictionary *esper;
+@property (readwrite)NSDictionary *bug;
+@property (readwrite)NSDictionary *rock;
+@property (readwrite)NSDictionary *ghost;
+@property (readwrite)NSDictionary *dragon;
+@property (readwrite)NSDictionary *evil;
+@property (readwrite)NSDictionary *iron;
+
+@property (readwrite)NSDictionary *index;
+
+
+@end
 
 @implementation Type
 

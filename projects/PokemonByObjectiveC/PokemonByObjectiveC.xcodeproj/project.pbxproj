@@ -10,6 +10,7 @@
 		B9078C791E2F93F1004C11CA /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = B9078C781E2F93F1004C11CA /* Type.m */; };
 		B94F92C51E2DFAF9006A928E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F92C41E2DFAF9006A928E /* main.m */; };
 		B94F92D01E2DFB41006A928E /* Pokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F92CF1E2DFB41006A928E /* Pokemon.m */; };
+		B960F5D11E35CB2E0052AC4B /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = B960F5D01E35CB2E0052AC4B /* Controller.m */; };
 		B9AC61981E2E05780071BE72 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AC61971E2E05780071BE72 /* Person.m */; };
 		B9AC619B1E2E07800071BE72 /* Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AC619A1E2E07800071BE72 /* Appearance.m */; };
 		B9AC61A41E2E09F90071BE72 /* EvolutionGain.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AC61A31E2E09F90071BE72 /* EvolutionGain.m */; };
@@ -38,6 +39,8 @@
 		B94F92C41E2DFAF9006A928E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B94F92CE1E2DFB41006A928E /* Pokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pokemon.h; sourceTree = "<group>"; };
 		B94F92CF1E2DFB41006A928E /* Pokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pokemon.m; sourceTree = "<group>"; };
+		B960F5CF1E35CB2E0052AC4B /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		B960F5D01E35CB2E0052AC4B /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
 		B9AC61961E2E05780071BE72 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		B9AC61971E2E05780071BE72 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		B9AC61991E2E07800071BE72 /* Appearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appearance.h; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				B94F92CF1E2DFB41006A928E /* Pokemon.m */,
 				B9D2F13F1E2E396900AD27CA /* Player.h */,
 				B9D2F1401E2E396900AD27CA /* Player.m */,
+				B960F5CF1E35CB2E0052AC4B /* Controller.h */,
+				B960F5D01E35CB2E0052AC4B /* Controller.m */,
 				B9AC61961E2E05780071BE72 /* Person.h */,
 				B9AC61971E2E05780071BE72 /* Person.m */,
 				B9D4626B1E2E405700AF6F43 /* SynastryCalculator.h */,
@@ -169,6 +174,7 @@
 				B9AC61A41E2E09F90071BE72 /* EvolutionGain.m in Sources */,
 				B9D2F1441E2E3A3700AD27CA /* Skill.m in Sources */,
 				B94F92C51E2DFAF9006A928E /* main.m in Sources */,
+				B960F5D11E35CB2E0052AC4B /* Controller.m in Sources */,
 				B94F92D01E2DFB41006A928E /* Pokemon.m in Sources */,
 				B9D2F13E1E2E38E300AD27CA /* Trainer.m in Sources */,
 				B9078C791E2F93F1004C11CA /* Type.m in Sources */,

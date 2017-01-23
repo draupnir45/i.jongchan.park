@@ -40,7 +40,7 @@
 //@property id skill4;
 
 //타입
-@property (readonly) id type;
+@property (readonly) NSString *type;
 //@property id type2;
 
 //능력치
@@ -69,12 +69,10 @@
 //
 
 
-- (void)attackEnemy:(Skill *)skill
-         attacker:(Pokemon *)attacker
-           target:(Pokemon *)target;
+
 //- (void)run;
 - (Pokemon *)initWithName:(NSString *)specificName
               health:(NSInteger)health
-                type:(id)type;
-- (void)setCurrentHealth:(NSInteger)currentHealth;
+                type:(NSString *)type;
+- (void)damaged:(NSInteger)damage;
 @end

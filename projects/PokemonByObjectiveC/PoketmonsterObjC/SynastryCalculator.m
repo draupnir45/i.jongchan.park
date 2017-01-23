@@ -8,8 +8,17 @@
 
 #import "SynastryCalculator.h"
 #import "Pokemon.h"
+#import "Type.h"
+#import <CoreGraphics/CoreGraphics.h>
+
+@interface SynastryCalculator()
+
+@property (readonly) Type *typeRef;
+
+@end
 
 @implementation SynastryCalculator
+
 
 
 /** 상성을 통해서 데미지에 곱할 가중치를 구하는 부분입니다.
@@ -19,18 +28,12 @@
  @date 2017. 1. 17
  @return int
  */
-- (float)calcSynastryFrom:(id)skillType
-                     to:(id)targetType {
-    if (skillType == targetType) {
-        return 1.0;
-    } else if (
-               ([skillType isEqual:@"fire"] && [targetType isEqual:@"leaf"])|| ([skillType isEqual:@"fire"] && [targetType isEqual:@"leaf"]) || ([skillType isEqual:@"fire"] && [targetType isEqual:@"leaf"])
-               )
-    {
-        return 2.0;
-    } else {
-        return 0.5;
-    }
+- (CGFloat)calcSynastryFrom:(NSString *)skillType
+                     to:(NSString *)targetType {
+    NSDictionary *skillData = [self.typeRef.index objectForKey:skillType];
+    float synastry = [[skillData objectForKey:targetType]floatValue];
+    
+    return (CGFloat)synastry;
     
 }
 

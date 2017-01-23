@@ -11,12 +11,12 @@
 @interface Skill : NSObject
 
 @property NSString *name;
-@property id type;
+@property NSString *type;
 @property NSInteger damage;
 @property id effect;
 
 -(Skill*)initWithName:(id)name
-                 type:(id)type
+                 type:(NSString *)type
                damage:(int)damage;
 
 

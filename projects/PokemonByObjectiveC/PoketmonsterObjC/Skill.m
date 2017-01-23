@@ -11,7 +11,7 @@
 @implementation Skill
 
 -(Skill *)initWithName:(id)name
-                 type:(id)type
+                 type:(NSString *)type
                damage:(int)damage {
     self = [self init];
     self.name = name;

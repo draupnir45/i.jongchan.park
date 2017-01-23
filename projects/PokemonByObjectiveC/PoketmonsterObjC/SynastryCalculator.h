@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
+
 @class Pokemon;
 
 @interface SynastryCalculator : NSObject
 
 
-- (float)calcSynastryFrom:(id)skillType
-                     to:(id)targetType;
+- (CGFloat)calcSynastryFrom:(NSString *)skillType
+                     to:(NSString *)targetType;
 
 @end
