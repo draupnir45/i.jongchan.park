@@ -13,19 +13,19 @@
 
 @implementation AreaCalc
 
--(double)calculateAreaOfRect:(Rectangles *)rectangle{
-    double result = rectangle.width * rectangle.length;
+-(CGFloat)calculateAreaOfRect:(Rectangles *)rectangle{
+    CGFloat result = rectangle.width * rectangle.length;
     NSLog(@"사각형의 넓이는 %f 입니다.", result);
     return result;
 }
--(double)calculateAreaOfTriangle:(Triangles *)triangle{
-    double result = triangle.base * triangle.height;
+-(CGFloat)calculateAreaOfTriangle:(Triangles *)triangle{
+    CGFloat result = triangle.base * triangle.height;
         NSLog(@"삼각형의 넓이는 %f 입니다.", result);
     return result;
 }
--(double)calculateAreaOfCircle:(Circles *)circle {
-    double pi = 3.14159265359;
-    double result = circle.radius * circle.radius * pi;
+-(CGFloat)calculateAreaOfCircle:(Circles *)circle {
+    CGFloat pi = 3.14159265359;
+    CGFloat result = circle.radius * circle.radius * pi;
         NSLog(@"원의 넓이는 %f 입니다.", result);
     return result;
 }

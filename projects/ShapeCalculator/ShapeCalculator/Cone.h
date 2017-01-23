@@ -10,6 +10,6 @@
 
 @interface Cone : Circles
 
-@property double height;
+@property CGFloat height;
 
 @end

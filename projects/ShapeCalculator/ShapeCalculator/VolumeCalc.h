@@ -7,16 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AreaCalc.h"
 @class RectangularSolid;
 @class CircularCylinder;
 @class Sphere;
 @class Cone;
 
-@interface VolumeCalc : NSObject
+@interface VolumeCalc : AreaCalc
 
--(double)volumeOfRectSolid:(RectangularSolid *)solid;
--(double)volumeOfCircCylinder:(CircularCylinder *)cylinder;
--(double)volumeOfSphere:(Sphere *)sphere;
--(double)volumeOfCone:(Cone *)cone;
+-(CGFloat)volumeOfRectSolid:(RectangularSolid *)solid;
+-(CGFloat)volumeOfCircCylinder:(CircularCylinder *)cylinder;
+-(CGFloat)volumeOfSphere:(Sphere *)sphere;
+-(CGFloat)volumeOfCone:(Cone *)cone;
 
 @end

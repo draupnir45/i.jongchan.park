@@ -10,7 +10,7 @@
 
 @interface Rectangles : NSObject
 
-@property double length;
-@property double width;
+@property CGFloat length;
+@property CGFloat width;
 
 @end

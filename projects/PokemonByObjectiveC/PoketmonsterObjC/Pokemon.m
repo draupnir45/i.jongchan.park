@@ -51,7 +51,7 @@
 //- (void)evolve;
 
 //일러스트
-@property (readwrite) Appearance *rootAppearance;
+//@property (readwrite) Appearance *rootAppearance;
 
 ////첫 번째 진화 관련
 //@property id ev2Level;
@@ -89,12 +89,7 @@
     self.currentHealth -= damage;
 }
 
-/** 포켓몬으로 하여금 다른 포켓몬을 공격하도록 하는 함수입니다.
-현재 Controller 클래스를 아직 만들지 않아 Pokemon 클래스에 있지만, 추후 옮길 예정입니다.
 
- @author Jongchan Park
- @date 2017. 1. 17
- */
 //- (void)attackEnemy:(Skill *)skill
 //         attacker:(Pokemon *)attacker
 //           target:(Pokemon *)target {

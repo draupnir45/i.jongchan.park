@@ -13,18 +13,19 @@
 
 @implementation PerimeterCalc
 
--(double)calculatePerimeterOfRect:(Rectangles *)rectangle {
-    double result = (rectangle.length + rectangle.width)*2;
+-(CGFloat)calculatePerimeterOfRect:(Rectangles *)rectangle {
+    CGFloat result = (rectangle.length + rectangle.width)*2;
         NSLog(@"사각형의 둘레는 %f 입니다.", result);
     return result;
 }
-//-(double)calculatePerimeterOfTriangle:(Triangles *)triangle{
-//    double result =
+
+//-(CGFloat)calculatePerimeterOfTriangle:(Triangles *)triangle{
+//    CGFloat result =
 //    return result;
 //}
--(double)calculatePerimeterOfCircle:(Circles *)circle{
-    double pi = 3.14159265359;
-    double result = 2*circle.radius*pi;
+-(CGFloat)calculatePerimeterOfCircle:(Circles *)circle{
+    CGFloat pi = 3.14159265359;
+    CGFloat result = 2*circle.radius*pi;
     NSLog(@"원의 둘레는 %f 입니다.", result);
     return result;
 }

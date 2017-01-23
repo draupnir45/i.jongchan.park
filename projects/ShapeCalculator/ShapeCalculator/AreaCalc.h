@@ -13,8 +13,8 @@
 
 @interface AreaCalc : NSObject
 
--(double)calculateAreaOfRect:(Rectangles *)rectangle;
--(double)calculateAreaOfTriangle:(Triangles *)triangle;
--(double)calculateAreaOfCircle:(Circles *)circle;
+-(CGFloat)calculateAreaOfRect:(Rectangles *)rectangle;
+-(CGFloat)calculateAreaOfTriangle:(Triangles *)triangle;
+-(CGFloat)calculateAreaOfCircle:(Circles *)circle;
 
 @end

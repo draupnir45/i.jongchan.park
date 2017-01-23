@@ -17,4 +17,6 @@
              target:(Pokemon *)target;
 
 
+- (void)battleStartWith:(Pokemon *)mine To:(Pokemon *)enemy;
+
 @end

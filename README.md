@@ -23,3 +23,4 @@
 ###짧은 생각들
 - [프로그래머](learning/ShortThinking1.md)
 - [진공관, 트랜지스터, IC회로](learning/ShortThinking2.md)
+- [라이브러리와 프레임워크](learning/Library_vs_framework.md)

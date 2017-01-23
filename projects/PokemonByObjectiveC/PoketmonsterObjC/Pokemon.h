@@ -55,7 +55,7 @@
 //- (void)evolve;
 
 //일러스트
-@property (readonly) Appearance *rootAppearance;
+//@property (readonly) Appearance *rootAppearance;
 
 ////첫 번째 진화 관련
 //@property id ev2Level;

@@ -10,6 +10,6 @@
 
 @interface RectangularSolid : Rectangles
 
-@property double height;
+@property CGFloat height;
 
 @end

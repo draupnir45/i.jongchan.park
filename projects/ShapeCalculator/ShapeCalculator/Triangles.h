@@ -10,7 +10,7 @@
 
 @interface Triangles : NSObject
 
-@property double base;
-@property double height;
+@property CGFloat base;
+@property CGFloat height;
 
 @end

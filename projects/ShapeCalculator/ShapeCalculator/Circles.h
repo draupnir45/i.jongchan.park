@@ -10,6 +10,6 @@
 
 @interface Circles : NSObject
 
-@property double radius;
+@property CGFloat radius;
 
 @end

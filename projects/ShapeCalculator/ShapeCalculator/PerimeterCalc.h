@@ -14,9 +14,9 @@
 
 @interface PerimeterCalc : NSObject
 
--(double)calculatePerimeterOfRect:(Rectangles *)rectangle;
-//-(double)calculatePerimeterOfTriangle:(Triangles *)triangle;
--(double)calculatePerimeterOfCircle:(Circles *)circle;
+-(CGFloat)calculatePerimeterOfRect:(Rectangles *)rectangle;
+//-(CGFloat)calculatePerimeterOfTriangle:(Triangles *)triangle;
+-(CGFloat)calculatePerimeterOfCircle:(Circles *)circle;
 
 
 @end

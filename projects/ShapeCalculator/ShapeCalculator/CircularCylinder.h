@@ -10,6 +10,6 @@
 
 @interface CircularCylinder : Circles
 
-@property double height;
+@property CGFloat height;
 
 @end
