@@ -10,7 +10,6 @@
 #import "Appearance.h"
 #import "EvolutionGain.h"
 #import "Skill.h"
-#import "SynastryCalculator.h"
 
 @interface Pokemon : NSObject
 

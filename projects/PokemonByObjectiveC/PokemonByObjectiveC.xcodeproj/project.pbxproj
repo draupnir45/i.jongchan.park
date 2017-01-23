@@ -17,7 +17,6 @@
 		B9D2F13E1E2E38E300AD27CA /* Trainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D2F13D1E2E38E300AD27CA /* Trainer.m */; };
 		B9D2F1411E2E396900AD27CA /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D2F1401E2E396900AD27CA /* Player.m */; };
 		B9D2F1441E2E3A3700AD27CA /* Skill.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D2F1431E2E3A3700AD27CA /* Skill.m */; };
-		B9D4626D1E2E405700AF6F43 /* SynastryCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D4626C1E2E405700AF6F43 /* SynastryCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,8 +52,6 @@
 		B9D2F1401E2E396900AD27CA /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		B9D2F1421E2E3A3700AD27CA /* Skill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skill.h; sourceTree = "<group>"; };
 		B9D2F1431E2E3A3700AD27CA /* Skill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skill.m; sourceTree = "<group>"; };
-		B9D4626B1E2E405700AF6F43 /* SynastryCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynastryCalculator.h; sourceTree = "<group>"; };
-		B9D4626C1E2E405700AF6F43 /* SynastryCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynastryCalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +99,6 @@
 				B9D2F1431E2E3A3700AD27CA /* Skill.m */,
 				B9078C771E2F93F1004C11CA /* Type.h */,
 				B9078C781E2F93F1004C11CA /* Type.m */,
-				B9D4626B1E2E405700AF6F43 /* SynastryCalculator.h */,
-				B9D4626C1E2E405700AF6F43 /* SynastryCalculator.m */,
 				B9AC61991E2E07800071BE72 /* Appearance.h */,
 				B9AC619A1E2E07800071BE72 /* Appearance.m */,
 				B9AC61A21E2E09F90071BE72 /* EvolutionGain.h */,
@@ -181,7 +176,6 @@
 				B9AC61981E2E05780071BE72 /* Person.m in Sources */,
 				B9D2F1411E2E396900AD27CA /* Player.m in Sources */,
 				B9AC619B1E2E07800071BE72 /* Appearance.m in Sources */,
-				B9D4626D1E2E405700AF6F43 /* SynastryCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,11 +23,11 @@ int main(int argc, const char * argv[]) {
         Pokemon *hoosigidane = [[Pokemon alloc] initWithName:@"이상해씨" health:100 type:@"leaf"];        
         Skill *vineWhip =[[Skill alloc] initWithName:@"덩굴채찍" type:@"leaf" damage:20];
         hoosigidane.skills[0] = vineWhip;
+//        
+//        Controller *controller = [[Controller alloc]init];
+//        
         
-        Controller *controller = [[Controller alloc]init];
-        
-        
-        [controller battleStartWith:hitokage To:hoosigidane];
+        [Controller battleStartWith:hitokage To:hoosigidane];
 
         
         if (hitokage.currentHealth > hoosigidane.currentHealth) {

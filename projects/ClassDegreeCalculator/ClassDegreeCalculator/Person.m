@@ -10,26 +10,47 @@
 @interface Person()
 
 @property (readwrite) NSString *name;
-@property (readwrite) double math;
-@property (readwrite) double literature;
-@property (readwrite) double science;
-@property (readwrite) double society;
+@property (readwrite) CGFloat math;
+@property (readwrite) CGFloat literature;
+@property (readwrite) CGFloat science;
+@property (readwrite) CGFloat society;
 
 @end
 
 
 @implementation Person
 
--(instancetype)initWithName:(NSString *)name {
+-(instancetype)initWithName:(NSString*)name
+                       math:(CGFloat)math
+                 literature:(CGFloat)literature
+                    science:(CGFloat)science
+                    society:(CGFloat)society {
     self = [super init];
     if (self) {
         self.name = name;
-        self.math = 0.0;
-        self.literature = 0.0;
-        self.science = 0.0;
-        self.society = 0.0;
+        self.math = math;
+        self.literature = literature;
+        self.science = science;
+        self.society = society;
     }
     return self;
+}
+
+-(void)setDefaultWithZero {
+    self.math = 0;
+    self.literature = 0;
+    self.science = 0;
+    self.society = 0;
+}
+
+-(void)setDefaultWithMath:(CGFloat)math
+           literature:(CGFloat)literature
+              science:(CGFloat)science
+              society:(CGFloat)society {
+        self.math = math;
+        self.literature = literature;
+        self.science = science;
+    self.society = society;
 }
 
 @end

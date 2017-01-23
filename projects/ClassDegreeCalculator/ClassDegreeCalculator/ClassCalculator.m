@@ -11,12 +11,12 @@
 
 @implementation ClassCalculator
 
--(double)sumOfDegreesOf:(Person *)person {
-    double sum = person.math + person.literature + person.science + person.society;
+-(CGFloat)sumOfDegreesOf:(Person *)person {
+    CGFloat sum = person.math + person.literature + person.science + person.society;
     return sum;
 }
--(double)averageOf:(Person *)person {
-    double avg = [self sumOfDegreesOf:person] / 4;
+-(CGFloat)averageOf:(Person *)person {
+    CGFloat avg = [self sumOfDegreesOf:person] / 4;
     return avg;
 }
 

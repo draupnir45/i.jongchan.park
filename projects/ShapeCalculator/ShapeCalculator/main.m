@@ -22,48 +22,49 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
-        AreaCalc *areaCalc = [[AreaCalc alloc]init];
-        PerimeterCalc *perimeterCalc = [[PerimeterCalc alloc] init];
-        VolumeCalc * volumeCalc = [[VolumeCalc alloc] init];
+//        AreaCalc *areaCalc = [[AreaCalc alloc]init];
+//        PerimeterCalc *perimeterCalc = [[PerimeterCalc alloc] init];
+//        VolumeCalc * volumeCalc = [[VolumeCalc alloc] init];
         
         Rectangles *rect = [[Rectangles alloc]init];
         rect.width = 100;
         rect.length = 30;
-        [areaCalc calculateAreaOfRect:rect];
-        [perimeterCalc calculatePerimeterOfRect:rect];
+        
+        [AreaCalc calculateAreaOfRect:rect];
+        [PerimeterCalc calculatePerimeterOfRect:rect];
         
         Triangles *tri = [[Triangles alloc]init];
         tri.base = 100;
         tri.height = 50;
-        [areaCalc calculateAreaOfTriangle:tri];
+        [AreaCalc calculateAreaOfTriangle:tri];
         
         Circles *circle = [[Circles alloc]init];
         circle.radius = 100;
-        [areaCalc calculateAreaOfCircle:circle];
-        [perimeterCalc calculatePerimeterOfCircle:circle];
+        [AreaCalc calculateAreaOfCircle:circle];
+        [PerimeterCalc calculatePerimeterOfCircle:circle];
         
         RectangularSolid * rectSol = [[RectangularSolid alloc]init];
         rectSol.width = 100;
         rectSol.length = 50;
         rectSol.height = 40;
         
-        [volumeCalc volumeOfRectSolid:rectSol];
+        [VolumeCalc volumeOfRectSolid:rectSol];
         
         CircularCylinder *cirCyl = [[CircularCylinder alloc] init];
         cirCyl.radius = 100;
         cirCyl.height = 50;
         
-        [volumeCalc volumeOfCircCylinder:cirCyl];
+        [VolumeCalc volumeOfCircCylinder:cirCyl];
         
         Sphere *spr = [[Sphere alloc]init];
         spr.radius = 30;
         
-        [volumeCalc volumeOfSphere:spr];
+        [VolumeCalc volumeOfSphere:spr];
         
         Cone *cone = [[Cone alloc] init];
         cone.height = 30;
         cone.radius = 30;
-        [volumeCalc volumeOfCone:cone];
+        [VolumeCalc volumeOfCone:cone];
     }
     return 0;
 }

@@ -34,7 +34,7 @@
 
 @implementation Type
 
--(Type *)init {
+-(instancetype)init {
     self = [super init];
     if (self) {
     self.normal = @{ @"normal" : @1, @"fire" : @1, @"water" : @1, @"electricity" : @1, @"leaf" : @1, @"ice" : @1, @"combat" : @1, @"poison" : @1, @"land" : @1, @"flying" : @1, @"esper" : @1, @"bug" : @1, @"rock" : @0.5, @"ghost" : @0, @"dragon" : @1, @"evil" : @1, @"iron" : @0.5};

@@ -12,11 +12,11 @@
 
 @interface Controller : NSObject
 
-- (void)attackWith:(Skill *)skill
++ (void)attackWith:(Skill *)skill
            attacker:(Pokemon *)attacker
              target:(Pokemon *)target;
 
 
-- (void)battleStartWith:(Pokemon *)mine To:(Pokemon *)enemy;
++ (void)battleStartWith:(Pokemon *)mine To:(Pokemon *)enemy;
 
 @end

@@ -68,6 +68,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B92B28951E36386100E1C787 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAAC0C1E35D49E0046E349 /* Rectangles.h */,
+				B9FAAC0D1E35D49E0046E349 /* Rectangles.m */,
+				B9FAAC0F1E35D4AB0046E349 /* Triangles.h */,
+				B9FAAC101E35D4AB0046E349 /* Triangles.m */,
+				B9FAAC121E35D4B60046E349 /* Circles.h */,
+				B9FAAC131E35D4B60046E349 /* Circles.m */,
+			);
+			name = Shapes;
+			sourceTree = "<group>";
+		};
 		B9FAABF91E35D41B0046E349 = {
 			isa = PBXGroup;
 			children = (
@@ -88,12 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				B9FAAC051E35D41B0046E349 /* main.m */,
-				B9FAAC0C1E35D49E0046E349 /* Rectangles.h */,
-				B9FAAC0D1E35D49E0046E349 /* Rectangles.m */,
-				B9FAAC0F1E35D4AB0046E349 /* Triangles.h */,
-				B9FAAC101E35D4AB0046E349 /* Triangles.m */,
-				B9FAAC121E35D4B60046E349 /* Circles.h */,
-				B9FAAC131E35D4B60046E349 /* Circles.m */,
+				B92B28951E36386100E1C787 /* Shapes */,
 				B9FAAC2B1E35D9430046E349 /* Volumes */,
 				B9FAAC151E35D4C70046E349 /* AreaCalc.h */,
 				B9FAAC161E35D4C70046E349 /* AreaCalc.m */,
@@ -317,6 +325,7 @@
 				B9FAAC0B1E35D41B0046E349 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

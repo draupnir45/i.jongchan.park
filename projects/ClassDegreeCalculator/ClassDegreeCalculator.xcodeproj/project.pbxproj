@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B92B28941E3632BD00E1C787 /* EngStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = B92B28931E3632BD00E1C787 /* EngStudent.m */; };
 		B960F5C31E35A8BB0052AC4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B960F5C21E35A8BB0052AC4B /* main.m */; };
 		B960F5CB1E35A8E20052AC4B /* ClassCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = B960F5CA1E35A8E20052AC4B /* ClassCalculator.m */; };
 		B960F5CE1E35AADB0052AC4B /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B960F5CD1E35AADB0052AC4B /* Person.m */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B92B28921E3632BD00E1C787 /* EngStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EngStudent.h; sourceTree = "<group>"; };
+		B92B28931E3632BD00E1C787 /* EngStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EngStudent.m; sourceTree = "<group>"; };
 		B960F5BF1E35A8BB0052AC4B /* ClassDegreeCalculator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ClassDegreeCalculator; sourceTree = BUILT_PRODUCTS_DIR; };
 		B960F5C21E35A8BB0052AC4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B960F5C91E35A8E20052AC4B /* ClassCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassCalculator.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				B960F5CA1E35A8E20052AC4B /* ClassCalculator.m */,
 				B960F5CC1E35AADB0052AC4B /* Person.h */,
 				B960F5CD1E35AADB0052AC4B /* Person.m */,
+				B92B28921E3632BD00E1C787 /* EngStudent.h */,
+				B92B28931E3632BD00E1C787 /* EngStudent.m */,
 			);
 			path = ClassDegreeCalculator;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B92B28941E3632BD00E1C787 /* EngStudent.m in Sources */,
 				B960F5CE1E35AADB0052AC4B /* Person.m in Sources */,
 				B960F5CB1E35A8E20052AC4B /* ClassCalculator.m in Sources */,
 				B960F5C31E35A8BB0052AC4B /* main.m in Sources */,
@@ -261,6 +267,7 @@
 				B960F5C81E35A8BB0052AC4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

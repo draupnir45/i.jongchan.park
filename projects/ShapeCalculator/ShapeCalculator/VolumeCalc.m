@@ -14,24 +14,27 @@
 
 @implementation VolumeCalc
 
--(CGFloat)volumeOfRectSolid:(RectangularSolid *)solid {
-    CGFloat result = [self calculateAreaOfRect:solid] * solid.height;
-    NSLog(@"직육면체의 부피는 %f 입니다.", result);
++(CGFloat)volumeOfRectSolid:(RectangularSolid *)solid {
+    CGFloat result = [VolumeCalc calculateAreaOfRect:solid] * solid.height;
+    NSLog(@"직육면체의 부피는 %.0f 입니다.", result);
     return result;
 }
--(CGFloat)volumeOfCircCylinder:(CircularCylinder *)cylinder{
-        CGFloat result =[self calculateAreaOfCircle:cylinder] *cylinder.height;
-        NSLog(@"원통의 부피는 %f 입니다.", result);
+
++(CGFloat)volumeOfCircCylinder:(CircularCylinder *)cylinder{
+    CGFloat result =[VolumeCalc calculateAreaOfCircle:cylinder] *cylinder.height;
+    NSLog(@"원통의 부피는 %.0f 입니다.", result);
     return result;
 }
--(CGFloat)volumeOfSphere:(Sphere *)sphere {
-    CGFloat result = sphere.radius * [self calculateAreaOfCircle:sphere] * 4 / 3;
-        NSLog(@"구체의 부피는 %f 입니다.", result);
+
++(CGFloat)volumeOfSphere:(Sphere *)sphere {
+    CGFloat result = sphere.radius * [VolumeCalc calculateAreaOfCircle:sphere] * 4 / 3;
+    NSLog(@"구체의 부피는 %.0f 입니다.", result);
     return result;
 }
--(CGFloat)volumeOfCone:(Cone *)cone{
-    CGFloat result = [self calculateAreaOfCircle:cone] * cone.height / 3;
-        NSLog(@"원뿔의 부피는 %f 입니다.", result);
+
++(CGFloat)volumeOfCone:(Cone *)cone{
+    CGFloat result = [VolumeCalc calculateAreaOfCircle:cone] * cone.height / 3;
+    NSLog(@"원뿔의 부피는 %.0f 입니다.", result);
     return result;
 }
 

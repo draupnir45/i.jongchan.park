@@ -11,15 +11,22 @@
 @interface Person : NSObject
 
 @property (readonly) NSString *name;
-@property (readonly) double math;
-@property (readonly) double literature;
-@property (readonly) double science;
-@property (readonly) double society;
+@property (readonly) CGFloat math;
+@property (readonly) CGFloat literature;
+@property (readonly) CGFloat science;
+@property (readonly) CGFloat society;
 
--(instancetype)initWithName:(NSString*)name;
--(void)setMath:(double)math;
--(void)setLiterature:(double)literature;
--(void)setScience:(double)science;
--(void)setSociety:(double)society;
+-(instancetype)initWithName:(NSString*)name
+                       math:(CGFloat)math
+                 literature:(CGFloat)literature
+                    science:(CGFloat)science
+                    society:(CGFloat)society;
+-(void)setDefaultWithZero;
+-(void)setDefaultWithMath:(CGFloat)math
+               literature:(CGFloat)literature
+                  science:(CGFloat)science
+                  society:(CGFloat)society;
+
+
 
 @end

@@ -15,9 +15,15 @@
 
 @interface VolumeCalc : AreaCalc
 
--(CGFloat)volumeOfRectSolid:(RectangularSolid *)solid;
--(CGFloat)volumeOfCircCylinder:(CircularCylinder *)cylinder;
--(CGFloat)volumeOfSphere:(Sphere *)sphere;
--(CGFloat)volumeOfCone:(Cone *)cone;
+//-(CGFloat)volumeOfRectSolid:(RectangularSolid *)solid;
+//-(CGFloat)volumeOfCircCylinder:(CircularCylinder *)cylinder;
+//-(CGFloat)volumeOfSphere:(Sphere *)sphere;
+//-(CGFloat)volumeOfCone:(Cone *)cone;
+
++(CGFloat)volumeOfRectSolid:(RectangularSolid *)solid;
++(CGFloat)volumeOfCircCylinder:(CircularCylinder *)cylinder;
++(CGFloat)volumeOfSphere:(Sphere *)sphere;
++(CGFloat)volumeOfCone:(Cone *)cone;
+
 
 @end

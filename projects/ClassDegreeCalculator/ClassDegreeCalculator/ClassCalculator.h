@@ -12,7 +12,7 @@
 @interface ClassCalculator : NSObject
 
 
--(double)sumOfDegreesOf:(Person *)person;
--(double)averageOf:(Person *)person;
+-(CGFloat)sumOfDegreesOf:(Person *)person;
+-(CGFloat)averageOf:(Person *)person;
 
 @end
