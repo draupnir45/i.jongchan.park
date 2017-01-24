@@ -12,8 +12,10 @@
 
 int main(int argc, const char * argv[]) {
     
+    NSString *grade = [GradingCalc gradeWithMarks:96];
+    CGFloat point = [GradingCalc pointWithGrades:grade];
     
-    NSLog(@"점수는 %.1f입니다.",[GradingCalc pointWithGrades:[GradingCalc gradeWithMarks:96]]);
+    NSLog(@"점수는 %.1f, %@ 입니다.",point,grade);
     
     return 0;
 }

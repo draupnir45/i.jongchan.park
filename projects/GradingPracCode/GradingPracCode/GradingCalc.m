@@ -17,17 +17,17 @@
         return @"A";
     } else if (marks > 85) {
         return @"B+";
-    }else if (marks > 80) {
+    } else if (marks > 80) {
         return @"B";
-    }else if (marks > 75) {
+    } else if (marks > 75) {
         return @"C+";
-    }else if (marks > 70) {
+    } else if (marks > 70) {
         return @"C";
-    }else if (marks > 55) {
+    } else if (marks > 55) {
         return @"D+";
-    }else if (marks > 50) {
+    } else if (marks > 50) {
         return @"D";
-    }else {
+    } else {
         return @"F";
     }
 }
