@@ -1,4 +1,4 @@
-# iOS 앱 만드는 박종찬입니다.<a href="url"><img src="/learning/images/fc_n_ios.png" align="right" height="48" ></a>
+# Jongchan Park <a href="url"><img src="/learning/images/fc_n_ios.png" align="right" height="48" ></a>
 
 
 ##About Me
