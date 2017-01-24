@@ -1,10 +1,11 @@
 # iOS 앱 만드는 박종찬입니다.<a href="url"><img src="/learning/images/fc_n_ios.png" align="right" height="48" ></a>
 
-###About Me
+
+##About Me
 - 1988년 1월 4일 서울생
 - 모바일 앱을 좋아해서 UI/UX 디자이너가 되었지만, 직접 손으로 만들어보고 싶어서 개발자로 전향하게 되었습니다.
 
-###학습내용정리
+##학습내용정리
 ####1주차
 - [Git](learning/AboutGit.md)
 - [RAM](learning/RAM.md)
