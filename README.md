@@ -1,4 +1,4 @@
-# iOS 앱 만드는 박종찬입니다.
+# iOS 앱 만드는 박종찬입니다.<a href="url"><img src="/learning/images/FC&iOS.png" align="right" height="48" ></a>
 
 ###About Me
 - 1988년 1월 4일 서울생
