@@ -11,6 +11,15 @@ Objective-C의 기초를 이루는 프레임워크로, 모든 오브젝트의 �
 
 그래서 NSObject는 자기검사(introspection), 메모리관리(memory management), 메서드 발동 등을 포함하는 가장 기본적인 활동을 지원합니다. 이후 자신으로부터 상속한 모든 클래스의 객체들이 어엿한 NSObject로써 활동할 수 있도록 말입니다. 
 
+####메모리관리(memory management)
+현재의 프로젝트에는 ARC(Automatic Reference Counting) 모드를 사용하기 때문에 직접적으로 메모리 관리를 해줄 필요는 없습니다. 하지만 관련 내용을 알면 코드를 더 이해하기 쉬울 것입니다.
+
+- 소유하기 : 아래와 같은 메서드를 이용하여 객체를 '생성(Create)'합니다. `alloc`, `allocWithZone:`, `copy`, `copyWithZone:`, `mutableCopy`, `mutableCopyWithZone:`
+- 소유권 주장하기 : `retain`을 이용해 다른 곳에서 만들어진 객체라도 자신의 소유권을 주장할 수 있습니다.
+- 해제하기 : `release`, `autorelease` 등을 이용해, 자신이 소유권을 가진 객체를 해제합니다. `autorelease`는 생성할 때 해주고, `release`는 `autorelease하지 않은 객체에 대해서 수동으로 해제해줄 때 사용합니다.
+
+이 모든 것을 자동으로 해주는 것이 ARC입니다.
+
 ####자기검사(introspection)
 런타임 동안 각각의 객체에게 자기 자신의 특성을 물어볼 수 있는 특성을 말합니다. 자신이 어떤 클래스로부터 만들어진 객체인지 혹은 특정 메서드를 가지고 있는지 등등의 정보를 말이죠. 
 
@@ -19,4 +28,5 @@ Objective-C의 기초를 이루는 프레임워크로, 모든 오브젝트의 �
 - `respondsToSelector:` : 해당 객체가 특정 메서드를 실행할 수 있는지를 묻습니다. 역시 Bool값을 리턴합니다.
 - `conformsToProtocol: ` : 해당 객체가 특정 프로토콜을 따르는지 문의하고, Bool값을 반환합니다.
 
-####메모리관리(memory management)
+
+
