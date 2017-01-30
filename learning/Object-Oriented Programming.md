@@ -51,7 +51,7 @@
 이렇게 해주면 된다. 큰 차이가 없어 보이지만, 이런 경우가 있다.
 만약 남성(Male)과 여성(Female)의 클래스가 Person을 동시에 상속하고 Person이 ‘goToBathRoom’을 가지고 있다고 생각해보자. 이 상황에서 남녀 수십 명이 들어있는 ‘NSArray *people’이라는 배열 전체를 화장실에 보내야 한다고 생각해보자. 그러면 단형성은 각 아이템이 Male *인지 Female *인지 구분한 다음
 
-```{.cpp}
+```objc
 [people[0] goToMaleBathRoom];
 [people[1] goToFemaleBathRoom];
 [people[2] goToMaleBathRoom];
