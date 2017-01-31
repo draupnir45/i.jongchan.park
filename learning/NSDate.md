@@ -5,6 +5,6 @@
 ####`NSDateFormatter` 사용법
 ```objc
 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init]; //객체 생성
-        dateFormatter.dateFormat = @"yyyy-MM-dd"; //원하는대로 포맷 설정
-        NSDate *testBithday = [dateFormatter dateFromString:@"1988-01-31"]; //정한 포맷에 의거하여 생성, 만약 다른 포맷이 필요할 경우 포매터 다시 제작.
+dateFormatter.dateFormat = @"yyyy-MM-dd"; //원하는대로 포맷 설정
+NSDate *testBithday = [dateFormatter dateFromString:@"1988-01-31"]; //정한 포맷에 의거하여 생성, 만약 다른 포맷이 필요할 경우 포매터 다시 제작.
 ```
