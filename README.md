@@ -11,6 +11,7 @@
 - [한글 인코딩](learning/EncodingHangeul.md)
 - [ActiveX, 공인인증서 그리고 기술적 부채](learning/ActiveX&TechnicalDept.md)
 - [객체 지향 프로그래밍 기초](https://github.com/draupnir45/i.jongchan.park/blob/master/learning/Object-Oriented%20Programming.md)
+- [NSDate에 대하여](learning/NSDate.md)
 
 ###프로젝트
 - [연습] 스토리보드 연습 ([Day1TextChange](projects/Day1TextChange))
