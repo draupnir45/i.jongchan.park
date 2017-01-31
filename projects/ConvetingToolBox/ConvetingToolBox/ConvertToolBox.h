@@ -16,6 +16,10 @@
 +(CGFloat)pyeongToM2:(CGFloat)pyeong;
 +(CGFloat)fahrenheitToCelsius:(CGFloat)fahrenheit;
 +(CGFloat)celsiustoFahrenheit:(CGFloat)celsius;
-
++(CGFloat)absoluteNum:(CGFloat)num;
++(CGFloat)roundFloatToPoint2:(CGFloat)num;
++(CGFloat)calcOp:(NSString *)op
+            num1:(CGFloat)num1
+            num2:(CGFloat)num2;
 
 @end

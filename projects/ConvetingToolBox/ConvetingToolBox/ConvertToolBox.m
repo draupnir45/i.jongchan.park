@@ -40,6 +40,30 @@
     NSLog(@"%.0f 섭씨는 %.0f 화씨",celsius,result);
     return result;
 }
++(CGFloat)absoluteNum:(CGFloat)num {
+    if (num > 0 || num == 0) {
+        return num;
+    } else {
+        return -num;
+    }
+}
++(CGFloat)roundFloatToPoint2:(CGFloat)num {
+    NSInteger numInteger = (num+0.005)*100;
+    return (CGFloat)numInteger/100;
+}
++(CGFloat)calcOp:(NSString *)op
+            num1:(CGFloat)num1
+            num2:(CGFloat)num2 {
+    if ([op isEqualToString:@"+"]) {
+        return num1 + num2;
+    } else if ([op isEqualToString:@"-"]){
+        return [ConvertToolBox absoluteNum:(num1 - num2)];
+    } else {
+        NSLog(@"잘못된 연산자입니다. 0이 반환됩니다.");
+        return 0;
+    }
+}
+
 
 
 @end
