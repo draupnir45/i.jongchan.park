@@ -117,6 +117,67 @@
     return result;
     
 }
++(CGFloat)roundFloatFromLastNumPosition:(CGFloat)num {
+//        NSInteger i;
+    //    마지막 자리를 찾는다.
+    CGFloat copy = num; //원본의 복사본을 만듭니다.
+    CGFloat temp = 0; // 임시 저장소를 만듭니다.
+    temp = (NSInteger)copy; //우선 1의 자리 위를 결과값에 넘깁니다.
+    copy = copy - temp; //복사본에서도 소수점만 남깁니다.
+    NSInteger tens = 1;
+    while (temp < num) { //결과값이 원본보다 작을 동안 계속합니다. (같으면 그만 돕니다.
+        copy = copy * 10; //소수점 하나를 1의 자리로 올립니다.
+        NSInteger thisTime = (NSInteger)copy;
+        copy -= thisTime; //
+        tens *= 10;
+        temp = (temp * tens) + thisTime;
+        temp = temp / tens;
+    }
+        NSInteger numInteger = (num + (5.0/tens))* (tens/10.0);
+        CGFloat result = (((CGFloat)numInteger)/tens)*10.0;
+        return result;
+    
+    
+
+}
++(void)logMultiplicationTable:(NSInteger)numb{
+    NSInteger i = 1;
+    while (i<10) {
+        NSLog(@"%ld * %ld = %ld",numb,i,numb*i);
+        i++;
+    }
+}
++(NSArray *)findMultipleNum:(NSInteger)numb maxRange:(NSInteger)range {
+    NSMutableArray *result = [[NSMutableArray alloc]init];
+    NSInteger index = 1;
+    
+    while (index <= range) {
+        if (index % numb == 0) {
+            [result addObject:[NSNumber numberWithInteger:numb]];
+//            NSLog(@"%ld",(long)index);
+        }
+        index ++;
+    }
+    
+    return result;
+}
++(NSInteger)addAllNum:(NSInteger)numb{
+    NSInteger result = 0;
+    while (numb >= 1) {
+        result += numb % 10;
+        numb = numb/10;
+    }
+    return result;
+}
++(NSInteger)findStarInString:(NSString *)string {
+    NSArray *array = [string componentsSeparatedByString:@"*"];
+    if ([array objectAtIndex:1]) {
+        return ([array[0] length]+1);
+    } else {
+        NSLog(@"별이 없습니다.");
+        return 0;
+    }
+}
 
 
 @end

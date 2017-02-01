@@ -18,6 +18,7 @@
 +(CGFloat)celsiustoFahrenheit:(CGFloat)celsius;
 +(CGFloat)absoluteNum:(CGFloat)num;
 +(CGFloat)roundFloatToPoint2:(CGFloat)num;
++(CGFloat)roundFloatFromLastNumPosition:(CGFloat)num;
 +(CGFloat)calcOp:(NSString *)op
             num1:(CGFloat)num1
             num2:(CGFloat)num2;
@@ -26,6 +27,10 @@
                       year:(NSUInteger)year;
 +(NSUInteger)dayCalcWithFirstDay:(NSString *)firstDay
                     andLastDay:(NSString *)lastDay;
++(void)logMultiplicationTable:(NSInteger)numb;
++(NSArray *)findMultipleNum:(NSInteger)numb maxRange:(NSInteger)range;
++(NSInteger)addAllNum:(NSInteger)numb;
++(NSInteger)findStarInString:(NSString *)string;
 
 
 @end
