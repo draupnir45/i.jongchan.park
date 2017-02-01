@@ -77,8 +77,15 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"%d월의 마지막 날은 %lu일입니다.", 10, [Calender lastDayOfmonth:10]);
 //        NSLog(@"%d월의 마지막 날은 %lu일입니다.", 11, [Calender lastDayOfmonth:11]);
 //        NSLog(@"%d월의 마지막 날은 %lu일입니다.", 12, [Calender lastDayOfmonth:12]);
+        [ToolBox isDeveloper:jongchan];
         [ToolBox isDeveloper:someDev];
         [ToolBox checkIfThis:someDev isOlderThan:jongchan];
+        
+        if ([ToolBox isDeveloper:jongchan]) {
+            NSLog(@"개발자 맞음");
+        } else {
+            NSLog(@"개발자 아님");
+        }
         
     }
     return 0;

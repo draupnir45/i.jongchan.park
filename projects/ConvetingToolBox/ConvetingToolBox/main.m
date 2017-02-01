@@ -29,6 +29,8 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%.3f", [ConvertToolBox calcOp:@"+" num1:10 num2:3]);
         NSLog(@"%.3f", [ConvertToolBox calcOp:@"-" num1:10 num2:3]);
         NSLog(@"%.3f", [ConvertToolBox calcOp:@"-" num1:3 num2:10]);
+        NSInteger result = [ConvertToolBox dayCalcWithFirstDay:@"2001/1/2" andLastDay:@"2002/1/2"];
+        NSLog(@"%ld",(long)result);
         
         
         

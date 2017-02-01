@@ -63,7 +63,60 @@
         return 0;
     }
 }
-
++(bool)checkLeapYear:(NSUInteger)year {
+    if (year % 400 == 0) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
++(NSInteger)lastDayOfmonth:(NSInteger)month year:(NSUInteger)year {
+    switch (month) {
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            return 30;
+            break;
+        case 2:
+            if ([ConvertToolBox checkLeapYear:year]) {
+                return 29;
+            }else {
+                return 28;
+            }
+            break;
+        default:
+            return 31;
+            break;
+    }
+}
++(NSUInteger)dayCalcWithFirstDay:(NSString *)firstDay
+                      andLastDay:(NSString *)lastDay {
+    NSArray *firstDayArray = [firstDay componentsSeparatedByString:@"/"];
+    NSArray *lastDayArray = [lastDay componentsSeparatedByString:@"/"];
+    
+    
+    NSUInteger wholeMonths = (([[lastDayArray objectAtIndex:0] integerValue]-[[firstDayArray objectAtIndex:0]integerValue])*12) + [[lastDayArray objectAtIndex:1] integerValue] - [[firstDayArray objectAtIndex:1] integerValue];
+    
+    NSInteger yearSave = [[firstDayArray objectAtIndex:0] integerValue];
+    NSInteger monthSave = [[firstDayArray objectAtIndex:1] integerValue];
+    NSInteger i = 0;
+    NSUInteger result = 0;
+    for (i = 0; i < wholeMonths; i++) {
+        result += [ConvertToolBox lastDayOfmonth:monthSave year:yearSave];
+        if (monthSave == 12) {
+            monthSave = 1;
+            yearSave++;
+        } else {
+            monthSave++;
+        }
+    }
+    result -= [[firstDayArray objectAtIndex:2] integerValue];
+    result += [[lastDayArray objectAtIndex:2] integerValue];
+    
+    return result;
+    
+}
 
 
 @end

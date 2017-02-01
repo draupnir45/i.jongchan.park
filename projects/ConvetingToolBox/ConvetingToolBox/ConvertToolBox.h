@@ -21,5 +21,11 @@
 +(CGFloat)calcOp:(NSString *)op
             num1:(CGFloat)num1
             num2:(CGFloat)num2;
++(bool)checkLeapYear:(NSUInteger)year;
++(NSInteger)lastDayOfmonth:(NSInteger)month
+                      year:(NSUInteger)year;
++(NSUInteger)dayCalcWithFirstDay:(NSString *)firstDay
+                    andLastDay:(NSString *)lastDay;
+
 
 @end
