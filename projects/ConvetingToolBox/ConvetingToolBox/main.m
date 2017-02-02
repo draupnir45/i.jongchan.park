@@ -37,8 +37,6 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%ld",(long)[ConvertToolBox addAllNum:1234567890]);
         NSLog(@"%ld",(long)[ConvertToolBox findStarInString:@"123*test"]);
         
-        
-        
     }
     return 0;
 }
