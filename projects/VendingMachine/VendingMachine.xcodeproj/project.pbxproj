@@ -15,6 +15,7 @@
 		B9397A901E46D301009B10D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9397A8E1E46D301009B10D0 /* LaunchScreen.storyboard */; };
 		B9A89D7A1E46E5AD00FD4B98 /* images in Resources */ = {isa = PBXBuildFile; fileRef = B9A89D791E46E5AD00FD4B98 /* images */; };
 		B9A89D851E46F22000FD4B98 /* VendingItemBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A89D841E46F22000FD4B98 /* VendingItemBtn.m */; };
+		B9FB71AC1E474E43006B97E9 /* ButtonWithPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FB71AB1E474E43006B97E9 /* ButtonWithPrice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		B9A89D791E46E5AD00FD4B98 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		B9A89D831E46F22000FD4B98 /* VendingItemBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VendingItemBtn.h; sourceTree = "<group>"; };
 		B9A89D841E46F22000FD4B98 /* VendingItemBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VendingItemBtn.m; sourceTree = "<group>"; };
+		B9FB71AA1E474E43006B97E9 /* ButtonWithPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonWithPrice.h; sourceTree = "<group>"; };
+		B9FB71AB1E474E43006B97E9 /* ButtonWithPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonWithPrice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 				B9397A871E46D301009B10D0 /* ViewController.m */,
 				B9A89D831E46F22000FD4B98 /* VendingItemBtn.h */,
 				B9A89D841E46F22000FD4B98 /* VendingItemBtn.m */,
+				B9FB71AA1E474E43006B97E9 /* ButtonWithPrice.h */,
+				B9FB71AB1E474E43006B97E9 /* ButtonWithPrice.m */,
 				B9A89D791E46E5AD00FD4B98 /* images */,
 				B9397A891E46D301009B10D0 /* Main.storyboard */,
 				B9397A8C1E46D301009B10D0 /* Assets.xcassets */,
@@ -163,6 +168,7 @@
 				B9397A881E46D301009B10D0 /* ViewController.m in Sources */,
 				B9A89D851E46F22000FD4B98 /* VendingItemBtn.m in Sources */,
 				B9397A851E46D301009B10D0 /* AppDelegate.m in Sources */,
+				B9FB71AC1E474E43006B97E9 /* ButtonWithPrice.m in Sources */,
 				B9397A821E46D301009B10D0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

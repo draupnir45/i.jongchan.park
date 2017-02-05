@@ -7,6 +7,7 @@
 //
 
 #import "VendingItemBtn.h"
+#import "ButtonWithPrice.h"
 
 @interface VendingItemBtn ()
 
@@ -26,14 +27,13 @@
         [self.imageViewHolder.layer setCornerRadius:10.0];
 
         
-        self.itemImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 20, self.imageViewHolder.frame.size.width-40, self.imageViewHolder.frame.size.width-40)];
+        self.itemImage = [[ButtonWithPrice alloc] initWithFrame:CGRectMake(30, 30, self.imageViewHolder.frame.size.width-60, self.imageViewHolder.frame.size.width-60)];
         
         self.itemTitle = [[UILabel alloc] initWithFrame:CGRectMake(5, _imageViewHolder.frame.size.height, self.frame.size.width-10, self.frame.size.height - _imageViewHolder.frame.size.height)];
         [self.itemTitle setTextColor:[UIColor whiteColor]];
         [self.itemTitle setTextAlignment:NSTextAlignmentCenter];
         [self.itemTitle setFont: [UIFont fontWithName:@"ArialRoundedMTBold" size:17.0]];
 
-        
         [self.imageViewHolder addSubview:self.itemImage];        
         [self addSubview:self.itemTitle];
         [self addSubview:self.imageViewHolder];

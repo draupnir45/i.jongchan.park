@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ButtonWithPrice;
 
 @interface VendingItemBtn : UIView
 
-@property (readwrite) UIImageView   *itemImage;
-@property (readwrite) UILabel       *itemTitle;
+@property (readwrite) ButtonWithPrice   *itemImage;
+@property (readwrite) UILabel           *itemTitle;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "VendingItemBtn.h"
+#import "ButtonWithPrice.h"
 #import <LocalAuthentication/LocalAuthentication.h>
 
 @interface ViewController ()
@@ -22,16 +23,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.price = 0;
+    NSInteger price = 0;
+    price = 9;
+    _price = 0;
     
     CGSize frameSize = self.view.frame.size;
     
     
     //기본 배경을 설정합니다.
-    [self.view setBackgroundColor:[UIColor colorWithRed:17.0/255.0 green:98.0/255.0 blue:166/255.0 alpha:1.0]];
+    [self.view setBackgroundColor:[UIColor colorWithRed:17.0/255.0 green:98.0/255.0 blue:166.0/255.0 alpha:1.0]];
     [self setNeedsStatusBarAppearanceUpdate];
     
-    UIImageView *titleImage = [[UIImageView alloc]initWithFrame:CGRectMake (10, 20, frameSize.width-20, frameSize.height * 0.15-20)];
+    UIImageView *titleImage = [[UIImageView alloc]initWithFrame:CGRectMake (5, 20, frameSize.width-10, frameSize.height * 0.15-16)];
     [titleImage setImage:[UIImage imageNamed:@"images/title.png"]];
     [titleImage setContentMode:UIViewContentModeScaleAspectFit];
     [self.view addSubview:titleImage];
@@ -45,65 +48,55 @@
     
     VendingItemBtn *item0 = [[VendingItemBtn alloc] initWithFrame:CGRectMake(0, 0, itemsFrameSize.width/2, itemsFrameSize.height/2)];
     [item0.itemTitle setText:@"Pokemon Ball"];
-    [item0.itemImage setImage:[UIImage imageNamed:@"images/item0.png"]];
+    [item0.itemImage setImage:[UIImage imageNamed:@"images/item0.png"] forState:UIControlStateNormal];
+    [item0.itemImage setPrice:200];
     [container addSubview:item0];
-    UIButton *item0Btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    item0Btn.frame = item0.frame;
-    [item0Btn addTarget:self
+    [item0.itemImage addTarget:self
                  action:@selector(itemTouched:)
        forControlEvents:UIControlEventTouchUpInside];
-    [container addSubview:item0Btn];
     
     
     
     VendingItemBtn *item1 = [[VendingItemBtn alloc] initWithFrame:CGRectMake(itemsFrameSize.width/2, 0, itemsFrameSize.width/2, itemsFrameSize.height/2)];
     [item1.itemTitle setText:@"Berry"];
-    [item1.itemImage setImage:[UIImage imageNamed:@"images/item1.png"]];
+    [item1.itemImage setImage:[UIImage imageNamed:@"images/item1.png"] forState:UIControlStateNormal];
+    [item1.itemImage setPrice:150];
     [container addSubview:item1];
-    
-    UIButton *item1Btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    item1Btn.frame = item1.frame;
-    [item1Btn addTarget:self
+    [item1.itemImage addTarget:self
               action:@selector(itemTouched:)
     forControlEvents:UIControlEventTouchUpInside];
-    [container addSubview:item1Btn];
 
 
     
     VendingItemBtn *item2 = [[VendingItemBtn alloc] initWithFrame:CGRectMake(0, itemsFrameSize.height/2, itemsFrameSize.width/2, itemsFrameSize.height/2)];
     [item2.itemTitle setText:@"Revive"];
-    [item2.itemImage setImage:[UIImage imageNamed:@"images/item2.png"]];
+    [item2.itemImage setImage:[UIImage imageNamed:@"images/item2.png"] forState:UIControlStateNormal];
+    [item2.itemImage setPrice:300];
     [container addSubview:item2];
     
-    UIButton *item2Btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    item2Btn.frame = item2.frame;
-    [item2Btn addTarget:self
+    [item2.itemImage addTarget:self
                  action:@selector(itemTouched:)
        forControlEvents:UIControlEventTouchUpInside];
-    [container addSubview:item2Btn];
 
-    //
+    
     VendingItemBtn *item3 = [[VendingItemBtn alloc] initWithFrame:CGRectMake(itemsFrameSize.width/2, itemsFrameSize.height/2, itemsFrameSize.width/2, itemsFrameSize.height/2)];
     [item3.itemTitle setText:@"Potion"];
-    [item3.itemImage setImage:[UIImage imageNamed:@"images/item3.png"]];
+    [item3.itemImage setImage:[UIImage imageNamed:@"images/item3.png"] forState:UIControlStateNormal];
+    [item3.itemImage setPrice:200];
     [container addSubview:item3];
     
-    
-    UIButton *item3Btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    item3Btn.frame = item3.frame;
-    [item3Btn addTarget:self
+    [item3.itemImage addTarget:self
                  action:@selector(itemTouched:)
        forControlEvents:UIControlEventTouchUpInside];
-    [container addSubview:item3Btn];
     
     CGSize bottomLineSizeRef = CGSizeMake(container.frame.size.width, (container.frame.size.height) / 8);
     
     self.priceLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, itemsFrameSize.height+5, bottomLineSizeRef.width-20, bottomLineSizeRef.height-30)];
-    [self.priceLabel setBackgroundColor:[UIColor blackColor]];
+    [self.priceLabel setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5]];
     [self.priceLabel.layer setCornerRadius:10.0];
     [self.priceLabel setClipsToBounds:YES];
     [self.priceLabel setTextColor:[UIColor whiteColor]];
-    [self.priceLabel setFont:[UIFont boldSystemFontOfSize:25]];
+    [self.priceLabel setFont:[UIFont boldSystemFontOfSize:23]];
     [self.priceLabel setText:[NSString stringWithFormat:@"가격 : %ld원  ", (long)self.price]];
     [self.priceLabel setTextAlignment:NSTextAlignmentCenter];
     
@@ -115,11 +108,15 @@
     [checkOut setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [checkOut.titleLabel setFont:[UIFont boldSystemFontOfSize:25]];
     [checkOut.layer setCornerRadius:10.0];
+    [checkOut setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];
     
     [checkOut addTarget:self action:@selector(authenticateButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+//    [checkOut.titleLabel textali]
     
     
     [container addSubview:checkOut];
+    
+
     
 //    [[items objectAtIndex:1] setPosition:CGPointMake(itemsFrameSize.width * 0.75, itemsFrameSize.height * 0.25)];
 //    [[items objectAtIndex:2] setPosition:CGPointMake(itemsFrameSize.width * 0.25, itemsFrameSize.height * 0.75)];
@@ -145,9 +142,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)itemTouched:(id)sender {
+- (IBAction)itemTouched:(ButtonWithPrice *)sender {
 //    NSLog(@"Touch");
-    self.price += 1000;
+    self.price += sender.price;
     [self priceLabelUpdate];
     //아이템 터치시 반응 필요!
 }
@@ -157,9 +154,11 @@
 }
 
 - (IBAction)authenticateButtonTapped:(id)sender {
+
     LAContext *context = [[LAContext alloc] init];
     NSError *error = nil;
     NSString *reason = @"Please authenticate using TouchID.";
+
     
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
