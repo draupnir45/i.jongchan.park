@@ -27,6 +27,8 @@
     [imageHolder setImage:[UIImage imageNamed:@"imageTest.jpg"]];
     [imageHolder setContentMode:UIViewContentModeScaleAspectFill];
     [imageHolder setClipsToBounds:YES];
+    [imageHolder.layer setCornerRadius:10.0];
+    
     
     
     UILabel *titleTextHolder = [[UILabel alloc] initWithFrame:CGRectMake(80, 10, self.view.frame.size.width-90, 30)];
