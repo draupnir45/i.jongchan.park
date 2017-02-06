@@ -23,6 +23,7 @@
     self = [super init];
     if (self) {
         self.price = 0;
+        UITextField *mo;
     }
     return self;
 }

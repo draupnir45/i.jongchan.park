@@ -31,11 +31,13 @@
     self.resultLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 20, self.view.frame.size.width-20, self.view.frame.size.height* 2 / 7 - 20)];
     [self.resultLabel setText:[NSString stringWithFormat:@"%.0f",self.currentResult]];
     [self.resultLabel setTextAlignment:NSTextAlignmentRight];
-    [self.resultLabel setFont:[UIFont systemFontOfSize:70 weight:-1.0]];
+    [self.resultLabel setFont:[UIFont systemFontOfSize:100 weight:-1.0]];
+    [self.resultLabel setAdjustsFontSizeToFitWidth:YES];
     [self.view addSubview:self.resultLabel];
     
     CGSize sevenBlockSizes = CGSizeMake(self.view.frame.size.width/4, self.view.frame.size.height/7);
     NSInteger i = 0;
+    UIControl *test;
     
     for (i = 0; i<10; i++) {
         CGPoint numBtnPoint = CGPointZero;
