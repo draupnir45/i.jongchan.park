@@ -5,21 +5,23 @@
 - 1988년 1월 4일 서울생
 - 모바일 앱을 좋아해서 UI/UX 디자이너가 되었지만, 직접 손으로 만들어보고 싶어서 개발자로 전향하게 되었습니다.
 
-###학습내용정리
+###기초
+- [객체 지향 프로그래밍 기초](https://github.com/draupnir45/i.jongchan.park/blob/master/learning/Object-Oriented%20Programming.md)
+- [Objective-C의 클래스, 메서드, 프로퍼티, 객체 그리고 메인 파일](learning/Objective_C_method_property_and_mainfile.md)
 - [Git](learning/AboutGit.md)
 - [RAM](learning/RAM.md)
 - [한글 인코딩](learning/EncodingHangeul.md)
 - [ActiveX, 공인인증서 그리고 기술적 부채](learning/ActiveX&TechnicalDept.md)
-- [객체 지향 프로그래밍 기초](https://github.com/draupnir45/i.jongchan.park/blob/master/learning/Object-Oriented%20Programming.md)
-- [Objective-C의 클래스, 메서드, 프로퍼티, 객체 그리고 메인 파일](learning/Objective_C_method_property_and_mainfile.md)
 
-####Framework
-- [Cocoa](learning/AboutCocoa.md)
+###구현 관련
+- [Cocoa & Cocoa Touch](learning/AboutCocoa.md)
 - [NSDate](learning/NSDate.md)
-- UIView
+- [UIView](learning/UIView.md)
 - UIControl
-- [UIButton](learning/UIButton.md)
 - UILabel
+- UIImageView
+- [UIButton](learning/UIButton.md)
+- [Delegate](learning/FreakinDelegate.md)
 - [UITextField](learning/UITextField.md)
 
 ###프로젝트
