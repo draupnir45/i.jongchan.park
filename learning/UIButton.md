@@ -15,7 +15,7 @@
         [myButton setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
         [myButton setTitleColor:[UIColor blueColor] forState:UIControlStateHighlighted];
         [myButton addTarget:self 
-        		 action:@selector(btnSelected:)
-    forControlEvents:UIControlEventTouchUpInside];        
+				     action:@selector(btnSelected:)
+	       forControlEvents:UIControlEventTouchUpInside];        
 		[self.view addSubview:myButton];
 ```
