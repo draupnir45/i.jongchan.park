@@ -116,6 +116,7 @@
     
     [container addSubview:checkOut];
     
+    
 
     
 //    [[items objectAtIndex:1] setPosition:CGPointMake(itemsFrameSize.width * 0.75, itemsFrameSize.height * 0.25)];

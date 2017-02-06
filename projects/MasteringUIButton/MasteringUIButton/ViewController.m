@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ButtonDrawRectTest.h"
+#import "ButtonTest.h"
 
 @interface ViewController ()
 
@@ -18,10 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    ButtonDrawRectTest *btn = [[ButtonDrawRectTest alloc] initWithFrame:CGRectMake(0, 0, 150, 200)];
-    [btn setImage:[UIImage imageNamed:@"item0.png"] forState:UIControlStateNormal];
+    ButtonTest *btn = [[ButtonTest alloc] initWithFrame:CGRectMake(0, 0, 150, 200)];
+//    [btn setImage:[UIImage imageNamed:@"item0.png"] forState:UIControlStateNormal];
 //    [btn.imageView setContentMode:UIViewContentModeScaleAspectFit];
-    [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 50, 0)];
+//    [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 50, 0)];
     
     [btn setCenter:self.view.center];
 //    [btn setBackgroundColor:[UIColor blackColor]];
