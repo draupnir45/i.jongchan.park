@@ -15,16 +15,16 @@
 
 ###구현 관련
 - [Cocoa & Cocoa Touch](learning/AboutCocoa.md)
+- [Protocol/Delegate Pattern](learning/FreakinDelegate.md)
 - [NSDate](learning/NSDate.md)
 - [UIView](learning/UIView.md)
 - [UIControl](learning/UIControl.md)
 - [UILabel](learning/UILabel.md)
 - [UIImageView](learning/UIImageView.md)
 - [UIButton](learning/UIButton.md)
-- [Delegate](learning/FreakinDelegate.md)
 - [UITextField](learning/UITextField.md)
-- [UIPageControl](learning/UIPageControl.md)
 - [UIScrollView](learning/UIScrollView.md)
+- [UIPageControl](learning/UIPageControl.md)
 - [UISwitch](learning/UISwitch.md)
 - [UISegmentedControl](learning/UISegmentedControl.md)
 - UITableView

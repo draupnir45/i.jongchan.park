@@ -8,3 +8,4 @@
 - (void)setContentOffset:(CGPoint)contentOffset animated:(BOOL)animated;  //새로운 스크롤 위치로 애니메이션하여 이동시킴.
 ```
 
+`<UIScrollViewDelegate>`를 사용할 경우, 제스처를 받아서 결과값을 계산한 순간 다른 객체에 명령을 내릴 수 있다.
