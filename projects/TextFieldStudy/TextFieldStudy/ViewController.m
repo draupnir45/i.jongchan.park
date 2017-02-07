@@ -31,7 +31,7 @@
     
     
     
-    self.label = [[UILabel alloc] initWithFrame:CGRectMake(self.view.center.x-50, self.view.center.y, 100, 40)];
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.center.y, self.view.frame.size.width, 40)];
     [self.label setTextColor:[UIColor whiteColor]];
     [self.label setFont:[UIFont systemFontOfSize:40 weight:-1.0]];
     [self.label setTextAlignment:NSTextAlignmentCenter];
@@ -51,7 +51,24 @@
     return YES;
 }
 
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    NSLog(@"textFieldShouldBeginEditing: %@",textField.text);
+    return YES;
+}
 
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    NSLog(@"textFieldDidBeginEditing: %@",textField.text);
+}
+
+-(BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    NSLog(@"textFieldShouldEndEditing: %@",textField.text);
+    return YES;
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    NSLog(@"textFieldDidEndEditing: %@",textField.text);
+}
 
 
 - (void)didReceiveMemoryWarning {

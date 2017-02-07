@@ -23,6 +23,13 @@
 - [UIButton](learning/UIButton.md)
 - [Delegate](learning/FreakinDelegate.md)
 - [UITextField](learning/UITextField.md)
+- [UIPageControl](learning/UIPageControl.md)
+- [UIScrollView](learning/UIScrollView.md)
+- [UISwitch](learning/UISwitch.md)
+- [UISegmentedControl](learning/UISegmentedControl.md)
+- UITableView
+- UIWebView
+- UIActivityIndicator
 
 ###프로젝트
 - [연습] 스토리보드 연습 ([Day1TextChange](projects/Day1TextChange))
