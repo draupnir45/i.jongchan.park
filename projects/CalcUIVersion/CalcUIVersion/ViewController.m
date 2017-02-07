@@ -16,6 +16,7 @@
 @property NSMutableArray *opBtnArray;
 @property bool isClear;
 @property UIButton *clearButton;
+@property UIButton *makeNegative;
 
 @end
 
@@ -23,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     self.isClear = YES;
     self.currentResult = 0;
@@ -37,7 +39,6 @@
     
     CGSize sevenBlockSizes = CGSizeMake(self.view.frame.size.width/4, self.view.frame.size.height/7);
     NSInteger i = 0;
-    UIControl *test;
     
     for (i = 0; i<10; i++) {
         CGPoint numBtnPoint = CGPointZero;
@@ -108,6 +109,18 @@
     [self.clearButton addTarget:self action:@selector(numbClear:) forControlEvents:UIControlEventTouchUpInside];
     
     
+    self.makeNegative = [[UIButton alloc]initWithFrame:CGRectMake(sevenBlockSizes.width, sevenBlockSizes.height*2, sevenBlockSizes.width, sevenBlockSizes.height)];
+    [self.makeNegative setTitle:@"+|-" forState:UIControlStateNormal];
+    [self.makeNegative.titleLabel setFont:[UIFont systemFontOfSize:40 weight:-0.7]];
+    [self.makeNegative setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.makeNegative setBackgroundColor:[UIColor orangeColor]];
+    [self.makeNegative.layer setBorderColor:[[UIColor blackColor]CGColor]];
+    [self.makeNegative.layer setBorderWidth:0.5];
+    [self.view addSubview:self.makeNegative];
+    [self.makeNegative addTarget:self action:@selector(makeNumbNegative:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -118,9 +131,23 @@
     } else {
         self.resultLabel.text = [self.resultLabel.text stringByAppendingString:sender.currentTitle];
     }
-    self.currentResult = [self.resultLabel.text integerValue];
+    self.currentResult = [self.resultLabel.text floatValue];
     
 }
+
+-(IBAction)numbClear:(id)sender {
+    
+    self.resultLabel.text = @"0";
+    self.currentResult = [self.resultLabel.text floatValue];
+}
+
+-(IBAction)makeNumbNegative:(id)sender {
+    
+    NSString *negativeOp = @"-";
+    self.resultLabel.text = [negativeOp stringByAppendingString:self.resultLabel.text];
+    self.currentResult = [self.resultLabel.text floatValue];
+}
+
 
 
 - (void)didReceiveMemoryWarning {

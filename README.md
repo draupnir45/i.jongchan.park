@@ -17,9 +17,9 @@
 - [Cocoa & Cocoa Touch](learning/AboutCocoa.md)
 - [NSDate](learning/NSDate.md)
 - [UIView](learning/UIView.md)
-- UIControl
-- UILabel
-- UIImageView
+- [UIControl](learning/UIControl.md)
+- [UILabel](learning/UILabel.md)
+- [UIImageView](learning/UIImageView.md)
 - [UIButton](learning/UIButton.md)
 - [Delegate](learning/FreakinDelegate.md)
 - [UITextField](learning/UITextField.md)

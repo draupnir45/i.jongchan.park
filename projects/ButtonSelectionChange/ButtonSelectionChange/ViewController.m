@@ -33,9 +33,12 @@
         [temp setBackgroundColor:[UIColor blackColor]];
         [temp setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
         [temp setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-        [temp addTarget:self action:@selector(btnSelected:) forControlEvents:UIControlEventTouchUpInside];
+        [temp addTarget:self
+                 action:@selector(btnSelected:)
+       forControlEvents:UIControlEventTouchUpInside];
         [self.array addObject:temp];
         [self.view addSubview:_array[i-1]];
+        
     }
     
     
@@ -44,14 +47,10 @@
 }
 
 -(IBAction)btnSelected:(UIButton *)sender {
-    
     [sender setSelected:YES];
-    if (_currentSelectedBtn) {
-        [self.currentSelectedBtn setSelected:NO];
-    }
+    [self.currentSelectedBtn setSelected:NO];
     self.currentSelectedBtn = sender;
 }
-
 
 
 - (void)didReceiveMemoryWarning {
