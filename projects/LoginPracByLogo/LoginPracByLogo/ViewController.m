@@ -13,10 +13,14 @@
 
 @property UITextField *email;
 @property UITextField *pw;
+@property UITextField *pw2;
 @property UIButton *signIn;
 @property UIButton *signUp;
+@property UIButton *ok;
 @property UIScrollView *loginScrollView;
 @property UIImageView *logo;
+@property BOOL signUpMode;
+@property UIView *viewForBtnPosition;
 
 
 @end
@@ -30,7 +34,7 @@
     
     UIFont *font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:15];
     
-    
+    self.signUpMode = NO;
     
     CGSize frameSize = self.view.frame.size;
     
@@ -76,15 +80,16 @@
     [self.pw setLeftViewMode:UITextFieldViewModeAlways];
     [self.pw setSecureTextEntry:YES];
 //    [self.pw setRightViewMode:UITextFieldViewModeAlways];
+    
 
 
 
     
     
-    UIView *viewForBtnPosition = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
-    [viewForBtnPosition setCenter: CGPointMake(frameSize.width/2, frameSize.height/2 + 108)];
+    self.viewForBtnPosition = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
+    [self.viewForBtnPosition setCenter: CGPointMake(frameSize.width/2, frameSize.height/2 + 108)];
     
-    [self.loginScrollView addSubview:viewForBtnPosition];
+    [self.loginScrollView addSubview:self.viewForBtnPosition];
     
     self.signIn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 93, 40)];
     [self.signIn setBackgroundColor:[UIColor colorWithRed:60.0/255 green:89.0/255 blue:165.0/255 alpha:1.0]];
@@ -93,7 +98,7 @@
     [self.signIn setTitle:@"Sign In" forState:UIControlStateNormal];
     [self.signIn.layer setCornerRadius:20];
     
-    [viewForBtnPosition addSubview:self.signIn];
+    [self.viewForBtnPosition addSubview:self.signIn];
     
     self.signUp = [[UIButton alloc]initWithFrame:CGRectMake(93+14, 0, 93, 40)];
     [self.signUp setBackgroundColor:[UIColor colorWithRed:60.0/255 green:89.0/255 blue:165.0/255 alpha:1.0]];
@@ -101,8 +106,19 @@
     [self.signUp.titleLabel setFont:font];
     [self.signUp setTitle:@"Sign Up" forState:UIControlStateNormal];
     [self.signUp.layer setCornerRadius:20];
+    [self.signUp addTarget:self action:@selector(makeSignUpMode:) forControlEvents:UIControlEventTouchUpInside];
     
-    [viewForBtnPosition addSubview:self.signUp];
+    [self.viewForBtnPosition addSubview:self.signUp];
+    
+    self.ok = [[UIButton alloc]initWithFrame:CGRectMake(0, 54, 200, 40)];
+    [self.ok setBackgroundColor:[UIColor colorWithRed:60.0/255 green:89.0/255 blue:165.0/255 alpha:1.0]];
+    [self.ok setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.ok.titleLabel setFont:font];
+    [self.ok setTitle:@"Submit" forState:UIControlStateNormal];
+    [self.ok.layer setCornerRadius:20];
+    [self.ok setAlpha:0.0];
+    
+    [self.viewForBtnPosition addSubview:self.ok];
     
     self.logo = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frameSize.width - 100, 200)];
     [self.logo setImage:[UIImage imageNamed:@"logo.png"]];
@@ -111,16 +127,45 @@
     
     [self.loginScrollView addSubview:self.logo];
     
+    
+    self.pw2 = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
+    //    [self.pw setRightViewMode:UITextFieldViewModeAlways];
+    [self.pw2 setCenter: CGPointMake(frameSize.width/2, frameSize.height/2 + 108)];
+    [self.loginScrollView addSubview:self.pw2];
+    [self.pw2.layer setCornerRadius:20];
+    [self.pw2 setBackgroundColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0.7]];
+    [self.pw2 setTag:300];
+    [self.pw2 setPlaceholder:@"Password"];
+    [self.pw2 setFont:font];
+    [self.pw2 setDelegate:self];
+    [self.pw2 setLeftView:textFieldOffset10];
+    [self.pw2 setRightView:textFieldOffset10];
+    [self.pw2 setLeftViewMode:UITextFieldViewModeAlways];
+    [self.pw2 setSecureTextEntry:YES];
+    [self.pw2 setAlpha:0.0];
+
+    
+    
 }
 
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    [self.loginScrollView setContentOffset:CGPointMake(0, 100) animated:YES];
+    if (self.signUpMode) {
+        [self.loginScrollView setContentOffset:CGPointMake(0, 120) animated:YES];
+    } else {
+        [self.loginScrollView setContentOffset:CGPointMake(0, 100) animated:YES];
+    }
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField.tag == 100) {
         [self.pw becomeFirstResponder];
+    } else if (textField.tag == 200){
+        if (self.signUpMode) {
+            [self.pw2 becomeFirstResponder];
+        } else {
+            [textField resignFirstResponder];
+        }
     } else {
         [textField resignFirstResponder];
         [self.loginScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
@@ -137,6 +182,22 @@
 - (UIStatusBarStyle) preferredStatusBarStyle {
         return UIStatusBarStyleLightContent;
 }
+
+-(void)makeSignUpMode:(UIButton *)sender {
+    
+    self.signUpMode = YES;
+//    self.viewForBtnPosition.alpha =0.0;
+    [self.view bringSubviewToFront:self.pw2];
+    
+    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{self.signIn.alpha = 0.0;} completion:nil];
+    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{self.signUp.alpha = 0.0;} completion:nil];
+    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{self.ok.alpha = 1.0;} completion:nil];
+    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{self.pw2.alpha = 1.0;} completion:nil];
+    
+    
+}
+
+
 
 
 @end
