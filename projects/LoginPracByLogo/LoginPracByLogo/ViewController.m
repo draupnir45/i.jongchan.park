@@ -11,6 +11,7 @@
 @interface ViewController ()
 <UITextFieldDelegate>
 
+
 @property UITextField *email;
 @property UITextField *pw;
 @property UITextField *pw2;
@@ -50,6 +51,7 @@
     [self.view addSubview:self.loginScrollView];
     
     UIView *textFieldOffset10 = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 10)];
+    
     
     self.email = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
     [self.email setCenter: CGPointMake(frameSize.width/2, frameSize.height/2)];
@@ -165,6 +167,7 @@
             [self.pw2 becomeFirstResponder];
         } else {
             [textField resignFirstResponder];
+            [self.loginScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
         }
     } else {
         [textField resignFirstResponder];

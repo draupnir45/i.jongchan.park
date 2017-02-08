@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B97579051E4AB13F0070DD8D /* JournalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B97579041E4AB13F0070DD8D /* JournalTableViewCell.m */; };
 		B9EF03881E4A0B640006DE96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EF03871E4A0B640006DE96 /* main.m */; };
 		B9EF038B1E4A0B640006DE96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EF038A1E4A0B640006DE96 /* AppDelegate.m */; };
 		B9EF038E1E4A0B640006DE96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EF038D1E4A0B640006DE96 /* ViewController.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B97579031E4AB13F0070DD8D /* JournalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalTableViewCell.h; sourceTree = "<group>"; };
+		B97579041E4AB13F0070DD8D /* JournalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalTableViewCell.m; sourceTree = "<group>"; };
 		B9EF03831E4A0B640006DE96 /* TableViewHellgate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewHellgate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9EF03871E4A0B640006DE96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9EF03891E4A0B640006DE96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,6 +78,8 @@
 				B9EF038D1E4A0B640006DE96 /* ViewController.m */,
 				B9EF03A51E4A2BDD0006DE96 /* SecondViewController.h */,
 				B9EF03A61E4A2BDD0006DE96 /* SecondViewController.m */,
+				B97579031E4AB13F0070DD8D /* JournalTableViewCell.h */,
+				B97579041E4AB13F0070DD8D /* JournalTableViewCell.m */,
 				B9EF03A01E4A14640006DE96 /* JournalItems.h */,
 				B9EF03A11E4A14640006DE96 /* JournalItems.m */,
 				B9EF03A31E4A18440006DE96 /* item2.png */,
@@ -175,6 +180,7 @@
 				B9EF038B1E4A0B640006DE96 /* AppDelegate.m in Sources */,
 				B9EF03881E4A0B640006DE96 /* main.m in Sources */,
 				B9EF039F1E4A0BC30006DE96 /* TableViewController.m in Sources */,
+				B97579051E4AB13F0070DD8D /* JournalTableViewCell.m in Sources */,
 				B9EF03A21E4A14640006DE96 /* JournalItems.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +340,7 @@
 				B9EF039C1E4A0B650006DE96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

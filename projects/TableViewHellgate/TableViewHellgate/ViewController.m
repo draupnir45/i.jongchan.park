@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "JournalItems.h"
 #import "SecondViewController.h"
+#import "JournalTableViewCell.h"
 
 @interface ViewController ()
 <UITableViewDataSource, UITableViewDelegate>
@@ -29,7 +30,6 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
-    
     [self setDataArray];
     
 //    SecondViewController *newCont = [[SecondViewController alloc] init];
@@ -58,29 +58,29 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"reuseForSimpleTableView"];
+    JournalTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"reuseForSimpleTableView"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"reuseForSimpleTableView"];
+        cell = [[JournalTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseForSimpleTableView"];
     }
+    [cell awakeFromNib];
     
-    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     JournalItems *temp = [_dataArray objectAtIndex:indexPath.row];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy. M. d."];
     
+
+    [cell.journalTitleLabel setText: temp.journalTitle];
+    cell.journalWrittenDateLabel.text = [formatter stringFromDate:temp.writtenDate];
     
+    cell.textLabel.textAlignment
     
-    cell.textLabel.text = temp.journalTitle;
-    [cell.textLabel setFont:[UIFont systemFontOfSize:24 weight:UIFontWeightMedium]];
-    
-    cell.detailTextLabel.text = [formatter stringFromDate:temp.writtenDate];
-    [cell.detailTextLabel setFont:[UIFont systemFontOfSize:18 weight:UIFontWeightMedium]];
     return cell;
+    
     
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 64;
+    return 88;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
