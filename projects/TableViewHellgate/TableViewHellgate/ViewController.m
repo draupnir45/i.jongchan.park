@@ -72,8 +72,6 @@
     [cell.journalTitleLabel setText: temp.journalTitle];
     cell.journalWrittenDateLabel.text = [formatter stringFromDate:temp.writtenDate];
     
-    cell.textLabel.textAlignment
-    
     return cell;
     
     
