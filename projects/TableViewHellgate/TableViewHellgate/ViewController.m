@@ -89,6 +89,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     self.secondCont = [[SecondViewController alloc] init];
     NSLog(@"wow");
+    self.secondCont.title
     [self presentViewController:self.secondCont animated:YES completion:nil];
 }
 

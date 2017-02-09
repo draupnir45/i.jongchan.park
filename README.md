@@ -42,7 +42,7 @@
 - [연습] 계산기 만들기 ([CalculatorPrac](projects/CalculatorPrac))
 - [연습] `UITextField`와 `UIScrollView`를 이용하여 로그인 뷰 만들기 ([LoginPracByLogo](projects/LoginPracByLogo))
 - [연습] `UIPageControl`, `UISwitch`와 `UISegmentedControl` ([PageControlTest](projects/PageControlTest))
-- [연습] 버블, 머지, 퀵 정렬([SortingPrac](projects/SortingPrac)
+- [연습] 버블, 머지, 퀵 정렬([SortingPrac](projects/SortingPrac))
 
 ###짧은 생각들
 - [프로그래머](learning/ShortThinking1.md)
