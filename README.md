@@ -38,9 +38,11 @@
 - [연습] 스토리보드 연습 ([Day1TextChange](projects/Day1TextChange))
 - [연습] 클래스 연습 / 전사와 마법사([Day2RolePlayingGame](projects/Day2RolePlayingGame))
 - [연습] 클래스 연습 / 술마시기 게임([DringkingGame](projects/DringkingGame))
-- [개인작업] 포켓몬을 오브젝티브로 짜보자! ([PokemonByObjectiveC](projects/PokemonByObjectiveC))
+- [개인작업] 포켓몬을 오브젝티브로 짜보자! ([PokemonByObjectiveC](projects/PokemonByObjectiveC)) (Pending)
 - [연습] 계산기 만들기 ([CalculatorPrac](projects/CalculatorPrac))
-
+- [연습] `UITextField`와 `UIScrollView`를 이용하여 로그인 뷰 만들기 ([LoginPracByLogo](projects/LoginPracByLogo))
+- [연습] `UIPageControl`, `UISwitch`와 `UISegmentedControl` ([PageControlTest](projects/PageControlTest))
+- [연습] 버블, 머지, 퀵 정렬([SortingPrac](projects/SortingPrac)
 
 ###짧은 생각들
 - [프로그래머](learning/ShortThinking1.md)
