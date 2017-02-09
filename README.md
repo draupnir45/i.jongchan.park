@@ -14,6 +14,7 @@
 - [ActiveX, 공인인증서 그리고 기술적 부채](learning/ActiveX&TechnicalDept.md)
 - [Literal 문법](learning/LiteralSyntaxes.md)
 - [JSON](learning/JSON.md)
+- [버블 정렬, 머지 정렬, 퀵 정렬(소스코드)](learning/sorts.md)
 
 ###구현 관련
 - [Cocoa & Cocoa Touch](learning/AboutCocoa.md)

@@ -16,13 +16,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor redColor]];
+    
+    UIButton *temp = [[UIButton alloc] initWithFrame: CGRectMake(self.view.frame.size.width/2 - 75, 50, 150, 30)];
+    [temp setTitle:@"닫기" forState:UIControlStateNormal];
+    [temp setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [temp.layer setCornerRadius:15];
+    [temp setBackgroundColor:[UIColor blackColor]];
+    [temp setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+    [temp setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+    [temp addTarget:self
+             action:@selector(btnSelected:)
+   forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self.view addSubview:temp];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)btnSelected:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

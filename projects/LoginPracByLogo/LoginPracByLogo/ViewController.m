@@ -51,7 +51,7 @@
     [self.view addSubview:self.loginScrollView];
     
     UIView *textFieldOffset10 = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 10)];
-    
+    [textFieldOffset10 setBackgroundColor:[UIColor blackColor]];
     
     self.email = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
     [self.email setCenter: CGPointMake(frameSize.width/2, frameSize.height/2)];
@@ -81,7 +81,7 @@
     [self.pw setRightView:textFieldOffset10];
     [self.pw setLeftViewMode:UITextFieldViewModeAlways];
     [self.pw setSecureTextEntry:YES];
-//    [self.pw setRightViewMode:UITextFieldViewModeAlways];
+    [self.pw setRightViewMode:UITextFieldViewModeAlways];
     
 
 
@@ -143,6 +143,7 @@
     [self.pw2 setLeftView:textFieldOffset10];
     [self.pw2 setRightView:textFieldOffset10];
     [self.pw2 setLeftViewMode:UITextFieldViewModeAlways];
+//    [self.pw2 setRightViewMode:UITextFieldViewModeAlways];
     [self.pw2 setSecureTextEntry:YES];
     [self.pw2 setAlpha:0.0];
 
