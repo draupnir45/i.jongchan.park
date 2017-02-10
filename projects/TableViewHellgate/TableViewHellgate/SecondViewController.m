@@ -7,8 +7,11 @@
 //
 
 #import "SecondViewController.h"
+#import "JournalItems.h"
 
 @interface SecondViewController ()
+
+
 
 @end
 
@@ -17,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIButton *temp = [[UIButton alloc] initWithFrame: CGRectMake(self.view.frame.size.width/2 - 75, 50, 150, 30)];
+    UIButton *temp = [[UIButton alloc] initWithFrame: CGRectMake(self.view.frame.size.width-95, 50, 75, 30)];
     [temp setTitle:@"닫기" forState:UIControlStateNormal];
     [temp setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [temp.layer setCornerRadius:15];

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class JournalItems;
 
 @interface SecondViewController : UIViewController
 
-@property NSString *title;
+@property JournalItems *detailContent;
 
 @end

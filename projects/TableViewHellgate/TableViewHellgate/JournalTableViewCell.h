@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class JournalItems;
 
 @interface JournalTableViewCell : UITableViewCell
 
+@property (nonatomic)JournalItems *cellData;
 @property UILabel *journalTitleLabel;
 @property UILabel *journalWrittenDateLabel;
+
+//-(void)setCellData:(JournalItems *)cellData;
+-(JournalItems *)cellData;
 
 @end

@@ -7,6 +7,12 @@
 //
 
 #import "JournalTableViewCell.h"
+#import "JournalItems.h"
+
+@interface JournalTableViewCell ()
+
+
+@end
 
 
 @implementation JournalTableViewCell
@@ -31,5 +37,27 @@
 
     // Configure the view for the selected state
 }
+
+-(void)setMyCellData:(JournalItems *)cellData {
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyy. M. d."];
+        
+    self.cellData = cellData;
+    [self.journalTitleLabel setText: cellData.journalTitle];
+    [self.journalWrittenDateLabel setText:[formatter stringFromDate:cellData.writtenDate]];
+}
+
+-(void)setCellData:(JournalItems *)cellData {
+    
+    
+    if (_cellData != cellData) {
+        _cellData = cellData;
+    }
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy. M. d."];
+    [self.journalTitleLabel setText: cellData.journalTitle];
+    [self.journalWrittenDateLabel setText:[formatter stringFromDate:cellData.writtenDate]];
+}
+
 
 @end

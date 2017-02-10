@@ -65,12 +65,7 @@
     [cell awakeFromNib];
     
     JournalItems *temp = [_dataArray objectAtIndex:indexPath.row];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy. M. d."];
-    
-
-    [cell.journalTitleLabel setText: temp.journalTitle];
-    cell.journalWrittenDateLabel.text = [formatter stringFromDate:temp.writtenDate];
+    cell.cellData = temp;
     
     return cell;
     
@@ -88,8 +83,8 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     self.secondCont = [[SecondViewController alloc] init];
-    NSLog(@"wow");
-    self.secondCont.title
+    self.secondCont.detailContent = [_dataArray objectAtIndex:indexPath.row];
+    
     [self presentViewController:self.secondCont animated:YES completion:nil];
 }
 
