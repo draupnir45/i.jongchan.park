@@ -11,7 +11,8 @@
 
 @interface SecondViewController ()
 
-
+@property UILabel *titleLabel;
+@property UITextView *contentView;
 
 @end
 
@@ -33,6 +34,10 @@
     
     [self.view setBackgroundColor:[UIColor whiteColor]];
     [self.view addSubview:temp];
+    
+    self.titleLabel = [[UILabel alloc] init];
+    
+    
     // Do any additional setup after loading the view.
 }
 

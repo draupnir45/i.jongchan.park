@@ -11,7 +11,8 @@
 
 @interface JournalTableViewCell : UITableViewCell
 
-@property (nonatomic)JournalItems *cellData;
+@property (nonatomic, getter=getData)JournalItems *cellData;
+@property (getter=isFinished)BOOL *finished;
 @property UILabel *journalTitleLabel;
 @property UILabel *journalWrittenDateLabel;
 

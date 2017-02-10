@@ -14,7 +14,7 @@
 @interface ViewController ()
 <UITableViewDataSource, UITableViewDelegate>
 
-@property UITableView *tableView;
+@property (nonatomic) UITableView *tableView;
 @property (nonatomic) NSMutableArray *dataArray;
 @property SecondViewController *secondCont
 ;
@@ -30,6 +30,8 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
+    
+    
     [self setDataArray];
     
 //    SecondViewController *newCont = [[SecondViewController alloc] init];
@@ -47,6 +49,7 @@
         temp.image = [UIImage imageNamed:@"item2.png"];
         [array addObject:temp];
     }
+
     self.dataArray = array;
 }
 
@@ -66,6 +69,8 @@
     
     JournalItems *temp = [_dataArray objectAtIndex:indexPath.row];
     cell.cellData = temp;
+    
+    [cell getData];
     
     return cell;
     

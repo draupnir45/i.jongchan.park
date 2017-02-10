@@ -64,7 +64,7 @@
     [self.email setLeftView:textFieldOffset10];
     [self.email setRightView:textFieldOffset10];
     [self.email setLeftViewMode:UITextFieldViewModeAlways];
-    [self.email setRightViewMode:UITextFieldViewModeAlways];
+//    [self.email setRightViewMode:UITextFieldViewModeAlways];
     [self.loginScrollView addSubview:self.email];
     
     self.pw = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
@@ -81,7 +81,7 @@
     [self.pw setRightView:textFieldOffset10];
     [self.pw setLeftViewMode:UITextFieldViewModeAlways];
     [self.pw setSecureTextEntry:YES];
-    [self.pw setRightViewMode:UITextFieldViewModeAlways];
+//    [self.pw setRightViewMode:UITextFieldViewModeAlways];
     
 
 
