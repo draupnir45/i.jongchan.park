@@ -89,6 +89,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     self.secondCont = [[SecondViewController alloc] init];
     self.secondCont.detailContent = [_dataArray objectAtIndex:indexPath.row];
+    self.tableView.contentSize;
     
     [self presentViewController:self.secondCont animated:YES completion:nil];
 }
