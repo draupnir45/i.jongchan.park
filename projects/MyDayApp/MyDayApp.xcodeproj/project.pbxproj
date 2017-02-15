@@ -7,32 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B9515E051E503FC5008AA8CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9515E041E503FC5008AA8CF /* main.m */; };
-		B9515E081E503FC5008AA8CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9515E071E503FC5008AA8CF /* AppDelegate.m */; };
-		B9515E0B1E503FC5008AA8CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9515E0A1E503FC5008AA8CF /* ViewController.m */; };
-		B9515E0E1E503FC5008AA8CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9515E0C1E503FC5008AA8CF /* Main.storyboard */; };
-		B9515E101E503FC5008AA8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9515E0F1E503FC5008AA8CF /* Assets.xcassets */; };
-		B9515E131E503FC5008AA8CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9515E111E503FC5008AA8CF /* LaunchScreen.storyboard */; };
-		B9515E1C1E503FEE008AA8CF /* JCCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9515E1B1E503FEE008AA8CF /* JCCardViewController.m */; };
+		B90B78391E52D67500F272D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B90B78381E52D67500F272D9 /* main.m */; };
+		B90B783C1E52D67500F272D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B90B783B1E52D67500F272D9 /* AppDelegate.m */; };
+		B90B78421E52D67500F272D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90B78401E52D67500F272D9 /* Main.storyboard */; };
+		B90B78451E52D67500F272D9 /* MyDayApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B90B78431E52D67500F272D9 /* MyDayApp.xcdatamodeld */; };
+		B90B78471E52D67500F272D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90B78461E52D67500F272D9 /* Assets.xcassets */; };
+		B90B784A1E52D67500F272D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90B78481E52D67500F272D9 /* LaunchScreen.storyboard */; };
+		B90B78531E52D74600F272D9 /* MyDayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B90B78521E52D74600F272D9 /* MyDayTableViewController.m */; };
+		B90B78561E52D76500F272D9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B90B78551E52D76500F272D9 /* DetailViewController.m */; };
+		B90B78591E52DCEF00F272D9 /* MyDay.m in Sources */ = {isa = PBXBuildFile; fileRef = B90B78581E52DCEF00F272D9 /* MyDay.m */; };
+		B90B785C1E52DEAA00F272D9 /* CoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B90B785B1E52DEAA00F272D9 /* CoreDataController.m */; };
+		B99673641E52EC3400CDBE8A /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B99673631E52EC3400CDBE8A /* EditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B9515E001E503FC5008AA8CF /* MyDayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9515E041E503FC5008AA8CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B9515E061E503FC5008AA8CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B9515E071E503FC5008AA8CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B9515E091E503FC5008AA8CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B9515E0A1E503FC5008AA8CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B9515E0D1E503FC5008AA8CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B9515E0F1E503FC5008AA8CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B9515E121E503FC5008AA8CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B9515E141E503FC5008AA8CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9515E1A1E503FEE008AA8CF /* JCCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCardViewController.h; sourceTree = "<group>"; };
-		B9515E1B1E503FEE008AA8CF /* JCCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCCardViewController.m; sourceTree = "<group>"; };
+		B90B78341E52D67500F272D9 /* MyDayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B90B78381E52D67500F272D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B90B783A1E52D67500F272D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B90B783B1E52D67500F272D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B90B78411E52D67500F272D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B90B78441E52D67500F272D9 /* MyDayApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDayApp.xcdatamodel; sourceTree = "<group>"; };
+		B90B78461E52D67500F272D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B90B78491E52D67500F272D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B90B784B1E52D67500F272D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B90B78511E52D74600F272D9 /* MyDayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDayTableViewController.h; sourceTree = "<group>"; };
+		B90B78521E52D74600F272D9 /* MyDayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDayTableViewController.m; sourceTree = "<group>"; };
+		B90B78541E52D76500F272D9 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		B90B78551E52D76500F272D9 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B90B78571E52DCEF00F272D9 /* MyDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDay.h; sourceTree = "<group>"; };
+		B90B78581E52DCEF00F272D9 /* MyDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDay.m; sourceTree = "<group>"; };
+		B90B785A1E52DEAA00F272D9 /* CoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataController.h; sourceTree = "<group>"; };
+		B90B785B1E52DEAA00F272D9 /* CoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataController.m; sourceTree = "<group>"; };
+		B99673621E52EC3400CDBE8A /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		B99673631E52EC3400CDBE8A /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B9515DFD1E503FC5008AA8CF /* Frameworks */ = {
+		B90B78311E52D67500F272D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,44 +53,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B9515DF71E503FC5008AA8CF = {
+		B90B782B1E52D67500F272D9 = {
 			isa = PBXGroup;
 			children = (
-				B9515E021E503FC5008AA8CF /* MyDayApp */,
-				B9515E011E503FC5008AA8CF /* Products */,
+				B90B78361E52D67500F272D9 /* MyDayApp */,
+				B90B78351E52D67500F272D9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B9515E011E503FC5008AA8CF /* Products */ = {
+		B90B78351E52D67500F272D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9515E001E503FC5008AA8CF /* MyDayApp.app */,
+				B90B78341E52D67500F272D9 /* MyDayApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B9515E021E503FC5008AA8CF /* MyDayApp */ = {
+		B90B78361E52D67500F272D9 /* MyDayApp */ = {
 			isa = PBXGroup;
 			children = (
-				B9515E061E503FC5008AA8CF /* AppDelegate.h */,
-				B9515E071E503FC5008AA8CF /* AppDelegate.m */,
-				B9515E1A1E503FEE008AA8CF /* JCCardViewController.h */,
-				B9515E1B1E503FEE008AA8CF /* JCCardViewController.m */,
-				B9515E091E503FC5008AA8CF /* ViewController.h */,
-				B9515E0A1E503FC5008AA8CF /* ViewController.m */,
-				B9515E0C1E503FC5008AA8CF /* Main.storyboard */,
-				B9515E0F1E503FC5008AA8CF /* Assets.xcassets */,
-				B9515E111E503FC5008AA8CF /* LaunchScreen.storyboard */,
-				B9515E141E503FC5008AA8CF /* Info.plist */,
-				B9515E031E503FC5008AA8CF /* Supporting Files */,
+				B90B783A1E52D67500F272D9 /* AppDelegate.h */,
+				B90B783B1E52D67500F272D9 /* AppDelegate.m */,
+				B90B785A1E52DEAA00F272D9 /* CoreDataController.h */,
+				B90B785B1E52DEAA00F272D9 /* CoreDataController.m */,
+				B90B78571E52DCEF00F272D9 /* MyDay.h */,
+				B90B78581E52DCEF00F272D9 /* MyDay.m */,
+				B90B78511E52D74600F272D9 /* MyDayTableViewController.h */,
+				B90B78521E52D74600F272D9 /* MyDayTableViewController.m */,
+				B90B78541E52D76500F272D9 /* DetailViewController.h */,
+				B90B78551E52D76500F272D9 /* DetailViewController.m */,
+				B99673621E52EC3400CDBE8A /* EditViewController.h */,
+				B99673631E52EC3400CDBE8A /* EditViewController.m */,
+				B90B78401E52D67500F272D9 /* Main.storyboard */,
+				B90B78461E52D67500F272D9 /* Assets.xcassets */,
+				B90B78481E52D67500F272D9 /* LaunchScreen.storyboard */,
+				B90B784B1E52D67500F272D9 /* Info.plist */,
+				B90B78431E52D67500F272D9 /* MyDayApp.xcdatamodeld */,
+				B90B78371E52D67500F272D9 /* Supporting Files */,
 			);
 			path = MyDayApp;
 			sourceTree = "<group>";
 		};
-		B9515E031E503FC5008AA8CF /* Supporting Files */ = {
+		B90B78371E52D67500F272D9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B9515E041E503FC5008AA8CF /* main.m */,
+				B90B78381E52D67500F272D9 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -87,13 +105,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B9515DFF1E503FC5008AA8CF /* MyDayApp */ = {
+		B90B78331E52D67500F272D9 /* MyDayApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9515E171E503FC5008AA8CF /* Build configuration list for PBXNativeTarget "MyDayApp" */;
+			buildConfigurationList = B90B784E1E52D67500F272D9 /* Build configuration list for PBXNativeTarget "MyDayApp" */;
 			buildPhases = (
-				B9515DFC1E503FC5008AA8CF /* Sources */,
-				B9515DFD1E503FC5008AA8CF /* Frameworks */,
-				B9515DFE1E503FC5008AA8CF /* Resources */,
+				B90B78301E52D67500F272D9 /* Sources */,
+				B90B78311E52D67500F272D9 /* Frameworks */,
+				B90B78321E52D67500F272D9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -101,26 +119,26 @@
 			);
 			name = MyDayApp;
 			productName = MyDayApp;
-			productReference = B9515E001E503FC5008AA8CF /* MyDayApp.app */;
+			productReference = B90B78341E52D67500F272D9 /* MyDayApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B9515DF81E503FC5008AA8CF /* Project object */ = {
+		B90B782C1E52D67500F272D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Jongchan Park";
 				TargetAttributes = {
-					B9515DFF1E503FC5008AA8CF = {
+					B90B78331E52D67500F272D9 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = P75V2R55B5;
+						DevelopmentTeam = NN7QXHC8A3;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = B9515DFB1E503FC5008AA8CF /* Build configuration list for PBXProject "MyDayApp" */;
+			buildConfigurationList = B90B782F1E52D67500F272D9 /* Build configuration list for PBXProject "MyDayApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -128,56 +146,60 @@
 				en,
 				Base,
 			);
-			mainGroup = B9515DF71E503FC5008AA8CF;
-			productRefGroup = B9515E011E503FC5008AA8CF /* Products */;
+			mainGroup = B90B782B1E52D67500F272D9;
+			productRefGroup = B90B78351E52D67500F272D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9515DFF1E503FC5008AA8CF /* MyDayApp */,
+				B90B78331E52D67500F272D9 /* MyDayApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B9515DFE1E503FC5008AA8CF /* Resources */ = {
+		B90B78321E52D67500F272D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9515E131E503FC5008AA8CF /* LaunchScreen.storyboard in Resources */,
-				B9515E101E503FC5008AA8CF /* Assets.xcassets in Resources */,
-				B9515E0E1E503FC5008AA8CF /* Main.storyboard in Resources */,
+				B90B784A1E52D67500F272D9 /* LaunchScreen.storyboard in Resources */,
+				B90B78471E52D67500F272D9 /* Assets.xcassets in Resources */,
+				B90B78421E52D67500F272D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B9515DFC1E503FC5008AA8CF /* Sources */ = {
+		B90B78301E52D67500F272D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9515E0B1E503FC5008AA8CF /* ViewController.m in Sources */,
-				B9515E081E503FC5008AA8CF /* AppDelegate.m in Sources */,
-				B9515E051E503FC5008AA8CF /* main.m in Sources */,
-				B9515E1C1E503FEE008AA8CF /* JCCardViewController.m in Sources */,
+				B90B78591E52DCEF00F272D9 /* MyDay.m in Sources */,
+				B90B78561E52D76500F272D9 /* DetailViewController.m in Sources */,
+				B90B783C1E52D67500F272D9 /* AppDelegate.m in Sources */,
+				B90B785C1E52DEAA00F272D9 /* CoreDataController.m in Sources */,
+				B99673641E52EC3400CDBE8A /* EditViewController.m in Sources */,
+				B90B78451E52D67500F272D9 /* MyDayApp.xcdatamodeld in Sources */,
+				B90B78391E52D67500F272D9 /* main.m in Sources */,
+				B90B78531E52D74600F272D9 /* MyDayTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B9515E0C1E503FC5008AA8CF /* Main.storyboard */ = {
+		B90B78401E52D67500F272D9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B9515E0D1E503FC5008AA8CF /* Base */,
+				B90B78411E52D67500F272D9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B9515E111E503FC5008AA8CF /* LaunchScreen.storyboard */ = {
+		B90B78481E52D67500F272D9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B9515E121E503FC5008AA8CF /* Base */,
+				B90B78491E52D67500F272D9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -185,7 +207,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B9515E151E503FC5008AA8CF /* Debug */ = {
+		B90B784C1E52D67500F272D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -232,7 +254,7 @@
 			};
 			name = Debug;
 		};
-		B9515E161E503FC5008AA8CF /* Release */ = {
+		B90B784D1E52D67500F272D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -273,26 +295,28 @@
 			};
 			name = Release;
 		};
-		B9515E181E503FC5008AA8CF /* Debug */ = {
+		B90B784F1E52D67500F272D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P75V2R55B5;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = NN7QXHC8A3;
 				INFOPLIST_FILE = MyDayApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jongchanPark.presented.MyDayApp;
+				PRODUCT_BUNDLE_IDENTIFIER = jongchan.MyDayApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		B9515E191E503FC5008AA8CF /* Release */ = {
+		B90B78501E52D67500F272D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P75V2R55B5;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = NN7QXHC8A3;
 				INFOPLIST_FILE = MyDayApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jongchanPark.presented.MyDayApp;
+				PRODUCT_BUNDLE_IDENTIFIER = jongchan.MyDayApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -300,24 +324,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9515DFB1E503FC5008AA8CF /* Build configuration list for PBXProject "MyDayApp" */ = {
+		B90B782F1E52D67500F272D9 /* Build configuration list for PBXProject "MyDayApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9515E151E503FC5008AA8CF /* Debug */,
-				B9515E161E503FC5008AA8CF /* Release */,
+				B90B784C1E52D67500F272D9 /* Debug */,
+				B90B784D1E52D67500F272D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9515E171E503FC5008AA8CF /* Build configuration list for PBXNativeTarget "MyDayApp" */ = {
+		B90B784E1E52D67500F272D9 /* Build configuration list for PBXNativeTarget "MyDayApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9515E181E503FC5008AA8CF /* Debug */,
-				B9515E191E503FC5008AA8CF /* Release */,
+				B90B784F1E52D67500F272D9 /* Debug */,
+				B90B78501E52D67500F272D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B90B78431E52D67500F272D9 /* MyDayApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B90B78441E52D67500F272D9 /* MyDayApp.xcdatamodel */,
+			);
+			currentVersion = B90B78441E52D67500F272D9 /* MyDayApp.xcdatamodel */;
+			path = MyDayApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = B9515DF81E503FC5008AA8CF /* Project object */;
+	rootObject = B90B782C1E52D67500F272D9 /* Project object */;
 }

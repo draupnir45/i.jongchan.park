@@ -12,8 +12,6 @@
 <UITextFieldDelegate>
 
 @property UITextField *inputTextField;
-@property UILabel *resultLabel;
-
 @end
 
 @implementation ViewController
@@ -36,14 +34,7 @@
     [self.view addSubview:self.inputTextField];
 //    [self.inputTextField setKeyboardType:UIKeyboardTypeNumberPad];
     
-    
-    
-    self.resultLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 100, 200, 200, 40)];
-    [self.view addSubview:self.resultLabel];
-    [self.resultLabel setTextAlignment:NSTextAlignmentCenter];
-    
-    
-    
+   
     
     NSLog(@"viewDidLoad");
     
@@ -79,29 +70,40 @@
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if ([self isHashedNumber]) {
-        [self.resultLabel setText:@"HASH!"];
-    } else {
-        [self.resultLabel setText:@"NOPE, NOT AT ALL."];
-    }
+    
+    [self sumOfDivisor:textField.text];
+    
+    [self resignFirstResponder];
+
     return YES;
 }
 
--(BOOL)isHashedNumber {
-    NSString *inputText = self.inputTextField.text;
-    NSInteger length = inputText.length;
-    NSUInteger sumOfNumbers = 0;
-    for (NSInteger i=0; i<length; i++) {
-        NSString *charFromText = [inputText substringWithRange:NSMakeRange(i, 1)];
-        
-        sumOfNumbers += [charFromText integerValue];
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    NSArray *views = [self.view subviews];
+    for (NSInteger i=1; i<views.count; i++) {
+        if ([views[i] isMemberOfClass:[UILabel class]]) {
+                    [views[i] removeFromSuperview];
+        }
+
+    }
+}
+
+-(void)sumOfDivisor:(NSString *)numberString {
+    NSInteger number = [numberString integerValue];
+    NSInteger result = 0;
+    for (NSInteger i =1; i<=number; i++) {
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2 - 150, 200 + i*20, 300, 20)];
+        [label setTextAlignment:NSTextAlignmentCenter];
+
+        if (number % i) {
+            [label setText:[NSString stringWithFormat:@"%ld는 약수가 아닙니다.",i]];
+        } else {
+            result += i;
+            [label setText:[NSString stringWithFormat:@"%ld는 약수입니다. 결과값: %ld.",i,result]];
+        }
+        [self.view addSubview:label];
     }
     
-    if ([inputText integerValue] % sumOfNumbers) {
-        return NO;
-    } else {
-        return YES;
-    }
     
 }
 

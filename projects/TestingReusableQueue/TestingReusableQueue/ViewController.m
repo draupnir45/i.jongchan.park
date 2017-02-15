@@ -33,6 +33,11 @@
     self.scrollView.delegate = self;
     
     self.dataSource = [[NSMutableArray alloc] init];
+    
+    
+    
+    
+    
     for (NSInteger i = 0; i<100; i++) {
         UIView *temp = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
         [temp setCenter:CGPointMake(self.view.center.x, self.view.center.y - 250 + 50*i)];
@@ -42,13 +47,18 @@
         [self.dataSource addObject:temp];
     }
     
+    
+    
+    
     self.rowHeight = 50;
-    self.numberOfCardToPrepare = 5;
+    self.numberOfCardToPrepare = 30;
     
-    for (NSInteger i = 0; i<5; i++) {
-            [self.scrollView addSubview:self.dataSource[i]];
-    }
+//    for (NSInteger i = 0; i<5; i++) {
+//            [self.scrollView addSubview:self.dataSource[i]];
+//    }
     
+    self.displayingRange = NSMakeRange(7, self.numberOfCardToPrepare);
+    [self fetchCardsWithRange:self.displayingRange];
 
     
 
@@ -76,13 +86,32 @@
 }
 
 -(void)fetchCardsWithRange:(NSRange)range {
-    for (NSInteger i = 0; i<range.length; i++) {
-        UIView *focusedCard = [self.dataSource objectAtIndex:i+range.location];
-        if (![self.scrollView.subviews containsObject:focusedCard]) {
-            [self.scrollView addSubview:focusedCard];
-        }
+    NSInteger targetLastIndex = self.displayingRange.location + range.length;
+    
+    for (NSInteger i = self.displayingRange.location; i<targetLastIndex; i++) {
+        UIView *cardToFetch = [self.dataSource objectAtIndex:i];
+        
+        [self.scrollView insertSubview:cardToFetch atIndex:i];
+
+        
+        
+        //        if (![self.scrollView.subviews containsObject:cardToFetch]) {
+//            [self.scrollView insertSubview:cardToFetch atIndex:i];
+//        }
+
+    
     }
+    
+    CGRect contentRect = CGRectZero;
+    for (UIView *view in self.scrollView.subviews) {
+        contentRect = CGRectUnion(contentRect, view.frame);
+    }
+    self.scrollView.contentSize = contentRect.size;
+    
+
+    self.displayingRange = range;
 }
+
 
 
 - (void)didReceiveMemoryWarning {
