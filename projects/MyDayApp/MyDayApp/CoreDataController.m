@@ -11,6 +11,7 @@
 
 @interface CoreDataController ()
 
+
 @property AppDelegate *appDelegate;
 @property NSManagedObjectContext *context;
 
@@ -34,14 +35,33 @@
     [managedObject setValue:day.content forKey:@"content"];
     [managedObject setValue:day.writtenDate forKey:@"writtenDate"];
     
+    
     [self.appDelegate saveContext];
     
 }
 
+-(void)deleteMyDayItemAtIndex:(NSInteger)index {
+    self.context = [self managedObjectContext];
+    
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"MyDayEntity"];
+    
+    
+    NSError *error = nil;
+    NSArray *array = [self.context executeFetchRequest:request error:&error];
+    
+    [self.context deleteObject:array[index]];
+    [self.appDelegate saveContext];
+}
+
+
 -(NSArray *)fetchedArrayFromCoreData {
     self.context = [self managedObjectContext];
     
+    
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"MyDayEntity"];
+    
+    
     NSError *error = nil;
     NSArray *result = [self.context executeFetchRequest:request error:&error];
     

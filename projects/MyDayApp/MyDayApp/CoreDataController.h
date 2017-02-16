@@ -17,6 +17,7 @@
 
 -(void)saveMyDayItem:(MyDay *)day;
 -(NSArray *)fetchedArrayFromCoreData;
+-(void)deleteMyDayItemAtIndex:(NSInteger)index;
 
 
 @end

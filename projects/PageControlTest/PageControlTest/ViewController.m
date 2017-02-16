@@ -108,6 +108,7 @@
         }
         
     }
+                NSLog(@"scrollViewDidEndDragging");
     
 }
 
@@ -139,6 +140,36 @@
     [self.pageControl setUserInteractionEnabled:YES];
     
 }
+
+-(void)scrollViewDidZoom:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidZoom");
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidScroll");
+}
+-(void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidScrollToTop");
+}
+-(BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView {
+    return YES;
+}
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewWillBeginDragging");
+}
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidEndDecelerating");
+}
+-(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewWillBeginDecelerating");
+}
+-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidEndScrollingAnimation");
+}
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    NSLog(@"scrollViewDidEndDragging");
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

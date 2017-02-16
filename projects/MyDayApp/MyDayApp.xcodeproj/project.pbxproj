@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B906E3A01E547D1900A223AA /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B906E39F1E547D1900A223AA /* CardViewController.m */; };
 		B90B78391E52D67500F272D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B90B78381E52D67500F272D9 /* main.m */; };
 		B90B783C1E52D67500F272D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B90B783B1E52D67500F272D9 /* AppDelegate.m */; };
 		B90B78421E52D67500F272D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90B78401E52D67500F272D9 /* Main.storyboard */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B906E39E1E547D1900A223AA /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
+		B906E39F1E547D1900A223AA /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
 		B90B78341E52D67500F272D9 /* MyDayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90B78381E52D67500F272D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B90B783A1E52D67500F272D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				B90B78551E52D76500F272D9 /* DetailViewController.m */,
 				B99673621E52EC3400CDBE8A /* EditViewController.h */,
 				B99673631E52EC3400CDBE8A /* EditViewController.m */,
+				B906E39E1E547D1900A223AA /* CardViewController.h */,
+				B906E39F1E547D1900A223AA /* CardViewController.m */,
 				B90B78401E52D67500F272D9 /* Main.storyboard */,
 				B90B78461E52D67500F272D9 /* Assets.xcassets */,
 				B90B78481E52D67500F272D9 /* LaunchScreen.storyboard */,
@@ -179,6 +184,7 @@
 				B90B783C1E52D67500F272D9 /* AppDelegate.m in Sources */,
 				B90B785C1E52DEAA00F272D9 /* CoreDataController.m in Sources */,
 				B99673641E52EC3400CDBE8A /* EditViewController.m in Sources */,
+				B906E3A01E547D1900A223AA /* CardViewController.m in Sources */,
 				B90B78451E52D67500F272D9 /* MyDayApp.xcdatamodeld in Sources */,
 				B90B78391E52D67500F272D9 /* main.m in Sources */,
 				B90B78531E52D74600F272D9 /* MyDayTableViewController.m in Sources */,

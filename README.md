@@ -5,6 +5,8 @@
 - 1988년 1월 4일 서울생
 - 모바일 앱을 좋아해서 UI/UX 디자이너가 되었지만, 직접 손으로 만들어보고 싶어서 개발자로 전향하게 되었습니다.
 
+##공부한 것
+
 ###프로그래밍 일반
 - [객체 지향 프로그래밍 기초](https://github.com/draupnir45/i.jongchan.park/blob/master/learning/Object-Oriented%20Programming.md)
 - [Objective-C의 클래스, 메서드, 프로퍼티, 객체 그리고 메인 파일](learning/Objective_C_method_property_and_mainfile.md)
@@ -33,12 +35,18 @@
 - UITableView
 - UIWebView
 - UIActivityIndicator
+- UIViewController
 
-###프로젝트
+##프로젝트
+
+###
+- MyDay : 연습을 위해 
+
+###연습
 - [연습] 스토리보드 연습 ([Day1TextChange](projects/Day1TextChange))
 - [연습] 클래스 연습 / 전사와 마법사([Day2RolePlayingGame](projects/Day2RolePlayingGame))
 - [연습] 클래스 연습 / 술마시기 게임([DringkingGame](projects/DringkingGame))
-- [개인작업] 포켓몬을 오브젝티브로 짜보자! ([PokemonByObjectiveC](projects/PokemonByObjectiveC)) (Pending)
+- [연습] 포켓몬을 오브젝티브로 짜보자! ([PokemonByObjectiveC](projects/PokemonByObjectiveC)) (Pending)
 - [연습] 계산기 만들기 ([CalculatorPrac](projects/CalculatorPrac))
 - [연습] `UITextField`와 `UIScrollView`를 이용하여 로그인 뷰 만들기 ([LoginPracByLogo](projects/LoginPracByLogo))
 - [연습] `UIPageControl`, `UISwitch`와 `UISegmentedControl` ([PageControlTest](projects/PageControlTest))

@@ -52,6 +52,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Journals" id="eLv-oj-YXf">
+                        <barButtonItem key="leftBarButtonItem" title="CardView" id="Nkj-lB-n81">
+                            <connections>
+                                <segue destination="1Wr-AW-KzZ" kind="presentation" modalTransitionStyle="flipHorizontal" id="Acl-rC-muo"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="R98-qy-u93">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -62,9 +67,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVq-Uq-3rv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="153.37331334332833"/>
+            <point key="canvasLocation" x="740" y="152"/>
         </scene>
-        <!--Title-->
+        <!--Detail View Controller-->
         <scene sceneID="zFe-Nr-qNI">
             <objects>
                 <viewController id="VCt-F0-zdi" customClass="DetailViewController" sceneMemberID="viewController">
@@ -77,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="c4U-1h-TzM">
+                    <navigationItem key="navigationItem" id="c4U-1h-TzM">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="nDN-g7-uCn">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -89,6 +94,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Yo-dg-reu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1918" y="152"/>
+        </scene>
+        <!--Card View Controller-->
+        <scene sceneID="5z2-sj-FUG">
+            <objects>
+                <viewController id="1Wr-AW-KzZ" customClass="CardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="McT-Kc-R7C"/>
+                        <viewControllerLayoutGuide type="bottom" id="idu-ws-jwr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dlU-bC-h8t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n5-S1-JTq">
+                                <rect key="frame" x="15" y="26" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToTableView:" destination="1Wr-AW-KzZ" eventType="touchUpInside" id="5Nh-SK-4ks"/>
+                                    <segue destination="7DD-rE-caP" kind="presentation" modalTransitionStyle="flipHorizontal" id="n6r-B1-B3O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="5n5-S1-JTq" id="B3m-em-KZV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhK-Kx-A48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="920"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="3Rk-HH-ZU3">
@@ -159,10 +199,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMD-cu-isw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="160.80000000000001" y="153.37331334332833"/>
+            <point key="canvasLocation" x="-814" y="152"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fkt-7C-4Fl"/>
+        <segue reference="n6r-B1-B3O"/>
+        <segue reference="os6-ge-GVi"/>
     </inferredMetricsTieBreakers>
 </document>
