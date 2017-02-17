@@ -8,13 +8,16 @@
 
 #import "ViewController.h"
 #import "DetailViewController.h"
+#import "CustomTableViewCell.h"
 
 @interface ViewController ()
 <UITableViewDelegate, UITableViewDataSource>
 
 
+
 @property UITableView *tableView;
-@property NSArray *dataArray;
+@property NSArray *dataArray_gen1;
+@property NSArray *dataArray_gen2;
 
 @end
 
@@ -22,13 +25,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height - 20) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
+    self.title = @"PokéDex";
     
     [self.view addSubview:self.tableView];
     
-    self.dataArray = @[@"이상해씨",
+    self.dataArray_gen1 = @[@"이상해씨",
             @"이상해풀",
             @"이상해꽃",
             @"파이리",
@@ -179,6 +185,109 @@
             @"망나뇽",
         @"뮤츠",
         @"뮤" ];
+    self.dataArray_gen2 = @[
+                            @"치코리타",
+                            @"베이리프",
+                            @"메가니움",
+                            @"브케인",
+                            @"마그케인",
+                            @"블레이범",
+                            @"리아코",
+                            @"엘리게이",
+                            @"장크로다일",
+                            @"꼬리선",
+                            @"다꼬리",
+                            @"부우부",
+                            @"야부엉",
+                            @"레디바",
+                            @"레디안",
+                            @"페이검",
+                            @"아리아도스",
+                            @"크로뱃",
+                            @"초라기",
+                            @"랜턴",
+                            @"피츄",
+                            @"삐",
+                            @"푸푸린",
+                            @"토게피",
+                            @"토게틱",
+                            @"네이티",
+                            @"네이티오",
+                            @"메리프",
+                            @"보송송",
+                            @"전룡",
+                            @"아르코",
+                            @"마릴",
+                            @"마릴리",
+                            @"꼬지모",
+                            @"왕구리",
+                            @"통통코",
+                            @"두코",
+                            @"솜솜코",
+                            @"에이팜",
+                            @"해너츠",
+                            @"해루미",
+                            @"왕자리",
+                            @"우파",
+                            @"누오",
+                            @"에브이",
+                            @"블래키",
+                            @"니로우",
+                            @"야도킹",
+                            @"무우마",
+                            @"안농",
+                            @"마자용",
+                            @"키링키",
+                            @"피콘",
+                            @"쏘콘",
+                            @"노고치",
+                            @"글라이거",
+                            @"강철톤",
+                            @"블루",
+                            @"그랑블루",
+                            @"침바루",
+                            @"핫삼",
+                            @"단단지",
+                            @"헤라크로스",
+                            @"포푸니",
+                            @"깜지곰",
+                            @"링곰",
+                            @"마그마그",
+                            @"마그카르고",
+                            @"꾸꾸리",
+                            @"메꾸리",
+                            @"코산호",
+                            @"총어",
+                            @"대포무노",
+                            @"딜리버드",
+                            @"만타인",
+                            @"무장조",
+                            @"델빌",
+                            @"헬가",
+                            @"킹드라",
+                            @"코코리",
+                            @"코리갑",
+                            @"폴리곤2",
+                            @"노라키",
+                            @"루브도",
+                            @"배루키",
+                            @"카포에라",
+                            @"뽀뽀라",
+                            @"에레키드",
+                            @"마그비",
+                            @"밀탱크",
+                            @"해피너스",
+                            @"라이코",
+                            @"앤테이",
+                            @"스이쿤",
+                            @"애버라스",
+                            @"데기라스",
+                            @"마기라스",
+                            @"루기아",
+                            @"칠색조",
+                            @"세레비",
+                            
+                            ];
     
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -193,33 +302,92 @@
 #pragma mark - TableView DataSource
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataArray.count;
+    switch (section) {
+        case 0:
+            return self.dataArray_gen1.count;
+            break;
+        case 1:
+            return self.dataArray_gen2.count;
+            break;
+        default:
+            break;
+    }
+    
+    
+    return self.dataArray_gen1.count;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return @"1세대";
+            break;
+        case 1:
+            return @"2세대";
+            break;
+        default:
+            return @"What?";
+            break;
+    }
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseId"];
-    
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseId"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseId"];
+        cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseId"];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld - %@",indexPath.row +1, self.dataArray[indexPath.row]];
-    [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Thumbnails/thumbnail_%ld.png",indexPath.row+1]]];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
+    if (indexPath.section == 0) {
+        cell.textLabel.text = [NSString stringWithFormat:@"%ld. %@",indexPath.row +1, self.dataArray_gen1[indexPath.row]];
+        [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Thumbnails/thumbnail_%ld.png",indexPath.row+1]]];
+    } else {
+        cell.textLabel.text = [NSString stringWithFormat:@"%ld. %@",indexPath.row +1, self.dataArray_gen2[indexPath.row]];
+        [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Thumbnails/thumbnail_%ld.png",indexPath.row+152]]];
+    }
+    
+    [cell setBackgroundColor:[UIColor colorWithRed:17.0/255.0 green:98.0/255.0 blue:166.0/255.0 alpha:1.0]];
+
+
     return cell;
     
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    DetailViewController *detailView = [[DetailViewController alloc] init];
-    detailView.pokemonIndex = indexPath.row + 1;
-    [self presentViewController:detailView animated:YES completion:nil];
+//    DetailViewController *detailView = [[DetailViewController alloc] init];
+//    detailView.pokemonIndex = indexPath.row + 1;
+//    detailView.title = self.dataArray[indexPath.row];
+//    
+//    [self presentViewController:detailView animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"detail" sender:[tableView cellForRowAtIndexPath:indexPath]];
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 88;
+    return 60;
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"detail"]) {
+        DetailViewController *detailView = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        if (indexPath.section == 0) {
+            detailView.title = self.dataArray_gen1[indexPath.row];
+            detailView.pokemonIndex = indexPath.row + 1;
+        } else {
+            detailView.title = self.dataArray_gen2[indexPath.row];
+            detailView.pokemonIndex = indexPath.row + 152;
+        }
+        
+    }
+}
+
 
 
 @end

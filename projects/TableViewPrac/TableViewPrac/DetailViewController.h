@@ -11,5 +11,6 @@
 @interface DetailViewController : UIViewController
 
 @property NSInteger pokemonIndex;
+//@property NSString *name;
 
 @end

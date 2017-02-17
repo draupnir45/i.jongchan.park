@@ -17,6 +17,7 @@
 		B9B7BEDF1E556E8A00399CD8 /* Thumbnails in Resources */ = {isa = PBXBuildFile; fileRef = B9B7BEDE1E556E8A00399CD8 /* Thumbnails */; };
 		B9B7BEE11E556EE600399CD8 /* images in Resources */ = {isa = PBXBuildFile; fileRef = B9B7BEE01E556EE600399CD8 /* images */; };
 		B9B7BEE41E556F0700399CD8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B7BEE31E556F0700399CD8 /* DetailViewController.m */; };
+		B9C6FD161E55BDF700BB83FD /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C6FD151E55BDF700BB83FD /* CustomTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		B9B7BEE01E556EE600399CD8 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		B9B7BEE21E556F0700399CD8 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		B9B7BEE31E556F0700399CD8 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B9C6FD141E55BDF700BB83FD /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		B9C6FD151E55BDF700BB83FD /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				B94827B41E554CD700F375B3 /* ViewController.m */,
 				B9B7BEE21E556F0700399CD8 /* DetailViewController.h */,
 				B9B7BEE31E556F0700399CD8 /* DetailViewController.m */,
+				B9C6FD141E55BDF700BB83FD /* CustomTableViewCell.h */,
+				B9C6FD151E55BDF700BB83FD /* CustomTableViewCell.m */,
 				B94827B61E554CD700F375B3 /* Main.storyboard */,
 				B94828F61E55566000F375B3 /* pokemonimg */,
 				B94827BC1E554CD700F375B3 /* Assets.xcassets */,
@@ -177,6 +182,7 @@
 			files = (
 				B9B7BEE41E556F0700399CD8 /* DetailViewController.m in Sources */,
 				B94827B51E554CD700F375B3 /* ViewController.m in Sources */,
+				B9C6FD161E55BDF700BB83FD /* CustomTableViewCell.m in Sources */,
 				B94827B21E554CD700F375B3 /* AppDelegate.m in Sources */,
 				B94827AF1E554CD700F375B3 /* main.m in Sources */,
 				B94827BB1E554CD700F375B3 /* TableViewPrac.xcdatamodeld in Sources */,

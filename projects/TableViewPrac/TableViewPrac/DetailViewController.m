@@ -12,6 +12,7 @@
 
 @property UIImageView *bigImage;
 @property UIButton *closeButton;
+//@property UILabel *titleLabel;
 
 @end
 
@@ -22,18 +23,26 @@
     CGSize frameSize = self.view.frame.size;
     
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    self.bigImage = [[UIImageView alloc] initWithFrame:CGRectMake(frameSize.width * 1 / 6, 30, frameSize.width * 2 / 3, frameSize.width * 2 / 3)];
+    self.bigImage = [[UIImageView alloc] initWithFrame:CGRectMake(frameSize.width * 1 / 6, 130, frameSize.width * 2 / 3, frameSize.width * 2 / 3)];
     [self.bigImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"images/%ld.png",self.pokemonIndex]]];
     [self.view addSubview:self.bigImage];
     
-    self.closeButton = [[UIButton alloc] initWithFrame:CGRectMake(frameSize.width - 120, frameSize.height - 55, 100, 40)];
-    [self.closeButton setBackgroundColor:[UIColor blackColor]];
-    [self.closeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.closeButton.layer setCornerRadius:20];
-    [self.closeButton addTarget:self action:@selector(closeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    [self.closeButton setTitle:@"닫기" forState:UIControlStateNormal];
+//    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, frameSize.width, 100)];
+//    [self.titleLabel setFont:[UIFont systemFontOfSize:40 weight:0.5]];
+//    [self.titleLabel setTextColor:[UIColor blackColor]];
+//    [self.titleLabel setText:self.name];
+//    [self.titleLabel setTextAlignment:NSTextAlignmentCenter];
+//    [self.view addSubview:self.titleLabel];
     
-    [self.view addSubview:self.closeButton];
+    
+//    self.closeButton = [[UIButton alloc] initWithFrame:CGRectMake(frameSize.width - 120, frameSize.height - 55, 100, 40)];
+//    [self.closeButton setBackgroundColor:[UIColor blackColor]];
+//    [self.closeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [self.closeButton.layer setCornerRadius:20];
+//    [self.closeButton addTarget:self action:@selector(closeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.closeButton setTitle:@"닫기" forState:UIControlStateNormal];
+//    
+//    [self.view addSubview:self.closeButton];
     
     // Do any additional setup after loading the view.
 }
