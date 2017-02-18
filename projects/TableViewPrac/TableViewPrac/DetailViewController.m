@@ -12,6 +12,7 @@
 
 @property UIImageView *bigImage;
 @property UIButton *closeButton;
+//@property UITextView *descriptionView;
 //@property UILabel *titleLabel;
 
 @end
@@ -23,9 +24,18 @@
     CGSize frameSize = self.view.frame.size;
     
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    self.bigImage = [[UIImageView alloc] initWithFrame:CGRectMake(frameSize.width * 1 / 6, 130, frameSize.width * 2 / 3, frameSize.width * 2 / 3)];
+    self.bigImage = [[UIImageView alloc] initWithFrame:CGRectMake(frameSize.width * 1 / 6, 120, frameSize.width * 2 / 3, frameSize.width * 2 / 3)];
     [self.bigImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"images/%ld.png",self.pokemonIndex]]];
     [self.view addSubview:self.bigImage];
+    
+    self.descriptionView = [[UITextView alloc] initWithFrame:CGRectMake(15, (self.bigImage.frame.origin.y + frameSize.width * 2 / 3 + 50), frameSize.width -30, frameSize.height - (self.bigImage.frame.origin.y + frameSize.width * 2 / 3 + 50))];
+    self.descriptionView.text = self.contentsForPm;
+    self.descriptionView.textColor = [UIColor blackColor];
+    [self.descriptionView setFont:[UIFont systemFontOfSize:20  weight:0.0]];
+    self.descriptionView.editable = NO;
+    self.descriptionView.scrollEnabled = YES;
+    
+    [self.view addSubview:self.descriptionView];
     
 //    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, frameSize.width, 100)];
 //    [self.titleLabel setFont:[UIFont systemFontOfSize:40 weight:0.5]];

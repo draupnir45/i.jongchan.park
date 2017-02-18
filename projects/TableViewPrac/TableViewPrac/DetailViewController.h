@@ -11,6 +11,8 @@
 @interface DetailViewController : UIViewController
 
 @property NSInteger pokemonIndex;
-//@property NSString *name;
+@property UITextView *descriptionView;
+
+@property NSString *contentsForPm;
 
 @end

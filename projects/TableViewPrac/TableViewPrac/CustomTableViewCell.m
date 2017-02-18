@@ -16,6 +16,7 @@
         [self.imageView setFrame:CGRectMake(15, 0, 96, 96)];
         UIView *imageFrame = [[UIView alloc] initWithFrame:CGRectMake(20, 5, 86, 86)];
         [imageFrame.layer setCornerRadius:43];
+        [imageFrame.layer setBorderWidth:1];
         [imageFrame setBackgroundColor:[UIColor whiteColor]];
         [self setBackgroundColor:[UIColor colorWithRed:17.0/255.0 green:98.0/255.0 blue:166.0/255.0 alpha:1.0]];
         [self addSubview:imageFrame];
