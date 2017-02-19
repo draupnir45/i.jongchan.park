@@ -56,8 +56,8 @@
     self.nameLabel = nameLabel;
     
     UILabel *idLabel = [[UILabel alloc] init];
-    [idLabel setFont:[UIFont boldSystemFontOfSize:15]];
-    [idLabel setTextColor:[UIColor lightGrayColor]];
+    [idLabel setFont:[UIFont systemFontOfSize:15]];
+    [idLabel setTextColor:[UIColor grayColor]];
     
     [self.contentView addSubview:idLabel];
     self.idLabel = idLabel;
@@ -84,7 +84,7 @@
     
     [self.nameLabel setFrame:CGRectMake(offsetX, offsetY, nameLabelSizeThatFits.width, 20)];
     
-    offsetY += self.nameLabel.frame.size.height + MARGIN_Y;
+    offsetY += self.nameLabel.frame.size.height + MARGIN_Y/2;
     
     [self.customTextLabel setFrame:CGRectMake(offsetX, offsetY, self.frame.size.width - offsetX - MARGIN_X, self.frame.size.height - offsetY - MARGIN_Y)];
     
@@ -92,8 +92,6 @@
     offsetX = self.nameLabel.frame.origin.x + nameLabelSizeThatFits.width + 5;
     offsetY = MARGIN_Y;
     [self.idLabel setFrame:CGRectMake(offsetX, offsetY, self.frame.size.width - offsetX - 5, 20)];
-
-    
     
 }
 
