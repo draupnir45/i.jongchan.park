@@ -14,6 +14,7 @@
 		B9242D171E58AAD600708E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9242D161E58AAD600708E35 /* Assets.xcassets */; };
 		B9242D1A1E58AAD600708E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9242D181E58AAD600708E35 /* LaunchScreen.storyboard */; };
 		B9242D231E58AAF600708E35 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9242D221E58AAF600708E35 /* CustomTableViewCell.m */; };
+		B931848E1E594AB20065B387 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B931848D1E594AB20065B387 /* 1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B9242D1B1E58AAD600708E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9242D211E58AAF600708E35 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		B9242D221E58AAF600708E35 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		B931848D1E594AB20065B387 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				B9242D211E58AAF600708E35 /* CustomTableViewCell.h */,
 				B9242D221E58AAF600708E35 /* CustomTableViewCell.m */,
 				B9242D131E58AAD600708E35 /* Main.storyboard */,
+				B931848D1E594AB20065B387 /* 1.jpg */,
 				B9242D161E58AAD600708E35 /* Assets.xcassets */,
 				B9242D181E58AAD600708E35 /* LaunchScreen.storyboard */,
 				B9242D1B1E58AAD600708E35 /* Info.plist */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9242D1A1E58AAD600708E35 /* LaunchScreen.storyboard in Resources */,
+				B931848E1E594AB20065B387 /* 1.jpg in Resources */,
 				B9242D171E58AAD600708E35 /* Assets.xcassets in Resources */,
 				B9242D151E58AAD600708E35 /* Main.storyboard in Resources */,
 			);
@@ -318,6 +322,7 @@
 				B9242D201E58AAD600708E35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
