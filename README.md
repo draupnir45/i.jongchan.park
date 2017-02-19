@@ -40,9 +40,10 @@
 ##프로젝트
 
 ###
-- MyDay : 연습을 위해 
+- MyDay : 연습을 위해 만들어 본 메모장 겸 일기장입니다.
 
-###연습
+###연습 및 과제
+- [과제] 커스텀 테이블 뷰 과제 ([CustomTableViewCopy](projects/CustomTableViewCopy), 2017. 2. 19)
 - [연습] 스토리보드 연습 ([Day1TextChange](projects/Day1TextChange))
 - [연습] 클래스 연습 / 전사와 마법사([Day2RolePlayingGame](projects/Day2RolePlayingGame))
 - [연습] 클래스 연습 / 술마시기 게임([DringkingGame](projects/DringkingGame))
