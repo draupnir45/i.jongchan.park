@@ -1,7 +1,7 @@
 #UITableView
 연습으로 만든 포켓몬 도감을 이용해, UITableView와 UIScrollView의 프로토콜 메서드를 로그로 찍어 보았습니다.
 기준 : numberOfSection 1, rowHeight 90, iPhone 7
-![](images/pokedex.png =250x)
+![](images/pokedex.png)
 
  1. `numberOfSectionsInTableView`, `numberOfRowsInSection`, `heightForRowAtIndexPath` 이 3회 불리고 난 후,
  2. `cellForRowAtIndexPath`를 딱 화면에 보이는 부분까지만 부릅니다. (7번 꼬부기)
