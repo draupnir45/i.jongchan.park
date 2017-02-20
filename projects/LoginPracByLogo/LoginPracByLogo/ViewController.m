@@ -18,7 +18,7 @@
 @property UIButton *signIn;
 @property UIButton *signUp;
 @property UIButton *ok;
-@property UIScrollView *loginScrollView;
+@property UIScrollView *loginScrollView; 
 @property UIImageView *logo;
 @property BOOL signUpMode;
 @property UIView *viewForBtnPosition;
@@ -56,7 +56,7 @@
     self.email = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
     [self.email setCenter: CGPointMake(frameSize.width/2, frameSize.height/2)];
     [self.email.layer setCornerRadius:20];
-    [self.email setBackgroundColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0.7]];
+    [self.email setBackgroundColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0.5]];
     [self.email setTag:100];
     [self.email setPlaceholder:@"ID"];
     [self.email setFont:font];
@@ -72,7 +72,7 @@
     [self.pw setCenter: CGPointMake(frameSize.width/2, frameSize.height/2 + 54)];
     [self.loginScrollView addSubview:self.pw];
     [self.pw.layer setCornerRadius:20];
-    [self.pw setBackgroundColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0.7]];
+    [self.pw setBackgroundColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0.5]];
     [self.pw setTag:200];
     [self.pw setPlaceholder:@"Password"];
     [self.pw setFont:font];
@@ -135,7 +135,7 @@
     [self.pw2 setCenter: CGPointMake(frameSize.width/2, frameSize.height/2 + 108)];
     [self.loginScrollView addSubview:self.pw2];
     [self.pw2.layer setCornerRadius:20];
-    [self.pw2 setBackgroundColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0.7]];
+    [self.pw2 setBackgroundColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0.5]];
     [self.pw2 setTag:300];
     [self.pw2 setPlaceholder:@"Password"];
     [self.pw2 setFont:font];

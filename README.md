@@ -32,7 +32,7 @@
 - [UIPageControl](learning/UIPageControl.md)
 - [UISwitch](learning/UISwitch.md)
 - [UISegmentedControl](learning/UISegmentedControl.md)
-- UITableView
+- [UITableViewLog](learning/UITableViewLog.md)
 - UIWebView
 - UIActivityIndicator
 - UIViewController

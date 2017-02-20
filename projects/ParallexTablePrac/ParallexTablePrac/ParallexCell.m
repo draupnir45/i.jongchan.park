@@ -49,7 +49,6 @@
     
     UIView *textHolder = [[UIView alloc] init];
     [self.contentView addSubview:textHolder];
-    UITableViewAutomaticDimension
 }
 
 
