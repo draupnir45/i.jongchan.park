@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "PokeWikiWebViewController.h"
 
 @interface DetailViewController ()
 
@@ -37,6 +38,7 @@
     
     [self.view addSubview:self.descriptionView];
     
+    
 //    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, frameSize.width, 100)];
 //    [self.titleLabel setFont:[UIFont systemFontOfSize:40 weight:0.5]];
 //    [self.titleLabel setTextColor:[UIColor blackColor]];
@@ -55,6 +57,13 @@
 //    [self.view addSubview:self.closeButton];
     
     // Do any additional setup after loading the view.
+}
+- (IBAction)openWiki:(id)sender {
+    
+    PokeWikiWebViewController *webView = [[PokeWikiWebViewController alloc] init];
+    webView.urlString = @"http://ko.pokemon.wikia.com/wiki/이상해씨";
+    [self presentViewController:webView animated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {

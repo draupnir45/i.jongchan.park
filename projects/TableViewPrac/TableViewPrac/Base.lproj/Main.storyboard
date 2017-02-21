@@ -31,7 +31,7 @@
             </objects>
             <point key="canvasLocation" x="1079.2" y="137.18140929535232"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Title-->
         <scene sceneID="cJ9-LE-OvV">
             <objects>
                 <viewController id="SOs-TG-DNb" customClass="DetailViewController" sceneMemberID="viewController">
@@ -44,6 +44,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Ymn-8a-Egj">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="kuN-GJ-abv">
+                            <connections>
+                                <action selector="openWiki:" destination="SOs-TG-DNb" id="Ofa-5O-vkN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34k-Mg-1N8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
