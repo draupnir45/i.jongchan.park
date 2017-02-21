@@ -58,13 +58,13 @@
     
     // Do any additional setup after loading the view.
 }
-- (IBAction)openWiki:(id)sender {
-    
-    PokeWikiWebViewController *webView = [[PokeWikiWebViewController alloc] init];
-    webView.urlString = @"http://ko.pokemon.wikia.com/wiki/이상해씨";
-    [self presentViewController:webView animated:YES completion:nil];
-    
-}
+//- (IBAction)openWiki:(id)sender {
+//    
+//    PokeWikiWebViewController *webView = [[PokeWikiWebViewController alloc] init];
+//    webView.urlString = @"http://ko.pokemon.wikia.com/wiki/이상해씨/";
+//    [self presentViewController:webView animated:YES completion:nil];
+//    
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -81,8 +81,23 @@
 }
 */
 
--(void)closeButtonClicked:(UIButton *)sender {
+- (void)closeButtonClicked:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"webViewSegue"]) {
+        PokeWikiWebViewController *webView = segue.destinationViewController;
+        NSString *urlString = @"http://ko.pokemon.wikia.com/wiki/이상해씨/";
+
+        webView.urlString = urlString;
+        
+    }
+
+    
+    
+    
 }
 
 @end

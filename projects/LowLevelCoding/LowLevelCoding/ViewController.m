@@ -21,13 +21,18 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
+    
+//    [self.navigationController.navigationBar setBarTintColor:[UIColor blueColor]];
+    
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(50, 100, self.view.frame.size.width - 100, 40)];
     [button setTitle:@"전환" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(pushNewVC:) forControlEvents:UIControlEventTouchUpInside];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     self.button = button;
-    [self.view addSubview:button];
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.rightBarButtonItem = barButton;
     
     self.title = @"First View";
     

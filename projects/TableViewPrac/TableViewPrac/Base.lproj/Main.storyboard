@@ -45,9 +45,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Ymn-8a-Egj">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="kuN-GJ-abv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="kuN-GJ-abv">
                             <connections>
-                                <action selector="openWiki:" destination="SOs-TG-DNb" id="Ofa-5O-vkN"/>
+                                <segue destination="rY4-bQ-193" kind="presentation" identifier="webViewSegue" id="25y-oY-xEK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -55,6 +55,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34k-Mg-1N8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1911.2" y="136.28185907046478"/>
+        </scene>
+        <!--Poke Wiki Web View Controller-->
+        <scene sceneID="ntW-BG-cm4">
+            <objects>
+                <viewController id="rY4-bQ-193" customClass="PokeWikiWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cO2-W3-43C"/>
+                        <viewControllerLayoutGuide type="bottom" id="fZs-0y-qPh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bWR-Ge-5bi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lsA-hh-lGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2690" y="136"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TO0-5s-q6c">

@@ -18,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [self.window setTintColor:[UIColor lightGrayColor]];
+    [self.window.rootViewController.navigationController.navigationBar setBarTintColor:[UIColor blackColor]];
     
     // Override point for customization after application launch.
     return YES;

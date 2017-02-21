@@ -27,6 +27,21 @@
     [super viewDidLoad];
     self.title = @"Twitter";
     
+    UIImageView *titleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"twitter"]];
+    
+    UIBarButtonItem *rightOne = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(composeAction:)];
+    [rightOne setTintColor:[UIColor colorWithRed:29.0/255 green:161.0/255 blue:242.0/255 alpha:1.0]];
+    self.navigationItem.rightBarButtonItem = rightOne;
+    
+    UIBarButtonItem *backTest = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"twitter"] landscapeImagePhone:nil style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem =backTest;
+    
+//    UIBarButtonItem *logo = [[UIBarButtonItem alloc] initWithCustomView:titleImageView];
+    titleImageView.contentMode = UIViewContentModeScaleAspectFit;
+    titleImageView.frame = CGRectMake(0, 0, 44, 44);
+    
+    self.navigationItem.titleView = titleImageView;
+    
     self.dataDict = @{ @0 : @{ @"name" : @"주영만",
                                @"id" : @"@youngman",
                                @"tweetText" : @"이는 청춘 청춘에서만 싹이 고행을 무엇을 원질이 있으랴? 어디 이상의 커다란 듣는다. 이것이야말로 뜨거운지라, 얼마나 굳세게 끓는 동력은 부패뿐이다. 우리 들어 바이며, 온갖 사랑의 그들의 이상의 살 칼이다.",
@@ -146,6 +161,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)composeAction:(UIBarButtonItem *)sender {
+    NSLog(@"good");
 }
 
 //

@@ -22,6 +22,7 @@
 @property UIImageView *logo;
 @property BOOL signUpMode;
 @property UIView *viewForBtnPosition;
+@property UITextField *respondingTextField;
 
 
 @end
@@ -147,12 +148,15 @@
     [self.pw2 setSecureTextEntry:YES];
     [self.pw2 setAlpha:0.0];
 
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     
+    [self.view addGestureRecognizer:tap];
     
 }
 
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
+    self.respondingTextField = textField;
     if (self.signUpMode) {
         [self.loginScrollView setContentOffset:CGPointMake(0, 120) animated:YES];
     } else {
@@ -168,13 +172,15 @@
             [self.pw2 becomeFirstResponder];
         } else {
             [textField resignFirstResponder];
-            [self.loginScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
         }
     } else {
         [textField resignFirstResponder];
-        [self.loginScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
     }
     return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [self.loginScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
 }
 
 
@@ -201,6 +207,11 @@
     
 }
 
+
+-(void)dismissKeyboard
+{
+    [self.respondingTextField resignFirstResponder];
+}
 
 
 

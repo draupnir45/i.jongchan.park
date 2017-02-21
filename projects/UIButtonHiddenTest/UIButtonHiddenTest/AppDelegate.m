@@ -1,14 +1,12 @@
 //
 //  AppDelegate.m
-//  LowLevelCoding
+//  UIButtonHiddenTest
 //
-//  Created by 박종찬 on 2017. 2. 20..
+//  Created by 박종찬 on 2017. 2. 21..
 //  Copyright © 2017년 Jongchan Park. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import <LocalAuthentication/LocalAuthentication.h>
-#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,37 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    
-    //윈도우 만들기
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
-    
-    
-    //루트뷰컨트롤러 - 스토리보드 버전
-    //UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    //UIViewController *rootView = [mainStoryboard instantiateViewControllerWithIdentifier:@"SomeViewControllerYouWant"];
-    //self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
-    
-    
-    
-    //루트뷰컨트롤러 - 손 버전
-    ViewController *initialViewController = [[ViewController alloc] init];
-    
-    
-    
-    //루트뷰컨트롤러 - 손, 네비게이션 컨트롤러 버전
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:initialViewController];
-
-    
-    
-    
-    
-    //윈도우에 루트뷰 컨트롤러 지정
-    self.window.rootViewController = navigationController;
-    [self.window makeKeyAndVisible];
-    
-    
+    // Override point for customization after application launch.
     return YES;
 }
 

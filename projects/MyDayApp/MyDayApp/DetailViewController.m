@@ -28,6 +28,8 @@
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 100, self.view.frame.size.width - 100, 40)];
     
     self.contentTextView = [[UITextView alloc] initWithFrame:CGRectMake(15, 0, frameSize.width-30, frameSize.height-68)];
+//    [self.contentTextView setHidden:YES];
+//    [self.titleLabel setHidden:YES];
     
     self.contentTextView.textColor = [UIColor blackColor];
     [self.contentTextView setFont:[UIFont systemFontOfSize:24 weight:0.0]];
@@ -35,6 +37,7 @@
     self.contentTextView.scrollEnabled = YES;
     [self.view addSubview:self.contentTextView];
     
+//    [self.navigationController.navigationBar setTintColor:[UIColor redColor]];
     
     
     
