@@ -22,7 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1o6-7g-jfu"/>
+                    <navigationItem key="navigationItem" title="Title" id="24M-FZ-y72">
+                        <barButtonItem key="rightBarButtonItem" image="idcard.png" id="zDe-yf-2F2">
+                            <connections>
+                                <segue destination="yqm-eS-yWx" kind="presentation" id="a0Z-sF-14f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="tvS-ar-xHX" kind="show" identifier="detail" id="CSy-Vj-uc7"/>
                     </connections>
@@ -31,7 +37,7 @@
             </objects>
             <point key="canvasLocation" x="2015.2" y="137.18140929535232"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Title-->
         <scene sceneID="xrZ-ZH-wOr">
             <objects>
                 <viewController id="tvS-ar-xHX" customClass="DetailViewController" sceneMemberID="viewController">
@@ -44,6 +50,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="0Dh-ew-HWW">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="4Il-ep-U0i"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="Lbl-b6-cUp" kind="presentation" identifier="webViewSegue" id="KPe-wh-MbM"/>
                     </connections>
@@ -83,7 +92,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Hg8-st-dUS"/>
+                    <navigationItem key="navigationItem" title="Title" id="X6t-qw-x5K">
+                        <barButtonItem key="rightBarButtonItem" image="idcard.png" id="U7i-fU-KTP">
+                            <connections>
+                                <segue destination="yqm-eS-yWx" kind="presentation" id="5x1-K4-heS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="tvS-ar-xHX" kind="show" identifier="detail" id="Vdv-Uo-MLq"/>
                     </connections>
@@ -92,12 +107,38 @@
             </objects>
             <point key="canvasLocation" x="2015" y="901"/>
         </scene>
+        <!--설정-->
+        <scene sceneID="NNv-eg-Va5">
+            <objects>
+                <viewController id="qcT-RP-FW3" customClass="SettingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ei9-ma-U7t"/>
+                        <viewControllerLayoutGuide type="bottom" id="3ck-98-uaa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N6o-xl-75K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="설정" id="09d-l5-4p1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="DuQ-gV-OrE">
+                            <connections>
+                                <action selector="dismissAction:" destination="qcT-RP-FW3" id="bMb-0a-bwL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c38-B8-J34" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2017" y="1673"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="w2o-6N-r6L">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5tr-Zl-X6f" customClass="TabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="KCZ-FV-A0V">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -148,8 +189,30 @@
             </objects>
             <point key="canvasLocation" x="1076" y="901"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="um0-VM-yxL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yqm-eS-yWx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ron-pa-pXB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qcT-RP-FW3" kind="relationship" relationship="rootViewController" id="6mY-Zk-EST"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qga-4g-vhs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="1673"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="idcard.png" width="16" height="16"/>
+    </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="5x1-K4-heS"/>
         <segue reference="Vdv-Uo-MLq"/>
     </inferredMetricsTieBreakers>
 </document>

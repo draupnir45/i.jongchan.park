@@ -10,12 +10,18 @@
 
 @interface AppDelegate ()
 
+
+
 @end
 
 @implementation AppDelegate
 
 
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [self.window setTintColor:[UIColor redColor]];
     // Override point for customization after application launch.
     return YES;
 }
@@ -47,5 +53,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)setTintChanged:(BOOL)tintChanged {
+    if (tintChanged) {
+        [self.window setTintColor:[UIColor blueColor]];
+    } else {
+        [self.window setTintColor:[UIColor redColor]];
+    }
+    _tintChanged = tintChanged;
+}
 
 @end
