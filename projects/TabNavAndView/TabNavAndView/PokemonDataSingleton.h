@@ -14,7 +14,7 @@
 @property (readonly, nonatomic, retain) NSArray *pokemonDescription;
 @property (nonatomic, retain) NSMutableArray *favoritePokemon;
 
-+ (PokemonDataSingleton *)sharedData;
++ (instancetype)sharedData;
 
 
 @end

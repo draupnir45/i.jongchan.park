@@ -10,16 +10,16 @@
 
 @implementation PokemonDataSingleton
 
-+ (PokemonDataSingleton *)sharedData {
-    static dispatch_once_t pred;
-    static PokemonDataSingleton *sharedData = nil;
+
++ (instancetype)sharedData
+{
+    static PokemonDataSingleton *instance = nil;
     
-    dispatch_once(&pred, ^{
-        sharedData = [[PokemonDataSingleton alloc] init];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[PokemonDataSingleton alloc] init];
     });
-    
-    return sharedData;
-    
+    return instance;
 }
 
 - (instancetype)init

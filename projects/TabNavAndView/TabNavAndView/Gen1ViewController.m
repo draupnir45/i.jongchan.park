@@ -9,6 +9,7 @@
 #import "Gen1ViewController.h"
 #import "DetailViewController.h"
 #import "PokemonDataSingleton.h"
+#import "PokemonTableViewCell.h"
 
 @interface Gen1ViewController ()
 <UITableViewDelegate, UITableViewDataSource>
@@ -49,13 +50,15 @@
     return 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseId"];
+    PokemonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseId"];
     if (cell != nil) {
     } else {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseId"];
+        cell = [[PokemonTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseId"];
     }
     
     cell.textLabel.text = [NSString stringWithFormat:@"%ld. %@",indexPath.row +1, self.sharedData.pokemonName[indexPath.row]];
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    
     [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Thumbnails/thumbnail_%ld.png",indexPath.row+1]]];
     return cell;
     

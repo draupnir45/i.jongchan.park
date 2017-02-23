@@ -64,6 +64,7 @@
         case 0:
             if (indexPath.row == 0) {
                 cell.textLabel.text = @"즐겨찾기 포켓몬";
+                [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             } else {
                 cell.textLabel.text = @"배틀식스";
                 UISwitch *switchView = [[UISwitch alloc] init];
@@ -82,6 +83,10 @@
             break;
     }
     
+    if ([cell.accessoryView isMemberOfClass:[UISwitch class]]) {
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    
     return cell;
 }
 - (IBAction)dismissAction:(id)sender {
@@ -92,6 +97,9 @@
 - (void)battleSix:(UISwitch *)sender {
     ////////////////////////이씀!!!
     NSLog(@"여섯마리 제한 넣을 필요 있음");
+    
+    NSIndexPath *indexPath = [_tableView indexPathForCell:(UITableViewCell *)[sender superview]];
+    NSLog(@"s:%ld, r:%ld", indexPath.section, indexPath.row);
 }
 
 
@@ -106,6 +114,28 @@
     if (indexPath.section == 0 && indexPath.row == 0) {
         [self performSegueWithIdentifier:@"FavoritePokemonSegue" sender:[tableView cellForRowAtIndexPath:indexPath]];
     }
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return @"즐겨찾기";
+            break;
+            
+        default:
+            return @"사용자 설정";
+            break;
+    }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    if (section == 0) {
+        return @"배틀식스 모드를 켜면 즐겨찾기가 6마리까지만 포함되며, 같은 포켓몬을 집어넣을 수도 있습니다.";
+    } else {
+        return nil;
+    }
+
+
 }
 
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

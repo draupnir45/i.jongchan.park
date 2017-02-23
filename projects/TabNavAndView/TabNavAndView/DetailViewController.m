@@ -40,12 +40,13 @@
     [self.bigImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"images/%ld.png",self.pokemonIndex + 1]]];
     [self.view addSubview:self.bigImage];
     
-    self.descriptionView = [[UITextView alloc] initWithFrame:CGRectMake(45, (self.bigImage.frame.origin.y + frameSize.width * 2 / 3 + 50), frameSize.width -90, frameSize.height - (self.bigImage.frame.origin.y + frameSize.width * 2 / 3 + 50))];
+    self.descriptionView = [[UITextView alloc] initWithFrame:CGRectMake(15, (self.bigImage.frame.origin.y + frameSize.width * 2 / 3 + 50), frameSize.width -30, frameSize.height - (self.bigImage.frame.origin.y + frameSize.width * 2 / 3 + 50))];
     self.descriptionView.text = self.sharedData.pokemonDescription[self.pokemonIndex];
     self.descriptionView.textColor = [UIColor blackColor];
     [self.descriptionView setFont:[UIFont systemFontOfSize:20  weight:0.0]];
     self.descriptionView.editable = NO;
     self.descriptionView.scrollEnabled = YES;
+//    self.descriptionView.layoutManager.delegate = self;
     
     
     [self.view addSubview:self.descriptionView];
@@ -97,5 +98,6 @@
 //    }
 //    
 //}
+
 
 @end

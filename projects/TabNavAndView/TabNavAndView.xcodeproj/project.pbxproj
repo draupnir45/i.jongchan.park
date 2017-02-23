@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B93A37181E5E902800178863 /* PokemonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B93A37171E5E902800178863 /* PokemonTableViewCell.m */; };
 		B98BBAD31E5DB16F00E41B1B /* star_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B98BBAD11E5DB16F00E41B1B /* star_selected@3x.png */; };
 		B98BBAD41E5DB16F00E41B1B /* star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B98BBAD21E5DB16F00E41B1B /* star@3x.png */; };
 		B98BBAD61E5DB7C200E41B1B /* setting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B98BBAD51E5DB7C200E41B1B /* setting@3x.png */; };
@@ -31,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B93A37161E5E902800178863 /* PokemonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokemonTableViewCell.h; sourceTree = "<group>"; };
+		B93A37171E5E902800178863 /* PokemonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokemonTableViewCell.m; sourceTree = "<group>"; };
 		B98BBAD11E5DB16F00E41B1B /* star_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_selected@3x.png"; sourceTree = "<group>"; };
 		B98BBAD21E5DB16F00E41B1B /* star@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@3x.png"; sourceTree = "<group>"; };
 		B98BBAD51E5DB7C200E41B1B /* setting@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@3x.png"; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				B9A22F0A1E5C5190004DA68E /* Gen1ViewController.m */,
 				B9A22F171E5C559A004DA68E /* Gen2ViewController.h */,
 				B9A22F181E5C559A004DA68E /* Gen2ViewController.m */,
+				B93A37161E5E902800178863 /* PokemonTableViewCell.h */,
+				B93A37171E5E902800178863 /* PokemonTableViewCell.m */,
 				B9A2BADE1E5D607800C59DCB /* PokemonDataSingleton.h */,
 				B9A2BADF1E5D607800C59DCB /* PokemonDataSingleton.m */,
 				B9A22F1A1E5C56F0004DA68E /* DetailViewController.h */,
@@ -218,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9A2BAE01E5D607800C59DCB /* PokemonDataSingleton.m in Sources */,
+				B93A37181E5E902800178863 /* PokemonTableViewCell.m in Sources */,
 				B9A22F191E5C559A004DA68E /* Gen2ViewController.m in Sources */,
 				B9A22F0B1E5C5190004DA68E /* Gen1ViewController.m in Sources */,
 				B9A22F0E1E5C5242004DA68E /* TabBarController.m in Sources */,

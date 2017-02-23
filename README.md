@@ -36,6 +36,7 @@
 - UIWebView
 - UIActivityIndicator
 - UIViewController
+- UIBlurEffect
 
 ##프로젝트
 
