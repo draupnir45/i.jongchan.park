@@ -13,6 +13,7 @@
 <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, weak) UISwitch *tintSwitch;
 
 @end
 
@@ -27,6 +28,8 @@
     tableView.dataSource = self;
     
     self.tableView = tableView;
+    
+
     
     // Do any additional setup after loading the view.
 }
@@ -72,7 +75,10 @@
             cell.textLabel.text = @"틴트컬러 바꾸기";
             UISwitch *switchView = [[UISwitch alloc] init];
             cell.accessoryView = switchView;
+            self.tintSwitch = switchView;
             [switchView addTarget:self action:@selector(tintColorChange:) forControlEvents:UIControlEventValueChanged];
+            AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+            self.tintSwitch.on = appDelegate.tintChanged;
             break;
     }
     
@@ -94,5 +100,18 @@
     [appDelegate setTintChanged:sender.on];
 
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        [self performSegueWithIdentifier:@"FavoritePokemonSegue" sender:[tableView cellForRowAtIndexPath:indexPath]];
+    }
+}
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"FavoritePokemonSegue"]) {
+//        
+//    }
+//}
 
 @end

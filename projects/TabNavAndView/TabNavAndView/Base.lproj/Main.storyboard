@@ -23,7 +23,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="24M-FZ-y72">
-                        <barButtonItem key="rightBarButtonItem" image="idcard.png" id="zDe-yf-2F2">
+                        <barButtonItem key="rightBarButtonItem" image="setting.png" id="zDe-yf-2F2">
                             <connections>
                                 <segue destination="yqm-eS-yWx" kind="presentation" id="a0Z-sF-14f"/>
                             </connections>
@@ -51,33 +51,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="0Dh-ew-HWW">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="4Il-ep-U0i"/>
+                        <barButtonItem key="rightBarButtonItem" image="star.png" id="JA6-uX-I1s">
+                            <connections>
+                                <action selector="favoriteRegister:" destination="tvS-ar-xHX" id="6xx-Fs-mfV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Lbl-b6-cUp" kind="presentation" identifier="webViewSegue" id="KPe-wh-MbM"/>
+                        <outlet property="favoriteBtn" destination="JA6-uX-I1s" id="Lbz-Xf-37B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8l-eI-jCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2946" y="137"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="yNU-4m-nvA">
-            <objects>
-                <viewController id="Lbl-b6-cUp" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="J1w-MI-L6R"/>
-                        <viewControllerLayoutGuide type="bottom" id="bcK-E1-nZ0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="f5c-Hr-h5r">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ft6-u0-yYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3919" y="137"/>
+            <point key="canvasLocation" x="3337" y="137"/>
         </scene>
         <!--2세대-->
         <scene sceneID="Tvt-e6-IMw">
@@ -93,7 +79,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="X6t-qw-x5K">
-                        <barButtonItem key="rightBarButtonItem" image="idcard.png" id="U7i-fU-KTP">
+                        <barButtonItem key="rightBarButtonItem" image="setting.png" id="U7i-fU-KTP">
                             <connections>
                                 <segue destination="yqm-eS-yWx" kind="presentation" id="5x1-K4-heS"/>
                             </connections>
@@ -127,10 +113,34 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="FFV-ld-BO6" kind="show" identifier="FavoritePokemonSegue" id="c3m-cl-OdB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c38-B8-J34" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2017" y="1673"/>
+        </scene>
+        <!--FavoritePM View Controller-->
+        <scene sceneID="jae-oB-Rip">
+            <objects>
+                <viewController id="FFV-ld-BO6" customClass="FavoritePMViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6xz-b9-KIz"/>
+                        <viewControllerLayoutGuide type="bottom" id="FGe-Sh-W0d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mLi-xg-qem">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="tvS-ar-xHX" kind="show" identifier="detail" id="FuR-ue-GqK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O2o-dy-QLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2929" y="1673"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="w2o-6N-r6L">
@@ -209,7 +219,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="idcard.png" width="16" height="16"/>
+        <image name="setting.png" width="16" height="16"/>
+        <image name="star.png" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5x1-K4-heS"/>

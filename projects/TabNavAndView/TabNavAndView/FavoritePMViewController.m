@@ -1,16 +1,16 @@
 //
-//  Gen1ViewController.m
+//  FavoritePMViewController.m
 //  TabNavAndView
 //
-//  Created by 박종찬 on 2017. 2. 21..
+//  Created by 박종찬 on 2017. 2. 22..
 //  Copyright © 2017년 Jongchan Park. All rights reserved.
 //
 
-#import "Gen1ViewController.h"
+#import "FavoritePMViewController.h"
 #import "DetailViewController.h"
 #import "PokemonDataSingleton.h"
 
-@interface Gen1ViewController ()
+@interface FavoritePMViewController ()
 <UITableViewDelegate, UITableViewDataSource>
 
 @property UITableView *tableView;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation Gen1ViewController
+@implementation FavoritePMViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,6 +34,11 @@
     
     self.sharedData = [PokemonDataSingleton sharedData];
     
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
 }
 
 
@@ -43,7 +48,7 @@
 #pragma mark - TableView DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 151;
+    return self.sharedData.favoritePokemon.count;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -55,8 +60,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseId"];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld. %@",indexPath.row +1, self.sharedData.pokemonName[indexPath.row]];
-    [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Thumbnails/thumbnail_%ld.png",indexPath.row+1]]];
+    NSInteger pmIndex = [[self.sharedData.favoritePokemon objectAtIndex:indexPath.row] integerValue];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld. %@",pmIndex +1, self.sharedData.pokemonName[pmIndex]];
+    [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Thumbnails/thumbnail_%ld.png",pmIndex+1]]];
     return cell;
     
 }
@@ -76,9 +83,9 @@
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
 //        detailView.title = self.sharedData.pokemonName[indexPath.row];
 //        detailView.contentsForPm = self.sharedData.pokemonDescription[indexPath.row];
-        detailView.pokemonIndex = indexPath.row;
+        NSInteger pmIndex = [[self.sharedData.favoritePokemon objectAtIndex:indexPath.row] integerValue];
+        detailView.pokemonIndex = pmIndex;
     }
 }
-
 
 @end
