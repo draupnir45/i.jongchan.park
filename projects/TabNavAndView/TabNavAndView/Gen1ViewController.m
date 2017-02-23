@@ -55,8 +55,8 @@
     } else {
         cell = [[PokemonTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseId"];
     }
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld. %@",indexPath.row +1, self.sharedData.pokemonName[indexPath.row]];
+    cell.numberLabel.text = [NSString stringWithFormat:@"NO.%ld",indexPath.row +1];
+    cell.textLabel.text = self.sharedData.pokemonName[indexPath.row];
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     
     [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Thumbnails/thumbnail_%ld.png",indexPath.row+1]]];

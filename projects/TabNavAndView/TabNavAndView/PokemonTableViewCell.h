@@ -10,4 +10,6 @@
 
 @interface PokemonTableViewCell : UITableViewCell
 
+@property (nonatomic, weak) UILabel *numberLabel;
+
 @end

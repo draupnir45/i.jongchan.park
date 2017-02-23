@@ -19,6 +19,7 @@
     UINavigationController *firstItem = self.viewControllers[0];
     UINavigationController *secondItem = self.viewControllers[1];
     
+    
     UIImage *firstImage = [UIImage imageNamed:@"gen1-1"];
     UIImage *highlightedFirstImage = [UIImage imageNamed:@"gen1-2"];
     UIImage *secondImage = [UIImage imageNamed:@"gen2-1"];
