@@ -19,13 +19,14 @@
 ###Objective C / iOS 구조 및 디자인 패턴
 - [Objective-C 클래스, 메서드, 프로퍼티, 객체 그리고 메인 파일](learning/Objective_C_method_property_and_mainfile.md)
 - [Framework Cocoa & Cocoa Touch](learning/AboutCocoa.md)
-- [Design Pattern 프로토콜(Delegate) 패턴](learning/FreakinDelegate.md)
-- [Design Pattern 싱글톤 패턴](learning/Singleton.md)
+- [Design Pattern - 프로토콜(Delegate)](learning/FreakinDelegate.md)
+- [Design Pattern - 싱글톤](learning/Singleton.md)
 - [MVC]UIViewController
 - [MVC]CoreData
 - [날짜 표현(NSDate)](learning/NSDate.md)
 - [Literal 문법](learning/LiteralSyntaxes.md)
-
+- [우리들의 싱글톤 1 - NSUserDefaults](learning/NSUserDefaults.md)
+- [우리들의 싱글톤 2 - NSNotificationCenter](learning/NSNotificationCenter.md)
 
 
 ###UIView와 아이들
@@ -40,14 +41,15 @@
 - [UISwitch](learning/UISwitch.md)
 - [UISegmentedControl](learning/UISegmentedControl.md)
 - [UITableView](learning/UITableViewLog.md)
-- UIWebView
+- [UIWebView](learning/UIWebView.md)
 - UIActivityIndicator
 - UIBlurEffect
 
 ##프로젝트
 
 ###
-- MyDay : 연습을 위해 만들어 본 메모장 겸 일기장입니다.
+- [MyDay](projects/MyDayApp) : 연습을 위해 만들어 본 메모장 겸 일기장입니다.
+- [PokéDex](projects/TabNavAndView) : 탭바와 네비바 컨트롤을 연습하면서 만든 포켓몬 도감입니다.
 
 ###연습 및 과제
 - [과제] 커스텀 테이블 뷰 과제 ([CustomTableViewCopy](projects/CustomTableViewCopy), 2017. 2. 19)

@@ -55,7 +55,6 @@
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewFrameChange:) name:UIKeyboardDidShowNotification object:nil];
-    
 
 }
 
@@ -97,7 +96,9 @@
     
 }
 
-
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 /*
 #pragma mark - Navigation

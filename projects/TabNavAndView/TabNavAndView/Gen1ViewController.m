@@ -113,6 +113,10 @@
     }
 }
 
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self.tableView];
+}
+
 
 
 @end
