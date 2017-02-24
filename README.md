@@ -9,23 +9,30 @@
 
 ###프로그래밍 일반
 - [객체 지향 프로그래밍 기초](https://github.com/draupnir45/i.jongchan.park/blob/master/learning/Object-Oriented%20Programming.md)
-- [Objective-C의 클래스, 메서드, 프로퍼티, 객체 그리고 메인 파일](learning/Objective_C_method_property_and_mainfile.md)
 - [Git](learning/AboutGit.md)
 - [RAM](learning/RAM.md)
 - [한글 인코딩](learning/EncodingHangeul.md)
 - [ActiveX, 공인인증서 그리고 기술적 부채](learning/ActiveX&TechnicalDept.md)
-- [Literal 문법](learning/LiteralSyntaxes.md)
 - [JSON](learning/JSON.md)
 - [버블 정렬, 머지 정렬, 퀵 정렬(소스코드)](learning/sorts.md)
 
-###구현 관련
-- [Cocoa & Cocoa Touch](learning/AboutCocoa.md)
-- [Protocol/Delegate Pattern](learning/FreakinDelegate.md)
-- [NSDate](learning/NSDate.md)
+###Objective C / iOS 구조 및 디자인 패턴
+- [Objective-C 클래스, 메서드, 프로퍼티, 객체 그리고 메인 파일](learning/Objective_C_method_property_and_mainfile.md)
+- [Framework Cocoa & Cocoa Touch](learning/AboutCocoa.md)
+- [Design Pattern 프로토콜(Delegate) 패턴](learning/FreakinDelegate.md)
+- [Design Pattern 싱글톤 패턴](learning/Singleton.md)
+- [MVC]UIViewController
+- [MVC]CoreData
+- [날짜 표현(NSDate)](learning/NSDate.md)
+- [Literal 문법](learning/LiteralSyntaxes.md)
+
+
+
+###UIView와 아이들
 - [UIView](learning/UIView.md)
-- [UIControl](learning/UIControl.md)
 - [UILabel](learning/UILabel.md)
 - [UIImageView](learning/UIImageView.md)
+- [UIControl](learning/UIControl.md)
 - [UIButton](learning/UIButton.md)
 - [UITextField](learning/UITextField.md)
 - [UIScrollView](learning/UIScrollView.md)
@@ -35,7 +42,6 @@
 - [UITableView](learning/UITableViewLog.md)
 - UIWebView
 - UIActivityIndicator
-- UIViewController
 - UIBlurEffect
 
 ##프로젝트

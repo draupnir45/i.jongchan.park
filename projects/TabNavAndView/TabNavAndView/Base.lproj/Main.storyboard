@@ -35,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015.2" y="137.18140929535232"/>
+            <point key="canvasLocation" x="2017" y="136"/>
         </scene>
         <!--Title-->
         <scene sceneID="xrZ-ZH-wOr">
@@ -63,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8l-eI-jCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3337" y="137"/>
+            <point key="canvasLocation" x="3748" y="135"/>
         </scene>
         <!--2세대-->
         <scene sceneID="Tvt-e6-IMw">
@@ -91,12 +91,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XgU-Oy-2h4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015" y="901"/>
+            <point key="canvasLocation" x="2017" y="901"/>
         </scene>
         <!--설정-->
         <scene sceneID="NNv-eg-Va5">
             <objects>
-                <viewController id="qcT-RP-FW3" customClass="SettingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingViewController" id="qcT-RP-FW3" customClass="SettingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ei9-ma-U7t"/>
                         <viewControllerLayoutGuide type="bottom" id="3ck-98-uaa"/>
@@ -121,7 +121,7 @@
             </objects>
             <point key="canvasLocation" x="2017" y="1673"/>
         </scene>
-        <!--FavoritePM View Controller-->
+        <!--Title-->
         <scene sceneID="jae-oB-Rip">
             <objects>
                 <viewController id="FFV-ld-BO6" customClass="FavoritePMViewController" sceneMemberID="viewController">
@@ -134,13 +134,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="ygI-gb-PZa">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Fe0-YH-8uM">
+                            <connections>
+                                <action selector="startEditing:" destination="FFV-ld-BO6" id="N0j-sC-FCb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="EditButton" destination="Fe0-YH-8uM" id="cEI-p3-37t"/>
                         <segue destination="tvS-ar-xHX" kind="show" identifier="detail" id="FuR-ue-GqK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2o-dy-QLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2929" y="1673"/>
+            <point key="canvasLocation" x="2966" y="1673"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="w2o-6N-r6L">
@@ -167,7 +175,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="svN-xf-AAb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="JtU-1n-VgV"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RSu-RU-PS4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RSu-RU-PS4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -202,7 +210,7 @@
         <!--Navigation Controller-->
         <scene sceneID="um0-VM-yxL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yqm-eS-yWx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SettingNaviCon" automaticallyAdjustsScrollViewInsets="NO" id="yqm-eS-yWx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ron-pa-pXB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -223,7 +231,7 @@
         <image name="star.png" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5x1-K4-heS"/>
-        <segue reference="Vdv-Uo-MLq"/>
+        <segue reference="CSy-Vj-uc7"/>
+        <segue reference="a0Z-sF-14f"/>
     </inferredMetricsTieBreakers>
 </document>

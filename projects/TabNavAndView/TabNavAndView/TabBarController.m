@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //탭바 설정합니다.
+    
     UINavigationController *firstItem = self.viewControllers[0];
     UINavigationController *secondItem = self.viewControllers[1];
     

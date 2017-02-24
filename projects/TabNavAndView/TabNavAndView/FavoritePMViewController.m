@@ -8,13 +8,17 @@
 
 #import "FavoritePMViewController.h"
 #import "DetailViewController.h"
-#import "PokemonDataSingleton.h"
+#import "PokemonData.h"
+#import "SettingData.h"
+#import "PokemonTableViewCell.h"
 
 @interface FavoritePMViewController ()
 <UITableViewDelegate, UITableViewDataSource>
 
 @property UITableView *tableView;
-@property PokemonDataSingleton *sharedData;
+@property PokemonData *sharedData;
+@property SettingData *settings;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *EditButton;
 
 
 @end
@@ -32,9 +36,10 @@
     [self.view addSubview:self.tableView];
     
     
-    self.sharedData = [PokemonDataSingleton sharedData];
-    
-    
+    self.sharedData = [PokemonData sharedData];
+    self.settings = [SettingData sharedSettings];
+
+
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -48,21 +53,21 @@
 #pragma mark - TableView DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.sharedData.favoritePokemon.count;
+    return self.settings.favoritePokemonIndexes.count;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseId"];
+    PokemonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseId"];
     if (cell != nil) {
     } else {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseId"];
+        cell = [[PokemonTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseId"];
     }
     
-    NSInteger pmIndex = [[self.sharedData.favoritePokemon objectAtIndex:indexPath.row] integerValue];
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld. %@",pmIndex +1, self.sharedData.pokemonName[pmIndex]];
+    NSInteger pmIndex = [[self.settings.favoritePokemonIndexes objectAtIndex:indexPath.row] integerValue];
+    cell.numberLabel.text = [NSString stringWithFormat:@"NO.%03ld",pmIndex+1];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld. %@",indexPath.row+1, self.sharedData.pokemonName[pmIndex]];
     [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Thumbnails/thumbnail_%ld.png",pmIndex+1]]];
     return cell;
     
@@ -75,6 +80,26 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 60;
 }
+- (IBAction)startEditing:(id)sender {
+    
+    [self.tableView setEditing:!self.tableView.editing animated:YES];
+    
+    if (self.tableView.editing) {
+        [self.navigationItem.rightBarButtonItem setTitle:@"Done"];
+        [self.navigationItem.rightBarButtonItem setStyle:UIBarButtonItemStyleDone];
+    } else {
+        [self.navigationItem.rightBarButtonItem setTitle:@"Edit"];
+    }
+    
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.settings.favoritePokemonIndexes removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
 #pragma mark - Segue
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -83,9 +108,11 @@
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
 //        detailView.title = self.sharedData.pokemonName[indexPath.row];
 //        detailView.contentsForPm = self.sharedData.pokemonDescription[indexPath.row];
-        NSInteger pmIndex = [[self.sharedData.favoritePokemon objectAtIndex:indexPath.row] integerValue];
+        NSInteger pmIndex = [[self.settings.favoritePokemonIndexes objectAtIndex:indexPath.row] integerValue];
         detailView.pokemonIndex = pmIndex;
     }
 }
+
+
 
 @end

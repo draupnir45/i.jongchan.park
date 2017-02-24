@@ -6,19 +6,20 @@
 //  Copyright © 2017년 Jongchan Park. All rights reserved.
 //
 
-#import "PokemonDataSingleton.h"
+#import "PokemonData.h"
 
-@implementation PokemonDataSingleton
+@implementation PokemonData
 
 
-+ (instancetype)sharedData
-{
-    static PokemonDataSingleton *instance = nil;
++ (instancetype)sharedData {
+    
+    static PokemonData *instance = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[PokemonDataSingleton alloc] init];
+        instance = [[PokemonData alloc] init];
     });
+    
     return instance;
 }
 
@@ -26,8 +27,7 @@
 {
     self = [super init];
     if (self) {
-        NSLog(@"싱글톤 초기화중...");
-        _favoritePokemon = [[NSMutableArray alloc] init];
+        NSLog(@"데이터 싱글톤 초기화중...");
         _pokemonName = @[@"이상해씨",
                          @"이상해풀",
                          @"이상해꽃",

@@ -26,8 +26,8 @@
     
     UILabel *numberLabel = [[UILabel alloc] init];
     [numberLabel setTextColor:self.tintColor];
-    [numberLabel setAlpha:0.5];
-    [numberLabel setFont:[UIFont systemFontOfSize:12 weight:1.0]];
+    [numberLabel setAlpha:0.4];
+    [numberLabel setFont:[UIFont systemFontOfSize:12 weight:0.5]];
     [self.contentView addSubview:numberLabel];
     
     self.numberLabel = numberLabel;
@@ -39,6 +39,7 @@
     
     [self.numberLabel setFrame:CGRectMake(self.textLabel.frame.origin.x, self.textLabel.frame.origin.y+10, self.frame.size.width, self.frame.size.height)];
     [self.numberLabel sizeToFit];
+    
     CGRect textLabelFrame = self.textLabel.frame;
     CGFloat textLabelMargin = 15;
     textLabelFrame.origin.y += textLabelMargin;

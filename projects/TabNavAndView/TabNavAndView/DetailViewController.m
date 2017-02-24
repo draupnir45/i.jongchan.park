@@ -7,13 +7,16 @@
 //
 
 #import "DetailViewController.h"
-#import "PokemonDataSingleton.h"
+#import "PokemonData.h"
+#import "SettingData.h"
 
 @interface DetailViewController ()
 
 @property UIImageView *bigImage;
 @property UIButton *closeButton;
-@property PokemonDataSingleton *sharedData;
+@property PokemonData *sharedData;
+@property SettingData *settings;
+
 @property BOOL isFavorited;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *favoriteBtn;
 
@@ -24,10 +27,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.sharedData = [PokemonDataSingleton sharedData];
+    self.sharedData = [PokemonData sharedData];
+    self.settings = [SettingData sharedSettings];
     CGSize frameSize = self.view.frame.size;
     
-    if ([self.sharedData.favoritePokemon containsObject:[NSNumber numberWithInteger:self.pokemonIndex]]) {
+    if ([self.settings.favoritePokemonIndexes containsObject:[NSNumber numberWithInteger:self.pokemonIndex]]) {
         self.isFavorited = YES;
     }
     
@@ -67,12 +71,32 @@
     
 
     NSNumber *indexNumber = [NSNumber numberWithInteger:self.pokemonIndex];
-    if ([self.sharedData.favoritePokemon containsObject:indexNumber]) {
-        [self.sharedData.favoritePokemon removeObject:indexNumber];
+    if ([self.settings.favoritePokemonIndexes containsObject:indexNumber]) {
+        [self.settings.favoritePokemonIndexes removeObject:indexNumber];
         [self setIsFavorited:NO];
     } else {
-        [self.sharedData.favoritePokemon addObject:indexNumber];
-        [self setIsFavorited:YES];
+        if ((self.settings.isBattleSixEnabled && [self.settings.favoritePokemonIndexes count]<6) || !self.settings.isBattleSixEnabled) {
+                [self.settings.favoritePokemonIndexes addObject:indexNumber];
+                [self setIsFavorited:YES];
+        } else {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"6마리가 다 찼습니다!"
+                                                                           message:@"즐겨찾기 목록에서 수정하시겠어요?" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"취소" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
+                [alert dismissViewControllerAnimated:YES completion:nil];
+            }];
+            [alert addAction:cancel];
+            UIAlertAction *ok = [UIAlertAction actionWithTitle:@"확인" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+                UINavigationController *settingNav = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingNaviCon"];
+                [self presentViewController:settingNav animated:YES completion:^{
+                    [settingNav.topViewController performSegueWithIdentifier:@"FavoritePokemonSegue" sender:self];
+                
+                }];
+                [alert dismissViewControllerAnimated:YES completion:nil];
+            }];
+            [alert addAction:ok];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+
     }
     
     [self updateFavorite];

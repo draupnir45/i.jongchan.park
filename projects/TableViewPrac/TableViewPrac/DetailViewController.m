@@ -39,6 +39,8 @@
     [self.view addSubview:self.descriptionView];
     
     
+    
+    
 //    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, frameSize.width, 100)];
 //    [self.titleLabel setFont:[UIFont systemFontOfSize:40 weight:0.5]];
 //    [self.titleLabel setTextColor:[UIColor blackColor]];
@@ -65,6 +67,11 @@
 //    [self presentViewController:webView animated:YES completion:nil];
 //    
 //}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

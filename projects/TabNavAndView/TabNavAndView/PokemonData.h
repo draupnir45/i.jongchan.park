@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PokemonDataSingleton : NSObject 
+@interface PokemonData : NSObject 
 
 @property (readonly, nonatomic, retain) NSArray *pokemonName;
 @property (readonly, nonatomic, retain) NSArray *pokemonDescription;
-@property (nonatomic, retain) NSMutableArray *favoritePokemon;
+
 
 + (instancetype)sharedData;
 

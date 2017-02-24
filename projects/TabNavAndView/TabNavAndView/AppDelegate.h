@@ -11,7 +11,6 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic) BOOL tintChanged;
 
 - (void)setTintChanged:(BOOL)tintChanged;
 

@@ -7,10 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "SettingData.h"
 
 @interface AppDelegate ()
 
-
+@property SettingData *settings;
 
 @end
 
@@ -18,48 +19,46 @@
 
 
 
-
+///저장되는 설정을 불러옵니다.
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [self.window setTintColor:[UIColor redColor]];
+    //NSUserDefaults로부터 설정을 불러오고, 세팅합니다.
+    
+    self.settings = [SettingData sharedSettings];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"haveData"]) { //설정을 저장한 적이 있는지 확인합니다.
+        [self loadSettings]; //
+    }
+    
+    [self setTintChanged:self.settings.tintColorChanged];
+    
     // Override point for customization after application launch.
     return YES;
 }
 
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-}
-
-
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"haveData"];
+    [[NSUserDefaults standardUserDefaults] setObject:self.settings.favoritePokemonIndexes forKey:@"favoritePokemonIndexes"];
+    [[NSUserDefaults standardUserDefaults] setBool:self.settings.tintColorChanged forKey:@"tintColorChanged"];
+    [[NSUserDefaults standardUserDefaults] setBool:self.settings.battleSixEnabled forKey:@"battleSixEnabled"];
 }
 
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-}
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
+///틴트컬러를 설정에 따라 바꾸어 줍니다.
 - (void)setTintChanged:(BOOL)tintChanged {
-    if (tintChanged) {
-        [self.window setTintColor:[UIColor blueColor]];
-    } else {
-        [self.window setTintColor:[UIColor redColor]];
-    }
-    _tintChanged = tintChanged;
+    if (tintChanged) [self.window setTintColor:[UIColor blueColor]];
+    else [self.window setTintColor:[UIColor redColor]];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadAppDelegateTable" object:nil];
+    self.settings.tintColorChanged = tintChanged;
+}
+
+///NSUserDefaults로부터 설정을 불러 와 싱글턴 설정에 넣습니다.
+- (void)loadSettings {
+    self.settings.favoritePokemonIndexes = [[[NSUserDefaults standardUserDefaults] objectForKey:@"favoritePokemonIndexes"] mutableCopy];
+    self.settings.tintColorChanged = [[NSUserDefaults standardUserDefaults] boolForKey:@"tintColorChanged"];
+    self.settings.battleSixEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:@"battleSixEnabled"];
+
 }
 
 @end

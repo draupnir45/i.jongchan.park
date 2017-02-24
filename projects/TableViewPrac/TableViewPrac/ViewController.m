@@ -34,6 +34,8 @@
     
     [self.view addSubview:self.tableView];
     
+    NSLog(@"viewDidLoad");
+    
     
     
     self.description_gen1 = @[
@@ -480,13 +482,17 @@
     
     cell.textLabel.text = [NSString stringWithFormat:@"%ld. %@",indexPath.row +1, self.dataArray_gen1[indexPath.row]];
     [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Thumbnails/thumbnail_%ld.png",indexPath.row+1]]];
+    
+    
 
-//    NSLog(@"cellForRowAtIndexPath %ld. %@",indexPath.row +1, self.dataArray_gen1[indexPath.row]);
+    NSLog(@"cellForRowAtIndexPath %ld. %@",indexPath.row +1, self.dataArray_gen1[indexPath.row]);
     return cell;
     
 }
 
-
+-(void)viewWillAppear:(BOOL)animated {
+    NSLog(@"viewWillAppear");
+}
 
 
 
