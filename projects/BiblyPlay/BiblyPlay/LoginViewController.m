@@ -12,6 +12,7 @@
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userIDTf;
 @property (weak, nonatomic) IBOutlet UITextField *pwTf;
+@property (weak, nonatomic) IBOutlet UIImageView *background;
 
 @end
 
@@ -20,7 +21,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+
     
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    UIBlurEffect *blurrEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleProminent];
+    
+    UIVisualEffectView *effcetView = [[UIVisualEffectView alloc] initWithEffect:blurrEffect];
+    effcetView.frame = self.view.bounds;
+            [_background addSubview:effcetView];
+    [effcetView setAlpha:0.0];
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+
+        
+        [effcetView setAlpha:1.0];
+
+    } completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

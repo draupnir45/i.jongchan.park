@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgg-Lf-SHj">
-                                <rect key="frame" x="153" y="318" width="69" height="30"/>
+                                <rect key="frame" x="153" y="318" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Setting"/>
                                 <connections>
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XK4-hb-Dnp">
-                                <rect key="frame" x="164" y="392" width="46" height="30"/>
+                                <rect key="frame" x="164" y="392" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
@@ -54,25 +54,28 @@
                         <viewControllerLayoutGuide type="bottom" id="2rd-7h-X6f"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ar5-fk-Kur">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookcover.png" translatesAutoresizingMaskIntoConstraints="NO" id="sgV-gY-1hs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JCe-fW-gRw">
-                                <rect key="frame" x="87" y="235" width="200" height="30"/>
+                                <rect key="frame" x="87" y="250" width="239" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RSW-fI-HQB">
-                                <rect key="frame" x="87" y="308" width="200" height="30"/>
+                                <rect key="frame" x="87" y="308" width="239" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFe-g7-RIk">
-                                <rect key="frame" x="206" y="376" width="55" height="30"/>
+                                <rect key="frame" x="206" y="376" width="94" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
@@ -80,18 +83,29 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpI-fj-cL2">
-                                <rect key="frame" x="110" y="376" width="47" height="30"/>
+                                <rect key="frame" x="110" y="376" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signInSelected:" destination="nrq-AC-TGd" eventType="touchUpInside" id="7kR-2n-EEX"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bookshelf_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="o8K-CX-aWr">
+                                <rect key="frame" x="107" y="153" width="200" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sgV-gY-1hs" firstAttribute="top" secondItem="ar5-fk-Kur" secondAttribute="top" id="J0x-0a-sA0"/>
+                            <constraint firstItem="sgV-gY-1hs" firstAttribute="leading" secondItem="ar5-fk-Kur" secondAttribute="leading" id="biS-ZI-31b"/>
+                            <constraint firstItem="2rd-7h-X6f" firstAttribute="top" secondItem="sgV-gY-1hs" secondAttribute="bottom" id="kw0-Sr-xNI"/>
+                            <constraint firstAttribute="trailing" secondItem="sgV-gY-1hs" secondAttribute="trailing" id="uuS-85-YxT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WZB-k1-R4b"/>
                     <connections>
+                        <outlet property="background" destination="sgV-gY-1hs" id="Czs-Yn-zpa"/>
                         <outlet property="pwTf" destination="RSW-fI-HQB" id="mAT-db-qbK"/>
                         <outlet property="userIDTf" destination="JCe-fW-gRw" id="MDQ-w8-C3l"/>
                     </connections>
@@ -109,25 +123,25 @@
                         <viewControllerLayoutGuide type="bottom" id="WNU-ep-41f"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="shP-P1-XoC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h7w-9l-bVP">
-                                <rect key="frame" x="87" y="238" width="200" height="30"/>
+                                <rect key="frame" x="87" y="238" width="239" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aho-n5-vDl">
-                                <rect key="frame" x="87" y="308" width="200" height="30"/>
+                                <rect key="frame" x="87" y="308" width="239" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfo-sP-Zgo">
-                                <rect key="frame" x="160" y="377" width="55" height="30"/>
+                                <rect key="frame" x="160" y="377" width="94" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
@@ -155,7 +169,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Xey-o2-hrB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rfp-AK-K5I">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -208,4 +222,8 @@
             <point key="canvasLocation" x="136.80000000000001" y="906.29685157421295"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bookcover.png" width="1722" height="2412"/>
+        <image name="bookshelf_logo.png" width="200" height="59"/>
+    </resources>
 </document>

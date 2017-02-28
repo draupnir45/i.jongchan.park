@@ -17,6 +17,9 @@
 		B902F2971E5FE562005A8867 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B902F2961E5FE562005A8867 /* DataCenter.m */; };
 		B902F29A1E5FF6A0005A8867 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B902F2991E5FF6A0005A8867 /* LoginViewController.m */; };
 		B902F29D1E5FF6BD005A8867 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B902F29C1E5FF6BD005A8867 /* SignUpViewController.m */; };
+		B9662D9F1E644CBF0007EB64 /* bookshelf_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9662D9E1E644CBF0007EB64 /* bookshelf_logo@3x.png */; };
+		B9662DA11E64545C0007EB64 /* bookcover.png in Resources */ = {isa = PBXBuildFile; fileRef = B9662DA01E64545C0007EB64 /* bookcover.png */; };
+		B9EDC5FB1E6407D900EC8F65 /* bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9EDC5FA1E6407D900EC8F65 /* bg@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		B902F2991E5FF6A0005A8867 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B902F29B1E5FF6BD005A8867 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		B902F29C1E5FF6BD005A8867 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		B9662D9E1E644CBF0007EB64 /* bookshelf_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookshelf_logo@3x.png"; sourceTree = "<group>"; };
+		B9662DA01E64545C0007EB64 /* bookcover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookcover.png; sourceTree = "<group>"; };
+		B9EDC5FA1E6407D900EC8F65 /* bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,9 @@
 				B902F2951E5FE562005A8867 /* DataCenter.h */,
 				B902F2961E5FE562005A8867 /* DataCenter.m */,
 				B902F2811E5FC859005A8867 /* Main.storyboard */,
+				B9EDC5FA1E6407D900EC8F65 /* bg@3x.png */,
+				B9662D9E1E644CBF0007EB64 /* bookshelf_logo@3x.png */,
+				B9662DA01E64545C0007EB64 /* bookcover.png */,
 				B902F2981E5FF6A0005A8867 /* LoginViewController.h */,
 				B902F2991E5FF6A0005A8867 /* LoginViewController.m */,
 				B902F29B1E5FF6BD005A8867 /* SignUpViewController.h */,
@@ -158,7 +167,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9662DA11E64545C0007EB64 /* bookcover.png in Resources */,
+				B9EDC5FB1E6407D900EC8F65 /* bg@3x.png in Resources */,
 				B902F2881E5FC859005A8867 /* LaunchScreen.storyboard in Resources */,
+				B9662D9F1E644CBF0007EB64 /* bookshelf_logo@3x.png in Resources */,
 				B902F2851E5FC859005A8867 /* Assets.xcassets in Resources */,
 				B902F2831E5FC859005A8867 /* Main.storyboard in Resources */,
 			);
@@ -334,6 +346,7 @@
 				B902F28E1E5FC859005A8867 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
