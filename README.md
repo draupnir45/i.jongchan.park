@@ -45,6 +45,9 @@
 - UIActivityIndicator
 - UIBlurEffect
 
+###아야기판
+ - [ScrollingStoryBoard](projects/FreakinAutoLayoutPrac) - 오토 레이아웃으로 뷰를 정렬하고 스크롤뷰에 싣는 것을 연습해 보았습니다. 
+
 ##프로젝트
 
 ###
