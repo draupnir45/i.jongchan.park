@@ -27,7 +27,7 @@
     UILabel *numberLabel = [[UILabel alloc] init];
     [numberLabel setTextColor:self.tintColor];
     [numberLabel setAlpha:0.4];
-    [numberLabel setFont:[UIFont systemFontOfSize:12 weight:0.5]];
+    [numberLabel setFont:[UIFont systemFontOfSize:12 weight:-0.3]];
     [self.contentView addSubview:numberLabel];
     
     self.numberLabel = numberLabel;

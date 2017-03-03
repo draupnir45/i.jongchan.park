@@ -81,19 +81,20 @@
         } else {
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"6마리가 다 찼습니다!"
                                                                            message:@"즐겨찾기 목록에서 수정하시겠어요?" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"취소" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
-                [alert dismissViewControllerAnimated:YES completion:nil];
-            }];
-            [alert addAction:cancel];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"취소" style:UIAlertActionStyleCancel handler:nil];
+            
+            
+            
             UIAlertAction *ok = [UIAlertAction actionWithTitle:@"확인" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
-                UINavigationController *settingNav = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingNaviCon"];
-                [self presentViewController:settingNav animated:YES completion:^{
-                    [settingNav.topViewController performSegueWithIdentifier:@"FavoritePokemonSegue" sender:self];
-                
-                }];
-                [alert dismissViewControllerAnimated:YES completion:nil];
+                    UINavigationController *settingNav = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingNaviCon"];
+                    [self presentViewController:settingNav animated:YES completion:^{
+                        [settingNav.topViewController performSegueWithIdentifier:@"FavoritePokemonSegue" sender:self];
+                    
+                    }];
+                    [alert dismissViewControllerAnimated:YES completion:nil];
             }];
             [alert addAction:ok];
+            [alert addAction:cancel];
             [self presentViewController:alert animated:YES completion:nil];
         }
 

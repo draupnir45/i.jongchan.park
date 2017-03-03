@@ -37,7 +37,7 @@
             </objects>
             <point key="canvasLocation" x="2017" y="136"/>
         </scene>
-        <!--Title-->
+        <!--Detail-->
         <scene sceneID="xrZ-ZH-wOr">
             <objects>
                 <viewController id="tvS-ar-xHX" customClass="DetailViewController" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="0Dh-ew-HWW">
+                    <navigationItem key="navigationItem" title="Detail" id="0Dh-ew-HWW">
                         <barButtonItem key="rightBarButtonItem" image="star.png" id="JA6-uX-I1s">
                             <connections>
                                 <action selector="favoriteRegister:" destination="tvS-ar-xHX" id="6xx-Fs-mfV"/>
