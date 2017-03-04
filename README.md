@@ -51,7 +51,6 @@
 ##프로젝트
 
 ###
-- [MyDay](projects/MyDayApp) : 연습을 위해 만들어 본 메모장 겸 일기장입니다.
 - [PokéDex](projects/TabNavAndView) : 탭바와 네비바 컨트롤을 연습하면서 만든 포켓몬 도감입니다.
 
 ###연습 및 과제
@@ -64,4 +63,4 @@
 - [연습] `UITextField`와 `UIScrollView`를 이용하여 로그인 뷰 만들기 ([LoginPracByLogo](projects/LoginPracByLogo))
 - [연습] `UIPageControl`, `UISwitch`와 `UISegmentedControl` ([PageControlTest](projects/PageControlTest))
 - [연습] 버블, 머지, 퀵 정렬([SortingPrac](projects/SortingPrac))
-
+- [MyDay](projects/MyDayApp) : 연습을 위해 만들어 본 메모장 겸 일기장입니다.
