@@ -51,7 +51,7 @@
 ##프로젝트
 
 ###
-- [PokéDex](projects/TabNavAndView) : 탭바와 네비바 컨트롤을 연습하면서 만든 포켓몬 도감입니다.
+- [PokéDex](https://github.com/draupnir45/Poke-dex) : 탭바와 네비바 컨트롤을 연습하면서 만든 포켓몬 도감입니다.
 
 ###연습 및 과제
 - [과제] 커스텀 테이블 뷰 과제 ([CustomTableViewCopy](projects/CustomTableViewCopy), 2017. 2. 19)
