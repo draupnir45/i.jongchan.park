@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B91F32341E6CFCA6005DB418 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = B91F32331E6CFCA6005DB418 /* twitter.png */; };
 		B9242D0C1E58AAD600708E35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9242D0B1E58AAD600708E35 /* main.m */; };
 		B9242D0F1E58AAD600708E35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9242D0E1E58AAD600708E35 /* AppDelegate.m */; };
 		B9242D121E58AAD600708E35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9242D111E58AAD600708E35 /* ViewController.m */; };
@@ -20,10 +21,10 @@
 		B93F5B991E59B123008F5466 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B93F5B941E59B123008F5466 /* 2.jpg */; };
 		B93F5B9A1E59B123008F5466 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B93F5B951E59B123008F5466 /* 5.jpg */; };
 		B93F5B9B1E59B123008F5466 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B93F5B961E59B123008F5466 /* 4.jpg */; };
-		B9DE5E271E5C0FA500CA10FC /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DE5E261E5C0FA500CA10FC /* twitter.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B91F32331E6CFCA6005DB418 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		B9242D071E58AAD600708E35 /* CustomTableViewCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTableViewCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9242D0B1E58AAD600708E35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9242D0D1E58AAD600708E35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		B93F5B941E59B123008F5466 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		B93F5B951E59B123008F5466 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		B93F5B961E59B123008F5466 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
-		B9DE5E261E5C0FA500CA10FC /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = ../../../../../Desktop/twitter.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 				B9242D111E58AAD600708E35 /* ViewController.m */,
 				B9242D211E58AAF600708E35 /* CustomTableViewCell.h */,
 				B9242D221E58AAF600708E35 /* CustomTableViewCell.m */,
-				B9DE5E261E5C0FA500CA10FC /* twitter.png */,
+				B91F32331E6CFCA6005DB418 /* twitter.png */,
 				B93F5B9C1E59B12C008F5466 /* images */,
 				B9242D131E58AAD600708E35 /* Main.storyboard */,
 				B9242D161E58AAD600708E35 /* Assets.xcassets */,
@@ -144,7 +144,7 @@
 				TargetAttributes = {
 					B9242D061E58AAD500708E35 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = P75V2R55B5;
+						DevelopmentTeam = 8KDMCH8V2F;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -178,8 +178,8 @@
 				B93F5B991E59B123008F5466 /* 2.jpg in Resources */,
 				B9242D1A1E58AAD600708E35 /* LaunchScreen.storyboard in Resources */,
 				B931848E1E594AB20065B387 /* 1.jpg in Resources */,
+				B91F32341E6CFCA6005DB418 /* twitter.png in Resources */,
 				B93F5B9B1E59B123008F5466 /* 4.jpg in Resources */,
-				B9DE5E271E5C0FA500CA10FC /* twitter.png in Resources */,
 				B9242D171E58AAD600708E35 /* Assets.xcassets in Resources */,
 				B9242D151E58AAD600708E35 /* Main.storyboard in Resources */,
 			);
@@ -315,7 +315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P75V2R55B5;
+				DEVELOPMENT_TEAM = 8KDMCH8V2F;
 				INFOPLIST_FILE = CustomTableViewCopy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jongchan.CustomTableViewCopy;
@@ -327,7 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P75V2R55B5;
+				DEVELOPMENT_TEAM = 8KDMCH8V2F;
 				INFOPLIST_FILE = CustomTableViewCopy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jongchan.CustomTableViewCopy;
