@@ -19,27 +19,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    WKWebViewConfiguration *webViewConf = [[WKWebViewConfiguration alloc] init];
-//    
-//    WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:webViewConf];
-//    webView.navigationDelegate = self;
-    
     WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
     webView.navigationDelegate = self;
     webView.UIDelegate = self;
     
-    
     [self.view addSubview:webView];
     [self.view sendSubviewToBack:webView];
     
+    // URL용으로 퍼센트인코딩합니다.
     NSString *encodedStr = [self.urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
     NSURL *url = [NSURL URLWithString:encodedStr];
     [webView loadRequest:[NSURLRequest requestWithURL:url]];
     
-    
-
 }
+
 - (IBAction)dismissWebView:(id)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];

@@ -9,11 +9,13 @@
 #import "DetailViewController.h"
 #import "PokemonData.h"
 #import "SettingData.h"
+#import "PokeWikiWebViewController.h"
 
 @interface DetailViewController ()
 
-@property UIImageView *bigImage;
-@property UIButton *closeButton;
+@property (weak, nonatomic) IBOutlet UIImageView *bigImage;
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionView;
 @property PokemonData *sharedData;
 @property SettingData *settings;
 
@@ -29,9 +31,8 @@
     
     self.sharedData = [PokemonData sharedData];
     self.settings = [SettingData sharedSettings];
-    CGSize frameSize = self.view.frame.size;
     
-    if ([self.settings.favoritePokemonIndexes containsObject:[NSNumber numberWithInteger:self.pokemonIndex]]) {
+    if ([self.settings.favoritePokemonIndexes containsObject:[NSNumber numberWithInteger:self.pokemonIndex]]) { //즐겨찾기 포켓몬인지 확인합니다.
         self.isFavorited = YES;
     }
     
@@ -40,25 +41,12 @@
     self.title = self.sharedData.pokemonName[self.pokemonIndex];
     
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    self.bigImage = [[UIImageView alloc] initWithFrame:CGRectMake(frameSize.width * 1 / 6, 120, frameSize.width * 2 / 3, frameSize.width * 2 / 3)];
     [self.bigImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"images/%ld.png",self.pokemonIndex + 1]]];
-    [self.view addSubview:self.bigImage];
-    
-    self.descriptionView = [[UITextView alloc] initWithFrame:CGRectMake(15, (self.bigImage.frame.origin.y + frameSize.width * 2 / 3 + 50), frameSize.width -30, frameSize.height - (self.bigImage.frame.origin.y + frameSize.width * 2 / 3 + 50))];
-    self.descriptionView.text = self.sharedData.pokemonDescription[self.pokemonIndex];
-    self.descriptionView.textColor = [UIColor blackColor];
-    [self.descriptionView setFont:[UIFont systemFontOfSize:20  weight:0.0]];
-    self.descriptionView.editable = NO;
-    self.descriptionView.scrollEnabled = YES;
-//    self.descriptionView.layoutManager.delegate = self;
-    
-    
-    [self.view addSubview:self.descriptionView];
+    [self.descriptionView setText: self.sharedData.pokemonDescription[self.pokemonIndex]];
     
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -112,17 +100,19 @@
     }
 }
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    
-//    if ([segue.identifier isEqualToString:@"webViewSegue"]) {
-//        PokeWikiWebViewController *webView = segue.destinationViewController;
-//        NSString *urlString = @"http://ko.pokemon.wikia.com/wiki/이상해씨/";
-//        
-//        webView.urlString = urlString;
-//        
-//    }
-//    
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"webViewSegue"]) {
+        UINavigationController *navi = segue.destinationViewController;
+        PokeWikiWebViewController *webView = (PokeWikiWebViewController *)navi.topViewController;
+        
+        NSString *urlString = [NSString stringWithFormat:@"http://ko.pokemon.wikia.com/wiki/%@/",self.title];
+        webView.title = [NSString stringWithFormat:@"%@(포켓몬위키)",self.title];
+        webView.urlString = urlString;
+        
+    }
+    
+}
 
 
 @end

@@ -10,6 +10,8 @@
 #import "AppDelegate.h"
 #import "SettingData.h"
 
+
+
 @interface SettingViewController ()
 <UITableViewDelegate, UITableViewDataSource>
 
@@ -19,6 +21,8 @@
 @property (weak) SettingData *settings;
 
 @end
+
+
 
 @implementation SettingViewController
 
@@ -34,15 +38,13 @@
     
     self.settings = [SettingData sharedSettings];
     
-
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
@@ -95,9 +97,45 @@
     
     return cell;
 }
-- (IBAction)dismissAction:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+
+#pragma mark - UITableViewDelegate
+
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        [self performSegueWithIdentifier:@"FavoritePokemonSegue" sender:[tableView cellForRowAtIndexPath:indexPath]];
+    }
 }
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return @"즐겨찾기";
+            break;
+            
+        default:
+            return @"사용자 설정";
+            break;
+    }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    if (section == 0) {
+        return @"배틀식스 모드를 켜면 즐겨찾기가 6마리까지만 포함됩니다.";
+    } else {
+        return nil;
+    }
+    
+    
+}
+
+#pragma mark - Control Settings
+
+
+
 
 
 - (void)battleSix:(UISwitch *)sender {
@@ -132,39 +170,12 @@
 
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.section == 0 && indexPath.row == 0) {
-        [self performSegueWithIdentifier:@"FavoritePokemonSegue" sender:[tableView cellForRowAtIndexPath:indexPath]];
-    }
+
+#pragma mark - Navigation
+
+- (IBAction)dismissAction:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    switch (section) {
-        case 0:
-            return @"즐겨찾기";
-            break;
-            
-        default:
-            return @"사용자 설정";
-            break;
-    }
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    if (section == 0) {
-        return @"배틀식스 모드를 켜면 즐겨찾기가 6마리까지만 포함됩니다.";
-    } else {
-        return nil;
-    }
-
-
-}
-
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([segue.identifier isEqualToString:@"FavoritePokemonSegue"]) {
-//        
-//    }
-//}
 
 @end

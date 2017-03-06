@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		B9010F741E5EAF8D00761D88 /* SettingData.m in Sources */ = {isa = PBXBuildFile; fileRef = B9010F731E5EAF8D00761D88 /* SettingData.m */; };
 		B93A37181E5E902800178863 /* PokemonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B93A37171E5E902800178863 /* PokemonTableViewCell.m */; };
-		B98BBAD31E5DB16F00E41B1B /* star_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B98BBAD11E5DB16F00E41B1B /* star_selected@3x.png */; };
-		B98BBAD41E5DB16F00E41B1B /* star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B98BBAD21E5DB16F00E41B1B /* star@3x.png */; };
-		B98BBAD61E5DB7C200E41B1B /* setting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B98BBAD51E5DB7C200E41B1B /* setting@3x.png */; };
 		B9A22EF41E5C4FDF004DA68E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A22EF31E5C4FDF004DA68E /* main.m */; };
 		B9A22EF71E5C4FDF004DA68E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A22EF61E5C4FDF004DA68E /* AppDelegate.m */; };
 		B9A22EFD1E5C4FDF004DA68E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A22EFB1E5C4FDF004DA68E /* Main.storyboard */; };
@@ -19,16 +16,13 @@
 		B9A22F021E5C4FDF004DA68E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A22F001E5C4FDF004DA68E /* LaunchScreen.storyboard */; };
 		B9A22F0B1E5C5190004DA68E /* Gen1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A22F0A1E5C5190004DA68E /* Gen1ViewController.m */; };
 		B9A22F0E1E5C5242004DA68E /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A22F0D1E5C5242004DA68E /* TabBarController.m */; };
-		B9A22F131E5C548F004DA68E /* gen1-1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A22F0F1E5C548F004DA68E /* gen1-1@3x.png */; };
-		B9A22F141E5C548F004DA68E /* gen1-2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A22F101E5C548F004DA68E /* gen1-2@3x.png */; };
-		B9A22F151E5C548F004DA68E /* gen2-1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A22F111E5C548F004DA68E /* gen2-1@3x.png */; };
-		B9A22F161E5C548F004DA68E /* gen2-2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A22F121E5C548F004DA68E /* gen2-2@3x.png */; };
 		B9A22F191E5C559A004DA68E /* Gen2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A22F181E5C559A004DA68E /* Gen2ViewController.m */; };
 		B9A22F1C1E5C56F0004DA68E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A22F1B1E5C56F0004DA68E /* DetailViewController.m */; };
 		B9A22F221E5C5BEE004DA68E /* images in Resources */ = {isa = PBXBuildFile; fileRef = B9A22F201E5C5BEE004DA68E /* images */; };
 		B9A22F231E5C5BEE004DA68E /* Thumbnails in Resources */ = {isa = PBXBuildFile; fileRef = B9A22F211E5C5BEE004DA68E /* Thumbnails */; };
 		B9A2BADD1E5D5EFD00C59DCB /* FavoritePMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A2BADC1E5D5EFD00C59DCB /* FavoritePMViewController.m */; };
 		B9A2BAE01E5D607800C59DCB /* PokemonData.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A2BADF1E5D607800C59DCB /* PokemonData.m */; };
+		B9B7A1B11E6D301200926BA7 /* PokeWikiWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B7A1B01E6D301200926BA7 /* PokeWikiWebViewController.m */; };
 		B9E89E3F1E5D38F100CDB77B /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E89E3E1E5D38F100CDB77B /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -37,9 +31,6 @@
 		B9010F731E5EAF8D00761D88 /* SettingData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingData.m; sourceTree = "<group>"; };
 		B93A37161E5E902800178863 /* PokemonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokemonTableViewCell.h; sourceTree = "<group>"; };
 		B93A37171E5E902800178863 /* PokemonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokemonTableViewCell.m; sourceTree = "<group>"; };
-		B98BBAD11E5DB16F00E41B1B /* star_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_selected@3x.png"; sourceTree = "<group>"; };
-		B98BBAD21E5DB16F00E41B1B /* star@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@3x.png"; sourceTree = "<group>"; };
-		B98BBAD51E5DB7C200E41B1B /* setting@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@3x.png"; sourceTree = "<group>"; };
 		B9A22EEF1E5C4FDF004DA68E /* TabNavAndView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabNavAndView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A22EF31E5C4FDF004DA68E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9A22EF51E5C4FDF004DA68E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,10 +43,6 @@
 		B9A22F0A1E5C5190004DA68E /* Gen1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gen1ViewController.m; sourceTree = "<group>"; };
 		B9A22F0C1E5C5242004DA68E /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		B9A22F0D1E5C5242004DA68E /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
-		B9A22F0F1E5C548F004DA68E /* gen1-1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gen1-1@3x.png"; sourceTree = "<group>"; };
-		B9A22F101E5C548F004DA68E /* gen1-2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gen1-2@3x.png"; sourceTree = "<group>"; };
-		B9A22F111E5C548F004DA68E /* gen2-1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gen2-1@3x.png"; sourceTree = "<group>"; };
-		B9A22F121E5C548F004DA68E /* gen2-2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gen2-2@3x.png"; sourceTree = "<group>"; };
 		B9A22F171E5C559A004DA68E /* Gen2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gen2ViewController.h; sourceTree = "<group>"; };
 		B9A22F181E5C559A004DA68E /* Gen2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gen2ViewController.m; sourceTree = "<group>"; };
 		B9A22F1A1E5C56F0004DA68E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -66,6 +53,8 @@
 		B9A2BADC1E5D5EFD00C59DCB /* FavoritePMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritePMViewController.m; sourceTree = "<group>"; };
 		B9A2BADE1E5D607800C59DCB /* PokemonData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokemonData.h; sourceTree = "<group>"; };
 		B9A2BADF1E5D607800C59DCB /* PokemonData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokemonData.m; sourceTree = "<group>"; };
+		B9B7A1AF1E6D301200926BA7 /* PokeWikiWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PokeWikiWebViewController.h; sourceTree = "<group>"; };
+		B9B7A1B01E6D301200926BA7 /* PokeWikiWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PokeWikiWebViewController.m; sourceTree = "<group>"; };
 		B9E89E3D1E5D38F100CDB77B /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		B9E89E3E1E5D38F100CDB77B /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +70,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B91DA3521E6D707A00B63FFE /* MainNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				B9A22F1A1E5C56F0004DA68E /* DetailViewController.h */,
+				B9A22F1B1E5C56F0004DA68E /* DetailViewController.m */,
+				B9A22F0C1E5C5242004DA68E /* TabBarController.h */,
+				B9A22F0D1E5C5242004DA68E /* TabBarController.m */,
+				B9A22F091E5C5190004DA68E /* Gen1ViewController.h */,
+				B9A22F0A1E5C5190004DA68E /* Gen1ViewController.m */,
+				B9A22F171E5C559A004DA68E /* Gen2ViewController.h */,
+				B9A22F181E5C559A004DA68E /* Gen2ViewController.m */,
+				B93A37161E5E902800178863 /* PokemonTableViewCell.h */,
+				B93A37171E5E902800178863 /* PokemonTableViewCell.m */,
+				B9B7A1AF1E6D301200926BA7 /* PokeWikiWebViewController.h */,
+				B9B7A1B01E6D301200926BA7 /* PokeWikiWebViewController.m */,
+			);
+			name = MainNavigation;
+			sourceTree = "<group>";
+		};
+		B91DA3531E6D709500B63FFE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B9A2BADE1E5D607800C59DCB /* PokemonData.h */,
+				B9A2BADF1E5D607800C59DCB /* PokemonData.m */,
+				B9010F721E5EAF8D00761D88 /* SettingData.h */,
+				B9010F731E5EAF8D00761D88 /* SettingData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		B91DA3541E6D70A500B63FFE /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				B9E89E3D1E5D38F100CDB77B /* SettingViewController.h */,
+				B9E89E3E1E5D38F100CDB77B /* SettingViewController.m */,
+				B9A2BADB1E5D5EFD00C59DCB /* FavoritePMViewController.h */,
+				B9A2BADC1E5D5EFD00C59DCB /* FavoritePMViewController.m */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
 		B9A22EE61E5C4FDE004DA68E = {
 			isa = PBXGroup;
 			children = (
@@ -102,36 +132,14 @@
 			children = (
 				B9A22EF51E5C4FDF004DA68E /* AppDelegate.h */,
 				B9A22EF61E5C4FDF004DA68E /* AppDelegate.m */,
-				B9A22F0C1E5C5242004DA68E /* TabBarController.h */,
-				B9A22F0D1E5C5242004DA68E /* TabBarController.m */,
+				B91DA3521E6D707A00B63FFE /* MainNavigation */,
+				B91DA3531E6D709500B63FFE /* Data */,
+				B91DA3541E6D70A500B63FFE /* Setting */,
 				B9A22EFB1E5C4FDF004DA68E /* Main.storyboard */,
-				B9A22F091E5C5190004DA68E /* Gen1ViewController.h */,
-				B9A22F0A1E5C5190004DA68E /* Gen1ViewController.m */,
-				B9A22F171E5C559A004DA68E /* Gen2ViewController.h */,
-				B9A22F181E5C559A004DA68E /* Gen2ViewController.m */,
-				B93A37161E5E902800178863 /* PokemonTableViewCell.h */,
-				B93A37171E5E902800178863 /* PokemonTableViewCell.m */,
-				B9A2BADE1E5D607800C59DCB /* PokemonData.h */,
-				B9A2BADF1E5D607800C59DCB /* PokemonData.m */,
-				B9A22F1A1E5C56F0004DA68E /* DetailViewController.h */,
-				B9A22F1B1E5C56F0004DA68E /* DetailViewController.m */,
-				B9010F721E5EAF8D00761D88 /* SettingData.h */,
-				B9010F731E5EAF8D00761D88 /* SettingData.m */,
-				B9E89E3D1E5D38F100CDB77B /* SettingViewController.h */,
-				B9E89E3E1E5D38F100CDB77B /* SettingViewController.m */,
-				B9A2BADB1E5D5EFD00C59DCB /* FavoritePMViewController.h */,
-				B9A2BADC1E5D5EFD00C59DCB /* FavoritePMViewController.m */,
-				B98BBAD51E5DB7C200E41B1B /* setting@3x.png */,
-				B98BBAD11E5DB16F00E41B1B /* star_selected@3x.png */,
-				B98BBAD21E5DB16F00E41B1B /* star@3x.png */,
+				B9A22F001E5C4FDF004DA68E /* LaunchScreen.storyboard */,
 				B9A22F201E5C5BEE004DA68E /* images */,
 				B9A22F211E5C5BEE004DA68E /* Thumbnails */,
-				B9A22F0F1E5C548F004DA68E /* gen1-1@3x.png */,
-				B9A22F101E5C548F004DA68E /* gen1-2@3x.png */,
-				B9A22F111E5C548F004DA68E /* gen2-1@3x.png */,
-				B9A22F121E5C548F004DA68E /* gen2-2@3x.png */,
 				B9A22EFE1E5C4FDF004DA68E /* Assets.xcassets */,
-				B9A22F001E5C4FDF004DA68E /* LaunchScreen.storyboard */,
 				B9A22F031E5C4FDF004DA68E /* Info.plist */,
 				B9A22EF21E5C4FDF004DA68E /* Supporting Files */,
 			);
@@ -205,16 +213,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9A22F131E5C548F004DA68E /* gen1-1@3x.png in Resources */,
 				B9A22F021E5C4FDF004DA68E /* LaunchScreen.storyboard in Resources */,
-				B9A22F141E5C548F004DA68E /* gen1-2@3x.png in Resources */,
-				B98BBAD41E5DB16F00E41B1B /* star@3x.png in Resources */,
 				B9A22F231E5C5BEE004DA68E /* Thumbnails in Resources */,
-				B9A22F151E5C548F004DA68E /* gen2-1@3x.png in Resources */,
-				B98BBAD61E5DB7C200E41B1B /* setting@3x.png in Resources */,
 				B9A22F221E5C5BEE004DA68E /* images in Resources */,
-				B98BBAD31E5DB16F00E41B1B /* star_selected@3x.png in Resources */,
-				B9A22F161E5C548F004DA68E /* gen2-2@3x.png in Resources */,
 				B9A22EFF1E5C4FDF004DA68E /* Assets.xcassets in Resources */,
 				B9A22EFD1E5C4FDF004DA68E /* Main.storyboard in Resources */,
 			);
@@ -237,6 +238,7 @@
 				B9A22EF41E5C4FDF004DA68E /* main.m in Sources */,
 				B9A22F1C1E5C56F0004DA68E /* DetailViewController.m in Sources */,
 				B9A2BADD1E5D5EFD00C59DCB /* FavoritePMViewController.m in Sources */,
+				B9B7A1B11E6D301200926BA7 /* PokeWikiWebViewController.m in Sources */,
 				B9E89E3F1E5D38F100CDB77B /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -47,7 +47,7 @@
                     <navigationItem key="navigationItem" title="Title" id="Ymn-8a-Egj">
                         <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="kuN-GJ-abv">
                             <connections>
-                                <segue destination="rY4-bQ-193" kind="presentation" identifier="webViewSegue" id="25y-oY-xEK"/>
+                                <segue destination="3K1-bV-dLD" kind="presentation" identifier="webViewSegue" id="25y-oY-xEK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -67,45 +67,19 @@
                     <view key="view" contentMode="scaleToFill" id="bWR-Ge-5bi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kid-Pm-6JP">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem systemItem="flexibleSpace" id="qMy-kY-uEB"/>
-                                    <barButtonItem systemItem="done" id="6er-mS-iPl">
-                                        <connections>
-                                            <action selector="dismissWebView:" destination="rY4-bQ-193" id="m0s-xk-63b"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2s9-yB-G64">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="HW5-wj-wXY"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="kid-Pm-6JP" secondAttribute="trailing" id="4Wl-4i-9Cd"/>
-                            <constraint firstItem="kid-Pm-6JP" firstAttribute="leading" secondItem="bWR-Ge-5bi" secondAttribute="leading" id="9zq-AR-nmS"/>
-                            <constraint firstItem="kid-Pm-6JP" firstAttribute="leading" secondItem="bWR-Ge-5bi" secondAttribute="leading" id="APP-yX-xnb"/>
-                            <constraint firstItem="2s9-yB-G64" firstAttribute="leading" secondItem="bWR-Ge-5bi" secondAttribute="leading" id="HWr-GV-cZJ"/>
-                            <constraint firstAttribute="trailing" secondItem="kid-Pm-6JP" secondAttribute="trailing" id="OBf-Kh-Qvh"/>
-                            <constraint firstItem="2s9-yB-G64" firstAttribute="top" secondItem="cO2-W3-43C" secondAttribute="bottom" id="WH4-z2-STE"/>
-                            <constraint firstAttribute="trailing" secondItem="2s9-yB-G64" secondAttribute="trailing" id="aWu-WU-wA4"/>
-                            <constraint firstItem="fZs-0y-qPh" firstAttribute="top" secondItem="kid-Pm-6JP" secondAttribute="bottom" id="bv5-0F-LEC"/>
-                            <constraint firstItem="fZs-0y-qPh" firstAttribute="top" secondItem="kid-Pm-6JP" secondAttribute="bottom" id="n8W-Yk-gvt"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="titleLabel" destination="HW5-wj-wXY" id="ZM8-tD-wc0"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="wz3-3u-sMv">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="7jM-d3-gYb">
+                            <connections>
+                                <action selector="dismissWebView:" destination="rY4-bQ-193" id="i1U-ix-wmh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lsA-hh-lGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2690" y="136"/>
+            <point key="canvasLocation" x="3628" y="135.38230884557723"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TO0-5s-q6c">
@@ -124,6 +98,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jL6-Mm-Uhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="137.18140929535232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i9r-5M-CsA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3K1-bV-dLD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SX3-Yc-ibC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rY4-bQ-193" kind="relationship" relationship="rootViewController" id="8bx-QW-sp5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8gU-Pi-3dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2688.8000000000002" y="135.38230884557723"/>
         </scene>
     </scenes>
 </document>

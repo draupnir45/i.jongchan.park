@@ -15,6 +15,7 @@
 @property (nonatomic) BOOL tintColorChanged;
 @property (nonatomic, retain) NSMutableArray *favoritePokemonIndexes;
 
-+(instancetype)sharedSettings;
++ (instancetype)sharedSettings;
+- (void)saveData;
 
 @end

@@ -50,8 +50,12 @@
     [super didReceiveMemoryWarning];
 }
 
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self.tableView];
+}
 
-#pragma mark - TableView DataSource
+
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //1세대 포켓몬 수
@@ -83,7 +87,7 @@
 }
 
 
-#pragma mark - TableView Delegate
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -101,7 +105,7 @@
 }
 
 
-#pragma mark - Segue
+#pragma mark - Navigation
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"detail"]) {
@@ -111,10 +115,6 @@
         //포켓몬 인덱스 전달
         detailView.pokemonIndex = indexPath.row;
     }
-}
-
--(void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self.tableView];
 }
 
 

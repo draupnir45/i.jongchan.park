@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,7 +50,65 @@
                     <view key="view" contentMode="scaleToFill" id="6Ji-cP-gZn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUG-hc-KXG">
+                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPH-sD-BVS" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="450.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="DOg-QS-utN">
+                                                <rect key="frame" x="8" y="63" width="359" height="350.5"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TiJ-oY-fSO">
+                                                        <rect key="frame" x="59.5" y="0.0" width="240" height="240"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="240" id="cSg-Wm-Rgu"/>
+                                                            <constraint firstAttribute="width" secondItem="TiJ-oY-fSO" secondAttribute="height" multiplier="1:1" id="fsC-aQ-ufj"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlp-R2-brZ">
+                                                        <rect key="frame" x="42" y="270" width="275" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTt-si-pRK">
+                                                        <rect key="frame" x="117" y="320.5" width="125" height="30"/>
+                                                        <state key="normal" title="포켓몬 위키에서 보기"/>
+                                                        <connections>
+                                                            <segue destination="dWb-Oy-q9N" kind="presentation" identifier="webViewSegue" id="QDr-qf-phV"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" secondItem="DOg-QS-utN" secondAttribute="height" constant="100" id="9pl-RK-SV4"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="DOg-QS-utN" secondAttribute="trailing" id="Ffn-Ko-etd"/>
+                                            <constraint firstItem="DOg-QS-utN" firstAttribute="leading" secondItem="TPH-sD-BVS" secondAttribute="leadingMargin" id="K61-gt-LBl"/>
+                                            <constraint firstItem="DOg-QS-utN" firstAttribute="top" secondItem="TPH-sD-BVS" secondAttribute="topMargin" constant="55" id="eof-IZ-JTj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="TPH-sD-BVS" secondAttribute="bottom" id="DcR-c2-dXx"/>
+                                    <constraint firstItem="TPH-sD-BVS" firstAttribute="width" secondItem="XUG-hc-KXG" secondAttribute="width" id="OAA-tC-q3H"/>
+                                    <constraint firstAttribute="trailing" secondItem="TPH-sD-BVS" secondAttribute="trailing" id="OKZ-wk-T3B"/>
+                                    <constraint firstItem="TPH-sD-BVS" firstAttribute="top" secondItem="XUG-hc-KXG" secondAttribute="top" id="sKc-e8-7lM"/>
+                                    <constraint firstItem="TPH-sD-BVS" firstAttribute="leading" secondItem="XUG-hc-KXG" secondAttribute="leading" id="v2B-Gu-qlS"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XUG-hc-KXG" firstAttribute="height" secondItem="6Ji-cP-gZn" secondAttribute="height" id="7uH-3L-T56"/>
+                            <constraint firstItem="XUG-hc-KXG" firstAttribute="centerY" secondItem="6Ji-cP-gZn" secondAttribute="centerY" id="NTl-xd-O47"/>
+                            <constraint firstItem="XUG-hc-KXG" firstAttribute="centerX" secondItem="6Ji-cP-gZn" secondAttribute="centerX" id="PpS-Cf-Bc6"/>
+                            <constraint firstItem="wlp-R2-brZ" firstAttribute="width" secondItem="6Ji-cP-gZn" secondAttribute="width" constant="-100" id="R1z-v4-Cha"/>
+                            <constraint firstItem="XUG-hc-KXG" firstAttribute="width" secondItem="6Ji-cP-gZn" secondAttribute="width" id="SJW-fr-H3C"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="0Dh-ew-HWW">
                         <barButtonItem key="rightBarButtonItem" image="star.png" id="JA6-uX-I1s">
@@ -58,12 +118,39 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bigImage" destination="TiJ-oY-fSO" id="kg3-WY-NwW"/>
+                        <outlet property="descriptionView" destination="wlp-R2-brZ" id="918-RM-tVM"/>
                         <outlet property="favoriteBtn" destination="JA6-uX-I1s" id="Lbz-Xf-37B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8l-eI-jCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3748" y="135"/>
+        </scene>
+        <!--Poke Wiki Web View Controller-->
+        <scene sceneID="rYY-2V-AAe">
+            <objects>
+                <viewController id="PhQ-oq-szi" customClass="PokeWikiWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OrA-vp-4Xl"/>
+                        <viewControllerLayoutGuide type="bottom" id="bpI-aP-6la"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dQc-Un-p0w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EhH-zn-zoX">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="vkZ-Wm-Kig">
+                            <connections>
+                                <action selector="dismissWebView:" destination="PhQ-oq-szi" id="gSQ-ml-s4N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KA1-Lb-x1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5326" y="901"/>
         </scene>
         <!--2세대-->
         <scene sceneID="Tvt-e6-IMw">
@@ -224,6 +311,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qga-4g-vhs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="1673"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6ZG-wu-zIC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dWb-Oy-q9N" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xTZ-dd-IaU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PhQ-oq-szi" kind="relationship" relationship="rootViewController" id="FT3-02-cJk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g57-s6-gMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4545" y="901"/>
         </scene>
     </scenes>
     <resources>

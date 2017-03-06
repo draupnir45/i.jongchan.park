@@ -12,6 +12,8 @@
 
 @implementation PokemonTableViewCell
 
+
+
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -22,17 +24,21 @@
     return self;
 }
 
+
+
 - (void)createSubviews {
-    
     UILabel *numberLabel = [[UILabel alloc] init];
     [numberLabel setTextColor:self.tintColor];
-    [numberLabel setAlpha:0.4];
+    [numberLabel setAlpha:1.0];
     [numberLabel setFont:[UIFont systemFontOfSize:12 weight:-0.3]];
-    [self.contentView addSubview:numberLabel];
     
+    
+    [self.contentView addSubview:numberLabel];
     self.numberLabel = numberLabel;
     
 }
+
+
 
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -41,7 +47,7 @@
     [self.numberLabel sizeToFit];
     
     CGRect textLabelFrame = self.textLabel.frame;
-    CGFloat textLabelMargin = 15;
+    CGFloat const textLabelMargin = 15;
     textLabelFrame.origin.y += textLabelMargin;
     textLabelFrame.size.height -= textLabelMargin;
     
@@ -49,10 +55,6 @@
     
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
-}
 
 @end

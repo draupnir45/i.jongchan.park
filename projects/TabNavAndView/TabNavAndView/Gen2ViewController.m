@@ -45,12 +45,19 @@
 }
 
 
+
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self.tableView];
+}
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
 
-#pragma mark - TableView DataSource
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //2세대 포켓몬 수
@@ -82,7 +89,7 @@
 }
 
 
-#pragma mark - TableView Delegate
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -100,7 +107,7 @@
 }
 
 
-#pragma mark - Segue
+#pragma mark - Navigation
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"detail"]) {

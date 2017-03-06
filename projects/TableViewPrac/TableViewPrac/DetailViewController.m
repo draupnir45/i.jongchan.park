@@ -95,7 +95,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:@"webViewSegue"]) {
-        PokeWikiWebViewController *webView = segue.destinationViewController;
+        UINavigationController *navi = segue.destinationViewController;
+        PokeWikiWebViewController *webView = (PokeWikiWebViewController *)navi.topViewController;
+        
         NSString *urlString = [NSString stringWithFormat:@"http://ko.pokemon.wikia.com/wiki/%@ (포켓몬)",self.title];
         webView.title = [NSString stringWithFormat:@"%@(포켓몬위키)",self.title];
         webView.urlString = urlString;

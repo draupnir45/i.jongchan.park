@@ -12,6 +12,8 @@
 #import "SettingData.h"
 #import "PokemonTableViewCell.h"
 
+
+
 @interface FavoritePMViewController ()
 <UITableViewDelegate, UITableViewDataSource>
 
@@ -20,8 +22,9 @@
 @property SettingData *settings;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *EditButton;
 
-
 @end
+
+
 
 @implementation FavoritePMViewController
 
@@ -46,18 +49,27 @@
     [self.tableView reloadData];
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-#pragma mark - TableView DataSource
+
+
+
+#pragma mark - UITableViewDataSource
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.settings.favoritePokemonIndexes.count;
 }
+
+
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
+
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PokemonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseId"];
     if (cell != nil) {
@@ -72,18 +84,27 @@
     return cell;
     
 }
-#pragma mark - TableView Delegate
+
+
+
+#pragma mark - UITableViewDelegate
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"detail" sender:[tableView cellForRowAtIndexPath:indexPath]];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 60;
 }
+
+
+
 - (IBAction)startEditing:(id)sender {
-    
     [self.tableView setEditing:!self.tableView.editing animated:YES];
-    
     if (self.tableView.editing) {
         [self.navigationItem.rightBarButtonItem setTitle:@"Done"];
         [self.navigationItem.rightBarButtonItem setStyle:UIBarButtonItemStyleDone];
@@ -93,6 +114,8 @@
     
 }
 
+
+
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self.settings.favoritePokemonIndexes removeObjectAtIndex:indexPath.row];
@@ -100,19 +123,17 @@
     }
 }
 
-#pragma mark - Segue
+
+
+#pragma mark - Navigation
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"detail"]) {
         DetailViewController *detailView = segue.destinationViewController;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-//        detailView.title = self.sharedData.pokemonName[indexPath.row];
-//        detailView.contentsForPm = self.sharedData.pokemonDescription[indexPath.row];
         NSInteger pmIndex = [[self.settings.favoritePokemonIndexes objectAtIndex:indexPath.row] integerValue];
         detailView.pokemonIndex = pmIndex;
     }
 }
-
-
 
 @end
