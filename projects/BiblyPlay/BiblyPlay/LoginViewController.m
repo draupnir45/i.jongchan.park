@@ -28,14 +28,14 @@
 -(void)viewDidAppear:(BOOL)animated {
     UIBlurEffect *blurrEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleProminent];
     
-    UIVisualEffectView *effcetView = [[UIVisualEffectView alloc] initWithEffect:blurrEffect];
-    effcetView.frame = self.view.bounds;
-            [_background addSubview:effcetView];
-    [effcetView setAlpha:0.0];
+    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurrEffect];
+    
+    visualEffectView.frame = self.view.bounds;
+            [_background addSubview:visualEffectView];
+    [visualEffectView setAlpha:0.0];
     [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
 
-        
-        [effcetView setAlpha:1.0];
+        [visualEffectView setAlpha:1.0];
 
     } completion:nil];
 }

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "JCAlertController.h"
 
 @interface ViewController ()
 
@@ -17,10 +18,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
-    [tempView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight];
+
     
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)alertAction:(id)sender {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"test" message:@"test" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"취소" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alert addAction:cancelAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+}
+
+- (IBAction)test:(id)sender {
+    JCAlertController *alert = [JCAlertController alertControllerWithTitle:@"test" message:@"sss" preferredStyle: UIAlertControllerStyleAlert cancelTitle:@"취취소" okTitle:@"옷키" touchedSwitch:sender ];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 

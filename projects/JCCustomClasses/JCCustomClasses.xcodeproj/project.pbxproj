@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B91E48F41E6EE65A0018D9BB /* JCBlurrManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B91E48F31E6EE65A0018D9BB /* JCBlurrManager.m */; };
 		B945E1B61E6AE1CC00FF7F0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B945E1B51E6AE1CC00FF7F0C /* main.m */; };
 		B945E1B91E6AE1CC00FF7F0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B945E1B81E6AE1CC00FF7F0C /* AppDelegate.m */; };
 		B945E1BC1E6AE1CC00FF7F0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B945E1BB1E6AE1CC00FF7F0C /* ViewController.m */; };
@@ -15,10 +16,13 @@
 		B945E1C41E6AE1CE00FF7F0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B945E1C21E6AE1CE00FF7F0C /* LaunchScreen.storyboard */; };
 		B945E1CD1E6AE1E200FF7F0C /* JCDateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B945E1CC1E6AE1E200FF7F0C /* JCDateManager.m */; };
 		B945E1D01E6AE23500FF7F0C /* JCPlistDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B945E1CF1E6AE23500FF7F0C /* JCPlistDataController.m */; };
+		B95A3E961E6ED76800D73345 /* JCAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95A3E951E6ED76800D73345 /* JCAlertController.m */; };
 		B983BBE61E6AE87F002BC25F /* appData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B983BBE51E6AE87F002BC25F /* appData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B91E48F21E6EE65A0018D9BB /* JCBlurrManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCBlurrManager.h; sourceTree = "<group>"; };
+		B91E48F31E6EE65A0018D9BB /* JCBlurrManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCBlurrManager.m; sourceTree = "<group>"; };
 		B945E1B11E6AE1CC00FF7F0C /* JCCustomClasses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCCustomClasses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B945E1B51E6AE1CC00FF7F0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B945E1B71E6AE1CC00FF7F0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,6 +37,8 @@
 		B945E1CC1E6AE1E200FF7F0C /* JCDateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCDateManager.m; sourceTree = "<group>"; };
 		B945E1CE1E6AE23500FF7F0C /* JCPlistDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCPlistDataController.h; sourceTree = "<group>"; };
 		B945E1CF1E6AE23500FF7F0C /* JCPlistDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCPlistDataController.m; sourceTree = "<group>"; };
+		B95A3E941E6ED76800D73345 /* JCAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCAlertController.h; sourceTree = "<group>"; };
+		B95A3E951E6ED76800D73345 /* JCAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCAlertController.m; sourceTree = "<group>"; };
 		B983BBE51E6AE87F002BC25F /* appData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +78,10 @@
 				B945E1BB1E6AE1CC00FF7F0C /* ViewController.m */,
 				B945E1CB1E6AE1E200FF7F0C /* JCDateManager.h */,
 				B945E1CC1E6AE1E200FF7F0C /* JCDateManager.m */,
+				B91E48F21E6EE65A0018D9BB /* JCBlurrManager.h */,
+				B91E48F31E6EE65A0018D9BB /* JCBlurrManager.m */,
+				B95A3E941E6ED76800D73345 /* JCAlertController.h */,
+				B95A3E951E6ED76800D73345 /* JCAlertController.m */,
 				B945E1CE1E6AE23500FF7F0C /* JCPlistDataController.h */,
 				B945E1CF1E6AE23500FF7F0C /* JCPlistDataController.m */,
 				B983BBE51E6AE87F002BC25F /* appData.plist */,
@@ -167,7 +177,9 @@
 			files = (
 				B945E1CD1E6AE1E200FF7F0C /* JCDateManager.m in Sources */,
 				B945E1D01E6AE23500FF7F0C /* JCPlistDataController.m in Sources */,
+				B91E48F41E6EE65A0018D9BB /* JCBlurrManager.m in Sources */,
 				B945E1BC1E6AE1CC00FF7F0C /* ViewController.m in Sources */,
+				B95A3E961E6ED76800D73345 /* JCAlertController.m in Sources */,
 				B945E1B91E6AE1CC00FF7F0C /* AppDelegate.m in Sources */,
 				B945E1B61E6AE1CC00FF7F0C /* main.m in Sources */,
 			);

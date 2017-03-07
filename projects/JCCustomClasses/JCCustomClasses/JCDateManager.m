@@ -47,8 +47,12 @@
                       format:(NSString *)formatText {
     NSString *result;
     
+    NSString *initialFormat = self.formatter.dateFormat;
+    
     self.formatter.dateFormat = formatText;
     result = [self.formatter stringFromDate:date];
+    
+    self.formatter.dateFormat = initialFormat;
     
     return result;
 }

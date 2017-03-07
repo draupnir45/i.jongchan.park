@@ -21,8 +21,6 @@
 - [Framework Cocoa & Cocoa Touch](learning/AboutCocoa.md)
 - [Design Pattern - 프로토콜(Delegate)](learning/FreakinDelegate.md)
 - [Design Pattern - 싱글톤](learning/Singleton.md)
-- [MVC]UIViewController
-- [MVC]CoreData
 - [날짜 표현(NSDate)](learning/NSDate.md)
 - [Literal 문법](learning/LiteralSyntaxes.md)
 - [우리들의 싱글톤 1 - NSUserDefaults](learning/NSUserDefaults.md)
@@ -42,8 +40,7 @@
 - [UISegmentedControl](learning/UISegmentedControl.md)
 - [UITableView](learning/UITableViewLog.md)
 - [UIWebView](learning/UIWebView.md)
-- UIActivityIndicator
-- UIBlurEffect
+- [UIBlurEffect](learning/UIBlurEffect.md)
 
 ###이야기판
  - [ScrollingStoryBoard](projects/FreakinAutoLayoutPrac) - 오토 레이아웃으로 뷰를 정렬하고 스크롤뷰에 싣는 것을 연습해 보았습니다.
