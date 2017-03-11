@@ -1,9 +1,13 @@
 # Jongchan Park <a href="url"><img src="learning/images/fc_n_ios.png" align="right" height="40" ></a>
 
-
 ###About Me
 - 1988년 1월 4일 서울생
 - 모바일 앱을 좋아해서 UI/UX 디자이너가 되었지만, 직접 손으로 만들어보고 싶어서 개발자로 전향하게 되었습니다.
+
+##프로젝트
+
+- [PokéDex](https://github.com/draupnir45/Poke-dex) : 탭바와 네비바 컨트롤을 연습하면서 만든 포켓몬 도감입니다.
+
 
 ##공부한 것
 
@@ -45,10 +49,6 @@
 ###이야기판
  - [ScrollingStoryBoard](projects/FreakinAutoLayoutPrac) - 오토 레이아웃으로 뷰를 정렬하고 스크롤뷰에 싣는 것을 연습해 보았습니다.
 
-##프로젝트
-
-###
-- [PokéDex](https://github.com/draupnir45/Poke-dex) : 탭바와 네비바 컨트롤을 연습하면서 만든 포켓몬 도감입니다.
 
 ###연습 및 과제
 - [과제] 커스텀 테이블 뷰 과제 ([CustomTableViewCopy](projects/CustomTableViewCopy), 2017. 2. 19)
