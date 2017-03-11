@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HSRecipeCollectionCell" id="IFY-Bo-Mur" customClass="HSCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="168" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="168" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Obb-kO-oNS">
+                        <rect key="frame" x="0.0" y="0.0" width="168" height="168"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Obb-kO-oNS" secondAttribute="height" multiplier="1:1" id="7bf-b7-ioY"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="음식 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4I-0l-oC3">
+                        <rect key="frame" x="0.0" y="180" width="168" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="소요 시간: 00분" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueg-BI-JGK">
+                        <rect key="frame" x="0.0" y="203.5" width="84" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예산: 2천원 미만" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KT2-aG-bsT">
+                        <rect key="frame" x="84" y="203.5" width="84" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ueg-BI-JGK" firstAttribute="width" secondItem="IFY-Bo-Mur" secondAttribute="width" multiplier="0.5" id="4ih-yc-NA6"/>
+                <constraint firstItem="ueg-BI-JGK" firstAttribute="top" secondItem="C4I-0l-oC3" secondAttribute="bottom" constant="4" id="5ol-wP-fwP"/>
+                <constraint firstItem="KT2-aG-bsT" firstAttribute="width" secondItem="IFY-Bo-Mur" secondAttribute="width" multiplier="1/2" id="MNs-Xt-X8z"/>
+                <constraint firstAttribute="trailing" secondItem="C4I-0l-oC3" secondAttribute="trailing" id="OGE-ny-tk5"/>
+                <constraint firstItem="Obb-kO-oNS" firstAttribute="leading" secondItem="IFY-Bo-Mur" secondAttribute="leading" id="Pcp-NJ-Y9b"/>
+                <constraint firstItem="ueg-BI-JGK" firstAttribute="leading" secondItem="IFY-Bo-Mur" secondAttribute="leading" id="YiA-hG-Iqa"/>
+                <constraint firstItem="Obb-kO-oNS" firstAttribute="top" secondItem="IFY-Bo-Mur" secondAttribute="top" id="ZoA-9r-VEa"/>
+                <constraint firstItem="C4I-0l-oC3" firstAttribute="leading" secondItem="IFY-Bo-Mur" secondAttribute="leading" id="aat-lb-mry"/>
+                <constraint firstAttribute="trailing" secondItem="Obb-kO-oNS" secondAttribute="trailing" id="cmj-T5-cJU"/>
+                <constraint firstAttribute="trailing" secondItem="KT2-aG-bsT" secondAttribute="trailing" id="dgu-bP-h3g"/>
+                <constraint firstItem="KT2-aG-bsT" firstAttribute="top" secondItem="ueg-BI-JGK" secondAttribute="top" id="t7o-Gc-JVy"/>
+                <constraint firstItem="C4I-0l-oC3" firstAttribute="top" secondItem="Obb-kO-oNS" secondAttribute="bottom" constant="12" id="zC7-MS-eVi"/>
+            </constraints>
+            <size key="customSize" width="157" height="259"/>
+            <connections>
+                <outlet property="recipeCostLabel" destination="KT2-aG-bsT" id="i24-Kr-LYM"/>
+                <outlet property="recipeTimeLabel" destination="ueg-BI-JGK" id="mUK-S9-Rwu"/>
+                <outlet property="recipeTitleLabel" destination="C4I-0l-oC3" id="Na0-si-nQe"/>
+                <outlet property="squareThumb" destination="Obb-kO-oNS" id="1IR-Gu-ivn"/>
+            </connections>
+            <point key="canvasLocation" x="46" y="22"/>
+        </collectionViewCell>
+    </objects>
+</document>
