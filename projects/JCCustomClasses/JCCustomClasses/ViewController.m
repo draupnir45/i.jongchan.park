@@ -18,6 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    typedef NSString * (^MyBlockType)(NSInteger, NSString *);
+    
+    MyBlockType myBlockInstance = ^(NSInteger intParam, NSString *textParam) {
+        return [NSString stringWithFormat:@"%@ : %ld",textParam,(long)intParam];
+    };
+    
+    NSLog(@"%@",myBlockInstance(4, @"hi"));
+    
+    
+    
 
     
     // Do any additional setup after loading the view, typically from a nib.

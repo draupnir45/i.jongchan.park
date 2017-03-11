@@ -1,6 +1,6 @@
 # Jongchan Park <a href="url"><img src="learning/images/fc_n_ios.png" align="right" height="40" ></a>
 
-###About Me
+##About Me
 - 1988년 1월 4일 서울생
 - 모바일 앱을 좋아해서 UI/UX 디자이너가 되었지만, 직접 손으로 만들어보고 싶어서 개발자로 전향하게 되었습니다.
 
@@ -29,6 +29,7 @@
 - [Literal 문법](learning/LiteralSyntaxes.md)
 - [우리들의 싱글톤 1 - NSUserDefaults](learning/NSUserDefaults.md)
 - [우리들의 싱글톤 2 - NSNotificationCenter](learning/NSNotificationCenter.md)
+- [Block 놀이](learning/Block.md)
 
 
 ###UIView와 아이들

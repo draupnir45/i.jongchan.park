@@ -12,7 +12,7 @@
 
 - (void)rollWithImageArray:(NSArray <UIImage *>*)array timeIntervel:(NSTimeInterval)timeInterval {
     __block NSInteger index = 0;
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval repeats:YES block:^(NSTimer * _Nonnull timer) {
+    [NSTimer scheduledTimerWithTimeInterval:timeInterval repeats:YES block:^(NSTimer * _Nonnull timer) {
         self.image = array[index];
         index ++;
         if (array.count <= index) {
