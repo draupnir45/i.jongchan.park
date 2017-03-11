@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "JCAlertController.h"
+#import "JCRandomRollImageView.h"
 
 @interface ViewController ()
 
@@ -25,9 +26,6 @@
     };
     
     NSLog(@"%@",myBlockInstance(4, @"hi"));
-    
-    
-    
 
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -56,6 +54,15 @@
     
 }
 
+- (IBAction)rollIt:(id)sender {
+    
+    NSArray *imgArray = @[ [UIImage imageNamed:@"thumbnail_1"],[UIImage imageNamed:@"thumbnail_4"], [UIImage imageNamed:@"thumbnail_7"], [UIImage imageNamed:@"thumbnail_1"],[UIImage imageNamed:@"thumbnail_4"], [UIImage imageNamed:@"thumbnail_7"], [UIImage imageNamed:@"thumbnail_1"],[UIImage imageNamed:@"thumbnail_4"], [UIImage imageNamed:@"thumbnail_7"], [UIImage imageNamed:@"thumbnail_1"],[UIImage imageNamed:@"thumbnail_4"], [UIImage imageNamed:@"thumbnail_7"], [UIImage imageNamed:@"thumbnail_1"],[UIImage imageNamed:@"thumbnail_4"], [UIImage imageNamed:@"thumbnail_7"]];
+    
+    [self.rollingImageView rollWithImageArray:imgArray timeIntervel:0.07];
+    
+    
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

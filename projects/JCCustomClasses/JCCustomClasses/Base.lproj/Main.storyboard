@@ -43,13 +43,38 @@
                                     <action selector="test:" destination="BYZ-38-t0r" eventType="valueChanged" id="DJf-Do-4Tc"/>
                                 </connections>
                             </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbnail_1" translatesAutoresizingMaskIntoConstraints="NO" id="CYI-JX-HlV" customClass="JCRandomRollImageView">
+                                <rect key="frame" x="162" y="120" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vPJ-Nn-Yad"/>
+                                    <constraint firstAttribute="width" constant="50" id="zkj-qC-LN7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqj-cG-y9t">
+                                <rect key="frame" x="164" y="178" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Roll It"/>
+                                <connections>
+                                    <action selector="rollIt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="shZ-3a-2Gi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CYI-JX-HlV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b8P-gK-GD8"/>
+                            <constraint firstItem="CYI-JX-HlV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="dsz-vB-B01"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="rollingImageView" destination="CYI-JX-HlV" id="dsQ-fr-hRm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="206" y="26"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="thumbnail_1" width="96" height="96"/>
+    </resources>
 </document>

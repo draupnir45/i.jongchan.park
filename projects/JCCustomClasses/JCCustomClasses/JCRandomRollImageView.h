@@ -10,4 +10,6 @@
 
 @interface JCRandomRollImageView : UIImageView
 
+- (void)rollWithImageArray:(NSArray <UIImage *>*)array timeIntervel:(NSTimeInterval)timeInterval;
+
 @end
