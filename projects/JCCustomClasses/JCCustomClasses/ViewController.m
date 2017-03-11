@@ -35,8 +35,15 @@
 }
 
 - (IBAction)test:(id)sender {
-    JCAlertController *alert = [JCAlertController alertControllerWithTitle:@"test" message:@"sss" preferredStyle: UIAlertControllerStyleAlert cancelTitle:@"취취소" okTitle:@"옷키" touchedSwitch:sender ];
-    [self presentViewController:alert animated:YES completion:nil];
+//    JCAlertController *alert = [JCAlertController alertControllerWithTitle:@"test" message:@"sss" preferredStyle: UIAlertControllerStyleAlert cancelTitle:@"취취소" okTitle:@"옷키" touchedSwitch:sender ];
+//    [self presentViewController:alert animated:YES completion:nil];
+    JCAlertController *alert2 = [JCAlertController alertControllerWithTitle:@"Test" message:@"test" preferredStyle:UIAlertControllerStyleAlert cancelTitle:@"취소" okTitle:@"확인" okHandler:^(UIAlertAction *action) {
+        NSLog(@"확인이 선택됨");
+    }];
+    
+    [self presentViewController:alert2 animated:YES completion:nil];
+    
+    
 }
 
 

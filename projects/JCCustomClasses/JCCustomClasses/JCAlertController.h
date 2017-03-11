@@ -34,4 +34,12 @@
                                  okTitle:(NSString *)okTitle
                            touchedSwitch:(UISwitch *)touchedSwitch;
 
+///okTitle을 탭하면 컴플리션 블록 안에 있는 것을 실행.
++ (instancetype)alertControllerWithTitle:(NSString *)title
+                                 message:(NSString *)message
+                          preferredStyle:(UIAlertControllerStyle)preferredStyle
+                             cancelTitle:(NSString *)cancelTitle
+                                 okTitle:(NSString *)okTitle
+                               okHandler:(void (^)(UIAlertAction *))handler;
+
 @end

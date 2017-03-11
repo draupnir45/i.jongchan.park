@@ -82,4 +82,24 @@
 }
 
 
++ (instancetype)alertControllerWithTitle:(NSString *)title
+                                 message:(NSString *)message
+                          preferredStyle:(UIAlertControllerStyle)preferredStyle
+                             cancelTitle:(NSString *)cancelTitle
+                                 okTitle:(NSString *)okTitle
+                               okHandler:(void (^)(UIAlertAction *))handler {
+    
+    JCAlertController *alert = [JCAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:preferredStyle
+                                                               cancelTitle:cancelTitle];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:okTitle style:UIAlertActionStyleDefault handler:handler];
+    
+    [alert addAction:okAction];
+    
+    return alert;
+}
+
+
 @end

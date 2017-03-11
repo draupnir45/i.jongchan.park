@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B91E48F41E6EE65A0018D9BB /* JCBlurrManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B91E48F31E6EE65A0018D9BB /* JCBlurrManager.m */; };
+		B923B1EA1E72954A0006C245 /* JCRandomRollImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B923B1E91E72954A0006C245 /* JCRandomRollImageView.m */; };
 		B945E1B61E6AE1CC00FF7F0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B945E1B51E6AE1CC00FF7F0C /* main.m */; };
 		B945E1B91E6AE1CC00FF7F0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B945E1B81E6AE1CC00FF7F0C /* AppDelegate.m */; };
 		B945E1BC1E6AE1CC00FF7F0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B945E1BB1E6AE1CC00FF7F0C /* ViewController.m */; };
@@ -23,6 +24,8 @@
 /* Begin PBXFileReference section */
 		B91E48F21E6EE65A0018D9BB /* JCBlurrManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCBlurrManager.h; sourceTree = "<group>"; };
 		B91E48F31E6EE65A0018D9BB /* JCBlurrManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCBlurrManager.m; sourceTree = "<group>"; };
+		B923B1E81E72954A0006C245 /* JCRandomRollImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCRandomRollImageView.h; sourceTree = "<group>"; };
+		B923B1E91E72954A0006C245 /* JCRandomRollImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCRandomRollImageView.m; sourceTree = "<group>"; };
 		B945E1B11E6AE1CC00FF7F0C /* JCCustomClasses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCCustomClasses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B945E1B51E6AE1CC00FF7F0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B945E1B71E6AE1CC00FF7F0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				B95A3E951E6ED76800D73345 /* JCAlertController.m */,
 				B945E1CE1E6AE23500FF7F0C /* JCPlistDataController.h */,
 				B945E1CF1E6AE23500FF7F0C /* JCPlistDataController.m */,
+				B923B1E81E72954A0006C245 /* JCRandomRollImageView.h */,
+				B923B1E91E72954A0006C245 /* JCRandomRollImageView.m */,
 				B983BBE51E6AE87F002BC25F /* appData.plist */,
 				B945E1BD1E6AE1CD00FF7F0C /* Main.storyboard */,
 				B945E1C01E6AE1CD00FF7F0C /* Assets.xcassets */,
@@ -182,6 +187,7 @@
 				B95A3E961E6ED76800D73345 /* JCAlertController.m in Sources */,
 				B945E1B91E6AE1CC00FF7F0C /* AppDelegate.m in Sources */,
 				B945E1B61E6AE1CC00FF7F0C /* main.m in Sources */,
+				B923B1EA1E72954A0006C245 /* JCRandomRollImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

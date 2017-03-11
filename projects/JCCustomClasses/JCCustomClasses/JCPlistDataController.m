@@ -25,7 +25,7 @@
     dispatch_once(&onceToken, ^{
         sharedData = [[JCPlistDataController alloc] init];
     });
-    
+
     return sharedData;
 }
 
