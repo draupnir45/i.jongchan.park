@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cvj-5m-Lw4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Filtering Table View Controller-->
+        <scene sceneID="qI3-HI-iCh">
+            <objects>
+                <viewController id="cvj-5m-Lw4" customClass="JCFilteringTableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hGI-9t-p6r"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qiw-Wm-2iu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eDE-7B-NRM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z7t-n2-hzD">
+                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JCFilteringCell" id="EB4-fj-gq2">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EB4-fj-gq2" id="QLG-e0-jCK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cvj-5m-Lw4" id="Xm7-0h-r2i"/>
+                                    <outlet property="delegate" destination="cvj-5m-Lw4" id="UNX-qv-NVd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z7t-n2-hzD" firstAttribute="centerX" secondItem="eDE-7B-NRM" secondAttribute="centerX" id="2Dp-h1-LdU"/>
+                            <constraint firstItem="z7t-n2-hzD" firstAttribute="width" secondItem="eDE-7B-NRM" secondAttribute="width" id="9mC-dj-Nnq"/>
+                            <constraint firstItem="z7t-n2-hzD" firstAttribute="centerY" secondItem="eDE-7B-NRM" secondAttribute="centerY" id="f1i-d5-hCp"/>
+                            <constraint firstItem="z7t-n2-hzD" firstAttribute="height" secondItem="eDE-7B-NRM" secondAttribute="height" id="gMc-bR-ho1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQ7-oc-cHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-374" y="8"/>
+        </scene>
+    </scenes>
+</document>
