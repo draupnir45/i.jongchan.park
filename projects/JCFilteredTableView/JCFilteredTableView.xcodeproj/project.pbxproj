@@ -11,6 +11,7 @@
 		B9293DAF1E74F8CE00838252 /* JCFilteringTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9293DAE1E74F8CE00838252 /* JCFilteringTableViewController.storyboard */; };
 		B9293DB31E74FA0700838252 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B9293DB21E74FA0700838252 /* DataCenter.m */; };
 		B9293DB61E75040900838252 /* JCArrayFilteringManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9293DB51E75040900838252 /* JCArrayFilteringManager.m */; };
+		B9CC545C1E7508D900FAC26A /* JCFilterOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CC545B1E7508D900FAC26A /* JCFilterOptionsViewController.m */; };
 		B9D706331E74F7E000A80B71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D706321E74F7E000A80B71 /* main.m */; };
 		B9D706361E74F7E000A80B71 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D706351E74F7E000A80B71 /* AppDelegate.m */; };
 		B9D7063C1E74F7E000A80B71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9D7063A1E74F7E000A80B71 /* Main.storyboard */; };
@@ -26,6 +27,8 @@
 		B9293DB21E74FA0700838252 /* DataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
 		B9293DB41E75040900838252 /* JCArrayFilteringManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCArrayFilteringManager.h; sourceTree = "<group>"; };
 		B9293DB51E75040900838252 /* JCArrayFilteringManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCArrayFilteringManager.m; sourceTree = "<group>"; };
+		B9CC545A1E7508D900FAC26A /* JCFilterOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCFilterOptionsViewController.h; sourceTree = "<group>"; };
+		B9CC545B1E7508D900FAC26A /* JCFilterOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCFilterOptionsViewController.m; sourceTree = "<group>"; };
 		B9D7062E1E74F7E000A80B71 /* JCFilteredTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCFilteredTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D706321E74F7E000A80B71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9D706341E74F7E000A80B71 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,6 +55,8 @@
 			children = (
 				B9293DAB1E74F8B000838252 /* JCFilteringTableViewController.h */,
 				B9293DAC1E74F8B000838252 /* JCFilteringTableViewController.m */,
+				B9CC545A1E7508D900FAC26A /* JCFilterOptionsViewController.h */,
+				B9CC545B1E7508D900FAC26A /* JCFilterOptionsViewController.m */,
 				B9293DAE1E74F8CE00838252 /* JCFilteringTableViewController.storyboard */,
 			);
 			name = JCFilteringTableView;
@@ -177,6 +182,7 @@
 				B9D706361E74F7E000A80B71 /* AppDelegate.m in Sources */,
 				B9293DAD1E74F8B000838252 /* JCFilteringTableViewController.m in Sources */,
 				B9293DB31E74FA0700838252 /* DataCenter.m in Sources */,
+				B9CC545C1E7508D900FAC26A /* JCFilterOptionsViewController.m in Sources */,
 				B9D706331E74F7E000A80B71 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -48,10 +48,57 @@
                             <constraint firstItem="z7t-n2-hzD" firstAttribute="height" secondItem="eDE-7B-NRM" secondAttribute="height" id="gMc-bR-ho1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="5Yr-EB-9xN" kind="presentation" identifier="filter" id="ilL-9B-WnX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQ7-oc-cHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-374" y="8"/>
+            <point key="canvasLocation" x="-249" y="101"/>
+        </scene>
+        <!--Filter Options View Controller-->
+        <scene sceneID="vyX-yx-a3f">
+            <objects>
+                <viewController id="5Yr-EB-9xN" customClass="JCFilterOptionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XTz-ez-Vu2"/>
+                        <viewControllerLayoutGuide type="bottom" id="V7d-PL-SbK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sKX-NU-tsk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSM-z5-Zg5">
+                                <rect key="frame" x="164" y="221" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="optionSelected:" destination="5Yr-EB-9xN" eventType="touchUpInside" id="j8m-sP-M5U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sl-Rl-c7F">
+                                <rect key="frame" x="164" y="271" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="optionSelected:" destination="5Yr-EB-9xN" eventType="touchUpInside" id="h1S-Jv-SZy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iuo-WD-fKh">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="optionSelected:" destination="5Yr-EB-9xN" eventType="touchUpInside" id="n9d-3H-1wm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lz6-aA-Egg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="8"/>
         </scene>
     </scenes>
 </document>

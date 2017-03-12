@@ -19,6 +19,7 @@
 		B945E1D01E6AE23500FF7F0C /* JCPlistDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B945E1CF1E6AE23500FF7F0C /* JCPlistDataController.m */; };
 		B95A3E961E6ED76800D73345 /* JCAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95A3E951E6ED76800D73345 /* JCAlertController.m */; };
 		B983BBE61E6AE87F002BC25F /* appData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B983BBE51E6AE87F002BC25F /* appData.plist */; };
+		B9CC54591E75073300FAC26A /* JCArrayFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CC54581E75073300FAC26A /* JCArrayFilter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		B95A3E941E6ED76800D73345 /* JCAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCAlertController.h; sourceTree = "<group>"; };
 		B95A3E951E6ED76800D73345 /* JCAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCAlertController.m; sourceTree = "<group>"; };
 		B983BBE51E6AE87F002BC25F /* appData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appData.plist; sourceTree = "<group>"; };
+		B9CC54571E75073300FAC26A /* JCArrayFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCArrayFilter.h; sourceTree = "<group>"; };
+		B9CC54581E75073300FAC26A /* JCArrayFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCArrayFilter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				B945E1CF1E6AE23500FF7F0C /* JCPlistDataController.m */,
 				B923B1E81E72954A0006C245 /* JCRandomRollImageView.h */,
 				B923B1E91E72954A0006C245 /* JCRandomRollImageView.m */,
+				B9CC54571E75073300FAC26A /* JCArrayFilter.h */,
+				B9CC54581E75073300FAC26A /* JCArrayFilter.m */,
 				B983BBE51E6AE87F002BC25F /* appData.plist */,
 				B945E1BD1E6AE1CD00FF7F0C /* Main.storyboard */,
 				B945E1C01E6AE1CD00FF7F0C /* Assets.xcassets */,
@@ -186,6 +191,7 @@
 				B945E1BC1E6AE1CC00FF7F0C /* ViewController.m in Sources */,
 				B95A3E961E6ED76800D73345 /* JCAlertController.m in Sources */,
 				B945E1B91E6AE1CC00FF7F0C /* AppDelegate.m in Sources */,
+				B9CC54591E75073300FAC26A /* JCArrayFilter.m in Sources */,
 				B945E1B61E6AE1CC00FF7F0C /* main.m in Sources */,
 				B923B1EA1E72954A0006C245 /* JCRandomRollImageView.m in Sources */,
 			);

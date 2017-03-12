@@ -45,7 +45,8 @@
     if (self.rollingIndex < self.imgArray.count) {
         self.image = self.imgArray[self.rollingIndex];
         self.rollingIndex++;
-    } else { [self.rollingTimer invalidate];
+    } else {
+        [self.rollingTimer invalidate];
         self.rollingTimer = nil;
         self.imgArray = @[];
         self.rollingIndex = 0;

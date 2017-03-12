@@ -24,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"필터" style:UIBarButtonItemStylePlain target:self action:@selector(goToFilterView)];
+    
     self.originalDataArray = [DataCenter sharedData].appData;
     self.filteredDataArray = [self.originalDataArray mutableCopy];
     
@@ -35,6 +37,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)goToFilterView {
+    [self performSegueWithIdentifier:@"filter" sender:nil];
 }
 
 
