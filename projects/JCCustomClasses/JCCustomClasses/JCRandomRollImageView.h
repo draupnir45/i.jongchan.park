@@ -11,5 +11,6 @@
 @interface JCRandomRollImageView : UIImageView
 
 - (void)rollWithImageArray:(NSArray <UIImage *>*)array timeIntervel:(NSTimeInterval)timeInterval;
+- (void)rollWithImageArray:(NSArray <UIImage *>*)array timeIntervel:(NSTimeInterval)timeInterval repeatNumb:(NSInteger)repeatNumb;
 
 @end

@@ -13,6 +13,7 @@
 @property NSTimer *rollingTimer;
 @property NSInteger rollingIndex;
 @property NSArray *imgArray;
+@property NSInteger repeatNumb;
 
 @end
 
@@ -20,30 +21,43 @@
 @implementation JCRandomRollImageView
 
 - (void)rollWithImageArray:(NSArray <UIImage *>*)array timeIntervel:(NSTimeInterval)timeInterval {
-//    __block NSInteger index = 0;
-//    [NSTimer scheduledTimerWithTimeInterval:timeInterval repeats:YES block:^(NSTimer * _Nonnull timer) {
-////        NSInteger index = 0;
-//        self.image = array[index];
-//        index ++;
-//        if (array.count < index) {
-//            NSLog(@"들어오긴 함?");
-//            [timer invalidate];
-//        }
-//    }];
-
+    
     self.imgArray = array;
     self.rollingIndex = 0;
     
-    self.rollingTimer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(changeImageWithArray) userInfo:nil repeats:YES];
-    
-
+    self.rollingTimer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(changeImage) userInfo:nil repeats:YES];
     
     
 }
 
-- (void)changeImageWithArray {
-    if (self.rollingIndex < self.imgArray.count) {
-        self.image = self.imgArray[self.rollingIndex];
+- (void)rollWithImageArray:(NSArray <UIImage *>*)array timeIntervel:(NSTimeInterval)timeInterval repeatNumb:(NSInteger)repeatNumb {
+    
+    self.imgArray = array;
+    self.rollingIndex = 0;
+    self.repeatNumb = repeatNumb;
+    
+    self.rollingTimer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(changeImageRepeat) userInfo:nil repeats:YES];
+    
+    
+    
+}
+
+- (void)changeImage {
+    if (self.rollingIndex < self.imgArray.count * 3) {
+        self.image = self.imgArray[self.rollingIndex % self.imgArray.count];
+        self.rollingIndex++;
+    } else {
+        [self.rollingTimer invalidate];
+        self.rollingTimer = nil;
+        self.imgArray = @[];
+        self.rollingIndex = 0;
+    }
+    
+}
+
+- (void)changeImageRepeat{
+    if (self.rollingIndex < self.imgArray.count * self.repeatNumb) {
+        self.image = self.imgArray[self.rollingIndex % self.imgArray.count];
         self.rollingIndex++;
     } else {
         [self.rollingTimer invalidate];
@@ -55,13 +69,5 @@
 }
 
 
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end
