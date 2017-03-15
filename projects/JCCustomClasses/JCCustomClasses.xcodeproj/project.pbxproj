@@ -18,7 +18,6 @@
 		B945E1CD1E6AE1E200FF7F0C /* JCDateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B945E1CC1E6AE1E200FF7F0C /* JCDateManager.m */; };
 		B945E1D01E6AE23500FF7F0C /* JCPlistDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B945E1CF1E6AE23500FF7F0C /* JCPlistDataController.m */; };
 		B95A3E961E6ED76800D73345 /* JCAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95A3E951E6ED76800D73345 /* JCAlertController.m */; };
-		B97B6B8C1E7543BD0025FE3D /* JCRandomRollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B97B6B8B1E7543BD0025FE3D /* JCRandomRollLabel.m */; };
 		B983BBE61E6AE87F002BC25F /* appData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B983BBE51E6AE87F002BC25F /* appData.plist */; };
 		B9CC54591E75073300FAC26A /* JCArrayFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CC54581E75073300FAC26A /* JCArrayFilter.m */; };
 /* End PBXBuildFile section */
@@ -44,8 +43,6 @@
 		B945E1CF1E6AE23500FF7F0C /* JCPlistDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCPlistDataController.m; sourceTree = "<group>"; };
 		B95A3E941E6ED76800D73345 /* JCAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCAlertController.h; sourceTree = "<group>"; };
 		B95A3E951E6ED76800D73345 /* JCAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCAlertController.m; sourceTree = "<group>"; };
-		B97B6B8A1E7543BD0025FE3D /* JCRandomRollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCRandomRollLabel.h; sourceTree = "<group>"; };
-		B97B6B8B1E7543BD0025FE3D /* JCRandomRollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCRandomRollLabel.m; sourceTree = "<group>"; };
 		B983BBE51E6AE87F002BC25F /* appData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appData.plist; sourceTree = "<group>"; };
 		B9CC54571E75073300FAC26A /* JCArrayFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCArrayFilter.h; sourceTree = "<group>"; };
 		B9CC54581E75073300FAC26A /* JCArrayFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCArrayFilter.m; sourceTree = "<group>"; };
@@ -95,8 +92,6 @@
 				B945E1CF1E6AE23500FF7F0C /* JCPlistDataController.m */,
 				B923B1E81E72954A0006C245 /* JCRandomRollImageView.h */,
 				B923B1E91E72954A0006C245 /* JCRandomRollImageView.m */,
-				B97B6B8A1E7543BD0025FE3D /* JCRandomRollLabel.h */,
-				B97B6B8B1E7543BD0025FE3D /* JCRandomRollLabel.m */,
 				B9CC54571E75073300FAC26A /* JCArrayFilter.h */,
 				B9CC54581E75073300FAC26A /* JCArrayFilter.m */,
 				B983BBE51E6AE87F002BC25F /* appData.plist */,
@@ -191,7 +186,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B945E1CD1E6AE1E200FF7F0C /* JCDateManager.m in Sources */,
-				B97B6B8C1E7543BD0025FE3D /* JCRandomRollLabel.m in Sources */,
 				B945E1D01E6AE23500FF7F0C /* JCPlistDataController.m in Sources */,
 				B91E48F41E6EE65A0018D9BB /* JCBlurrManager.m in Sources */,
 				B945E1BC1E6AE1CC00FF7F0C /* ViewController.m in Sources */,
