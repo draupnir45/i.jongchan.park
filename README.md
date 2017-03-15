@@ -1,18 +1,17 @@
 # Jongchan Park <a href="url"><img src="learning/images/fc_n_ios.png" align="right" height="40" ></a>
 
-##About Me
+**About Me**
 - 1988년 1월 4일 서울생
 - 모바일 앱을 좋아해서 UI/UX 디자이너가 되었지만, 직접 손으로 만들어보고 싶어서 개발자로 전향하게 되었습니다.
 - 모바일 네이티브 프론트엔드 클라이언트 및 모바일 네이티브 어플리케이션 혹은 그 두가지를 복합적으로 개발하는 개발자를 목표로 하고 있습니다.
 
-##프로젝트
+**프로젝트**
 
 - [PokéDex](https://github.com/draupnir45/Poke-dex) : 탭바와 네비바 컨트롤을 연습하면서 만든 포켓몬 도감입니다.
 
 
-##공부한 것
+**프로그래밍 일반**
 
-###프로그래밍 일반
 - [객체 지향 프로그래밍 기초](https://github.com/draupnir45/i.jongchan.park/blob/master/learning/Object-Oriented%20Programming.md)
 - [Git](learning/AboutGit.md)
 - [RAM](learning/RAM.md)
@@ -21,7 +20,8 @@
 - [JSON](learning/JSON.md)
 - [버블 정렬, 머지 정렬, 퀵 정렬(소스코드)](learning/sorts.md)
 
-###Objective C / iOS 구조 및 디자인 패턴
+**Objective C / iOS 구조 및 디자인 패턴**
+
 - [Objective-C 클래스, 메서드, 프로퍼티, 객체 그리고 메인 파일](learning/Objective_C_method_property_and_mainfile.md)
 - [Framework Cocoa & Cocoa Touch](learning/AboutCocoa.md)
 - [Design Pattern - 프로토콜(Delegate)](learning/FreakinDelegate.md)
@@ -33,7 +33,8 @@
 - [Block 놀이](learning/Block.md)
 
 
-###UIView와 아이들
+**UIView와 아이들**
+
 - [UIView](learning/UIView.md)
 - [UILabel](learning/UILabel.md)
 - [UIImageView](learning/UIImageView.md)
@@ -48,11 +49,13 @@
 - [UIWebView](learning/UIWebView.md)
 - [UIBlurEffect](learning/UIBlurEffect.md)
 
-###이야기판
+**이야기판**
+
  - [ScrollingStoryBoard](projects/FreakinAutoLayoutPrac) - 오토 레이아웃으로 뷰를 정렬하고 스크롤뷰에 싣는 것을 연습해 보았습니다.
 
 
-###연습 및 과제
+**연습 및 과제**
+
 - [과제] 커스텀 테이블 뷰 과제 ([CustomTableViewCopy](projects/CustomTableViewCopy), 2017. 2. 19)
 - [연습] 스토리보드 연습 ([Day1TextChange](projects/Day1TextChange))
 - [연습] 클래스 연습 / 전사와 마법사([Day2RolePlayingGame](projects/Day2RolePlayingGame))
