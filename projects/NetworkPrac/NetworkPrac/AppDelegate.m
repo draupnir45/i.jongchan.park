@@ -18,7 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
 
-    
+    //ID : B-
+    //PW : 8자 이상, 연속 안됨
 
     return YES;
 }

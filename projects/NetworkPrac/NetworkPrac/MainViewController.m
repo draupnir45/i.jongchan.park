@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+    
     
     // Do any additional setup after loading the view.
 }
@@ -28,11 +28,22 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-    BOOL autoLoginable = NO;
+//    BOOL autoLoginable = NO;
+//    
+//    if (!autoLoginable) {
+//        [self performSegueWithIdentifier:@"LoginViewSegue" sender:nil];
+//    }
+}
+
+- (IBAction)postBtnSelected:(id)sender {
+    BOOL haveToken = YES;
     
-    if (!autoLoginable) {
-        [self performSegueWithIdentifier:@"LoginViewSegue" sender:nil];
+    if (haveToken) {
+        [self performSegueWithIdentifier:@"PostingViewSegue" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"LoginViewSegue" sender:self];
     }
+    
 }
 
 /*
