@@ -69,5 +69,5 @@
 - [연습] 버블, 머지, 퀵 정렬([SortingPrac](projects/SortingPrac))
 - [MyDay](projects/MyDayApp) : 연습을 위해 만들어 본 메모장 겸 일기장입니다.
 
-###커스텀 클래스들
+### 커스텀 클래스들
 - [JCCustomClasses](projects/JCCustomClasses)
