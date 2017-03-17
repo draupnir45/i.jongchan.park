@@ -10,4 +10,7 @@
 
 @interface SignUpViewController : UIViewController
 
+
+- (void)alertWithResult:(NSUInteger)result;
+
 @end

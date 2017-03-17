@@ -9,6 +9,8 @@
 #import "PostingViewController.h"
 
 @interface PostingViewController ()
+<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -16,12 +18,51 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell;
+    
+    if (indexPath.row == 0) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"titleCell"];
+    } else if (indexPath.row == 1) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"photoCell"];
+    } else if (indexPath.row == 2) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"contentCell"];
+    }
+    
+    return cell;
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        return 66;
+    } else if (indexPath.row == 1) {
+        return 180;
+    } else {
+        return 300;
+    }
+    
+}
+
+-(void)textViewDidChange:(UITextView *)textView {
+    [textView scrollRangeToVisible:[textView selectedRange]];
+}
+
+- (IBAction)unwindForSegue:(UIStoryboardSegue *)unwindSegue towardsViewController:(UIViewController *)subsequentVC {
+    
 }
 
 /*

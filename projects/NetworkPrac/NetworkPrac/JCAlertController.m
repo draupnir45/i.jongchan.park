@@ -48,30 +48,6 @@
     return alert;
 }
 
-//+ (instancetype)alertControllerWithTitle:(NSString *)title
-//                                 message:(NSString *)message
-//                          preferredStyle:(UIAlertControllerStyle)preferredStyle
-//                             cancelTitle:(NSString *)cancelTitle
-//                                 okTitle:(NSString *)okTitle
-//                          viewController:(UIViewController *)viewController
-//                         segueIdentifier:(NSString *)segueIdentifier {
-//    
-//    JCAlertController *alert = [JCAlertController alertControllerWithTitle:title
-//                                                                   message:message
-//                                                            preferredStyle:preferredStyle
-//                                                               cancelTitle:cancelTitle];
-//    
-//    
-//    UIAlertAction *okAction = [UIAlertAction actionWithTitle:okTitle
-//                                                       style:UIAlertActionStyleDefault
-//                                                     handler:^(UIAlertAction * _Nonnull action) {
-//        [viewController performSegueWithIdentifier:segueIdentifier sender:alert];
-//    }];
-//    
-//    [alert addAction:okAction];
-//    
-//    return alert;
-//}
 
 + (instancetype)alertControllerWithTitle:(NSString *)title
                                  message:(NSString *)message

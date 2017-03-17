@@ -7,6 +7,9 @@
 //
 
 #import "DataCenter.h"
+#import "NetworkManager.h"
+#import "SignUpViewController.h"
+
 
 @implementation DataCenter
 
@@ -25,24 +28,55 @@
 {
     self = [super init];
     if (self) {
+        self.nManager = [[NetworkManager alloc] init];
+        
+        if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"Token"] length] > 0) {
+            self.userToken =[[NSUserDefaults standardUserDefaults] objectForKey:@"Token"];
+        }
         
     }
     return self;
 }
 
-- (BOOL)signUpRequestWithUserName:(NSString *)userName password:(NSString *)password {
+
+
+- (void)signUpRequestWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion {
     //회원가입, 로그인 시키고 토큰 저장, 오류 처리, 성공여부 리턴
+//        __block NSUInteger resultCode;
     
-    return YES;
+    [self.nManager signUpRequestToServerWithUserName:userName password:password completion:^(BOOL sucess, NSDictionary *dataDict) {
+        
+        if ([dataDict objectForKey:@"key"]) {
+            
+            self.userToken = [dataDict objectForKey:@"key"];
+            
+            [[NSUserDefaults standardUserDefaults] setValue:self.userToken forKey:@"Token"];
+        }
+        completion(sucess, dataDict);
+    }];
+    
+    //    return resultCode;
 }
 
-- (BOOL)loginRequestWithUserName:(NSString *)userName password:(NSString *)password {
+
+- (void)loginRequestWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion{
     //로그인 요청하고 토큰 저장, 오류 처리, 성공여부 리턴
-    
-    return YES;
+    [self.nManager loginRequestToServerWithUserName:userName password:password completion:^(BOOL sucess, NSDictionary *dataDict) {
+        if ([dataDict objectForKey:@"key"]) {
+            self.userToken = [dataDict objectForKey:@"key"];
+            
+            [[NSUserDefaults standardUserDefaults] setValue:self.userToken forKey:@"Token"];
+        }
+        completion(sucess, dataDict);
+    }];
+
 }
 
-
+- (void)logOutRequest {
+    [self.nManager logOutRequestToServerWithToken:self.userToken];
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Token"];
+    self.userToken = @"";
+}
 
 
 

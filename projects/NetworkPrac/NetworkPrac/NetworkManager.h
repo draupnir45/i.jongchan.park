@@ -8,6 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+
+typedef void (^CompletionBlock)(BOOL sucess, NSDictionary *dataDict);
+
+
 @interface NetworkManager : NSObject
+
+
+- (void)signUpRequestToServerWithUserName:(NSString *)userName
+                                 password:(NSString *)password
+                               completion:(CompletionBlock)completion;
+- (void)loginRequestToServerWithUserName:(NSString *)userName
+                                password:(NSString *)password
+                              completion:(CompletionBlock)completion;
+- (void)logOutRequestToServerWithToken:(NSString *)token;
 
 @end

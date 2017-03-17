@@ -23,7 +23,7 @@
                                  message:(NSString *)message
                           preferredStyle:(UIAlertControllerStyle)preferredStyle
                              actionTitle:(NSString *)actionTitle
-                                 handler:(void (^)(UIAlertAction *))handler;
+                                 handler:(void (^)(UIAlertAction *action))handler;
 
 
 ///스위치 밸류가 바뀐 경우 받아서 확인하면 그대로 두고 취소하면 값을 원래대로 바꿔 줍니다.
@@ -40,6 +40,6 @@
                           preferredStyle:(UIAlertControllerStyle)preferredStyle
                              cancelTitle:(NSString *)cancelTitle
                                  okTitle:(NSString *)okTitle
-                               okHandler:(void (^)(UIAlertAction *action))handler;
+                               okHandler:(void (^)(UIAlertAction *))handler;
 
 @end

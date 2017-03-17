@@ -7,8 +7,11 @@
 //
 
 #import "MainViewController.h"
+#import "DataCenter.h"
 
 @interface MainViewController ()
+<UITableViewDataSource, UITableViewDelegate>
+
 
 @end
 
@@ -17,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.title = @"메인";
     
     // Do any additional setup after loading the view.
 }
@@ -36,14 +39,19 @@
 }
 
 - (IBAction)postBtnSelected:(id)sender {
-    BOOL haveToken = YES;
     
-    if (haveToken) {
+    if ([[[DataCenter sharedData] userToken] length]>0) {
         [self performSegueWithIdentifier:@"PostingViewSegue" sender:self];
     } else {
         [self performSegueWithIdentifier:@"LoginViewSegue" sender:self];
     }
     
+}
+- (IBAction)logOut:(id)sender {
+    
+    [[DataCenter sharedData] logOutRequest];
+    
+    [self performSegueWithIdentifier:@"LoginViewSegue" sender:self];
 }
 
 /*
@@ -55,5 +63,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - TableView
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FCiOSCell"];
+    
+    cell.textLabel.text = @"test";
+    
+    return cell;
+}
+
 
 @end
