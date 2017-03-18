@@ -80,4 +80,11 @@
 
 
 
+
+- (void)getPostDataOnPage:(NSInteger)page completion:(CompletionBlock)completion {
+    [self.nManager getPostDataOnPage:page completion:^(BOOL sucess, NSDictionary *dataDict) {
+        
+    }];
+}
+
 @end

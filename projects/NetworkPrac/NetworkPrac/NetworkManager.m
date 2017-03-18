@@ -125,7 +125,35 @@ static NSString *POSTRETIREVE = @"/post/<post_pk>/";
     
 }
 
-
+- (void)getPostDataOnPage:(NSInteger)page completion:(CompletionBlock)completion {
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    //request
+    NSString *pageStr = [NSString stringWithFormat:@"?page=%ld",page];
+    NSMutableURLRequest *request = [self mutableRequestWithApiURL:[POSTLIST stringByAppendingString:pageStr]];
+    
+    request.HTTPMethod = @"GET";
+    
+    NSURLSessionUploadTask *getPosts = [defaultSession uploadTaskWithRequest:request fromData:nil completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+        NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+        if (error == nil) {
+            if (statusCode == 200) {
+                completion(YES, dataDict);
+            } else {
+                completion(NO, dataDict);
+            }
+        } else {
+            NSLog(@"error: %@", error);
+        }
+        
+    }];
+    
+    
+    [getPosts resume];
+    
+}
 
 
 @end

@@ -29,12 +29,12 @@
     
     UIImageView *titleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"twitter"]];
     
-    UIBarButtonItem *rightOne = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(composeAction:)];
-    [rightOne setTintColor:[UIColor colorWithRed:29.0/255 green:161.0/255 blue:242.0/255 alpha:1.0]];
-    self.navigationItem.rightBarButtonItem = rightOne;
-    
-    UIBarButtonItem *backTest = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"twitter"] landscapeImagePhone:nil style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationItem.backBarButtonItem =backTest;
+//    UIBarButtonItem *rightOne = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(composeAction:)];
+//    [rightOne setTintColor:[UIColor colorWithRed:29.0/255 green:161.0/255 blue:242.0/255 alpha:1.0]];
+//    self.navigationItem.rightBarButtonItem = rightOne;
+//    
+//    UIBarButtonItem *backTest = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"twitter"] landscapeImagePhone:nil style:UIBarButtonItemStylePlain target:nil action:nil];
+//    self.navigationItem.backBarButtonItem =backTest;
     
 //    UIBarButtonItem *logo = [[UIBarButtonItem alloc] initWithCustomView:titleImageView];
     titleImageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -167,6 +167,17 @@
     NSLog(@"good");
 }
 
+- (IBAction)action:(id)sender {
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    
+    CustomTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    
+    cell.profilePhoto.image = [UIImage imageNamed:@"3.jpg"];
+    
+//    [self.tableView reloadData];
+    
+}
 //
 //- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    return 20.0;

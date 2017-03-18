@@ -18,9 +18,14 @@ typedef void (^CompletionBlock)(BOOL sucess, NSDictionary *dataDict);
 - (void)signUpRequestToServerWithUserName:(NSString *)userName
                                  password:(NSString *)password
                                completion:(CompletionBlock)completion;
+
 - (void)loginRequestToServerWithUserName:(NSString *)userName
                                 password:(NSString *)password
                               completion:(CompletionBlock)completion;
+
 - (void)logOutRequestToServerWithToken:(NSString *)token;
+
+- (void)getPostDataOnPage:(NSInteger)page
+               completion:(CompletionBlock)completion;
 
 @end

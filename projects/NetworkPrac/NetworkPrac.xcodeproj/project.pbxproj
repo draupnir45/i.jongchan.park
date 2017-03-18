@@ -20,6 +20,7 @@
 		B975E8471E79543E00B83D92 /* PostingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B975E8461E79543E00B83D92 /* PostingViewController.m */; };
 		B975E84A1E795C1000B83D92 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B975E8491E795C1000B83D92 /* LoginViewController.m */; };
 		B9C4C64F1E7A35BA00DC03E2 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C4C64E1E7A35BA00DC03E2 /* SignUpViewController.m */; };
+		B9D3ECA31E7BD41600986693 /* PostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D3ECA21E7BD41600986693 /* PostModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		B975E8491E795C1000B83D92 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B9C4C64D1E7A35BA00DC03E2 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		B9C4C64E1E7A35BA00DC03E2 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		B9D3ECA11E7BD41600986693 /* PostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostModel.h; sourceTree = "<group>"; };
+		B9D3ECA21E7BD41600986693 /* PostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 			children = (
 				B92373191E7A2EDC004A8BC9 /* DataCenter.h */,
 				B923731A1E7A2EDC004A8BC9 /* DataCenter.m */,
+				B9D3ECA11E7BD41600986693 /* PostModel.h */,
+				B9D3ECA21E7BD41600986693 /* PostModel.m */,
 				B923731C1E7A3454004A8BC9 /* NetworkManager.h */,
 				B923731D1E7A3454004A8BC9 /* NetworkManager.m */,
 			);
@@ -220,6 +225,7 @@
 				B975E82A1E794A3E00B83D92 /* main.m in Sources */,
 				B975E8441E79543300B83D92 /* DetailViewController.m in Sources */,
 				B9C4C64F1E7A35BA00DC03E2 /* SignUpViewController.m in Sources */,
+				B9D3ECA31E7BD41600986693 /* PostModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
