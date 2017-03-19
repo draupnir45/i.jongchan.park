@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [self.fcImageView.layer setCornerRadius:self.fcImageView.frame.size.height/2];
+    [self.customImageView.layer setCornerRadius:self.customImageView.frame.size.height/2];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

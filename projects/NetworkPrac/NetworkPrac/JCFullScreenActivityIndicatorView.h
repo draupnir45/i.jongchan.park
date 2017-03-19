@@ -11,6 +11,7 @@
 @interface JCFullScreenActivityIndicatorView : UIView
 
 @property UIActivityIndicatorView *indicator;
+
 - (void)start;
 
 @end

@@ -23,8 +23,8 @@
 @property NSInteger showingPage;
 @property NSInteger lastPage;
 @property JCFullScreenActivityIndicatorView *indicatorView;
-@property UIRefreshControl *refreshControl;
-@property NSInteger postCount;
+@property UIRefreshControl *tableViewRefreshControl;
+@property NSInteger numberOfAllPosts;
 
 
 
@@ -49,13 +49,13 @@
     self.title = @"메인";
     
     //리프레시 컨트롤
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    self.refreshControl.backgroundColor = [UIColor lightGrayColor];
-    self.refreshControl.tintColor = [UIColor whiteColor];
-    [self.refreshControl addTarget:self
+    self.tableViewRefreshControl = [[UIRefreshControl alloc] init];
+    self.tableViewRefreshControl.backgroundColor = [UIColor lightGrayColor];
+    self.tableViewRefreshControl.tintColor = [UIColor whiteColor];
+    [self.tableViewRefreshControl addTarget:self
                             action:@selector(refreshData)
                   forControlEvents:UIControlEventValueChanged];
-    self.tableView.refreshControl = self.refreshControl;
+    self.tableView.refreshControl = self.tableViewRefreshControl;
 
 }
 
@@ -94,7 +94,7 @@
     self.showingPage ++;
     if (self.showingPage <= self.lastPage || self.lastPage == 0) {
         
-        if (!self.refreshControl.refreshing) {
+        if (!self.tableViewRefreshControl.refreshing) {
             [self.view addSubview:self.indicatorView];
             [self.indicatorView start];
             
@@ -113,12 +113,12 @@
             
             self.dataArray = dataArray;
             
-            self.postCount = [[dataDict objectForKey:@"count"] integerValue];
+            self.numberOfAllPosts = [[dataDict objectForKey:@"count"] integerValue];
             
-            if (self.postCount % 10 == 0) {
-                self.lastPage = self.postCount / 10;
+            if (self.numberOfAllPosts % 10 == 0) {
+                self.lastPage = self.numberOfAllPosts / 10;
             } else {
-                self.lastPage = (self.postCount / 10) + 1;
+                self.lastPage = (self.numberOfAllPosts / 10) + 1;
             }
             
             dispatch_queue_t main_queue = dispatch_get_main_queue();
@@ -126,8 +126,8 @@
             dispatch_sync(main_queue, ^{
                 [self.tableView reloadData];
                 
-                if (self.refreshControl.refreshing) {
-                    [self.refreshControl endRefreshing];
+                if (self.tableViewRefreshControl.refreshing) {
+                    [self.tableViewRefreshControl endRefreshing];
                 } else {
                     [self.view sendSubviewToBack:self.indicatorView];
                     [self.indicatorView removeFromSuperview];
@@ -155,24 +155,27 @@
 }
 - (IBAction)logOut:(id)sender {
     
-//    [[DataCenter sharedData] logOutRequest];
+    [self.view addSubview:self.indicatorView];
+    [self.indicatorView start];
+
     [[DataCenter sharedData] logOutRequestWithCompletion:^(BOOL sucess, NSDictionary *dataDict) {
         if (sucess) {
             dispatch_queue_t main_queue = dispatch_get_main_queue();
             
             dispatch_sync(main_queue, ^{
-                
-                [self presentViewController:[JCAlertController alertControllerWithTitle:@"로그아웃 성공!" message:nil preferredStyle:UIAlertControllerStyleAlert cancelTitle:@"확인"] animated:YES completion:^{
+                [self.indicatorView removeFromSuperview];
+                [self presentViewController:[JCAlertController alertControllerWithTitle:@"로그아웃 성공!" message:nil preferredStyle:UIAlertControllerStyleAlert actionTitle:@"확인" handler:^(UIAlertAction *action) {
                     [self performSegueWithIdentifier:@"LoginViewSegue" sender:self];
-                }];
+                }] animated:YES completion:nil];
                 
             });
         } else {
             dispatch_queue_t main_queue = dispatch_get_main_queue();
             
             dispatch_sync(main_queue, ^{
-                
+                [self.indicatorView removeFromSuperview];
                 [self presentViewController:[JCAlertController alertControllerWithTitle:@"무언가가 잘못되었습니다." message:@"다시 시도해 주세요." preferredStyle:UIAlertControllerStyleAlert cancelTitle:@"확인"] animated:YES completion:nil];
+                
                 
             });
         }
@@ -196,10 +199,10 @@
     cell.titleLabel.text = item.title;
     cell.contentLabel.text = item.content;
     
-    if ([[[DataCenter sharedData] imgDict] objectForKey:[NSNumber numberWithInteger:item.postPK]]) {
-        NSData *data = [[[DataCenter sharedData] imgDict] objectForKey:[NSNumber numberWithInteger:item.postPK]];
-        cell.fcImageView.image = [UIImage imageWithData:data];
-        cell.fcImageView.frame = CGRectMake(0, 0, 100, 100);
+    if ([[[DataCenter sharedData] postImageDictionary] objectForKey:[NSNumber numberWithInteger:item.postPK]]) {
+        NSData *data = [[[DataCenter sharedData] postImageDictionary] objectForKey:[NSNumber numberWithInteger:item.postPK]];
+        cell.customImageView.image = [UIImage imageWithData:data];
+        cell.customImageView.frame = CGRectMake(0, 0, 100, 100);
     }
     
     return cell;
@@ -219,17 +222,18 @@
     [self performSegueWithIdentifier:@"DetailViewSegue" sender:[tableView cellForRowAtIndexPath:indexPath]];
 }
 
+
 - (void)changeCellImage:(NSNotification *)notification {
     
     NSInteger postPK = [[notification.userInfo objectForKey:@"Post_PK"] integerValue];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.postCount - postPK inSection:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.numberOfAllPosts - postPK inSection:0];
     dispatch_queue_t main_queue = dispatch_get_main_queue();
     
     dispatch_sync(main_queue, ^{
         
         CustomTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-        NSData *data = [[[DataCenter sharedData] imgDict] objectForKey:[NSNumber numberWithInteger:postPK]];
-        cell.fcImageView.image = [UIImage imageWithData:data];
+        NSData *data = [[[DataCenter sharedData] postImageDictionary] objectForKey:[NSNumber numberWithInteger:postPK]];
+        cell.customImageView.image = [UIImage imageWithData:data];
         
     });
     
@@ -242,10 +246,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"DetailViewSegue"]) {
-        DetailViewController *destinationVC = segue.destinationViewController;
+        DetailViewController *detailViewController = segue.destinationViewController;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:((CustomTableViewCell *)sender)];
-        destinationVC.post = [self.dataArray objectAtIndex:indexPath.row];
-//        destinationVC.imageView.image = ((CustomTableViewCell *)sender).fcImageView.image;
+        detailViewController.post = [self.dataArray objectAtIndex:indexPath.row];
     }
 }
 

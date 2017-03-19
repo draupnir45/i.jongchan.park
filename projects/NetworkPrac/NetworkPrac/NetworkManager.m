@@ -21,18 +21,7 @@ static NSString *POSTRETIREVE = @"/post/<post_pk>/";
 
 
 
-@implementation NetworkManager {
-
-}
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        self.imgLoadingQueue = dispatch_queue_create("imgQueue", DISPATCH_QUEUE_SERIAL);
-    }
-    return self;
-}
+@implementation NetworkManager 
 
 ///ROOT_URL문자열 뒤에 경로를 붙여 NSMutableURLRequest를 만들어 반환합니다.
 - (NSMutableURLRequest *)mutableRequestWithApiURL:(NSString *)urlStr {
@@ -242,7 +231,7 @@ static NSString *POSTRETIREVE = @"/post/<post_pk>/";
     
     //data task
     NSURLSessionDataTask *loadImage = [defaultSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        [[[DataCenter sharedData] imgDict] setObject:data forKey:[NSNumber numberWithInteger:postPK]];
+        [[[DataCenter sharedData] postImageDictionary] setObject:data forKey:[NSNumber numberWithInteger:postPK]];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"gotImage" object:nil userInfo:@{@"Post_PK" : [NSNumber numberWithInteger:postPK]}];
     }];
     

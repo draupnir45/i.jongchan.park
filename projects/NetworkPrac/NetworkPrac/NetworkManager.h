@@ -16,8 +16,6 @@ typedef void (^CompletionBlock)(BOOL sucess, NSDictionary *dataDict);
 @interface NetworkManager : NSObject
 
 
-@property dispatch_queue_t imgLoadingQueue;
-
 
 - (void)signUpRequestToServerWithUserName:(NSString *)userName
                                  password:(NSString *)password

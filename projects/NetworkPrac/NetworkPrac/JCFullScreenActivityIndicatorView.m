@@ -22,6 +22,7 @@
 - (void)start {
     self.frame = self.superview.frame;
     self.indicator = [[UIActivityIndicatorView alloc] init];
+    self.indicator.frame = CGRectMake(0, 0, 200, 200);
     [self.indicator setCenter:self.center];
     [self addSubview:self.indicator];
     [self.indicator startAnimating];

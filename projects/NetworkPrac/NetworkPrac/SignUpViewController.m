@@ -9,13 +9,16 @@
 #import "SignUpViewController.h"
 #import "DataCenter.h"
 #import "JCAlertController.h"
+#import "JCFullScreenActivityIndicatorView.h"
 
 @interface SignUpViewController ()
 <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *password1;
-@property (weak, nonatomic) IBOutlet UITextField *password2;
+@property (weak, nonatomic) IBOutlet UITextField *password1TextField;
+@property (weak, nonatomic) IBOutlet UITextField *password2TextField;
+
+@property JCFullScreenActivityIndicatorView *indicatorView;
 
 @end
 
@@ -23,7 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //인디케이터뷰
+    self.indicatorView = [[JCFullScreenActivityIndicatorView alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,19 +47,24 @@
 - (IBAction)signUp:(id)sender {
     
     [self.userNameTextField resignFirstResponder];
-    [self.password1 resignFirstResponder];
-    [self.password2 resignFirstResponder];
+    [self.password1TextField resignFirstResponder];
+    [self.password2TextField resignFirstResponder];
+    
+    [self.view addSubview:self.indicatorView];
+    [self.indicatorView start];
     
     if (self.userNameTextField.text.length == 0 || self.userNameTextField.text.length == 0 || self.userNameTextField.text.length == 0) {
+        [self.indicatorView removeFromSuperview];
         [self presentViewController:[JCAlertController alertControllerWithTitle:@"필수 항목이 빠졌습니다." message:@"아이디, 비밀번호를 모두 넣어 주세요." preferredStyle:UIAlertControllerStyleAlert cancelTitle:@"확인"] animated:YES completion:nil];
-    } else if (![self.password1.text isEqualToString:self.password2.text]) {
+    } else if (![self.password1TextField.text isEqualToString:self.password2TextField.text]) {
+        [self.indicatorView removeFromSuperview];
         [self presentViewController:[JCAlertController alertControllerWithTitle:@"비밀번호가 다릅니다!" message:@"비밀번호와 비밀번호 확인 란에 같은 비밀번호를 넣어 주세요." preferredStyle:UIAlertControllerStyleAlert cancelTitle:@"확인"] animated:YES completion:^{
-            [self.password2 becomeFirstResponder];
+            [self.password2TextField becomeFirstResponder];
         }];
     } else {
     
         
-        [[DataCenter sharedData] signUpRequestWithUserName:self.userNameTextField.text password:self.password1.text completion:^(BOOL sucess, NSDictionary *dataDict) {
+        [[DataCenter sharedData] signUpRequestWithUserName:self.userNameTextField.text password:self.password1TextField.text completion:^(BOOL sucess, NSDictionary *dataDict) {
             NSUInteger resultCode = 100;
             
             if ([dataDict objectForKey:@"key"]) {
@@ -69,14 +78,16 @@
                     
                     resultCode = JCNetworkSignUpResponsePasswordNotStaisfying;
                 } else {
-                    NSLog(@"하아아아아아아아아아아아아아아아아아");
+                    NSLog(@"끄악");
                 }
             }
             
             dispatch_queue_t mainqueue = dispatch_get_main_queue();
             
             dispatch_sync(mainqueue, ^{
+                [self.indicatorView removeFromSuperview];
                 [self alertWithResult:resultCode];
+
             });
             
             
@@ -103,7 +114,7 @@
         case JCNetworkSignUpResponsePasswordNotStaisfying:
         {
             JCAlertController *alert = [JCAlertController alertControllerWithTitle:@"비밀번호 오류" message:@"8자 이상, 영문자와 숫자의 조합이되 너무 간단하지 않도록 해 주세요." preferredStyle:UIAlertControllerStyleAlert actionTitle:@"확인" handler:^(UIAlertAction *action) {
-                [self.password1 becomeFirstResponder];
+                [self.password1TextField becomeFirstResponder];
             }];
             [self presentViewController:alert animated:YES completion:nil];
         }

@@ -31,15 +31,15 @@ typedef void (^CompletionBlock)(BOOL sucess, NSDictionary *dataDict);
 @interface DataCenter : NSObject
 
 @property NSString *userToken;
-@property NetworkManager *nManager;
-@property NSMutableDictionary *imgDict;
+@property NetworkManager *networkManager;
+@property NSMutableDictionary *postImageDictionary;
 
 + (instancetype)sharedData;
 
 //account
 - (void)signUpRequestWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion;
 - (void)loginRequestWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion;
-- (void)logOutRequest;
+
 - (void)logOutRequestWithCompletion:(CompletionBlock)completion;
 
 //post

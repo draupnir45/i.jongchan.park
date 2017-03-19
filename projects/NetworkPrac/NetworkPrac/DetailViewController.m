@@ -21,7 +21,7 @@
     [super viewDidLoad];
     self.title = self.post.title;
     self.contentLabel.text = self.post.content;
-    NSData *imgData = [[[DataCenter sharedData] imgDict] objectForKey:[NSNumber numberWithInteger:self.post.postPK]];
+    NSData *imgData = [[[DataCenter sharedData] postImageDictionary] objectForKey:[NSNumber numberWithInteger:self.post.postPK]];
     if (imgData) {
         self.imageView.image = [UIImage imageWithData:imgData];
     }

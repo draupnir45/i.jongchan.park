@@ -9,16 +9,21 @@
 #import "PostingViewController.h"
 #import "DataCenter.h"
 #import "PostModel.h"
+#import "JCFullScreenActivityIndicatorView.h"
+#import "JCAlertController.h"
 
 @interface PostingViewController ()
 <UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
-@property UIImagePickerController *imagePickerController;
-@property NSData *imgData;
-@property (weak, nonatomic) IBOutlet UIButton *postBtn;
+@property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
+
+@property JCFullScreenActivityIndicatorView *indicatorView;
+@property UIImagePickerController *imagePickerController;
+@property NSData *imageData;
+
+
 
 @end
 
@@ -26,12 +31,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //인디케이터뷰
+    self.indicatorView = [[JCFullScreenActivityIndicatorView alloc] init];
+    
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     [imagePickerController setAllowsEditing:YES];
     imagePickerController.delegate = self;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardShowsUp:) name:UIKeyboardWillShowNotification object:nil];
-    
     self.imagePickerController = imagePickerController;
     
 }
@@ -91,7 +99,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
     UIImage *image = [self scaleImage:[info objectForKey:UIImagePickerControllerEditedImage] toSize:CGSizeMake(300, 300)];
-    self.imgData = UIImageJPEGRepresentation(image, 0.1);
+    self.imageData = UIImageJPEGRepresentation(image, 0.1);
     self.imageView.image = image;
     self.imageView.hidden = NO;
 
@@ -113,11 +121,24 @@
 #pragma mark - Upload
 
 - (IBAction)upload:(id)sender {
-    [[DataCenter sharedData] postTitle:self.titleTextField.text content:self.textView.text imageData:self.imgData completion:^(BOOL sucess, NSDictionary *dataDict) {
+    [self.view addSubview:self.indicatorView];
+    [self.indicatorView start];
+    
+    [[DataCenter sharedData] postTitle:self.titleTextField.text content:self.contentTextView.text imageData:self.imageData completion:^(BOOL sucess, NSDictionary *dataDict) {
+        dispatch_queue_t main_queue = dispatch_get_main_queue();
         if (sucess) {
-            dispatch_queue_t main_queue = dispatch_get_main_queue();
+            
             dispatch_sync(main_queue, ^{
-                [self dismissViewControllerAnimated:YES completion:nil];
+                [self.indicatorView removeFromSuperview];
+                [self presentViewController:[JCAlertController alertControllerWithTitle:@"포스트 성공!" message:nil preferredStyle:UIAlertControllerStyleAlert actionTitle:@"확인" handler:^(UIAlertAction *action) {
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                }] animated:YES completion:nil];
+                
+            });
+        } else {
+            dispatch_sync(main_queue, ^{
+                [self.indicatorView removeFromSuperview];
+                [self presentViewController:[JCAlertController alertControllerWithTitle:@"업로드에 실패했습니다." message:@"다시 시도해 주세요." preferredStyle:UIAlertControllerStyleAlert cancelTitle:@"확인"] animated:YES completion:nil];
             });
         }
     }];

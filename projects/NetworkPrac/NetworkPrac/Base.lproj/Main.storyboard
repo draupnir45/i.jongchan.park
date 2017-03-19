@@ -68,7 +68,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentLabel" destination="GaT-Ia-oDm" id="A42-Fb-Z8i"/>
-                                            <outlet property="fcImageView" destination="xth-zO-pHm" id="06r-M4-gfZ"/>
+                                            <outlet property="customImageView" destination="xth-zO-pHm" id="mtX-0M-kOU"/>
                                             <outlet property="titleLabel" destination="iz9-pS-G0f" id="Dwt-wI-XiK"/>
                                         </connections>
                                     </tableViewCell>
@@ -164,7 +164,7 @@
                                             <constraint firstAttribute="height" constant="40" id="dzV-oV-G3d"/>
                                         </constraints>
                                     </stackView>
-                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rJV-NR-RRg">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rJV-NR-RRg">
                                         <rect key="frame" x="0.0" y="40" width="375" height="200"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -216,8 +216,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentTextView" destination="ISC-pD-nlU" id="WgV-QP-Qwi"/>
                         <outlet property="imageView" destination="rJV-NR-RRg" id="hIy-ln-dab"/>
-                        <outlet property="textView" destination="ISC-pD-nlU" id="QmQ-tP-RHn"/>
                         <outlet property="titleTextField" destination="g1o-ra-Y8g" id="eKp-nJ-XBI"/>
                         <outlet property="toolBar" destination="tVa-fR-i1k" id="yAt-DO-xF4"/>
                     </connections>
@@ -389,8 +389,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="9vW-ik-RcK"/>
                     <connections>
-                        <outlet property="password" destination="zBb-nO-Mtm" id="No7-FB-0nR"/>
-                        <outlet property="userName" destination="r65-uZ-adm" id="1xI-pK-dO9"/>
+                        <outlet property="passwordTextField" destination="zBb-nO-Mtm" id="zN3-z8-VFw"/>
+                        <outlet property="userNameTextField" destination="r65-uZ-adm" id="MLC-bb-y4A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdA-JS-WMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -499,8 +499,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="password1" destination="luQ-bs-Psc" id="Ouf-MV-wPL"/>
-                        <outlet property="password2" destination="KUJ-la-hN3" id="8K5-WZ-bf1"/>
+                        <outlet property="password1TextField" destination="luQ-bs-Psc" id="DRd-lD-Hxd"/>
+                        <outlet property="password2TextField" destination="KUJ-la-hN3" id="ZXc-lh-2ua"/>
                         <outlet property="userNameTextField" destination="Zgz-rF-ntU" id="cmf-Jm-PKR"/>
                     </connections>
                 </viewController>
