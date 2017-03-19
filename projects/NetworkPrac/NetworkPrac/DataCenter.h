@@ -32,11 +32,20 @@ typedef void (^CompletionBlock)(BOOL sucess, NSDictionary *dataDict);
 
 @property NSString *userToken;
 @property NetworkManager *nManager;
+@property NSMutableDictionary *imgDict;
 
 + (instancetype)sharedData;
-//- (void)signUpRequestWithUserName:(NSString *)userName password:(NSString *)password;
+
+//account
 - (void)signUpRequestWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion;
 - (void)loginRequestWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion;
 - (void)logOutRequest;
+- (void)logOutRequestWithCompletion:(CompletionBlock)completion;
+
+//post
+- (void)getPostDataOnPage:(NSInteger)page completion:(CompletionBlock)completion;
+- (void)loadImageWithURL:(NSURL *)url postPK:(NSInteger)postPK;
+- (void)postTitle:(NSString *)title content:(NSString *)content imageData:(NSData *)imageData completion:(CompletionBlock)completion;
+
 
 @end

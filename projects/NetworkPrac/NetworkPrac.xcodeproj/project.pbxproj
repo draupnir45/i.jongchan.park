@@ -10,6 +10,7 @@
 		B923731B1E7A2EDC004A8BC9 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B923731A1E7A2EDC004A8BC9 /* DataCenter.m */; };
 		B923731E1E7A3454004A8BC9 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B923731D1E7A3454004A8BC9 /* NetworkManager.m */; };
 		B95A88E51E7A73B7001DF715 /* JCAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95A88E41E7A73B7001DF715 /* JCAlertController.m */; };
+		B961A06B1E7E714900BEC5A6 /* JCFullScreenActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B961A06A1E7E714900BEC5A6 /* JCFullScreenActivityIndicatorView.m */; };
 		B975E82A1E794A3E00B83D92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B975E8291E794A3E00B83D92 /* main.m */; };
 		B975E82D1E794A3E00B83D92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B975E82C1E794A3E00B83D92 /* AppDelegate.m */; };
 		B975E8331E794A3E00B83D92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B975E8311E794A3E00B83D92 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		B975E84A1E795C1000B83D92 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B975E8491E795C1000B83D92 /* LoginViewController.m */; };
 		B9C4C64F1E7A35BA00DC03E2 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C4C64E1E7A35BA00DC03E2 /* SignUpViewController.m */; };
 		B9D3ECA31E7BD41600986693 /* PostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D3ECA21E7BD41600986693 /* PostModel.m */; };
+		B9ECB6B81E7E596700F5141B /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9ECB6B61E7E596700F5141B /* CustomTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		B923731D1E7A3454004A8BC9 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		B95A88E31E7A73B7001DF715 /* JCAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCAlertController.h; sourceTree = "<group>"; };
 		B95A88E41E7A73B7001DF715 /* JCAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCAlertController.m; sourceTree = "<group>"; };
+		B961A0691E7E714900BEC5A6 /* JCFullScreenActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCFullScreenActivityIndicatorView.h; sourceTree = "<group>"; };
+		B961A06A1E7E714900BEC5A6 /* JCFullScreenActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCFullScreenActivityIndicatorView.m; sourceTree = "<group>"; };
 		B975E8251E794A3E00B83D92 /* NetworkPrac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkPrac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B975E8291E794A3E00B83D92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B975E82B1E794A3E00B83D92 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,6 +54,8 @@
 		B9C4C64E1E7A35BA00DC03E2 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		B9D3ECA11E7BD41600986693 /* PostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostModel.h; sourceTree = "<group>"; };
 		B9D3ECA21E7BD41600986693 /* PostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostModel.m; sourceTree = "<group>"; };
+		B9ECB6B61E7E596700F5141B /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		B9ECB6B71E7E596700F5141B /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +91,9 @@
 				B975E82B1E794A3E00B83D92 /* AppDelegate.h */,
 				B975E82C1E794A3E00B83D92 /* AppDelegate.m */,
 				B9A2520C1E7AA60300E1073E /* Model */,
-				B9A2520E1E7AA64200E1073E /* ViewControllers */,
+				B9A2520E1E7AA64200E1073E /* Posting ViewControllers */,
 				B9A2520D1E7AA61400E1073E /* Account-Related ViewController */,
-				B95A88E31E7A73B7001DF715 /* JCAlertController.h */,
-				B95A88E41E7A73B7001DF715 /* JCAlertController.m */,
+				B9944E441E7EE4CD00A4D06B /* Utilities */,
 				B975E8311E794A3E00B83D92 /* Main.storyboard */,
 				B975E8341E794A3E00B83D92 /* Assets.xcassets */,
 				B975E8361E794A3E00B83D92 /* LaunchScreen.storyboard */,
@@ -104,6 +109,17 @@
 				B975E8291E794A3E00B83D92 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9944E441E7EE4CD00A4D06B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B95A88E31E7A73B7001DF715 /* JCAlertController.h */,
+				B95A88E41E7A73B7001DF715 /* JCAlertController.m */,
+				B961A0691E7E714900BEC5A6 /* JCFullScreenActivityIndicatorView.h */,
+				B961A06A1E7E714900BEC5A6 /* JCFullScreenActivityIndicatorView.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		B9A2520C1E7AA60300E1073E /* Model */ = {
@@ -130,17 +146,19 @@
 			name = "Account-Related ViewController";
 			sourceTree = "<group>";
 		};
-		B9A2520E1E7AA64200E1073E /* ViewControllers */ = {
+		B9A2520E1E7AA64200E1073E /* Posting ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				B975E83F1E79542B00B83D92 /* MainViewController.h */,
 				B975E8401E79542B00B83D92 /* MainViewController.m */,
+				B9ECB6B61E7E596700F5141B /* CustomTableViewCell.m */,
+				B9ECB6B71E7E596700F5141B /* CustomTableViewCell.h */,
 				B975E8421E79543300B83D92 /* DetailViewController.h */,
 				B975E8431E79543300B83D92 /* DetailViewController.m */,
 				B975E8451E79543E00B83D92 /* PostingViewController.h */,
 				B975E8461E79543E00B83D92 /* PostingViewController.m */,
 			);
-			name = ViewControllers;
+			name = "Posting ViewControllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +235,7 @@
 			files = (
 				B923731E1E7A3454004A8BC9 /* NetworkManager.m in Sources */,
 				B975E82D1E794A3E00B83D92 /* AppDelegate.m in Sources */,
+				B9ECB6B81E7E596700F5141B /* CustomTableViewCell.m in Sources */,
 				B975E8411E79542B00B83D92 /* MainViewController.m in Sources */,
 				B975E84A1E795C1000B83D92 /* LoginViewController.m in Sources */,
 				B975E8471E79543E00B83D92 /* PostingViewController.m in Sources */,
@@ -226,6 +245,7 @@
 				B975E8441E79543300B83D92 /* DetailViewController.m in Sources */,
 				B9C4C64F1E7A35BA00DC03E2 /* SignUpViewController.m in Sources */,
 				B9D3ECA31E7BD41600986693 /* PostModel.m in Sources */,
+				B961A06B1E7E714900BEC5A6 /* JCFullScreenActivityIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

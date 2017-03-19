@@ -10,8 +10,11 @@
 
 @interface PostModel : NSObject
 
+@property NSInteger postPK;
 @property NSString *title;
 @property NSString *content;
-@property NSData *imgCoverData;
+
+
+- (instancetype)initWithDict:(NSDictionary *)dict;
 
 @end

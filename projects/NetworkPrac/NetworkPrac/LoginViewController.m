@@ -35,26 +35,32 @@
     [self.userName resignFirstResponder];
     [self.password resignFirstResponder];
     
+    //필수항목누락 예외처리
     if (self.userName.text.length == 0 || self.userName.text.length == 0 || self.userName.text.length == 0) {
-        [self presentViewController:[JCAlertController alertControllerWithTitle:@"필수 항목이 빠졌습니다." message:@"아이디, 비밀번호를 모두 넣어 주세요." preferredStyle:UIAlertControllerStyleAlert cancelTitle:@"확인"] animated:YES completion:nil];
+        [self presentViewController:[JCAlertController alertControllerWithTitle:@"필수 항목이 빠졌습니다."
+                                                                        message:@"아이디, 비밀번호를 모두 넣어 주세요."
+                                                                 preferredStyle:UIAlertControllerStyleAlert
+                                                                    cancelTitle:@"확인"]
+                           animated:YES
+                         completion:nil];
     } else {
         
         [[DataCenter sharedData] loginRequestWithUserName:self.userName.text password:self.password.text completion:^(BOOL sucess, NSDictionary *dataDict) {
             
-            NSUInteger resultCode = 100;
+            NSUInteger loginResponse = 100;
             
             if ([dataDict objectForKey:@"key"]) {
-                resultCode = JCNetworkLogInResponseOK;
+                loginResponse = JCNetworkLogInResponseOK;
             } else if ([[dataDict objectForKey:@"non_field_errors"] count] > 0) {
-                resultCode = JCNetworkLogInResponseFailed;
+                loginResponse = JCNetworkLogInResponseFailed;
             } else {
-                NSLog(@"하아아아아아아아아아아아아아아아아아");
+                NSLog(@"WHAT?");
             }
             
             dispatch_queue_t mainqueue = dispatch_get_main_queue();
             
             dispatch_sync(mainqueue, ^{
-                [self actionWithResult:resultCode];
+                [self actionWithResult:loginResponse];
             });
             
             
@@ -86,14 +92,5 @@
 }
 
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

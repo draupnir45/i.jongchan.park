@@ -15,9 +15,13 @@
 {
     self = [super init];
     if (self) {
+        
+        self.postPK = [[dict objectForKey:@"pk"] integerValue];
         self.title = [dict objectForKey:@"title"];
         self.content = [dict objectForKey:@"content"];
-        
+        if ([dict objectForKey:@"img_cover"] != [NSNull null]) {
+            [[DataCenter sharedData] loadImageWithURL:[NSURL URLWithString:[dict objectForKey:@"img_cover"]] postPK:self.postPK];
+        }
     }
     return self;
 }

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class PostModel;
 
 @interface DetailViewController : UIViewController
+
+@property PostModel *post;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
