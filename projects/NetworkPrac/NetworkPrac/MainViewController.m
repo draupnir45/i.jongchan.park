@@ -203,6 +203,8 @@
         NSData *data = [[[DataCenter sharedData] postImageDictionary] objectForKey:[NSNumber numberWithInteger:item.postPK]];
         cell.customImageView.image = [UIImage imageWithData:data];
         cell.customImageView.frame = CGRectMake(0, 0, 100, 100);
+    } else {
+        cell.customImageView.image = [UIImage imageNamed:@"img_placeholder"];
     }
     
     return cell;
