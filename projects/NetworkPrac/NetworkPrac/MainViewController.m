@@ -25,7 +25,7 @@
 @property JCFullScreenActivityIndicatorView *indicatorView;
 @property UIRefreshControl *tableViewRefreshControl;
 @property NSInteger numberOfAllPosts;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *logOutButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *logOutButton;
 
 
 
@@ -66,7 +66,7 @@
     [self updateLogOutButton];
     static dispatch_once_t onceTokenForInitialFetch;
     dispatch_once(&onceTokenForInitialFetch, ^{
-        [self getData];
+        [self loadNextPostData];
     });
     
 }
@@ -93,19 +93,16 @@
 - (void)refreshData {
     self.showingPage = 0;
     self.lastPage = 0;
-
-    [self getData];
+    [self loadNextPostData];
 }
 
-- (void)getData{
+- (void)loadNextPostData{
     
     self.showingPage ++;
     if (self.showingPage <= self.lastPage || self.lastPage == 0) {
         
-        if (!self.tableViewRefreshControl.refreshing) {
-            [self.view addSubview:self.indicatorView];
-            [self.indicatorView start];
-            
+        if (!self.tableViewRefreshControl.refreshing) { //리프레시가 아닌 상황에만 인디케이터
+            [self.indicatorView startIndicatorOnView:self.view];
         }
         
         [[DataCenter sharedData] getPostDataOnPage:self.showingPage completion:^(BOOL sucess, NSDictionary *dataDict) {
@@ -137,8 +134,7 @@
                 if (self.tableViewRefreshControl.refreshing) {
                     [self.tableViewRefreshControl endRefreshing];
                 } else {
-                    [self.view sendSubviewToBack:self.indicatorView];
-                    [self.indicatorView removeFromSuperview];
+                    [self.indicatorView stopIndicator];
                 }
             });
             
@@ -163,32 +159,25 @@
 }
 - (IBAction)logOut:(id)sender {
     
-    [self.view addSubview:self.indicatorView];
-    [self.indicatorView start];
+    [self.indicatorView startIndicatorOnView:self.view];
 
     [[DataCenter sharedData] logOutRequestWithCompletion:^(BOOL sucess, NSDictionary *dataDict) {
-        if (sucess) {
-            dispatch_queue_t main_queue = dispatch_get_main_queue();
+        
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            if (sucess) {
+                    [self.indicatorView stopIndicator];
+                    [self presentViewController:[JCAlertController alertControllerWithTitle:@"로그아웃 성공!" message:nil preferredStyle:UIAlertControllerStyleAlert actionTitle:@"확인" handler:nil] animated:YES completion:nil];
+                    [self updateLogOutButton];
+            } else {
+
+                    [self.indicatorView stopIndicator];
+                    [self presentViewController:[JCAlertController alertControllerWithTitle:@"무언가가 잘못되었습니다." message:@"다시 시도해 주세요." preferredStyle:UIAlertControllerStyleAlert cancelTitle:@"확인"] animated:YES completion:nil];
+                    [self updateLogOutButton];
+            }
             
-            dispatch_sync(main_queue, ^{
-                [self.indicatorView removeFromSuperview];
-                [self presentViewController:[JCAlertController alertControllerWithTitle:@"로그아웃 성공!" message:nil preferredStyle:UIAlertControllerStyleAlert actionTitle:@"확인" handler:^(UIAlertAction *action) {
-                    
-                }] animated:YES completion:nil];
-                [self updateLogOutButton];
-                
-            });
-        } else {
-            dispatch_queue_t main_queue = dispatch_get_main_queue();
-            
-            dispatch_sync(main_queue, ^{
-                [self.indicatorView removeFromSuperview];
-                [self presentViewController:[JCAlertController alertControllerWithTitle:@"무언가가 잘못되었습니다." message:@"다시 시도해 주세요." preferredStyle:UIAlertControllerStyleAlert cancelTitle:@"확인"] animated:YES completion:nil];
-                
-                [self updateLogOutButton];
-            });
-        }
+        });
     }];
+                      
     
     
 }
@@ -223,7 +212,7 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row > self.dataArray.count - 2) {
-        [self getData];
+        [self loadNextPostData];
     }
 }
 

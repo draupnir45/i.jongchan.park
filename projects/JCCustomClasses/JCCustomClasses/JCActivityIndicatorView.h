@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JCFullScreenActivityIndicatorView : UIView
+@interface JCActivityIndicatorView : UIView
 
 @property UIActivityIndicatorView *indicator;
+
+- (void)startIndicatorOnView:(UIView *)targetView;
+- (void)stopIndicator;
 
 @end

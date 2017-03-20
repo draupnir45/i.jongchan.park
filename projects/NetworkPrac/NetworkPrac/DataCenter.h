@@ -23,6 +23,10 @@ typedef NS_ENUM(NSUInteger, JCNetworkLogInResponse) {
     JCNetworkLogInResponseFailed
 };
 
+typedef NS_ENUM(NSUInteger, JCUnknownError) {
+    JCUnknownErrorNetworkIssue = 1000
+};
+
 typedef void (^CompletionBlock)(BOOL sucess, NSDictionary *dataDict);
 
 

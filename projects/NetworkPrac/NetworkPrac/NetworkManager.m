@@ -17,11 +17,8 @@ static NSString *POSTCREATE = @"/post/";
 static NSString *POSTLIST = @"/post/";
 static NSString *POSTRETIREVE = @"/post/<post_pk>/";
 
-
-
-
-
 @implementation NetworkManager 
+
 
 ///ROOT_URL문자열 뒤에 경로를 붙여 NSMutableURLRequest를 만들어 반환합니다.
 - (NSMutableURLRequest *)mutableRequestWithApiURL:(NSString *)urlStr {
@@ -57,7 +54,7 @@ static NSString *POSTRETIREVE = @"/post/<post_pk>/";
             if (statusCode == 201) {
                 completion(YES, dataDict);
             } else if(statusCode == 400){
-                completion(NO, dataDict);
+                completion(NO, nil);
             } else {
                 NSLog(@"What the... %ld",statusCode);
             }
@@ -188,10 +185,9 @@ static NSString *POSTRETIREVE = @"/post/<post_pk>/";
     NSMutableURLRequest *request = [self mutableRequestWithApiURL:[POSTLIST stringByAppendingString:pageStr]];
     
     request.HTTPMethod = @"GET";
-    request.HTTPBody = [@"" dataUsingEncoding:NSUTF8StringEncoding];
     
     //upload task
-    NSURLSessionUploadTask *getPosts = [defaultSession uploadTaskWithRequest:request fromData:nil completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionDataTask *getPosts = [defaultSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
         NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];

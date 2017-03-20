@@ -43,6 +43,7 @@
     }
 }
 
+#warning server always throw success
 
 - (IBAction)signUp:(id)sender {
     
@@ -50,42 +51,35 @@
     [self.password1TextField resignFirstResponder];
     [self.password2TextField resignFirstResponder];
     
-    [self.view addSubview:self.indicatorView];
-    [self.indicatorView start];
+    [self.indicatorView startIndicatorOnView:self.view];
     
     if (self.userNameTextField.text.length == 0 || self.userNameTextField.text.length == 0 || self.userNameTextField.text.length == 0) {
-        [self.indicatorView removeFromSuperview];
+        
+        [self.indicatorView stopIndicator];
         [self presentViewController:[JCAlertController alertControllerWithTitle:@"필수 항목이 빠졌습니다." message:@"아이디, 비밀번호를 모두 넣어 주세요." preferredStyle:UIAlertControllerStyleAlert cancelTitle:@"확인"] animated:YES completion:nil];
+        
     } else if (![self.password1TextField.text isEqualToString:self.password2TextField.text]) {
-        [self.indicatorView removeFromSuperview];
+        
+        [self.indicatorView stopIndicator];
         [self presentViewController:[JCAlertController alertControllerWithTitle:@"비밀번호가 다릅니다!" message:@"비밀번호와 비밀번호 확인 란에 같은 비밀번호를 넣어 주세요." preferredStyle:UIAlertControllerStyleAlert cancelTitle:@"확인"] animated:YES completion:^{
             [self.password2TextField becomeFirstResponder];
         }];
+        
     } else {
     
-        
         [[DataCenter sharedData] signUpRequestWithUserName:self.userNameTextField.text password:self.password1TextField.text completion:^(BOOL sucess, NSDictionary *dataDict) {
             NSUInteger resultCode = 100;
             
-            if ([dataDict objectForKey:@"key"]) {
+            if (sucess) {
                 resultCode = JCNetworkSignUpResponseOK;
             } else {
-                if ([[[dataDict objectForKey:@"username"] objectAtIndex:0] isEqualToString:@"해당 사용자 이름은 이미 존재합니다."]) {
-                    
-                    resultCode = JCNetworkSignUpResponseUserNameAlreadyTaken;
-                    
-                } else if ([[dataDict objectForKey:@"password1"] count] > 0) {
-                    
-                    resultCode = JCNetworkSignUpResponsePasswordNotStaisfying;
-                } else {
-                    NSLog(@"끄악");
-                }
+                resultCode = JCNetworkSignUpResponseUserNameAlreadyTaken;
             }
             
             dispatch_queue_t mainqueue = dispatch_get_main_queue();
             
             dispatch_sync(mainqueue, ^{
-                [self.indicatorView removeFromSuperview];
+                [self.indicatorView stopIndicator];
                 [self alertWithResult:resultCode];
 
             });

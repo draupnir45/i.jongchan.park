@@ -108,9 +108,6 @@
 }
 
 - (UIImage *) scaleImage:(UIImage*)image toSize:(CGSize)newSize {
-    //UIGraphicsBeginImageContext(newSize);
-    // In next line, pass 0.0 to use the current device's pixel scaling factor (and thus account for Retina resolution).
-    // Pass 1.0 to force exact pixel size.
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
     [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -121,15 +118,15 @@
 #pragma mark - Upload
 
 - (IBAction)upload:(id)sender {
-    [self.view addSubview:self.indicatorView];
-    [self.indicatorView start];
+    
+    [self.indicatorView startIndicatorOnView:self.view];
     
     [[DataCenter sharedData] postTitle:self.titleTextField.text content:self.contentTextView.text imageData:self.imageData completion:^(BOOL sucess, NSDictionary *dataDict) {
         dispatch_queue_t main_queue = dispatch_get_main_queue();
         if (sucess) {
             
             dispatch_sync(main_queue, ^{
-                [self.indicatorView removeFromSuperview];
+                [self.indicatorView stopIndicator];
                 [self presentViewController:[JCAlertController alertControllerWithTitle:@"포스트 성공!" message:nil preferredStyle:UIAlertControllerStyleAlert actionTitle:@"확인" handler:^(UIAlertAction *action) {
                     [self dismissViewControllerAnimated:YES completion:nil];
                 }] animated:YES completion:nil];
@@ -137,7 +134,7 @@
             });
         } else {
             dispatch_sync(main_queue, ^{
-                [self.indicatorView removeFromSuperview];
+                [self.indicatorView stopIndicator];
                 [self presentViewController:[JCAlertController alertControllerWithTitle:@"업로드에 실패했습니다." message:@"다시 시도해 주세요." preferredStyle:UIAlertControllerStyleAlert cancelTitle:@"확인"] animated:YES completion:nil];
             });
         }

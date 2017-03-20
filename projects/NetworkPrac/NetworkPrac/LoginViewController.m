@@ -38,8 +38,7 @@
     [self.userNameTextField resignFirstResponder];
     [self.passwordTextField resignFirstResponder];
     
-    [self.view addSubview:self.indicatorView];
-    [self.indicatorView start];
+    [self.indicatorView startIndicatorOnView:self.view];
     //필수항목누락 예외처리
     if (self.userNameTextField.text.length == 0 || self.userNameTextField.text.length == 0 || self.userNameTextField.text.length == 0) {
         [self.indicatorView removeFromSuperview];
@@ -63,10 +62,8 @@
                 NSLog(@"WHAT?");
             }
             
-            dispatch_queue_t mainqueue = dispatch_get_main_queue();
-            
-            dispatch_sync(mainqueue, ^{
-                [self.indicatorView removeFromSuperview];
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [self.indicatorView stopIndicator];
                 [self actionWithResult:loginResponse];
                 
             });

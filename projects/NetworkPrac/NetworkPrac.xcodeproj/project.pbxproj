@@ -151,8 +151,8 @@
 			children = (
 				B975E83F1E79542B00B83D92 /* MainViewController.h */,
 				B975E8401E79542B00B83D92 /* MainViewController.m */,
-				B9ECB6B61E7E596700F5141B /* CustomTableViewCell.m */,
 				B9ECB6B71E7E596700F5141B /* CustomTableViewCell.h */,
+				B9ECB6B61E7E596700F5141B /* CustomTableViewCell.m */,
 				B975E8421E79543300B83D92 /* DetailViewController.h */,
 				B975E8431E79543300B83D92 /* DetailViewController.m */,
 				B975E8451E79543E00B83D92 /* PostingViewController.h */,

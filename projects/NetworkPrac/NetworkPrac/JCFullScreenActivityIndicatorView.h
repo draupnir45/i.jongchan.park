@@ -12,6 +12,7 @@
 
 @property UIActivityIndicatorView *indicator;
 
-- (void)start;
+- (void)startIndicatorOnView:(UIView *)targetView;
+- (void)stopIndicator;
 
 @end
