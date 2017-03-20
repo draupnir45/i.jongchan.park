@@ -100,6 +100,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="logOutButton" destination="V13-kn-7Gd" id="h5x-CD-Y5l"/>
                         <outlet property="tableView" destination="qaY-7E-58z" id="X5U-Nh-Qis"/>
                         <segue destination="76h-Yr-L9l" kind="show" identifier="DetailViewSegue" id="yqp-pk-bRz"/>
                         <segue destination="jHp-xt-cvW" kind="presentation" identifier="LoginViewSegue" id="37I-zG-fC2"/>

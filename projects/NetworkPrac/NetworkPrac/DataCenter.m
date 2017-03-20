@@ -74,9 +74,15 @@
 
 - (void)logOutRequestWithCompletion:(CompletionBlock)completion {
     
-    [self.networkManager logOutRequestToServerWithToken:self.userToken completion:completion];
-    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Token"];
-    self.userToken = @"";
+    [self.networkManager logOutRequestToServerWithToken:self.userToken completion:^(BOOL sucess, NSDictionary *dataDict) {
+        if (sucess) {
+            [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"Token"];
+            self.userToken = @"";
+        }
+        
+        completion(sucess, dataDict);
+    }];
+
     
 }
 

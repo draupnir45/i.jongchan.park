@@ -25,6 +25,7 @@
 @property JCFullScreenActivityIndicatorView *indicatorView;
 @property UIRefreshControl *tableViewRefreshControl;
 @property NSInteger numberOfAllPosts;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *logOutButton;
 
 
 
@@ -43,6 +44,7 @@
     //인디케이터뷰
     self.indicatorView = [[JCFullScreenActivityIndicatorView alloc] init];
     
+    [self updateLogOutButton];
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(changeCellImage:) name:@"gotImage" object:nil];
     
@@ -61,7 +63,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
-    
+    [self updateLogOutButton];
     static dispatch_once_t onceTokenForInitialFetch;
     dispatch_once(&onceTokenForInitialFetch, ^{
         [self getData];
@@ -78,7 +80,13 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-
+- (void)updateLogOutButton {
+    if ([[[DataCenter sharedData] userToken] length] == 0) {
+        self.navigationItem.leftBarButtonItem = nil;
+    } else {
+        self.navigationItem.leftBarButtonItem = self.logOutButton;
+    }
+}
 
 #pragma mark - Loading Data
 
@@ -165,8 +173,9 @@
             dispatch_sync(main_queue, ^{
                 [self.indicatorView removeFromSuperview];
                 [self presentViewController:[JCAlertController alertControllerWithTitle:@"로그아웃 성공!" message:nil preferredStyle:UIAlertControllerStyleAlert actionTitle:@"확인" handler:^(UIAlertAction *action) {
-                    [self performSegueWithIdentifier:@"LoginViewSegue" sender:self];
+                    
                 }] animated:YES completion:nil];
+                [self updateLogOutButton];
                 
             });
         } else {
@@ -176,7 +185,7 @@
                 [self.indicatorView removeFromSuperview];
                 [self presentViewController:[JCAlertController alertControllerWithTitle:@"무언가가 잘못되었습니다." message:@"다시 시도해 주세요." preferredStyle:UIAlertControllerStyleAlert cancelTitle:@"확인"] animated:YES completion:nil];
                 
-                
+                [self updateLogOutButton];
             });
         }
     }];
