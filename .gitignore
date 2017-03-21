@@ -99,6 +99,7 @@ playground.xcworkspace
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 # Pods/
+Pods/
 
 # Carthage
 #
@@ -227,3 +228,4 @@ dkms.conf
 # Executables
 
 # End of https://www.gitignore.io/api/objective-c,swift,macos,xcode,c,c++
+
