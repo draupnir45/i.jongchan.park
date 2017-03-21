@@ -67,8 +67,7 @@ static NSString *POSTRETIREVE = @"/post/<post_pk>/";
     [signUpTask resume]; 
 }
 
-
-- (void)loginRequestToServerWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion{
+- (void)logInRequestToServerWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion{
     //session
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     
@@ -102,36 +101,6 @@ static NSString *POSTRETIREVE = @"/post/<post_pk>/";
     }];
     
     [logInTask resume];
-}
-
-
-- (void)logOutRequestToServerWithToken:(NSString *)token {
-    
-    //session
-    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    
-    //request
-    NSMutableURLRequest *request = [self mutableRequestWithApiURL:LOG_OUT];
-    NSString *headerStr = [NSString stringWithFormat:@"Token %@",token];
-    
-    request.HTTPBody = [@"" dataUsingEncoding:NSUTF8StringEncoding];
-    request.HTTPMethod = @"POST";
-    [request setValue:headerStr forHTTPHeaderField:@"Authorization"];
-
-    //upload task
-    NSURLSessionUploadTask *logOutTask = [defaultSession uploadTaskWithRequest:request fromData:nil completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
-        NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-        if (error == nil && [[dataDict objectForKey:@"detail"] isEqualToString:@"Successfully logged out."]) {
-            NSLog(@"logOut완료!");
-        } else {
-            //재시도...?
-        }
-        
-    }];
-    
-    [logOutTask resume];
-    
 }
 
 - (void)logOutRequestToServerWithToken:(NSString *)token completion:(CompletionBlock)completion {
@@ -171,6 +140,7 @@ static NSString *POSTRETIREVE = @"/post/<post_pk>/";
     [logOutTask resume];
     
 }
+
 
 #pragma mark - Posts
 
@@ -227,15 +197,18 @@ static NSString *POSTRETIREVE = @"/post/<post_pk>/";
     
     //data task
     NSURLSessionDataTask *loadImage = [defaultSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        [[[DataCenter sharedData] postImageDictionary] setObject:data forKey:[NSNumber numberWithInteger:postPK]];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"gotImage" object:nil userInfo:@{@"Post_PK" : [NSNumber numberWithInteger:postPK]}];
+        
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [[[DataCenter sharedData] postImageDictionary] setObject:data forKey:[NSNumber numberWithInteger:postPK]];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"gotImage" object:nil userInfo:@{@"Post_PK" : [NSNumber numberWithInteger:postPK]}];
+        });
+        
     }];
     
     
     [loadImage resume];
 
 }
-
 
 ///글을 포스팅합니다.
 - (void)postTitle:(NSString *)title content:(NSString *)content imageData:(NSData *)imageData completion:(CompletionBlock)completion {
@@ -247,24 +220,29 @@ static NSString *POSTRETIREVE = @"/post/<post_pk>/";
     //body data - multipart
     NSString *boundary = @"--------BOUNDARY";
     NSMutableData *data = [NSMutableData data];
+
     
         // title
         [data appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
         [data appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name = \"title\"\r\n\r\n%@",title] dataUsingEncoding:NSUTF8StringEncoding]];
-        
+
+
         // content
         [data appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
         [data appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name = \"content\"\r\n\r\n%@",content] dataUsingEncoding:NSUTF8StringEncoding]];
-        
+
+    
         //image
         [data appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
         [data appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name = \"img_cover\"; filename=\"image.jpg\"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
         [data appendData:[@"Content-Type:application/octet-stream\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
         [data appendData:imageData];
 
+    
         //last boundary
         [data appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
 
+    
     //request
     NSMutableURLRequest *request = [self mutableRequestWithApiURL:POSTCREATE];
     request.HTTPMethod = @"POST";
@@ -275,8 +253,8 @@ static NSString *POSTRETIREVE = @"/post/<post_pk>/";
     NSString *multiPartContentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary];
     [request setValue:multiPartContentType forHTTPHeaderField: @"Content-Type"];
     
-    NSString *authTokenStr = [NSString stringWithFormat:@"Token %@",[[NSUserDefaults standardUserDefaults] objectForKey:@"Token"]];
-    [request setValue:authTokenStr forHTTPHeaderField:@"Authorization"];
+    NSString *authorizationTokenString = [NSString stringWithFormat:@"Token %@",[[NSUserDefaults standardUserDefaults] objectForKey:@"Token"]];
+    [request setValue:authorizationTokenString forHTTPHeaderField:@"Authorization"];
 
     //uploadtask
     NSURLSessionUploadTask *postingTask = [defaultSession uploadTaskWithRequest:request fromData:nil completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {

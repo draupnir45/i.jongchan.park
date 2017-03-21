@@ -9,7 +9,7 @@
 #import "PostingViewController.h"
 #import "DataCenter.h"
 #import "PostModel.h"
-#import "JCFullScreenActivityIndicatorView.h"
+#import "JCActivityIndicatorView.h"
 #import "JCAlertController.h"
 
 @interface PostingViewController ()
@@ -19,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
 
-@property JCFullScreenActivityIndicatorView *indicatorView;
+@property JCActivityIndicatorView *indicatorView;
 @property UIImagePickerController *imagePickerController;
 @property NSData *imageData;
 
@@ -33,13 +33,13 @@
     [super viewDidLoad];
     
     //인디케이터뷰
-    self.indicatorView = [[JCFullScreenActivityIndicatorView alloc] init];
+    self.indicatorView = [[JCActivityIndicatorView alloc] init];
     
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     [imagePickerController setAllowsEditing:YES];
     imagePickerController.delegate = self;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardShowsUp:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardShowsUp:) name:UIKeyboardFrameBeginUserInfoKey object:nil];
     self.imagePickerController = imagePickerController;
     
 }
@@ -98,7 +98,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
-    UIImage *image = [self scaleImage:[info objectForKey:UIImagePickerControllerEditedImage] toSize:CGSizeMake(300, 300)];
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     self.imageData = UIImageJPEGRepresentation(image, 0.1);
     self.imageView.image = image;
     self.imageView.hidden = NO;

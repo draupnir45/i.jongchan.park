@@ -16,17 +16,20 @@ typedef void (^CompletionBlock)(BOOL sucess, NSDictionary *dataDict);
 @interface NetworkManager : NSObject
 
 
-
+//ACCOUNT
 - (void)signUpRequestToServerWithUserName:(NSString *)userName
                                  password:(NSString *)password
                                completion:(CompletionBlock)completion;
 
-- (void)loginRequestToServerWithUserName:(NSString *)userName
+- (void)logInRequestToServerWithUserName:(NSString *)userName
                                 password:(NSString *)password
                               completion:(CompletionBlock)completion;
 
-- (void)logOutRequestToServerWithToken:(NSString *)token;
+- (void)logOutRequestToServerWithToken:(NSString *)token
+                            completion:(CompletionBlock)completion;
 
+
+//POSTS
 - (void)getPostDataOnPage:(NSInteger)page
                completion:(CompletionBlock)completion;
 
@@ -38,7 +41,5 @@ typedef void (^CompletionBlock)(BOOL sucess, NSDictionary *dataDict);
         imageData:(NSData *)imageData
        completion:(CompletionBlock)completion;
 
-- (void)logOutRequestToServerWithToken:(NSString *)token
-                            completion:(CompletionBlock)completion;
 
 @end

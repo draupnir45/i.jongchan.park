@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JCFullScreenActivityIndicatorView : UIView
+@interface JCActivityIndicatorView : UIView
 
 @property UIActivityIndicatorView *indicator;
 

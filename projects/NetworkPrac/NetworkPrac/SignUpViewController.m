@@ -9,7 +9,7 @@
 #import "SignUpViewController.h"
 #import "DataCenter.h"
 #import "JCAlertController.h"
-#import "JCFullScreenActivityIndicatorView.h"
+#import "JCActivityIndicatorView.h"
 
 @interface SignUpViewController ()
 <UITextFieldDelegate>
@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *password1TextField;
 @property (weak, nonatomic) IBOutlet UITextField *password2TextField;
 
-@property JCFullScreenActivityIndicatorView *indicatorView;
+@property JCActivityIndicatorView *indicatorView;
 
 @end
 
@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //인디케이터뷰
-    self.indicatorView = [[JCFullScreenActivityIndicatorView alloc] init];
+    self.indicatorView = [[JCActivityIndicatorView alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,7 +73,7 @@
             if (sucess) {
                 resultCode = JCNetworkSignUpResponseOK;
             } else {
-                resultCode = JCNetworkSignUpResponseUserNameAlreadyTaken;
+                resultCode = JCNetworkSignUpResponseUnknownError;
             }
             
             dispatch_queue_t mainqueue = dispatch_get_main_queue();
@@ -105,7 +105,7 @@
         }
             break;
             
-        case JCNetworkSignUpResponsePasswordNotStaisfying:
+        case JCNetworkSignUpResponsePasswordNotStaisfying: //아직은 에러코드가 오지 않아 사용되지 않습니다.
         {
             JCAlertController *alert = [JCAlertController alertControllerWithTitle:@"비밀번호 오류" message:@"8자 이상, 영문자와 숫자의 조합이되 너무 간단하지 않도록 해 주세요." preferredStyle:UIAlertControllerStyleAlert actionTitle:@"확인" handler:^(UIAlertAction *action) {
                 [self.password1TextField becomeFirstResponder];
@@ -114,9 +114,18 @@
         }
             break;
             
-        case JCNetworkSignUpResponseUserNameAlreadyTaken:
+        case JCNetworkSignUpResponseUserNameAlreadyTaken: //아직은 에러코드가 오지 않아 사용되지 않습니다.
         {
             JCAlertController *alert = [JCAlertController alertControllerWithTitle:@"ID 오류" message:@"이미 있는 아이디입니다." preferredStyle:UIAlertControllerStyleAlert actionTitle:@"확인" handler:^(UIAlertAction *action) {
+                [self.userNameTextField becomeFirstResponder];
+            }];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+            break;
+            
+        case JCNetworkSignUpResponseUnknownError:
+        {
+            JCAlertController *alert = [JCAlertController alertControllerWithTitle:@"알 수 없는 오류" message:@"이미 있는 아이디이거나, 패스워드가 만족스럽지 않습니다." preferredStyle:UIAlertControllerStyleAlert actionTitle:@"확인" handler:^(UIAlertAction *action) {
                 [self.userNameTextField becomeFirstResponder];
             }];
             [self presentViewController:alert animated:YES completion:nil];

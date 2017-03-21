@@ -10,7 +10,7 @@
 #import "DataCenter.h"
 #import "PostModel.h"
 #import "CustomTableViewCell.h"
-#import "JCFullScreenActivityIndicatorView.h"
+#import "JCActivityIndicatorView.h"
 #import "JCAlertController.h"
 #import "PostingViewController.h"
 #import "DetailViewController.h"
@@ -22,7 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property NSInteger showingPage;
 @property NSInteger lastPage;
-@property JCFullScreenActivityIndicatorView *indicatorView;
+@property JCActivityIndicatorView *indicatorView;
 @property UIRefreshControl *tableViewRefreshControl;
 @property NSInteger numberOfAllPosts;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *logOutButton;
@@ -42,7 +42,7 @@
     self.showingPage = 0;
     
     //인디케이터뷰
-    self.indicatorView = [[JCFullScreenActivityIndicatorView alloc] init];
+    self.indicatorView = [[JCActivityIndicatorView alloc] init];
     
     [self updateLogOutButton];
     
@@ -55,13 +55,13 @@
     self.tableViewRefreshControl.backgroundColor = [UIColor lightGrayColor];
     self.tableViewRefreshControl.tintColor = [UIColor whiteColor];
     [self.tableViewRefreshControl addTarget:self
-                            action:@selector(refreshData)
-                  forControlEvents:UIControlEventValueChanged];
+                                     action:@selector(refreshData:)
+                           forControlEvents:UIControlEventValueChanged];
     self.tableView.refreshControl = self.tableViewRefreshControl;
 
 }
 
--(void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     [self updateLogOutButton];
     static dispatch_once_t onceTokenForInitialFetch;
@@ -75,7 +75,6 @@
     [super didReceiveMemoryWarning];
 }
 
-
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -88,13 +87,10 @@
     }
 }
 
+
 #pragma mark - Loading Data
 
-- (void)refreshData {
-    self.showingPage = 0;
-    self.lastPage = 0;
-    [self loadNextPostData];
-}
+
 
 - (void)loadNextPostData{
     
@@ -102,7 +98,7 @@
     if (self.showingPage <= self.lastPage || self.lastPage == 0) {
         
         if (!self.tableViewRefreshControl.refreshing) { //리프레시가 아닌 상황에만 인디케이터
-            [self.indicatorView startIndicatorOnView:self.view];
+//            [self.indicatorView startIndicatorOnView:self.view];
         }
         
         [[DataCenter sharedData] getPostDataOnPage:self.showingPage completion:^(BOOL sucess, NSDictionary *dataDict) {
@@ -134,7 +130,7 @@
                 if (self.tableViewRefreshControl.refreshing) {
                     [self.tableViewRefreshControl endRefreshing];
                 } else {
-                    [self.indicatorView stopIndicator];
+//                    [self.indicatorView stopIndicator];
                 }
             });
             
@@ -143,7 +139,6 @@
         }];
     }
 }
-
 
 
 #pragma mark - Button Actions
@@ -157,6 +152,7 @@
     }
     
 }
+
 - (IBAction)logOut:(id)sender {
     
     [self.indicatorView startIndicatorOnView:self.view];
@@ -177,11 +173,13 @@
             
         });
     }];
-                      
-    
-    
 }
 
+- (void)refreshData:(id)sender {
+    self.showingPage = 0;
+    self.lastPage = 0;
+    [self loadNextPostData];
+}
 
 
 #pragma mark - TableView
@@ -208,38 +206,31 @@
     return cell;
 }
 
-
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.row > self.dataArray.count - 2) {
+    if (indexPath.row > self.dataArray.count - 5) { //마지막 셀이 디스플레이되기 직전에 새로운 데이터를 요청.
         [self loadNextPostData];
     }
 }
 
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self performSegueWithIdentifier:@"DetailViewSegue" sender:[tableView cellForRowAtIndexPath:indexPath]];
 }
 
-
+/// image가 로드될 때마다 PK로부터 indexPath를 찾아와 이미지를 바꾸어 줍니다.
 - (void)changeCellImage:(NSNotification *)notification {
     
     NSInteger postPK = [[notification.userInfo objectForKey:@"Post_PK"] integerValue];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.numberOfAllPosts - postPK inSection:0];
-    dispatch_queue_t main_queue = dispatch_get_main_queue();
     
-    dispatch_sync(main_queue, ^{
-        
-        CustomTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-        NSData *data = [[[DataCenter sharedData] postImageDictionary] objectForKey:[NSNumber numberWithInteger:postPK]];
-        cell.customImageView.image = [UIImage imageWithData:data];
-        
-    });
-    
+    CustomTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    NSData *data = [[[DataCenter sharedData] postImageDictionary] objectForKey:[NSNumber numberWithInteger:postPK]];
+    cell.customImageView.image = [UIImage imageWithData:data];
+
     
 }
-
 
 
 #pragma mark - Navigation

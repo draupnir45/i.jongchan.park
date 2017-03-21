@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1EB5D4A518F15B04944B888 /* libPods-NetworkPrac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC0F2EA704A29D63D251267 /* libPods-NetworkPrac.a */; };
+		B91140C21E7FEF2F00B6F0C0 /* JCActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B91140C11E7FEF2F00B6F0C0 /* JCActivityIndicatorView.m */; };
 		B923731B1E7A2EDC004A8BC9 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B923731A1E7A2EDC004A8BC9 /* DataCenter.m */; };
 		B923731E1E7A3454004A8BC9 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B923731D1E7A3454004A8BC9 /* NetworkManager.m */; };
 		B95A88E51E7A73B7001DF715 /* JCAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95A88E41E7A73B7001DF715 /* JCAlertController.m */; };
-		B961A06B1E7E714900BEC5A6 /* JCFullScreenActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B961A06A1E7E714900BEC5A6 /* JCFullScreenActivityIndicatorView.m */; };
 		B975E82A1E794A3E00B83D92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B975E8291E794A3E00B83D92 /* main.m */; };
 		B975E82D1E794A3E00B83D92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B975E82C1E794A3E00B83D92 /* AppDelegate.m */; };
 		B975E8331E794A3E00B83D92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B975E8311E794A3E00B83D92 /* Main.storyboard */; };
@@ -26,14 +27,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CC0F2EA704A29D63D251267 /* libPods-NetworkPrac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetworkPrac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		607DDD81E7E1C060B7E157A8 /* Pods-NetworkPrac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPrac.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPrac/Pods-NetworkPrac.release.xcconfig"; sourceTree = "<group>"; };
+		70091A118FF076D9E53F404E /* Pods-NetworkPrac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPrac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkPrac/Pods-NetworkPrac.debug.xcconfig"; sourceTree = "<group>"; };
+		B91140C01E7FEF2F00B6F0C0 /* JCActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCActivityIndicatorView.h; sourceTree = "<group>"; };
+		B91140C11E7FEF2F00B6F0C0 /* JCActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCActivityIndicatorView.m; sourceTree = "<group>"; };
 		B92373191E7A2EDC004A8BC9 /* DataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
 		B923731A1E7A2EDC004A8BC9 /* DataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
 		B923731C1E7A3454004A8BC9 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		B923731D1E7A3454004A8BC9 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		B95A88E31E7A73B7001DF715 /* JCAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCAlertController.h; sourceTree = "<group>"; };
 		B95A88E41E7A73B7001DF715 /* JCAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCAlertController.m; sourceTree = "<group>"; };
-		B961A0691E7E714900BEC5A6 /* JCFullScreenActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCFullScreenActivityIndicatorView.h; sourceTree = "<group>"; };
-		B961A06A1E7E714900BEC5A6 /* JCFullScreenActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCFullScreenActivityIndicatorView.m; sourceTree = "<group>"; };
 		B975E8251E794A3E00B83D92 /* NetworkPrac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkPrac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B975E8291E794A3E00B83D92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B975E82B1E794A3E00B83D92 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,17 +67,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EB5D4A518F15B04944B888 /* libPods-NetworkPrac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EE3231BA13A5294FC435AF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70091A118FF076D9E53F404E /* Pods-NetworkPrac.debug.xcconfig */,
+				607DDD81E7E1C060B7E157A8 /* Pods-NetworkPrac.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		42E0A6BABA44F994556333F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CC0F2EA704A29D63D251267 /* libPods-NetworkPrac.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B975E81C1E794A3D00B83D92 = {
 			isa = PBXGroup;
 			children = (
 				B975E8271E794A3E00B83D92 /* NetworkPrac */,
 				B975E8261E794A3E00B83D92 /* Products */,
+				1EE3231BA13A5294FC435AF1 /* Pods */,
+				42E0A6BABA44F994556333F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,7 +115,7 @@
 				B975E82B1E794A3E00B83D92 /* AppDelegate.h */,
 				B975E82C1E794A3E00B83D92 /* AppDelegate.m */,
 				B9A2520C1E7AA60300E1073E /* Model */,
-				B9A2520E1E7AA64200E1073E /* Posting ViewControllers */,
+				B9A2520E1E7AA64200E1073E /* Post-Related ViewControllers */,
 				B9A2520D1E7AA61400E1073E /* Account-Related ViewController */,
 				B9944E441E7EE4CD00A4D06B /* Utilities */,
 				B975E8311E794A3E00B83D92 /* Main.storyboard */,
@@ -116,8 +140,8 @@
 			children = (
 				B95A88E31E7A73B7001DF715 /* JCAlertController.h */,
 				B95A88E41E7A73B7001DF715 /* JCAlertController.m */,
-				B961A0691E7E714900BEC5A6 /* JCFullScreenActivityIndicatorView.h */,
-				B961A06A1E7E714900BEC5A6 /* JCFullScreenActivityIndicatorView.m */,
+				B91140C01E7FEF2F00B6F0C0 /* JCActivityIndicatorView.h */,
+				B91140C11E7FEF2F00B6F0C0 /* JCActivityIndicatorView.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -146,7 +170,7 @@
 			name = "Account-Related ViewController";
 			sourceTree = "<group>";
 		};
-		B9A2520E1E7AA64200E1073E /* Posting ViewControllers */ = {
+		B9A2520E1E7AA64200E1073E /* Post-Related ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				B975E83F1E79542B00B83D92 /* MainViewController.h */,
@@ -158,7 +182,7 @@
 				B975E8451E79543E00B83D92 /* PostingViewController.h */,
 				B975E8461E79543E00B83D92 /* PostingViewController.m */,
 			);
-			name = "Posting ViewControllers";
+			name = "Post-Related ViewControllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B975E83C1E794A3E00B83D92 /* Build configuration list for PBXNativeTarget "NetworkPrac" */;
 			buildPhases = (
+				1FD9F651F72BADB9CA7F2196 /* [CP] Check Pods Manifest.lock */,
 				B975E8211E794A3D00B83D92 /* Sources */,
 				B975E8221E794A3D00B83D92 /* Frameworks */,
 				B975E8231E794A3D00B83D92 /* Resources */,
+				C2AEADEFEB81275AF0C37B06 /* [CP] Embed Pods Frameworks */,
+				9AF844B74D6C5B7BE47748BF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,6 +255,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FD9F651F72BADB9CA7F2196 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9AF844B74D6C5B7BE47748BF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkPrac/Pods-NetworkPrac-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2AEADEFEB81275AF0C37B06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkPrac/Pods-NetworkPrac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B975E8211E794A3D00B83D92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -241,11 +316,11 @@
 				B975E8471E79543E00B83D92 /* PostingViewController.m in Sources */,
 				B95A88E51E7A73B7001DF715 /* JCAlertController.m in Sources */,
 				B923731B1E7A2EDC004A8BC9 /* DataCenter.m in Sources */,
+				B91140C21E7FEF2F00B6F0C0 /* JCActivityIndicatorView.m in Sources */,
 				B975E82A1E794A3E00B83D92 /* main.m in Sources */,
 				B975E8441E79543300B83D92 /* DetailViewController.m in Sources */,
 				B9C4C64F1E7A35BA00DC03E2 /* SignUpViewController.m in Sources */,
 				B9D3ECA31E7BD41600986693 /* PostModel.m in Sources */,
-				B961A06B1E7E714900BEC5A6 /* JCFullScreenActivityIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +436,7 @@
 		};
 		B975E83D1E794A3E00B83D92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70091A118FF076D9E53F404E /* Pods-NetworkPrac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8KDMCH8V2F;
@@ -373,6 +449,7 @@
 		};
 		B975E83E1E794A3E00B83D92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 607DDD81E7E1C060B7E157A8 /* Pods-NetworkPrac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8KDMCH8V2F;

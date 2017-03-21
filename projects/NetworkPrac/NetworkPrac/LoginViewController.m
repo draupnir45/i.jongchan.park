@@ -9,12 +9,12 @@
 #import "LoginViewController.h"
 #import "DataCenter.h"
 #import "JCAlertController.h"
-#import "JCFullScreenActivityIndicatorView.h"
+#import "JCActivityIndicatorView.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property JCFullScreenActivityIndicatorView *indicatorView;
+@property JCActivityIndicatorView *indicatorView;
 
 @end
 
@@ -24,7 +24,7 @@
     [super viewDidLoad];
     
     //인디케이터뷰
-    self.indicatorView = [[JCFullScreenActivityIndicatorView alloc] init];
+    self.indicatorView = [[JCActivityIndicatorView alloc] init];
 
 }
 
@@ -50,16 +50,14 @@
                          completion:nil];
     } else {
         
-        [[DataCenter sharedData] loginRequestWithUserName:self.userNameTextField.text password:self.passwordTextField.text completion:^(BOOL sucess, NSDictionary *dataDict) {
+        [[DataCenter sharedData] logInRequestWithUserName:self.userNameTextField.text password:self.passwordTextField.text completion:^(BOOL sucess, NSDictionary *dataDict) {
             
             NSUInteger loginResponse = 100;
             
-            if ([dataDict objectForKey:@"key"]) {
+            if (sucess) {
                 loginResponse = JCNetworkLogInResponseOK;
-            } else if ([[dataDict objectForKey:@"non_field_errors"] count] > 0) {
-                loginResponse = JCNetworkLogInResponseFailed;
             } else {
-                NSLog(@"WHAT?");
+                loginResponse = JCNetworkLogInResponseUnknownError;
             }
             
             dispatch_sync(dispatch_get_main_queue(), ^{
@@ -87,7 +85,7 @@
         }
             break;
             
-        case JCNetworkLogInResponseFailed:
+        case JCNetworkLogInResponseUnknownError:
         {
             JCAlertController *alert = [JCAlertController alertControllerWithTitle:@"로그인 실패" message:@"로그인 정보를 확인해 주세요!" preferredStyle:UIAlertControllerStyleAlert actionTitle:@"확인" handler:^(UIAlertAction *action) {
                 [self.userNameTextField becomeFirstResponder];

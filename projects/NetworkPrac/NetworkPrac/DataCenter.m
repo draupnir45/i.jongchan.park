@@ -59,9 +59,9 @@
 }
 
 
-- (void)loginRequestWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion{
+- (void)logInRequestWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion{
 
-    [self.networkManager loginRequestToServerWithUserName:userName password:password completion:^(BOOL sucess, NSDictionary *dataDict) {
+    [self.networkManager logInRequestToServerWithUserName:userName password:password completion:^(BOOL sucess, NSDictionary *dataDict) {
         if ([dataDict objectForKey:@"key"]) {
             self.userToken = [dataDict objectForKey:@"key"];
             
@@ -99,6 +99,7 @@
     [self.networkManager loadImageWithURL:url postPK:postPK];
 }
 
+///포스팅합니다.
 - (void)postTitle:(NSString *)title content:(NSString *)content imageData:(NSData *)imageData completion:(CompletionBlock)completion{
     [self.networkManager postTitle:title content:content imageData:imageData completion:completion];
 }

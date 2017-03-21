@@ -15,12 +15,13 @@
 typedef NS_ENUM(NSUInteger, JCNetworkSignUpResponse) {
     JCNetworkSignUpResponseOK,
     JCNetworkSignUpResponseUserNameAlreadyTaken,
-    JCNetworkSignUpResponsePasswordNotStaisfying
+    JCNetworkSignUpResponsePasswordNotStaisfying,
+    JCNetworkSignUpResponseUnknownError
 };
 
 typedef NS_ENUM(NSUInteger, JCNetworkLogInResponse) {
     JCNetworkLogInResponseOK,
-    JCNetworkLogInResponseFailed
+    JCNetworkLogInResponseUnknownError
 };
 
 typedef NS_ENUM(NSUInteger, JCUnknownError) {
@@ -40,13 +41,13 @@ typedef void (^CompletionBlock)(BOOL sucess, NSDictionary *dataDict);
 
 + (instancetype)sharedData;
 
-//account
+//ACCOUNT
 - (void)signUpRequestWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion;
-- (void)loginRequestWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion;
+- (void)logInRequestWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion;
 
 - (void)logOutRequestWithCompletion:(CompletionBlock)completion;
 
-//post
+//POSTS
 - (void)getPostDataOnPage:(NSInteger)page completion:(CompletionBlock)completion;
 - (void)loadImageWithURL:(NSURL *)url postPK:(NSInteger)postPK;
 - (void)postTitle:(NSString *)title content:(NSString *)content imageData:(NSData *)imageData completion:(CompletionBlock)completion;

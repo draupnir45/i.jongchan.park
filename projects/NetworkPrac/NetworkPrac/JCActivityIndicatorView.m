@@ -6,9 +6,9 @@
 //  Copyright © 2017년 박종찬. All rights reserved.
 //
 
-#import "JCFullScreenActivityIndicatorView.h"
+#import "JCActivityIndicatorView.h"
 
-@implementation JCFullScreenActivityIndicatorView
+@implementation JCActivityIndicatorView
 
 - (instancetype)init
 {
@@ -20,17 +20,6 @@
     }
     return self;
 }
-
-
-
-- (void)start {
-    self.frame = self.superview.frame;
-    self.indicator.frame = CGRectMake(0, 0, 200, 200);
-    [self.indicator setCenter:self.center];
-    [self.indicator startAnimating];
-    [self.superview bringSubviewToFront:self];
-}
-
 
 
 - (void)startIndicatorOnView:(UIView *)targetView {
