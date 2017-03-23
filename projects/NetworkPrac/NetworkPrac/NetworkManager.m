@@ -8,6 +8,7 @@
 
 #import "NetworkManager.h"
 #import "DataCenter.h"
+#import <AFNetworking.h>
 
 static NSString *ROOT_URL = @"https://fc-ios.lhy.kr/api";
 static NSString *SIGN_UP = @"/member/signup/";
@@ -33,38 +34,69 @@ static NSString *POSTRETIREVE = @"/post/<post_pk>/";
 
 - (void)signUpRequestToServerWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion{
     
-    //session
-    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+//    //session
+//    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+//    
+//    //request
+//    NSMutableURLRequest *request = [self mutableRequestWithApiURL:SIGN_UP];
+//    request.HTTPMethod = @"POST";
+//    
+//    //body data
+//    NSString *dataStr = [NSString stringWithFormat:@"username=%@&password1=%@&password2=%@",userName,password,password];
+//    request.HTTPBody = [dataStr dataUsingEncoding:NSUTF8StringEncoding];
+//    
+//    //upload task
+//    NSURLSessionUploadTask *signUpTask = [defaultSession uploadTaskWithRequest:request fromData:nil completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//
+//        NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+//        NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+//        
+//        if (error == nil) {
+//            if (statusCode == 201) {
+//                completion(YES, dataDict);
+//            } else if(statusCode == 400){
+//                completion(NO, nil);
+//            } else {
+//                NSLog(@"What the... %ld",statusCode);
+//            }
+//        } else {
+//            completion(NO, dataDict);
+//        }
+//
+//    }];
+//    
+//    [signUpTask resume];
     
-    //request
+    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *sessionManager = [[AFURLSessionManager alloc] initWithSessionConfiguration:sessionConfiguration];
+    
     NSMutableURLRequest *request = [self mutableRequestWithApiURL:SIGN_UP];
-    request.HTTPMethod = @"POST";
     
     //body data
     NSString *dataStr = [NSString stringWithFormat:@"username=%@&password1=%@&password2=%@",userName,password,password];
     request.HTTPBody = [dataStr dataUsingEncoding:NSUTF8StringEncoding];
+    request.HTTPMethod = @"POST";
     
-    //upload task
-    NSURLSessionUploadTask *signUpTask = [defaultSession uploadTaskWithRequest:request fromData:nil completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-
-        NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-        NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
-        
-        if (error == nil) {
-            if (statusCode == 201) {
-                completion(YES, dataDict);
-            } else if(statusCode == 400){
-                completion(NO, nil);
+    NSURLSessionUploadTask *task = [sessionManager uploadTaskWithRequest:request fromData:nil progress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+    
+            NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+    
+            if (error == nil) {
+                if (statusCode == 201) {
+                    completion(YES, responseObject);
+                } else if(statusCode == 400){
+                    completion(NO, nil);
+                } else {
+                    NSLog(@"What the... %ld",statusCode);
+                }
             } else {
-                NSLog(@"What the... %ld",statusCode);
+                completion(NO, responseObject);
             }
-        } else {
-            completion(NO, dataDict);
-        }
-
+    
     }];
     
-    [signUpTask resume]; 
+    [task resume];
+    
 }
 
 - (void)logInRequestToServerWithUserName:(NSString *)userName password:(NSString *)password completion:(CompletionBlock)completion{
