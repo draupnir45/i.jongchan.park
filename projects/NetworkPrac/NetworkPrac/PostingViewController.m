@@ -149,6 +149,28 @@
     [self.toolBar setFrame:CGRectMake(0, self.view.frame.size.height - keyboardRect.size.height - self.toolBar.bounds.size.height, self.toolBar.bounds.size.width, self.toolBar.bounds.size.height)];
 }
 
+- (void)unwindForSegue:(UIStoryboardSegue *)unwindSegue towardsViewController:(UIViewController *)subsequentVC {
+    [self.indicatorView startIndicatorOnView:self.view];
+    
+    [[DataCenter sharedData] postTitle:self.titleTextField.text content:self.contentTextView.text imageData:self.imageData completion:^(BOOL sucess, NSDictionary *dataDict) {
+        dispatch_queue_t main_queue = dispatch_get_main_queue();
+        if (sucess) {
+            
+            dispatch_sync(main_queue, ^{
+                [self.indicatorView stopIndicator];
+                [self presentViewController:[JCAlertController alertControllerWithTitle:@"포스트 성공!" message:nil preferredStyle:UIAlertControllerStyleAlert actionTitle:@"확인" handler:^(UIAlertAction *action) {
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                }] animated:YES completion:nil];
+                
+            });
+        } else {
+            dispatch_sync(main_queue, ^{
+                [self.indicatorView stopIndicator];
+                [self presentViewController:[JCAlertController alertControllerWithTitle:@"업로드에 실패했습니다." message:@"다시 시도해 주세요." preferredStyle:UIAlertControllerStyleAlert cancelTitle:@"확인"] animated:YES completion:nil];
+            });
+        }
+    }];
+}
 
 
 

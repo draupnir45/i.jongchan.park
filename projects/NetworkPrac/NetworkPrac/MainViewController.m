@@ -235,6 +235,11 @@
 
 #pragma mark - Navigation
 
+- (IBAction)backFromSegue:(UIStoryboardSegue *)segue {
+    [self.tableView setContentOffset:CGPointZero];
+    [self.tableView reloadData];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"DetailViewSegue"]) {
         DetailViewController *detailViewController = segue.destinationViewController;
