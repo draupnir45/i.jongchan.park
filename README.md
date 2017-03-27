@@ -8,6 +8,7 @@
 ## 프로젝트
 
 - [PokéDex](https://github.com/draupnir45/Poke-dex) : 탭바와 네비바 컨트롤을 연습하면서 만든 포켓몬 도감입니다.
+- [혼술집](https://github.com/draupnir45/honsulzip) : 패스트캠퍼스 iOS 스쿨의 해커톤 결과입니다.
 
 
 ## 공부한 내용, 경험한 내용
