@@ -35,10 +35,12 @@
 
 - (IBAction)logIn:(id)sender {
     
-    [self.userNameTextField resignFirstResponder];
-    [self.passwordTextField resignFirstResponder];
+//    [self.userNameTextField resignFirstResponder];
+//    [self.passwordTextField resignFirstResponder];
+    [self.view resignFirstResponder];
     
     [self.indicatorView startIndicatorOnView:self.view];
+
     //필수항목누락 예외처리
     if (self.userNameTextField.text.length == 0 || self.userNameTextField.text.length == 0 || self.userNameTextField.text.length == 0) {
         [self.indicatorView removeFromSuperview];
