@@ -12,6 +12,7 @@
 		B908E5361E923352005595FF /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B908E5321E923352005595FF /* 2.jpg */; };
 		B908E5371E923352005595FF /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B908E5331E923352005595FF /* 3.jpg */; };
 		B908E5391E923ABF005595FF /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B908E5381E923ABF005595FF /* 4.jpg */; };
+		B9C6CAF61E977B9E00984ED0 /* ptn.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C6CAF51E977B9E00984ED0 /* ptn.png */; };
 		B9D1657F1E922D33004EF12A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D1657E1E922D33004EF12A /* main.m */; };
 		B9D165821E922D33004EF12A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D165811E922D33004EF12A /* AppDelegate.m */; };
 		B9D165851E922D33004EF12A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D165841E922D33004EF12A /* ViewController.m */; };
@@ -28,6 +29,7 @@
 		B908E5321E923352005595FF /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		B908E5331E923352005595FF /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		B908E5381E923ABF005595FF /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		B9C6CAF51E977B9E00984ED0 /* ptn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ptn.png; sourceTree = "<group>"; };
 		B9D1657A1E922D33004EF12A /* BookShelfCollectionViewPrac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShelfCollectionViewPrac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D1657E1E922D33004EF12A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9D165801E922D33004EF12A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				B908E5321E923352005595FF /* 2.jpg */,
 				B908E5331E923352005595FF /* 3.jpg */,
 				B908E5381E923ABF005595FF /* 4.jpg */,
+				B9C6CAF51E977B9E00984ED0 /* ptn.png */,
 				B9D165861E922D33004EF12A /* Main.storyboard */,
 				B9D165891E922D33004EF12A /* Assets.xcassets */,
 				B9D1658B1E922D33004EF12A /* LaunchScreen.storyboard */,
@@ -167,6 +170,7 @@
 				B908E5391E923ABF005595FF /* 4.jpg in Resources */,
 				B9D165981E922E6D004EF12A /* BookCoverCollectionViewCell.xib in Resources */,
 				B908E5351E923352005595FF /* 1.jpg in Resources */,
+				B9C6CAF61E977B9E00984ED0 /* ptn.png in Resources */,
 				B9D1658A1E922D33004EF12A /* Assets.xcassets in Resources */,
 				B9D165881E922D33004EF12A /* Main.storyboard in Resources */,
 				B908E5371E923352005595FF /* 3.jpg in Resources */,

@@ -22,12 +22,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qbf-LJ-X6B">
-                                <rect key="frame" x="-0.5" y="247.5" width="375" height="172"/>
+                                <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="172" id="U6g-Tw-hU4"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="100" minimumInteritemSpacing="0.0" id="zKf-ic-Pz8">
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="8" maxX="0.0" maxY="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="zKf-ic-Pz8">
                                     <size key="itemSize" width="96" height="172"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -54,6 +52,7 @@
                         <constraints>
                             <constraint firstItem="qbf-LJ-X6B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RMM-bN-I98"/>
                             <constraint firstItem="qbf-LJ-X6B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VPY-mx-SWO"/>
+                            <constraint firstItem="qbf-LJ-X6B" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="oqw-Qi-w6i"/>
                             <constraint firstItem="qbf-LJ-X6B" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="zXl-Sf-sMi"/>
                         </constraints>
                     </view>

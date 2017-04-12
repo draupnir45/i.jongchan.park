@@ -22,6 +22,7 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"BookCoverCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"BookCoverCollectionViewCell"];
     self.collectionView.showsHorizontalScrollIndicator = NO;
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.collectionView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ptn"]];
     
 }
 
@@ -46,17 +47,17 @@
     
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-
-    CGFloat heightByWidthRatio = [BookCoverCollectionViewCell getImageRatioWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"%ld.jpg",indexPath.row % 5]]];
-    
-    if (heightByWidthRatio <= (172.0f/96.0f)) {
-        return CGSizeMake(96.0f, 172.0f);
-    } else {
-        CGFloat newWidth = 172.0f / heightByWidthRatio;
-        return CGSizeMake(newWidth, 172.0f);
-    }
-}
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+//
+//    CGFloat heightByWidthRatio = [BookCoverCollectionViewCell getImageRatioWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"%ld.jpg",indexPath.row % 5]]];
+//    
+//    if (heightByWidthRatio <= (172.0f/96.0f)) {
+//        return CGSizeMake(96.0f, 172.0f);
+//    } else {
+//        CGFloat newWidth = 172.0f / heightByWidthRatio;
+//        return CGSizeMake(newWidth, 172.0f);
+//    }
+//}
 
 //- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
 //    NSLog(@"minimumLineSpacingForSectionAtIndex");
@@ -69,7 +70,7 @@
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     // return UIEdgeInsetsMake(0,8,0,8);  // top, left, bottom, right
-    return UIEdgeInsetsMake(0,16,0,16); // top, left, bottom, right
+    return UIEdgeInsetsMake(8,16,0,16); // top, left, bottom, right
 }
 
 @end
