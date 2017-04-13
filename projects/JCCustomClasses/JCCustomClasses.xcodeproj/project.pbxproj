@@ -22,6 +22,7 @@
 		B972E9501E7FC5CB00A5929C /* JCActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B972E94F1E7FC5CB00A5929C /* JCActivityIndicatorView.m */; };
 		B983BBE61E6AE87F002BC25F /* appData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B983BBE51E6AE87F002BC25F /* appData.plist */; };
 		B9CC54591E75073300FAC26A /* JCArrayFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CC54581E75073300FAC26A /* JCArrayFilter.m */; };
+		B9E2B41D1E9F44A6002C3B20 /* NSURL+JCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E2B41C1E9F44A6002C3B20 /* NSURL+JCAddition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		B983BBE51E6AE87F002BC25F /* appData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appData.plist; sourceTree = "<group>"; };
 		B9CC54571E75073300FAC26A /* JCArrayFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCArrayFilter.h; sourceTree = "<group>"; };
 		B9CC54581E75073300FAC26A /* JCArrayFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCArrayFilter.m; sourceTree = "<group>"; };
+		B9E2B41B1E9F44A6002C3B20 /* NSURL+JCAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+JCAddition.h"; sourceTree = "<group>"; };
+		B9E2B41C1E9F44A6002C3B20 /* NSURL+JCAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+JCAddition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				B923B1E81E72954A0006C245 /* JCRandomRollImageView.h */,
 				B923B1E91E72954A0006C245 /* JCRandomRollImageView.m */,
 				B9109D331E9E417200A45311 /* NSMutableAttributedString+JCAdditions.h */,
+				B9E2B41B1E9F44A6002C3B20 /* NSURL+JCAddition.h */,
+				B9E2B41C1E9F44A6002C3B20 /* NSURL+JCAddition.m */,
 				B9109D341E9E417200A45311 /* NSMutableAttributedString+JCAdditions.m */,
 				B9CC54571E75073300FAC26A /* JCArrayFilter.h */,
 				B9CC54581E75073300FAC26A /* JCArrayFilter.m */,
@@ -204,6 +209,7 @@
 				B9CC54591E75073300FAC26A /* JCArrayFilter.m in Sources */,
 				B9109D351E9E417200A45311 /* NSMutableAttributedString+JCAdditions.m in Sources */,
 				B945E1B61E6AE1CC00FF7F0C /* main.m in Sources */,
+				B9E2B41D1E9F44A6002C3B20 /* NSURL+JCAddition.m in Sources */,
 				B923B1EA1E72954A0006C245 /* JCRandomRollImageView.m in Sources */,
 				B972E9501E7FC5CB00A5929C /* JCActivityIndicatorView.m in Sources */,
 			);
