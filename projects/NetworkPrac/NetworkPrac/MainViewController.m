@@ -208,7 +208,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.row > self.dataArray.count - 5) { //마지막 셀이 디스플레이되기 직전에 새로운 데이터를 요청.
+    if (indexPath.row == self.dataArray.count - 5) { //마지막 셀이 디스플레이되기 직전에 새로운 데이터를 요청.
         [self loadNextPostData];
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9109D351E9E417200A45311 /* NSMutableAttributedString+JCAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B9109D341E9E417200A45311 /* NSMutableAttributedString+JCAdditions.m */; };
 		B91E48F41E6EE65A0018D9BB /* JCBlurrManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B91E48F31E6EE65A0018D9BB /* JCBlurrManager.m */; };
 		B923B1EA1E72954A0006C245 /* JCRandomRollImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B923B1E91E72954A0006C245 /* JCRandomRollImageView.m */; };
 		B945E1B61E6AE1CC00FF7F0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B945E1B51E6AE1CC00FF7F0C /* main.m */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B9109D331E9E417200A45311 /* NSMutableAttributedString+JCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+JCAdditions.h"; sourceTree = "<group>"; };
+		B9109D341E9E417200A45311 /* NSMutableAttributedString+JCAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+JCAdditions.m"; sourceTree = "<group>"; };
 		B91E48F21E6EE65A0018D9BB /* JCBlurrManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCBlurrManager.h; sourceTree = "<group>"; };
 		B91E48F31E6EE65A0018D9BB /* JCBlurrManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCBlurrManager.m; sourceTree = "<group>"; };
 		B923B1E81E72954A0006C245 /* JCRandomRollImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCRandomRollImageView.h; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				B945E1CF1E6AE23500FF7F0C /* JCPlistDataController.m */,
 				B923B1E81E72954A0006C245 /* JCRandomRollImageView.h */,
 				B923B1E91E72954A0006C245 /* JCRandomRollImageView.m */,
+				B9109D331E9E417200A45311 /* NSMutableAttributedString+JCAdditions.h */,
+				B9109D341E9E417200A45311 /* NSMutableAttributedString+JCAdditions.m */,
 				B9CC54571E75073300FAC26A /* JCArrayFilter.h */,
 				B9CC54581E75073300FAC26A /* JCArrayFilter.m */,
 				B972E94E1E7FC5CB00A5929C /* JCActivityIndicatorView.h */,
@@ -197,6 +202,7 @@
 				B95A3E961E6ED76800D73345 /* JCAlertController.m in Sources */,
 				B945E1B91E6AE1CC00FF7F0C /* AppDelegate.m in Sources */,
 				B9CC54591E75073300FAC26A /* JCArrayFilter.m in Sources */,
+				B9109D351E9E417200A45311 /* NSMutableAttributedString+JCAdditions.m in Sources */,
 				B945E1B61E6AE1CC00FF7F0C /* main.m in Sources */,
 				B923B1EA1E72954A0006C245 /* JCRandomRollImageView.m in Sources */,
 				B972E9501E7FC5CB00A5929C /* JCActivityIndicatorView.m in Sources */,
