@@ -1,30 +1,36 @@
 # Jongchan Park <a href="url"><img src="learning/images/fc_n_ios.png" align="right" height="40" ></a>
 
 ## About Me
-- 1988년 1월 4일 서울생
-- 모바일 앱을 좋아해서 UI/UX 디자이너가 되었지만, 직접 손으로 만들어보고 싶어서 개발자로 전향하게 되었습니다.
-- 모바일 네이티브 프론트엔드 클라이언트 및 모바일 네이티브 어플리케이션 혹은 그 두가지를 복합적으로 개발하는 개발자를 목표로 하고 있습니다.
+- 현재 - 패스트캠퍼스 iOS School 3기에서 Objective-C를 공부했으며, 5월부터 iOS School 4기에서 조교를 맡으며 Swift를 공부하고 있습니다.
+- 과거 - 모바일 앱을 좋아해서 UI/UX 디자이너가 되었지만, 직접 손으로 만들어보고 싶어서 개발자로 전향하게 되었습니다.
+- 미래 - Apple이 제공하는 플랫폼의 전문가를 목표로 합니다. 여기서 전문가란 iOS, macOS, watchOS, tvOS 등의 어플리케이션 개발을 튼튼하고 효율적으로 구현할 수 있는 실력을 바탕으로, Apple이 제공하는 HIG 등 UX 지식을 더해 사용하기 쉽고 아름다운 고품질 어플리케이션을 설계하고 제작할 수 있는 사람을 뜻합니다.
 
 ## 프로젝트
 
-- [PokéDex](https://github.com/draupnir45/Poke-dex) : 탭바와 네비바 컨트롤을 연습하면서 만든 포켓몬 도감입니다.
-- [혼술집](https://github.com/draupnir45/honsulzip) : 패스트캠퍼스 iOS 스쿨의 해커톤 결과입니다.
+- [수북 for iOS](https://github.com/draupnir45/SooBook_iOS) : 패스트캠퍼스 iOS 스쿨 최종 결과물입니다. (Objective- C)
+
+- [혼술집 for iOS](https://github.com/draupnir45/honsulzip) : 패스트캠퍼스 iOS 스쿨의 해커톤 결과입니다. (Objective- C)
+
+- [PokéDex for iOS](https://github.com/draupnir45/Poke-dex) : 탭바와 네비바 컨트롤을 연습하면서 만든 포켓몬 도감입니다. (Objective- C)
 
 
-## 공부한 내용, 경험한 내용
+
+## Study
 
 ### 프로그래밍 일반
 
-- [객체 지향 프로그래밍 기초](https://github.com/draupnir45/i.jongchan.park/blob/master/learning/Object-Oriented%20Programming.md)
+- [객체 지향 프로그래밍 기초](learning/Object-Oriented%20Programming.md)
 - [Git](learning/AboutGit.md)
 - [RAM](learning/RAM.md)
 - [한글 인코딩](learning/EncodingHangeul.md)
 - [ActiveX, 공인인증서 그리고 기술적 부채](learning/ActiveX&TechnicalDept.md)
 - [JSON](learning/JSON.md)
+
+### Swift
+- [스위프트에 대하여](learning/About_Swift.md)
+
+### Objective-C
 - [버블 정렬, 머지 정렬, 퀵 정렬(소스코드)](learning/sorts.md)
-
-### Objective C / iOS 구조 및 디자인 패턴
-
 - [Objective-C 클래스, 메서드, 프로퍼티, 객체 그리고 메인 파일](learning/Objective_C_method_property_and_mainfile.md)
 - [Framework Cocoa & Cocoa Touch](learning/AboutCocoa.md)
 - [Design Pattern - 프로토콜(Delegate)](learning/FreakinDelegate.md)
@@ -36,8 +42,7 @@
 - [Block 놀이](learning/Block.md)
 
 
-### UIView와 아이들
-
+### Cocoa Touch API (Currently in Objective-C)
 - [UIView](learning/UIView.md)
 - [UILabel](learning/UILabel.md)
 - [UIImageView](learning/UIImageView.md)
@@ -52,10 +57,12 @@
 - [UIWebView](learning/UIWebView.md)
 - [UIBlurEffect](learning/UIBlurEffect.md)
 
-### 이야기판
+### Storyboard 연습
+- [ScrollingStoryBoard](projects/FreakinAutoLayoutPrac) - 오토 레이아웃으로 뷰를 정렬하고 스크롤뷰에 싣는 것을 연습해 보았습니다.
 
- - [ScrollingStoryBoard](projects/FreakinAutoLayoutPrac) - 오토 레이아웃으로 뷰를 정렬하고 스크롤뷰에 싣는 것을 연습해 보았습니다.
-
+### 잊을만하면 필요할 것만 같은 무언가들
+- [JCCustomClasses](projects/JCCustomClasses)
+- [무언가들](learning/RememberTheCode.md)
 
 ### 연습 및 과제
 
@@ -69,7 +76,3 @@
 - [연습] `UIPageControl`, `UISwitch`와 `UISegmentedControl` ([PageControlTest](projects/PageControlTest))
 - [연습] 버블, 머지, 퀵 정렬([SortingPrac](projects/SortingPrac))
 - [MyDay](projects/MyDayApp) : 연습을 위해 만들어 본 메모장 겸 일기장입니다.
-
-### 잊을만하면 필요할 것만 같은 무언가들
-- [JCCustomClasses](projects/JCCustomClasses)
-- [무언가들](learning/RememberTheCode.md)
