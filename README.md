@@ -27,7 +27,8 @@
 - [JSON](learning/JSON.md)
 
 ### Swift
-- [스위프트에 대하여](learning/About_Swift.md)
+1. [스위프트에 대하여](learning/Swift1_AboutSwift.md)
+- [기본 규칙](learning/Swift2_LetAndVar.md)
 
 ### Objective-C
 - [버블 정렬, 머지 정렬, 퀵 정렬(소스코드)](learning/sorts.md)
