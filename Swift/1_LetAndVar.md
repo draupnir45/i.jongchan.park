@@ -9,7 +9,7 @@
 - `dump()` : 좀 더 자세한 정보 제공
 
 ## 문자열 보간(String Interpolation)
-- 문자열 내에 '\(변수나 상수)' 를 추가하여 문자열로 만들고 싶을 때. NSString의 `stringWithFormat:` 를 훨씬 쉽게 대체해 놓은 것.
+- 문자열 내에 `"\(변수나 상수)"` 를 추가하여 문자열로 만들고 싶을 때. NSString의 `stringWithFormat:` 를 훨씬 쉽게 대체해 놓은 것.
 - 다만 변수나 상수의 타입이 `CustomStringConvertible` 프로토콜을 준수해야 가능.
 
 ## 변수와 상수
