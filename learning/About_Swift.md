@@ -53,3 +53,8 @@ let rv: [String] = names.sorted {
 // '>' 연산자도 함수고 어차피 Bool 리턴하는 거 똑같으니까 그냥 >이것만 전달. 전달할 함수만 준비되어 있다면 자동완성으로 가능. (2017년 5월)
 let r: [String] = names.sorted(by: >)
 ```
+
+## 프로토콜 지향 (Protocol-Oriented)
+- 모든 것을 클래스로 해결하려 하지 말고, 값 타입과 프로토콜을 사용해서 더 의미와 상황에 맞는 구조를 만들자는 이야기....같다. 현재로써는.
+- [Protocol-Oriented Programming in Swift](https://developer.apple.com/videos/play/wwdc2015/408/) ([번역](http://minsone.github.io/programming/protocol-oriented-programming))
+- [Building Better Apps with Value Types in Swift](https://developer.apple.com/videos/play/wwdc2015/414/)
