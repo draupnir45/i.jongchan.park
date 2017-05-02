@@ -85,6 +85,7 @@ for i in 0...3 {
     let person: Person = (name: names[i], age: ages[i], height: heights[i])
     personArray.append(person)
 }
+
 dump(personArray)
 
 personArray[0].name
