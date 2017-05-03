@@ -191,7 +191,7 @@
 	    print("\(person.name)의 고향은 \(person.hometown.rawValue)입니다.")
 	}
 	
-	//연관값을 이용한 연동
+	//연관값과 순환 열거형을 이용한 연동
 	enum Burger {
 	    case beef, cheese, chicken, fish
 	}

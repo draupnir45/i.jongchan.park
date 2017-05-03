@@ -30,6 +30,7 @@
 0. [스위프트에 대하여](Swift/0_AboutSwift.md)
 1. [기본 규칙](Swift/1_LetAndVar.md)
 2. [기본 데이터 타입](Swift/2_BasicDataTypes.md)
+3. [고급 데이터 타입](Swift/3_WeirdDataTypes.md)
 
 ### Objective-C
 - [버블 정렬, 머지 정렬, 퀵 정렬(소스코드)](learning/sorts.md)
