@@ -1,6 +1,6 @@
 # 기본 데이터 타입
 **모두 구조체**로 이루어져 있음. 구조체에 익스텐션, 제네릭 등을 사용할 수 있도록...내용 나중에 추가 필요.
-([playground](BasicDataTypes.playground))
+([playground](2_BasicDataTypes.playground))
 
 ## Int와 UInt
 - 각 환경에 따라 그 범위가 달라지는 정수 데이터타입. 
