@@ -1,5 +1,5 @@
 # 기본적인 사항들
-([playground](../projects/SwiftBasic.playground))
+([playground](SwiftBasic.playground))
 
 ## 명명법
 - lowerCamelCase : 함수, 메서드, 인스턴스
