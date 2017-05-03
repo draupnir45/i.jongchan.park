@@ -118,3 +118,101 @@
 	dump(type(of: dict["jongchan"])) //[String: Any]로 생성된 경우에는 Any 로 나온다.
 
 	```
+	
+## 세트
+- 순서 없음
+- 모든 값이 유일
+- 해시 가능한 값(Hashable)만 들어와야 함. 기본 데이터 타입은 모두 가능.
+- 무조건 `Set<Type>`으로 써야 함
+- `insert(_:)`와 `remove(_:)` 메서드로 추가 및 삭제
+
+	```swift
+	var seedSet: Set<String> = []
+	
+	for name in names {
+	    seedSet.insert(name)
+	}
+	
+	//seedSet.remove("jongchan")
+	
+	for name in seedSet {
+	    print(name)
+	}
+	
+	//스트링 셋을 정의
+	typealias StringSet = Set<String>
+	
+	//샘플용 셋들
+	let seokchonSeoulSet: StringSet = ["jongchan", "byeongjun", "junsuk"]
+	let dokhanPeopleSet: StringSet = ["jongchan", "junmin", "youngjin", "byeongjun", "hyeonjung", "donghee"]
+	
+	//교집합, 여집합의 합, 합집합, 차집합.
+	let intersectSet: StringSet = seedSet.intersection(seokchonSeoulSet)
+	let symetricDiff: StringSet = seedSet.symmetricDifference(dokhanPeopleSet)
+	let unionSet: StringSet = seedSet.union(seokchonSeoulSet)
+	let subtracktedSet: StringSet = seokchonSeoulSet.subtracting(seedSet)
+	
+	//서로 배타적인지, 포함되는지, 포함하는지.
+	symetricDiff.isDisjoint(with: seokchonSeoulSet)
+	seedSet.isSubset(of: dokhanPeopleSet)
+	dokhanPeopleSet.isSuperset(of: seedSet)
+	```
+	
+	
+## 열거형
+- 기존 `NS_ENUM`과 달리, 기본 정수형으로 정의되지 않음.
+- 기존 `UITableViewStylePlain`처럼 plain을 위해 제목을 모두 쓸 필요 없으며, 점 접근법(dot notation)으로 제목과 붙입니다.
+- 지정한 형태의 원시값(rawValue)과 연관값을 가질 수 있습니다. 
+
+>   Raw values can be strings, characters, or any of the integer or floating-point number types. Each raw value must be unique within its enumeration declaration.
+
+
+	```swift
+	//원시값을 가지는 열거형
+	enum Hometown: String {
+	    case seoul      = "서울"
+	    case gimcheon   = "김천"
+	    case incheon    = "인천"
+	    case unknown
+	}
+	
+	typealias HometownAddedPerson = (name: String, age: Int, height: Double, hometown: Hometown)
+	
+	var newPersonArray: [HometownAddedPerson] = []
+	
+	for person in personArray {
+	    var newPerson: HometownAddedPerson = (person.name, person.age, person.height, Hometown.unknown)
+	    newPersonArray.append(newPerson)
+	}
+	
+	newPersonArray[0].hometown = Hometown.seoul
+	newPersonArray[1].hometown = Hometown.gimcheon
+	newPersonArray[2].hometown = Hometown.incheon
+	newPersonArray[3].hometown = Hometown.seoul
+	
+	for person in newPersonArray {
+	    print("\(person.name)의 고향은 \(person.hometown.rawValue)입니다.")
+	}
+	
+	//연관값을 이용한 연동
+	enum Burger {
+	    case beef, cheese, chicken, fish
+	}
+	
+	enum Drink {
+	    case coke, zeroCoke
+	}
+	
+	enum Fries {
+	    case french, onion
+	}
+	
+	enum BurgerSet {
+	    case fullSet(burger: Burger, drink: Drink, fries: Fries)
+	    case combo(burger: Burger, drink: Drink)
+	    indirect case doublePack(firstSet: BurgerSet, secondSet: BurgerSet)
+	}
+	
+	var order1: BurgerSet = BurgerSet.fullSet(burger: Burger.cheese, drink: Drink.coke, fries: Fries.french)
+	var order2: BurgerSet = BurgerSet.doublePack(firstSet: BurgerSet.fullSet(burger: .chicken, drink: .zeroCoke, fries: .onion), secondSet: .combo(burger: .cheese, drink: .coke))
+	```
