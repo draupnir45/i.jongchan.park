@@ -162,9 +162,7 @@
 ## 열거형
 - 기존 `NS_ENUM`과 달리, 기본 정수형으로 정의되지 않음.
 - 기존 `UITableViewStylePlain`처럼 plain을 위해 제목을 모두 쓸 필요 없으며, 점 접근법(dot notation)으로 제목과 붙입니다.
-- 지정한 형태의 원시값(rawValue)과 연관값을 가질 수 있습니다. 
->   Raw values can be strings, characters, or any of the integer or floating-point number types. Each raw value must be unique within its enumeration declaration.
-
+- 지정한 형태(strings, characters, or any of the integer or floating-point number types)의 원시값(rawValue)과 연관값을 가질 수 있습니다. 
 
 	```swift
 	//원시값을 가지는 열거형
