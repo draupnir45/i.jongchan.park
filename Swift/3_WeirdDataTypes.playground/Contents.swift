@@ -190,14 +190,14 @@ enum BurgerSet {
     indirect case doublePack(firstSet: BurgerSet, secondSet: BurgerSet)
 }
 
-var order1: BurgerSet = BurgerSet.fullSet(burger: Burger.cheese, drink: Drink.coke, fries: Fries.french)
-var order2: BurgerSet = BurgerSet.doublePack(firstSet: BurgerSet.fullSet(burger: .chicken, drink: .zeroCoke, fries: .onion), secondSet: .combo(burger: .cheese, drink: .coke))
+var order1: BurgerSet = BurgerSet.fullSet(burger: Burger.cheese,
+                                           drink: Drink.coke,
+                                           fries: Fries.french)
 
-
-
-
-
-
-
+var order2: BurgerSet = BurgerSet.doublePack(firstSet: .fullSet(burger: .chicken,
+                                                                 drink: .zeroCoke,
+                                                                 fries: .onion),
+                                            secondSet:   .combo(burger: .cheese,
+                                                                 drink: .coke))
 
 
