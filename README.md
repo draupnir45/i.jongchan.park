@@ -32,6 +32,7 @@
 2. [기본 데이터 타입](Swift/2_BasicDataTypes.md)
 3. [고급 데이터 타입](Swift/3_WeirdDataTypes.md)
 4. [연산자](Swift/4_Operator.md)
+5. [흐름 제어하기](Swift/5_ControlFlow.md)
 
 ### Objective-C
 - [버블 정렬, 머지 정렬, 퀵 정렬(소스코드)](learning/sorts.md)
