@@ -56,33 +56,12 @@
 	    print("뭐야?")
 	}
 	
-	//연관값으로는 검사는 안 되고 전달만 가능. 그래도 유용!
-	enum Burger: String {
-	    case beef = "버거", cheese = "치즈버거", chicken = "치킨버거", fish = "생선버거"
-	}
-	enum Drink {
-	    case coke, zeroCoke
-	}
-	enum Fries {
-	    case french, onion
-	}
-	enum BurgerSet {
-	    case fullSet(burger: Burger, drink: Drink, fries: Fries)
-	    case combo(burger: Burger, drink: Drink)
-	    indirect case doublePack(firstSet: BurgerSet, secondSet: BurgerSet)
-	}
+	//where을 이용해 검사. 연관값 등은 와일드카드로 빼서 검사가 가능.
 	
 	var order1: BurgerSet = BurgerSet.fullSet(burger: Burger.chicken,
 	                                          drink: Drink.coke,
 	                                          fries: Fries.french)
-	var order2: BurgerSet = BurgerSet.doublePack(firstSet: .fullSet(burger: .chicken,
-	                                                                drink: .zeroCoke,
-	                                                                fries: .onion),
-	                                             secondSet:   .combo(burger: .cheese,
-	                                                                 drink: .coke))
-	
-	
-	//where을 이용해 검사. 연관값 등은 와일드카드로 빼서 검사가 가능.
+
 	switch order1 {
 	case .fullSet(let burger , _, _) where (burger.rawValue == "치즈버거") :
 	    print("\(burger.rawValue)세트 하나요!")
