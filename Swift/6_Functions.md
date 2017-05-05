@@ -8,7 +8,7 @@
 ## 정의하기
  - 기본 형태
 
- ```swift
+	```swift
  	func 함수이름(매개변수이름 전달인자레이블: 매개변수타입, 매개변수이름 전달인자레이블: 매개변수타입 = 기본값) -> 반환값타입 {
  		실행구문
  		return 반환값
@@ -19,14 +19,14 @@
  		return value
  	}
  	
- ```
+	```
 
 - 이름
 
- ```swift
+	```swift
  	//정의
  	func cellForRow(at indexPath: IndexPath) -> UITableViewCell?
- ```
+	```
  위와 같이 정의된 함수의 이름은 `cellForRow(at:)` 이다. 따라서 매개변수의 이름을 변경하면 서로 다른 함수가 됨.
  
 ## 기본값
