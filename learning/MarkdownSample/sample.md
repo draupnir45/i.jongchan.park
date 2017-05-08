@@ -41,7 +41,7 @@ let value: String = "깔깔깔"
 
 ![이미지](images/poster.jpg)
 
-(이미지는 MacDown에서는 안 됩니다.)
+(이미지는 MacDown에서는 안보입니다.)
 
 
 - **강조내용**
