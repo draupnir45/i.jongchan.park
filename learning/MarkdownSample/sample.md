@@ -17,14 +17,14 @@
 	
 ```swift
 //코드는 이렇게 쓰시면 됩니다.
-let value: String = "깔깔깔"
+let laughing: String = "깔깔깔"
 ```
 
 - 인용도 이렇게 가능합니다.
 
 	```swift
 	//코드 박스도 탭으로 줄을 맞출 수 있어요.
-	let value: String = "깔깔깔"
+	let laughing: String = "깔깔깔"
 	```
 	
 ```
