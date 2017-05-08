@@ -40,7 +40,7 @@ let value: String = "깔깔깔"
 
 [링크](http://developer.apple.com/)
 
-![이미지](/images/poster.jpg)
+![이미지](images/poster.jpg)
 
 (이미지는 MacDown에서는 안 됩니다.)
 
