@@ -69,7 +69,7 @@
 ### 잊을만하면 필요할 것만 같은 무언가들
 - [JCCustomClasses](projects/JCCustomClasses)
 - [무언가들](learning/RememberTheCode.md)
-- [마크다운 예제](MarkdownSample/sample.md)
+- [마크다운 예제](learning/MarkdownSample/sample.md)
 
 ### 연습 및 과제
 
