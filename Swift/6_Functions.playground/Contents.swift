@@ -1,4 +1,4 @@
-//: Playground - noun: a place where people can play
+ㅌ2//: Playground - noun: a place where people can play
 
 import UIKit
 //기본값 테스트. 자동완성에서도 지원됨.

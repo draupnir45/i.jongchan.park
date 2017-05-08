@@ -25,7 +25,7 @@
 ### class나 struct에 대하여 중위 연산자 구현
 - 커스텀 클래스나 구조체에 대해 유용하게 쓰일 수 있는 '비교' 연산자를 구현해줄 수 있다!
 
-  ```swift
+	```swift
 	class Car {
 		var modelYear: Date?
 		var modelName: String?
