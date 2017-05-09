@@ -38,7 +38,18 @@ checkOptionalValue(value: noName)
 
 
 
-//강제추출
+//강제추출. 위험.
 
 var shouldHaveValue = str!
+
+if noName != nil { //if로 안전하게.
+    shouldHaveValue = noName!
+} else {
+    print("없어!")
+}
+
+
+//옵셔널 바인딩
+
+var optString: String? = "옵셔널 스트링"
 
