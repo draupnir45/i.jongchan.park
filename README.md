@@ -34,6 +34,7 @@
 4. [연산자](Swift_learning/4_Operator.md)
 5. [흐름 제어하기](Swift_learning/5_ControlFlow.md)
 6. [함수](Swift_learning/6_Functions.md)
+7. [옵셔널](Swift_learning/7_optional.md)
 
 ### Objective-C
 - [버블 정렬, 머지 정렬, 퀵 정렬(소스코드)](learning/sorts.md)
