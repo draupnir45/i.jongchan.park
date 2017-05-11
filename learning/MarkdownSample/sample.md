@@ -20,6 +20,12 @@
 let laughing: String = "깔깔깔"
 ```
 
+`swift
+//코드는 이렇게 쓰시면 됩니다.
+let laughing: String = "깔깔깔"
+`
+
+
 - 인용도 이렇게 가능합니다.
 
 	```swift
