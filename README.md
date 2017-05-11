@@ -27,13 +27,15 @@
 - [JSON](learning/JSON.md)
 
 ### Swift
-0. [스위프트에 대하여](Swift/0_AboutSwift.md)
-1. [기본 규칙](Swift/1_LetAndVar.md)
-2. [기본 데이터 타입](Swift/2_BasicDataTypes.md)
-3. [고급 데이터 타입](Swift/3_WeirdDataTypes.md)
-4. [연산자](Swift/4_Operator.md)
-5. [흐름 제어하기](Swift/5_ControlFlow.md)
-6. [함수](Swift/6_Functions.md)
+0. [스위프트에 대하여](Swift_learning/0_AboutSwift.md)
+1. [기본 규칙](Swift_learning/1_LetAndVar.md)
+2. [기본 데이터 타입](Swift_learning/2_BasicDataTypes.md)
+3. [고급 데이터 타입](Swift_learning/3_WeirdDataTypes.md)
+4. [연산자](Swift_learning/4_Operator.md)
+5. [흐름 제어하기](Swift_learning/5_ControlFlow.md)
+6. [함수](Swift_learning/6_Functions.md)
+7. [옵셔널](Swift_learning/7_optional.md)
+8. [객체지향](Swift_learning/8_ObjectOrientedProgramming.md)
 
 ### Objective-C
 - [버블 정렬, 머지 정렬, 퀵 정렬(소스코드)](learning/sorts.md)
