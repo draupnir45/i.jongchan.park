@@ -72,6 +72,7 @@ class ViewController: UIViewController {
             return numb1 / numb2
         }
     }
+    
     func formatedString(with result: Double) -> String {
         let flooredResult: Double = floor(result)
         if (flooredResult == result) {
@@ -82,6 +83,10 @@ class ViewController: UIViewController {
         
     }
     
+    func addNewCalcBuffer(with operation: CalcOperators, andNumberString number: String) {
+        self.calcBufferArray.append(CalcBuffer(oper: operation, numb: number))
+    }
+    
     
     @IBAction func allClear() {
         self.displayLabel.text = "0"
@@ -90,14 +95,16 @@ class ViewController: UIViewController {
     
     @IBAction func numbButtonTouched(_ sender: CalcButton) {
         if self.previousKey == nil {
-            self.calcBufferArray.append(CalcBuffer(oper: CalcOperators.add, numb: sender.currentTitle!))
+            addNewCalcBuffer(with: .add, andNumberString: sender.currentTitle!)
         } else {
             switch self.previousKey! {
             case CalcKeyType.operators:
-                self.calcBufferArray.append(CalcBuffer(oper: self.operBuffer, numb: sender.currentTitle!))
+                addNewCalcBuffer(with: self.operBuffer, andNumberString: sender.currentTitle!)
             case CalcKeyType.numbers:
                 var bufferToEdit: CalcBuffer = self.calcBufferArray.last!
                 bufferToEdit.numb += sender.currentTitle!
+                self.calcBufferArray.removeLast()
+                self.calcBufferArray.append(bufferToEdit)
             }
         }
         
@@ -107,6 +114,34 @@ class ViewController: UIViewController {
     
     @IBAction func operatorButtonTouched(_ sender: OperatorButton) {
         
+        if self.previousKey == nil {
+            self.operBuffer = sender.oper
+        } else {
+            switch self.previousKey! {
+            case CalcKeyType.operators:
+                self.operBuffer = sender.oper
+            case CalcKeyType.numbers:
+                
+                switch sender.oper {
+                case CalcOperators.multiply, CalcOperators.divide:
+                    if self.calcBufferArray.count > 2 {
+                        if (self.calcBufferArray.last!.oper == CalcOperators.multiply || self.calcBufferArray.last!.oper == CalcOperators.multiply) {
+                            //앞 버퍼의 연산자가 우선일 경우... 연산 후 버퍼에 넣고 결과값 디스플레이
+                        }
+                    }
+                case CalcOperators.add, CalcOperators.minus:
+                    print("33")
+                    //무조건 모든 버퍼 연산 후 디스플레이
+                }
+                
+                
+                
+                addNewCalcBuffer(with: self.operBuffer, andNumberString: sender.currentTitle!)
+            }
+        }
+        
+        
+        self.previousKey = CalcKeyType.operators
     }
     
     @IBAction func equalButtonTouched(_ sender: ControlButton) {
@@ -124,7 +159,7 @@ class CalcButton: UIButton {
     }
 }
 class OperatorButton: CalcButton {
-    var oper: CalcOperators?
+    var oper: CalcOperators = CalcOperators.add //옵셔널로 하는 대신 기본값 설정.
 }
 class ControlButton: CalcButton {
     var controlType: CalcControls?
