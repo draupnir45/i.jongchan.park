@@ -46,6 +46,10 @@ class Person: ParentClass {
         self.firstName = fullName.substring(from: fullName.index(after: fullName.startIndex))
     }
     
+    deinit {
+        print("사라져주마!")
+    }
+    
 }
 
 extension Person: CustomStringConvertible {
@@ -55,19 +59,25 @@ extension Person: CustomStringConvertible {
 }
 
 
-let gildong: Person = Person.init(withFullname: "홍길동")
+var gildong: Person? = Person.init(withFullname: "홍길동")
 
-print(gildong)
+print(gildong!)
 
 //클래스의 인스턴스는 레퍼런스 타입이므로, let으로 정의해도 프로퍼티 자체가 var이면 다른 값을 할당 가능.
 
-gildong.changeMyLastName(to: "김")
+gildong!.changeMyLastName(to: "김")
 
-print(gildong)
+print(gildong!)
 
-gildong.firstName = "동길"
+gildong!.firstName = "동길"
 
-print(gildong)
+print(gildong!)
 
+var otherGildong: Person? = gildong!
+
+print(otherGildong === gildong)
+
+gildong = nil
+otherGildong = nil //ARC에 의하여 이 타이밍에 사라짐
 
 

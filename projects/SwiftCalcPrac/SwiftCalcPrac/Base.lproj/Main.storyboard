@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftCalcPrac" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="81T-A6-gc3" userLabel="Root Stack View">
+                                <rect key="frame" x="0.0" y="199" width="375" height="468"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Dx-dh-8l2" userLabel="Numb &amp; Controls Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="281" height="468"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Spc-Be-YDy" userLabel="Controls  Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="281" height="93"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4g-EJ-bKJ" customClass="CalcButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                        <state key="normal" title="AC">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted" title="AC">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="allClear" destination="BYZ-38-t0r" eventType="touchUpInside" id="E3j-Ro-6b9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VlH-fV-AVw" customClass="CalcButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                        <rect key="frame" x="94" y="0.0" width="93" height="93"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                        <state key="normal" title="+ / -">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsY-Dl-5gY" customClass="CalcButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                        <rect key="frame" x="188" y="0.0" width="93" height="93"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                        <state key="normal" title="%">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ArR-VI-L6W" userLabel="789 Stack View">
+                                                <rect key="frame" x="0.0" y="94" width="281" height="93"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0r-NS-bhE" customClass="CalcButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
+                                                        <color key="backgroundColor" red="0.91909898479999996" green="0.91909898479999996" blue="0.91909898479999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="numbButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wR9-Of-KSQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g80-He-W3e" customClass="CalcButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                        <rect key="frame" x="94" y="0.0" width="93" height="93"/>
+                                                        <color key="backgroundColor" red="0.91909898479999996" green="0.91909898479999996" blue="0.91909898479999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="numbButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wh9-NQ-yJJ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATS-Wk-IJy" customClass="CalcButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                        <rect key="frame" x="188" y="0.0" width="93" height="93"/>
+                                                        <color key="backgroundColor" red="0.91909898479999996" green="0.91909898479999996" blue="0.91909898479999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="numbButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="goj-aj-2Ob"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rhf-83-t9w" userLabel="456 Stack View">
+                                                <rect key="frame" x="0.0" y="188" width="281" height="92"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hb0-1N-cKU" customClass="CalcButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="92"/>
+                                                        <color key="backgroundColor" red="0.91909898479999996" green="0.91909898479999996" blue="0.91909898479999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="numbButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j23-7c-jmr"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gD-t0-ftW" customClass="CalcButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                        <rect key="frame" x="94" y="0.0" width="93" height="92"/>
+                                                        <color key="backgroundColor" red="0.91909898479999996" green="0.91909898479999996" blue="0.91909898479999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="numbButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CoX-fg-bXj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgM-rr-GfC" customClass="CalcButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                        <rect key="frame" x="188" y="0.0" width="93" height="92"/>
+                                                        <color key="backgroundColor" red="0.91909898479999996" green="0.91909898479999996" blue="0.91909898479999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="numbButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C4R-DQ-NkI"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="9dc-bB-Req" userLabel="123 Stack View">
+                                                <rect key="frame" x="0.0" y="281" width="281" height="93"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oL1-OR-9hl" customClass="CalcButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
+                                                        <color key="backgroundColor" red="0.91909898479999996" green="0.91909898479999996" blue="0.91909898479999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="numbButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8v3-U5-1dT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxk-tr-BrO" customClass="CalcButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                        <rect key="frame" x="94" y="0.0" width="93" height="93"/>
+                                                        <color key="backgroundColor" red="0.91909898479999996" green="0.91909898479999996" blue="0.91909898479999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="numbButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lQt-px-8kf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfH-mA-7gd" customClass="CalcButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                        <rect key="frame" x="188" y="0.0" width="93" height="93"/>
+                                                        <color key="backgroundColor" red="0.91909898479999996" green="0.91909898479999996" blue="0.91909898479999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="numbButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LHB-1n-mJ4"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="qYx-ea-5Jf" userLabel="0 Stack View">
+                                                <rect key="frame" x="0.0" y="375" width="281" height="93"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNV-Yv-Lo4" customClass="CalcButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="93"/>
+                                                        <color key="backgroundColor" red="0.91909898479999996" green="0.91909898479999996" blue="0.91909898479999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                        <state key="normal" title="0           ">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="numbButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVV-eO-d2P"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VE1-oz-9dD" customClass="CalcButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                        <rect key="frame" x="188" y="0.0" width="93" height="93"/>
+                                                        <color key="backgroundColor" red="0.91909898479999996" green="0.91909898479999996" blue="0.91909898479999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                                        <state key="normal" title=".">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qeb-Ax-pG2" userLabel="operator">
+                                        <rect key="frame" x="282" y="0.0" width="93" height="468"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGl-QZ-UZZ" customClass="OperatorButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
+                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
+                                                <state key="normal" title="÷">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Kf-Lm-t0Y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTe-cv-5BV" customClass="OperatorButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="94" width="93" height="93"/>
+                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
+                                                <state key="normal" title="×">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fDV-jb-uDZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFi-Jr-d1N" customClass="OperatorButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="188" width="93" height="92"/>
+                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ahd-ai-oof"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPc-el-6b8" customClass="OperatorButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="281" width="93" height="93"/>
+                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="operatorButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Xw-lO-i0N"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoA-ua-kb3" customClass="ControlButton" customModule="SwiftCalcPrac" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="375" width="93" height="93"/>
+                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
+                                                <state key="normal" title="=">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="equalButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u4u-DJ-l0x"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="81T-A6-gc3" secondAttribute="height" multiplier="4:5" id="7jd-Gg-mg5"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="none" minimumFontSize="45" translatesAutoresizingMaskIntoConstraints="NO" id="Mms-2b-15B">
+                                <rect key="frame" x="16" y="93" width="343" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="2zk-KC-aSe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="90"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20537159974093266" green="0.20537159974093266" blue="0.20537159974093266" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="81T-A6-gc3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0IN-K9-Y42"/>
+                            <constraint firstItem="81T-A6-gc3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="JpG-JU-Wtd"/>
+                            <constraint firstItem="Mms-2b-15B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R9E-Ze-Taz"/>
+                            <constraint firstItem="UNV-Yv-Lo4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/2" constant="-1" id="VI3-yR-ck9"/>
+                            <constraint firstItem="Qeb-Ax-pG2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/4" id="cb3-Hc-mI5"/>
+                            <constraint firstItem="Mms-2b-15B" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-32" id="gmI-gr-XVl"/>
+                            <constraint firstItem="81T-A6-gc3" firstAttribute="top" secondItem="Mms-2b-15B" secondAttribute="bottom" constant="16" id="oDu-51-OPM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="81T-A6-gc3" secondAttribute="bottom" id="xFX-dV-Pyg"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="addButton" destination="FPc-el-6b8" id="IHL-Hn-vB2"/>
+                        <outlet property="displayLabel" destination="Mms-2b-15B" id="Xvs-CL-CIT"/>
+                        <outlet property="divideButton" destination="OGl-QZ-UZZ" id="vwh-Jj-2Mm"/>
+                        <outlet property="equalButton" destination="NoA-ua-kb3" id="wsY-ML-scT"/>
+                        <outlet property="minusButton" destination="qFi-Jr-d1N" id="tfx-zx-a7K"/>
+                        <outlet property="multiplButton" destination="CTe-cv-5BV" id="N7H-Ng-vmo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
