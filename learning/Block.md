@@ -1,4 +1,4 @@
-#Block
+# Block
 
 ```objc
 typedef NSString * (^MyBlockType)(NSInteger, NSString *);
@@ -12,6 +12,6 @@ NSLog(@"%@",myBlockInstance(4, @"hi"));
 
 귀찮으니
 
-###가져다 쓰자!
+### 가져다 쓰자!
 
 <img src="images/blockTemp.png" width="200">

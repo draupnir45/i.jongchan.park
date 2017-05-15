@@ -1,4 +1,4 @@
-##Objective-C의 메서드, 프로퍼티, 그리고 메인 파일
+## Objective-C의 메서드, 프로퍼티, 그리고 메인 파일
 
 ![objC요약](images/ObjC_structure.png)
 

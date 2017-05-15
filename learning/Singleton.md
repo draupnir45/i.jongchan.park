@@ -1,8 +1,8 @@
-#Singleton Design Pattern
+# Singleton Design Pattern
 
 프로그램 전체에서 단 한 번만 만들어지도록 설계하여 사용하는 디자인 방법론.
 
-###코드 스니펫 (Objective-C)
+### 코드 스니펫 (Objective-C)
 ```objc
 + (instancetype)sharedData {
     

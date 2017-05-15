@@ -1,4 +1,4 @@
-#UIBlurEffect
+# UIBlurEffect
 UIBlurEffect를 만들고 그걸 바탕으로 UIVisualEffectView를 만든 후 블러하고자 하는 뷰에 서브뷰로 넣어주기만 하면 됩니다.
 
 

@@ -1,4 +1,4 @@
-#`UIControl`
+# `UIControl`
 UIButton의 상위로서 이벤트를 받아 메서드를 실행하는 객체의 최상위 클래스다.
 
 ```objc

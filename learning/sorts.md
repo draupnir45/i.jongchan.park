@@ -1,7 +1,7 @@
-##버블 정렬, 머지 정렬, 퀵 정렬
+## 버블 정렬, 머지 정렬, 퀵 정렬
 클래스에서 실습한 코드를 정리하여 남겼습니다. 프로젝트는 [여기](../projects/SortingPrac)에서 보실 수 있습니다.
 
-###버블정렬
+### 버블정렬
 
 ```objc
 + (NSArray *)bubbleSort:(NSArray *)dataArray {
@@ -25,7 +25,7 @@
 
 ```
 
-###머지 정렬
+### 머지 정렬
 ```objc
 + (NSArray *)mergeSort:(NSArray *)dataArray {
     //아이템이 1개이거나 없으면 바로 리턴시킨다.
@@ -86,7 +86,7 @@
 ```
 
 
-###퀵 정렬
+### 퀵 정렬
 ```objc
 + (NSArray *)quickSort:(NSArray *)dataArray {
     //아이템이 1개이거나 없으면 바로 리턴시킨다.

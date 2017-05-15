@@ -1,4 +1,4 @@
-#UITableView
+# UITableView
 연습으로 만든 포켓몬 도감을 이용해, UITableView와 UIScrollView의 프로토콜 메서드를 로그로 찍어 보았습니다.
 기준 : numberOfSection 1, rowHeight 90, iPhone 7
 

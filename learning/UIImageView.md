@@ -1,4 +1,4 @@
-#`UIImageView`
+# `UIImageView`
 
 ```objc
 - (instancetype)initWithImage:(nullable UIImage *)image;

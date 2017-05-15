@@ -1,4 +1,4 @@
-#`UISwitch`
+# `UISwitch`
 
 ```objc
 @property(nonatomic,getter=isOn) BOOL on;

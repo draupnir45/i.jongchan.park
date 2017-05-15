@@ -1,4 +1,4 @@
-#NSNotificationCenter
+# NSNotificationCenter
 
 특정 상황이 일어났을 때 리얼타임으로 다른 객체에게 메시지를 송신합니다.
 사용한 경우 dealloc을 오버라이드하여 옵저버를 지워 줍니다.
