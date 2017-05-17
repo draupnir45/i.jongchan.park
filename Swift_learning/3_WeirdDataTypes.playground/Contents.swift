@@ -71,6 +71,12 @@ names.append("byeongjun")
 names.append("junmin")
 names.append("youngjin")
 
+
+var namesSet: Set<String> = Set(names)
+names = namesSet.sorted()
+
+
+
 //선언 안해도 한방에 만들면 괜춘. but 왠만하면 쓰지 말자
 let ages = [31, 31, 33, 31]
 type(of: ages)
@@ -96,6 +102,7 @@ personArray.count
 //: -------------------------------------------------
 //선언
 var dict: [String: Person] = [:]
+type(of: dict)
 //[String: Any]//요렇게 하면 아무거나 넣을 수 있다. 하지만 가져올 때 캐스팅해줘야 할수도. 좋은 방법을 고민해보자.
 
 //추가. 그냥 리터럴에 할당하면 생성됨
@@ -190,6 +197,7 @@ enum BurgerSet {
     indirect case doublePack(firstSet: BurgerSet, secondSet: BurgerSet)
 }
 
+
 var order1: BurgerSet = BurgerSet.fullSet(burger: Burger.cheese,
                                            drink: Drink.coke,
                                            fries: Fries.french)
@@ -200,4 +208,11 @@ var order2: BurgerSet = BurgerSet.doublePack(firstSet: .fullSet(burger: .chicken
                                             secondSet:   .combo(burger: .cheese,
                                                                  drink: .coke))
 
+print(Hometown.seoul.rawValue)
 
+
+
+var unsignedOverflow = UInt8.max
+unsignedOverflow = unsignedOverflow &+ 1
+
+type(of: unsignedOverflow)

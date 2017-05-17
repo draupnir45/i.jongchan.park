@@ -25,7 +25,6 @@ enum CalcControls {
 enum CalcKeyType {
     case numbers
     case operators
-//    case controls
 }
 
 class ViewController: UIViewController {
@@ -45,6 +44,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var multiplButton: OperatorButton!
     @IBOutlet weak var minusButton: OperatorButton!
     @IBOutlet weak var addButton: OperatorButton!
+    
     
     
     override func viewDidLoad() {
@@ -131,7 +131,7 @@ class ViewController: UIViewController {
         self.operBuffer =           CalcOperators.add
         self.calcBufferArray =      []
         self.previousKey =          nil
-        deselectOperationButtons()
+        self.deselectOperationButtons()
     }
     
     @IBAction func changeSignButtonTouched(_ sender: CalcButton) {
@@ -139,7 +139,7 @@ class ViewController: UIViewController {
         var numb: Double = Double(self.calcBufferArray.last!.numb)!
         numb *= -1.0
         self.calcBufferArray[calcBufferArray.endIndex-1].numb = formatedString(with: numb)
-        updateDisplayLabel()
+        self.updateDisplayLabel()
         
     }
     

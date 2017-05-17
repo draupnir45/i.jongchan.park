@@ -9,8 +9,10 @@ import UIKit
     Int.min
     UInt.min
 
-    let a: Int = 10
+    let a: Int = 0
     let b: Int = 11
+
+
 
     let c: Int = a - b
 //: -------------------------------------------------
@@ -68,8 +70,6 @@ import UIKit
     print("원래 자료인 \(someString)는 바뀌지 않습니다.")
 
     print()
-
-
 
 
 

@@ -34,3 +34,57 @@
 	let myComputer: PowerPC = PowerPC.init(withOS: "10.4", CPU: "PotatoChip")
 	```
 	
+## 지연 저장 프로퍼티
+- `lazy`키워드를 붙이면, 호출될 때까지 기다렸다가 할당된다.
+
+## 연산 프로퍼티
+- 실제 값을 저장하는 것이 아니라, 다른 프로퍼티의 값을 기준으로 `getter` 역할만 하거나 `setter`역할까지 할 수도 있다.
+- `setter`만 할 수는 없다. 
+
+## 프로퍼티 옵저버
+- 프로퍼티 값이 변화함에 따라 해야하는 행동을 지정해줄 수 있음.
+- 지연 저장 프로퍼티에는 쓸 수가 없음.
+	
+	```swift
+	class Account {
+	    var credit: Int = 0 {
+	        willSet {
+	            print("잔액이 \(credit)원에서 \(newValue)원으로 변화합니다.")
+	        }
+	        didSet {
+	            print("잔액이 \(oldValue)원에서 \(credit)원으로 변화했습니다.")
+	            //여기에 레이블 등을 연동시킬 수 있을 것 같음.
+	        }
+	    }
+	    
+	    var dollarCredit : Double {
+	        get {
+	            return Double(credit) / 1000.0
+	        }
+	        set {
+	            credit = Int(newValue * 1000)
+	            print("잔액을 $\(newValue)로 변경 중입니다.")
+	        }
+	    }
+	}
+	
+	class ForeignAccount: Account {
+	    override var dollarCredit: Double {
+	        willSet {
+	            print("잔액이 $\(dollarCredit)에서 $\(newValue)으로 변화합니다.")
+	        }
+	        
+	        didSet {
+	            print("잔액이 $\(oldValue)에서 $\(dollarCredit)으로 변화했습니다.")
+	        }
+	    }
+	}
+	
+	var koreanUser: Account = Account()
+	koreanUser.credit = 1000
+	
+	var foreignUser: ForeignAccount = ForeignAccount()
+	foreignUser.dollarCredit = 10.5
+	```
+
+

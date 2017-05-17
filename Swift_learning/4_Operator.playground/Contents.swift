@@ -38,12 +38,23 @@ struct SmartPhone {
     var phoneNumber: Int?
 }
 
+infix operator **
+
+
 //클래스나 구조체나 상관 없이 프로퍼티 중 비교할 것만 비교해서 반환이 가능.
-func == (left: Car, right:Car) -> Bool {
+func ** (_ left:Car,_ right:Car) -> Bool {
     return left.registerNumber == right.registerNumber
 }
 
-func == (left: SmartPhone, right: SmartPhone) -> Bool {
-    return left.phoneNumber == right.phoneNumber
+var oneCar: Car = Car()
+oneCar.registerNumber = 3298
+var otherCar: Car = Car()
+otherCar.registerNumber = 3298
+
+if oneCar ** otherCar {
+    print(oneCar.registerNumber)
 }
 
+if oneCar === oneCar {
+    print("dma?")
+}

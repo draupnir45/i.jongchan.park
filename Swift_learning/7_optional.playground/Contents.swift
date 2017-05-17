@@ -74,5 +74,18 @@ if let variable1 = optString, let variable2 = str {
     print("둘 중에 하나가 없거나 둘다 없다!")
 }
 
+func letMeSee(thisOptional optStr: String?) {
+    guard let unwrappedOptionalString = optStr else {
+        print("응 없어")
+        return
+    }
+    print(unwrappedOptionalString)
+}
+
+letMeSee(thisOptional: "음")
+
 //암시적 추출 옵셔널 : nil 할당이 가능하지만 할당시 접근하면 오류. 일반 옵셔널은 오류는 아니고 경고만 발생. 옵셔널 바인딩도 사용 가능. 지양.
 var implicitVar: String! = nil
+
+
+letMeSee(thisOptional: implicitVar)
