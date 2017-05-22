@@ -51,9 +51,21 @@ if noName != nil { //if로 안전하게.
 }
 
 
+var numberArray: Array<Int> = [3,4]
+
+numberArray
+
 //옵셔널 바인딩
 
-var optString: String? = "옵셔널 스트링"
+
+
+var optString: String?
+if let uws:String = optString {
+//    jhgfjhgfjhgfjhgfjgf
+}
+type(of: 1...5)
+type(of: optString)
+type(of: optString!)
 
 if let variableToBind = optString {
     print("\(variableToBind)에 값이 있다!")
@@ -86,6 +98,6 @@ letMeSee(thisOptional: "음")
 
 //암시적 추출 옵셔널 : nil 할당이 가능하지만 할당시 접근하면 오류. 일반 옵셔널은 오류는 아니고 경고만 발생. 옵셔널 바인딩도 사용 가능. 지양.
 var implicitVar: String! = nil
-
+print(implicitVar)
 
 letMeSee(thisOptional: implicitVar)

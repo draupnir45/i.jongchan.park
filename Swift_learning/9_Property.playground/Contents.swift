@@ -58,8 +58,6 @@ struct CoordinatePoint {
             y = -newValue.y
         }
     }
-    
-    
 }
 
 
@@ -100,6 +98,9 @@ class Account {
 }
 
 class ForeignAccount: Account {
+    
+    static var exchangeRate = 1123
+    
     override var dollarCredit: Double {
         willSet {
             print("잔액이 $\(dollarCredit)에서 $\(newValue)으로 변화합니다.")

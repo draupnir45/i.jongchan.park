@@ -41,6 +41,37 @@
 - 실제 값을 저장하는 것이 아니라, 다른 프로퍼티의 값을 기준으로 `getter` 역할만 하거나 `setter`역할까지 할 수도 있다.
 - `setter`만 할 수는 없다. 
 
+	```swift
+	struct CoordinatePoint {
+	    var x: Int
+	    var y: Int
+	    
+	    var opposite: CoordinatePoint {
+	        
+	        get {
+	            return CoordinatePoint(x: -x, y: -y)
+	        }
+	        
+	        set {
+	            x = -newValue.x
+	            y = -newValue.y
+	        }
+	        
+	    }
+	    
+	    var verticalMirrored: CoordinatePoint {
+	        get {
+	            return CoordinatePoint(x: x, y: -y)
+	        }
+	        
+	        set {
+	           	x = newValue.x
+			     y = -newValue.y
+			}
+		}
+	}
+	```
+
 ## 프로퍼티 옵저버
 - 프로퍼티 값이 변화함에 따라 해야하는 행동을 지정해줄 수 있음.
 - 지연 저장 프로퍼티에는 쓸 수가 없음.
@@ -88,3 +119,11 @@
 	```
 
 
+## 타입 프로퍼티
+ - 인스턴스 생성 여부와 상관없는 프로퍼티.
+ - `static const`와 비슷...
+ - UI나 URL 추상화할 때 사용하면 될듯..
+
+```swift
+static let pi = 3.1425
+```
