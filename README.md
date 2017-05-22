@@ -36,6 +36,8 @@
 6. [함수](Swift_learning/6_Functions.md)
 7. [옵셔널](Swift_learning/7_optional.md)
 8. [객체지향](Swift_learning/8_ObjectOrientedProgramming.md)
+9. [프로퍼티](Swift_learning/9_Property.md)
+10. [메서드](Swift_learning/10_Methods.md)
 
 ### Objective-C
 - [버블 정렬, 머지 정렬, 퀵 정렬(소스코드)](learning/sorts.md)
