@@ -89,3 +89,66 @@
 	
 	let cost:RecipeCost = RecipeCost.init(withKRW: 24000)
 	```
+
+## 실패가능한 이니셜라이저
+
+- 들어온 값으로 초기화가 불가능할 경우 `nil`을 돌려주는 이니셜라이저
+- 리턴값 명시도 없는 주제에 `return nil` 사용.
+- 백문일 불여일RUN
+
+	```swift
+	enum RecipeCost {
+	    
+	    case under10
+	    case over10Under20
+	    case over20Under30
+	    case over30
+	    
+	    init?(with cost:Double){
+	        if cost <= 10.0 {
+	            self = .under10
+	        } else if cost > 10.0 && cost <= 20.0 {
+	            self = .over10Under20
+	        } else if cost > 20.0 && cost <= 30.0 {
+	            self = .over20Under30
+	        } else if cost > 30.0 {
+	            self = .over30
+	        } else {
+	            return nil
+	        }
+	    }
+	    
+	    init?(withKRW koreanWonCost: Int) {
+	        let dollarCost: Double = Double(koreanWonCost) / 1123.4
+	        self.init(with: dollarCost)
+	    }
+	}
+	
+	
+	let cost:RecipeCost? = RecipeCost.init(withKRW: 24000)
+	```
+	
+	
+## 클로저를 통한 기본값 세팅
+
+- 반환값이 있는 함수를 넘기면서 세팅도 가능하다.
+
+	```swift
+	//프로퍼티 기본초깃값을 세팅하는 3가지 방법!
+	struct TestStruct {
+	    let property1: Int = 0
+	    let property2: Int
+	    let property3: TestCase = {
+	       return TestCase.firstCase
+	    }()
+	    
+	    init() {
+	        self.property2 = 1
+	    }
+	}
+	```
+	
+## 디이닛
+
+- 응 디이닛.
+- 클래스에만 됨.
