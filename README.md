@@ -39,7 +39,7 @@
 9. [프로퍼티](Swift_learning/9_Property.md)
 10. [메서드](Swift_learning/10_Methods.md)
 
-###Swift 예제 프로젝트
+### Swift 예제 프로젝트
 - [베이스볼 게임](projects/BaseBallGame)
 
 ### Objective-C
