@@ -5,8 +5,6 @@ import UIKit
 
 typealias Comicbook = (title: String, volume: Int)
 var landedBooks: [Comicbook] = []
-
-
 func getComicbooks(named title: String, numbOfBooks count: Int, from volume: Int = 1) -> [Comicbook] {
     var returnArray: [Comicbook] = []
     let targetVolume: Int = volume + count

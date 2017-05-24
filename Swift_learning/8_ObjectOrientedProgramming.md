@@ -65,6 +65,7 @@
 	
 	```
 	
+	
 ## 공통점
 - 프로퍼티와 메서드를 가질 수 있음
 - 서브스크립트 문법을 통해 값에 접근할 수 있게 함
@@ -75,6 +76,48 @@
 ## 클래스에서만 되는 것 혹은 클래스가 남아 있는 이유 혹은 클래스로 만들어야 하는 객체의 구별법
 - 상속
 - 타입 캐스팅
+
+	```swift
+	class MediaItem {
+	    var name: String
+	    init(name: String) {
+	        self.name = name
+	    }
+	}
+	
+	class Movie: MediaItem {
+	    var director: String
+	    init(name: String, director: String) {
+	        self.director = director
+	        super.init(name: name)
+	    }
+	}
+	
+	class Song: MediaItem {
+	    var artist: String
+	    init(name: String, artist: String) {
+	        self.artist = artist
+	        super.init(name: name)
+	    }
+	}
+	
+	let library: [MediaItem] = [
+	    Movie(name: "Casablanca", director: "Michael Curtiz"),
+	    Song(name: "Blue Suede Shoes", artist: "Elvis Presley"),
+	    Movie(name: "Citizen Kane", director: "Orson Welles"),
+	    Song(name: "The One And Only", artist: "Chesney Hawkes"),
+	    Song(name: "Never Gonna Give You Up", artist: "Rick Astley")
+	]
+	
+	for item in library {
+	    if let movie = item as? Movie {
+	        print("Movie: \(movie.name), dir. \(movie.director)")
+	    } else if let song = item as? Song {
+	        print("Song: \(song.name), by \(song.artist)")
+	    }
+	}
+	```
+	
 - 디이니셜라이저
 - Reference Counting
 

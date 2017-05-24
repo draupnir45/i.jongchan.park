@@ -45,7 +45,7 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    NSInteger result= [self doCollatzRecursive3:[textField.text integerValue] count:0];
+    NSInteger result= [self doCollatzConjecture:[textField.text integerValue]];
     [self.resultLabel setText:[NSString stringWithFormat:@"결과는 %ld",result]];
     return YES;
 }
@@ -73,8 +73,8 @@
 -(NSInteger)doCollatzConjecture:(NSInteger)number {
     NSInteger result = 0; //결과값 담을 변수를 만듭니다.
     
-    while (number != 1 || result <= 500) { //수가 1이 아니고 result가 500보다 작거나 같을 동안 반복합니다.
-        if (number % 2) { number = number / 2; } //홀수일 경우
+    while (number != 1) { //수가 1이 아니고 result가 500보다 작거나 같을 동안 반복합니다.
+        if (number % 2 == 0) { number = number / 2; } //홀수일 경우
         else { number = number * 3 + 1; } //짝수일 경우
         result ++; //increments
     }

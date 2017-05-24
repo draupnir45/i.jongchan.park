@@ -50,6 +50,8 @@ class ViewController: UIViewController {
         } else {
             self.resultLabel.text = "3개 모두 선택했습니다. 낙장불입!"
         }
+        
+        
     }
 
     @IBAction func goButtonTouched(_ sender: UIButton) {

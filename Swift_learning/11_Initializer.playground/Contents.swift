@@ -68,4 +68,9 @@ enum RecipeCost {
 
 let cost:RecipeCost? = RecipeCost.init(withKRW: 24000)
 
+let testing: Int! = nil
+let test2: Int? = nil
+
+type(of: testing)
+type(of: testing) == type(of: test2)
 
