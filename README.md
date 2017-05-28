@@ -38,6 +38,9 @@
 8. [객체지향](Swift_learning/8_ObjectOrientedProgramming.md)
 9. [프로퍼티](Swift_learning/9_Property.md)
 10. [메서드](Swift_learning/10_Methods.md)
+11. [이니셜라이저](Swift_learning/11_Initializer.md)
+12. [접근제한자](Swift_learning/12_AccessControl.md)
+13. [클로저](Swift_learning/13_Closure.md)
 
 ### Swift 예제 프로젝트
 - [베이스볼 게임](projects/BaseBallGame)
