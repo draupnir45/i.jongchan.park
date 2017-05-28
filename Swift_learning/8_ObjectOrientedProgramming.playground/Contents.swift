@@ -8,15 +8,22 @@ var str = "Hello, playground"
 
 struct YourStructName {
     var someProperty: String
+    var someOtherProperty: Int
     
     mutating func someMethod(someParam: String) -> Void {
         someProperty = someParam
     }
     
+//    init(_ str: String, _ numb:Int) {
+//        self.someProperty = str + str
+//        self.someOtherProperty = numb * 2
+//    }
+    
 }
 
 //init 메서드가 자동으로 생성
-var structInstance: YourStructName = YourStructName.init(someProperty: "Hey!")
+//var structInstance: YourStructName = YourStructName.init(someProperty: "Hey!")
+var structInstance: YourStructName = YourStructName.init(someProperty: "sss", someOtherProperty: 4)
 
 //내부에서 var로 프로퍼트를 지정한다 해도 인스턴스가 let이면 변경불가
 structInstance.someMethod(someParam: "Wow!")
