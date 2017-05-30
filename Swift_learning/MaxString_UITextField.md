@@ -1,4 +1,4 @@
-##텍스트필드 스트링 길이 제한
+## 텍스트필드 스트링 길이 제한
 - 결론부터 말하면 답은 아래와 같습니다.
 
 	```swift
@@ -16,16 +16,11 @@
 	}
 	
 	class UITextField {
-	
 	    var delegate: UITextFieldDelegate?
 	    var text: String = ""
-	    
-	    
 	    func keyTouched(in range: Range<String.CharacterView.Index>, replacementString string: String) {
 	        if (self.delegate?.textField(self, shouldChangeCharactersIn: range, replacementString: string))! {
-	            
 	            self.text = self.text.replacingCharacters(in: range, with: string)
-	
 	        }
 	    }
 	
@@ -41,21 +36,17 @@
 	    
 	    override func viewDidLoad() {
 	        super.viewDidLoad()
-	        
 	        self.myTextField.delegate = self
-	        // Do any additional setup after loading the view, typically from a nib.
 	    }
 	    
 	    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 	        let newLength = (textField.text?.characters.count)! + string.characters.count - range.length
 	        return !(newLength > 10)
 	    }
-	    
-	
 	}
 	```
 
-- `shouldChange...`이므로 결국 추가하거나 교체하는 것도 지원합니다. 즉 키보드던 뭐던 텍스트필드에 있는 텍스트에 변화를 가할 수 있는 모든 경우에 
+- `shouldChange...`이므로 결국 추가하거나 교체하는 것도 지원합니다. 즉 키보드던 뭐던 텍스트필드에 있는 텍스트에 변화를 가할 수 있는 모든 경우에 불리게 됩니다.
 - 추가될 값과 지워질 양, 수정을 행할 위치가 필요합니다. 각각 다음과 같은 값으로 전달됩니다.
 	- 현재 커서 위치 : `range.location`	
 	- 지워질 양 : `range.length`
@@ -64,7 +55,7 @@
 - 상황별로 따져보기.
 	1. 일반 키보드 누름
 		- `range.location` = 현재 커서 위치
-		- `range.length` = 0 바꾸는 것이 아니므로
+		- `range.length` = 0
 		- `string` = 누른 키보드의 캐릭터
 	2. 지우기(delete)누름
 	 	- `range.location` = 현재 커서 위치 - 1 (문자열 처음에서는 안됨)
@@ -84,11 +75,9 @@
 
 	```swift
 	if (self.delegate?.textField(self, shouldChangeCharactersIn: range, replacementString: string))! {
-	    
 	self.text = self.text.replacingCharacters(in: range, with: string)
 	//1. 커서 위치(range.location)에서 (range.length)만큼 문자열을 지운다.
 	//2. 커서 위치(range.location)에 추가할 문자열(string)을 추가한다.
-	
 	}
 	```
 	

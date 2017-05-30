@@ -118,3 +118,34 @@ koreanUser.credit = 1000
 var foreignUser: ForeignAccount = ForeignAccount()
 foreignUser.dollarCredit = 10.5
 
+//public static var normal: UIControlState { get }
+//
+//public static var highlighted: UIControlState { get } // used when UIControl isHighlighted is set
+//
+//public static var disabled: UIControlState { get }
+//
+//public static var selected: UIControlState { get } // flag usable by app (see below)
+//
+//@available(iOS 9.0, *)
+//public static var focused: UIControlState { get } // Applicable only when the screen supports focus
+//
+//public static var application: UIControlState { get } // additional flags available for application use
+//
+//public static var reserved: UIControlState { get }
+dump(UIControlState.normal)
+dump(UIControlState.highlighted)
+dump(UIControlState.disabled)
+dump(UIControlState.selected)
+dump(UIControlState.focused)
+dump(UIControlState.reserved)
+dump(UIControlState.application)
+
+
+
+var state: UIControlState = UIControlState(rawValue: UInt(9))
+let btn: UIButton = UIButton()
+btn.setTitle("hey", for: state)
+
+dump(state)
+
+

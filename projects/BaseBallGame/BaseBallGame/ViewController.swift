@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var goButton: UIButton!
     
     var labelArray: [UILabel] = []
-    
     var pitchedArray: [Int] = []
     var answerArray: [Int] = []
     
@@ -35,6 +34,7 @@ class ViewController: UIViewController {
         
         self.goButton.layer.cornerRadius = 5
         
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -50,8 +50,6 @@ class ViewController: UIViewController {
         } else {
             self.resultLabel.text = "3개 모두 선택했습니다. 낙장불입!"
         }
-        
-        
     }
 
     @IBAction func goButtonTouched(_ sender: UIButton) {
@@ -66,8 +64,8 @@ class ViewController: UIViewController {
             self.goButton.setTitle("GO!", for: .normal )
         } else {
             self.tryCount += 1
-            calculateCounts()
-            displayResult()
+            self.calculateCounts()
+            self.displayResult()
         }
     }
     
@@ -121,3 +119,11 @@ class ViewController: UIViewController {
     
 }
 
+
+class AClass {
+    private class InClassClass {
+    }
+    var inst: InClassClass = InClassClass()
+}
+
+var classInstance: AClass = AClass()
