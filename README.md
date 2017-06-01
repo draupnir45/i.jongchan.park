@@ -44,6 +44,8 @@
 
 ### Swift 예제 프로젝트
 - [베이스볼 게임](projects/BaseBallGame)
+- [포켓몬 선택하기 (UIStoryBoardSegue 연습)](projects/PokemonSelect)
+- [시크한 로그인과 회원가입(StackView, ScrollView, UserDefaults)](projects/LoginSignUpPractice)
 
 ### Objective-C
 - [버블 정렬, 머지 정렬, 퀵 정렬(소스코드)](learning/sorts.md)

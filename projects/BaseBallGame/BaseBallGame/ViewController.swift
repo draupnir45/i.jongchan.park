@@ -118,12 +118,3 @@ class ViewController: UIViewController {
     }
     
 }
-
-
-class AClass {
-    private class InClassClass {
-    }
-    var inst: InClassClass = InClassClass()
-}
-
-var classInstance: AClass = AClass()
