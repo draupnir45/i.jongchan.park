@@ -86,7 +86,7 @@
                                                             <constraint firstAttribute="height" constant="10" id="7ea-Re-bvG"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACJ-LU-3OE">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACJ-LU-3OE" customClass="RoundedButton" customModule="LoginSignUpPractice" customModuleProvider="target">
                                                         <rect key="frame" x="26" y="296" width="285.5" height="40"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.63743397887323938" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -163,6 +163,7 @@
                         <outlet property="emailTextField" destination="pts-p0-fQU" id="Hhq-bX-E5Q"/>
                         <outlet property="passwordTextField" destination="TjX-DC-GOD" id="r6a-eb-fYZ"/>
                         <outlet property="scrollView" destination="89H-8H-8YS" id="NMk-je-Fss"/>
+                        <outlet property="subTitleLabel" destination="td3-0Q-M26" id="uhU-Wt-khS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9C-gI-rGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -188,7 +189,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="867"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fgu-at-z27">
-                                                <rect key="frame" x="19" y="129" width="337" height="410"/>
+                                                <rect key="frame" x="19" y="134" width="337" height="400"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원가입" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Vt-bW-gNk">
                                                         <rect key="frame" x="26.5" y="0.0" width="284" height="80"/>
@@ -280,7 +281,7 @@
                                                             <constraint firstAttribute="height" constant="10" id="wpP-Br-rNX"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLi-37-TJO">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLi-37-TJO" customClass="RoundedButton" customModule="LoginSignUpPractice" customModuleProvider="target">
                                                         <rect key="frame" x="26.5" y="360" width="284" height="40"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.63743397889999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -291,12 +292,6 @@
                                                             <action selector="signUpButtonTouched:" destination="dlU-lF-5rE" eventType="touchUpInside" id="OIc-vp-5CF"/>
                                                         </connections>
                                                     </button>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xzg-2P-Sf4" userLabel="Margin10">
-                                                        <rect key="frame" x="40" y="400" width="257" height="10"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="10" id="JaV-Bv-LEn"/>
-                                                        </constraints>
-                                                    </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="oAB-CQ-F03" firstAttribute="width" secondItem="3Vt-bW-gNk" secondAttribute="width" id="2g9-kq-42O"/>
@@ -406,7 +401,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-713" y="-602"/>
+            <point key="canvasLocation" x="113" y="116"/>
         </scene>
     </scenes>
 </document>

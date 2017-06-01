@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B9263AB81EDE942100E5EB37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9263AB71EDE942100E5EB37 /* Constants.swift */; };
+		B983E8CE1EDFBA7500F24407 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983E8CD1EDFBA7500F24407 /* RoundedButton.swift */; };
 		B9C21D2E1EDE51C9000FAA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C21D2D1EDE51C9000FAA3B /* AppDelegate.swift */; };
 		B9C21D331EDE51C9000FAA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C21D311EDE51C9000FAA3B /* Main.storyboard */; };
 		B9C21D351EDE51C9000FAA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C21D341EDE51C9000FAA3B /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		B9263AB71EDE942100E5EB37 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B983E8CD1EDFBA7500F24407 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		B9C21D2A1EDE51C9000FAA3B /* LoginSignUpPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginSignUpPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C21D2D1EDE51C9000FAA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9C21D321EDE51C9000FAA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,8 +65,9 @@
 				B9C21D2D1EDE51C9000FAA3B /* AppDelegate.swift */,
 				B9C21D451EDE522F000FAA3B /* MainViewController.swift */,
 				B9C21D431EDE5223000FAA3B /* LoginViewController.swift */,
-				B9263AB71EDE942100E5EB37 /* Constants.swift */,
 				B9C21D471EDE523A000FAA3B /* SignUpViewController.swift */,
+				B9263AB71EDE942100E5EB37 /* Constants.swift */,
+				B983E8CD1EDFBA7500F24407 /* RoundedButton.swift */,
 				B9C21D311EDE51C9000FAA3B /* Main.storyboard */,
 				B9C21D341EDE51C9000FAA3B /* Assets.xcassets */,
 				B9C21D361EDE51C9000FAA3B /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9263AB81EDE942100E5EB37 /* Constants.swift in Sources */,
+				B983E8CE1EDFBA7500F24407 /* RoundedButton.swift in Sources */,
 				B9C21D461EDE522F000FAA3B /* MainViewController.swift in Sources */,
 				B9C21D441EDE5223000FAA3B /* LoginViewController.swift in Sources */,
 				B9C21D481EDE523A000FAA3B /* SignUpViewController.swift in Sources */,

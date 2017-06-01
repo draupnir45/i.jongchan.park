@@ -12,7 +12,7 @@ struct Authentification {
     static let email = "Email"
     static let nickName = "NickName"
     static let password = "Password"
-    static let authentificationBool = "Authentification"
+    static let auth = "Authentification"
 }
 
 

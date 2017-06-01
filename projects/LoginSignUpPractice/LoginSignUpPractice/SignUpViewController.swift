@@ -8,14 +8,22 @@
 
 import UIKit
 
+
+
 class SignUpViewController: UIViewController, UITextFieldDelegate {
 
+    private let unwindSegueID: String = "UnwindSegue"
+    private let signUpFailedMessage: String = "똑바로 안하냐"
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nickNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmTextField: UITextField!
     @IBOutlet weak var subTitleLabel: UILabel!
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +70,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         self.signUpRequest()
     }
     
+    // MARK: - SignUp
+    
     func signUpRequest() {
         self.view.endEditing(true)
         if !(emailTextField.text?.isEmpty)! && !(nickNameTextField.text?.isEmpty)! && !(passwordTextField.text?.isEmpty)! && passwordTextField.text! == passwordConfirmTextField.text! {
@@ -73,22 +83,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             //            self.dismiss(animated: true, completion: nil)
 
             
-            UserDefaults.standard.set(true, forKey: Authentification.authentificationBool)
-            self.performSegue(withIdentifier: "UnwindSegue", sender: self)
+            UserDefaults.standard.set(true, forKey: Authentification.auth)
+            self.performSegue(withIdentifier: unwindSegueID, sender: self)
             
         } else {
-            self.subTitleLabel.text = "똑바로 안하냐"
+            self.subTitleLabel.text = signUpFailedMessage
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
