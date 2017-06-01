@@ -1,24 +1,24 @@
 //
-//  PokemonViewController.swift
+//  PokemonNavigationController.swift
 //  PokemonSelect
 //
-//  Created by 박종찬 on 2017. 5. 31..
+//  Created by 박종찬 on 2017. 6. 1..
 //  Copyright © 2017년 Jongchan Park. All rights reserved.
 //
 
 import UIKit
 
-class PokemonViewController: UIViewController {
+class PokemonNavigationController: UINavigationController {
     
-    
-    var pokemonInt: Int?
-    @IBOutlet weak var imageView: UIImageView!
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let data: Dictionary = pokemonDataArray[pokemonInt!]
-        self.title = (data["name"] as! String)
-        self.imageView.image = (data["image"] as! UIImage)
+        self.navigationBar.barTintColor = .red
+        self.navigationBar.tintColor = .white
+        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         // Do any additional setup after loading the view.
     }
 

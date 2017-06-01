@@ -10,6 +10,12 @@ import UIKit
 
 class SelectViewController: UIViewController {
     
+    private let SelectionSegueID: String = "SelectionSegue"
+    
+    @IBOutlet weak var ballButton1: UIButton!
+    @IBOutlet weak var ballButton2: UIButton!
+    @IBOutlet weak var ballButton3: UIButton!
+    
     var selectedBallNumber: Int?
     @IBOutlet weak var infoLabel: UILabel!
     
@@ -28,7 +34,7 @@ class SelectViewController: UIViewController {
     @IBAction func ballTouched(_ sender: UIButton) {
         
         self.selectedBallNumber = sender.tag
-        self.performSegue(withIdentifier: "SelectionSegue", sender: nil)
+        self.performSegue(withIdentifier: SelectionSegueID, sender: nil)
         
     }
     
@@ -42,22 +48,13 @@ class SelectViewController: UIViewController {
         let sourceViewController: PokemonViewController = segue.source as! PokemonViewController
         let pokemonInt: Int = sourceViewController.pokemonInt!
         
-        switch pokemonInt {
-        case 1:
-            self.infoLabel.text = "이상해씨를 선택했습니다."
-        case 4:
-            self.infoLabel.text = "파이리를 선택했습니다."
-        default:
-            self.infoLabel.text = "꼬부기를 선택했습니다."
-        }
+        let data: Dictionary = pokemonDataArray[pokemonInt]
         
-        let btn1: UIButton = self.view.viewWithTag(1) as! UIButton
-        let btn4: UIButton = self.view.viewWithTag(4) as! UIButton
-        let btn7: UIButton = self.view.viewWithTag(7) as! UIButton
+        self.infoLabel.text = "\((data["name"] as! String))를 선택하였구나...!"
         
-        btn1.isEnabled = false
-        btn4.isEnabled = false
-        btn7.isEnabled = false
+        ballButton1.isEnabled = false
+        ballButton2.isEnabled = false
+        ballButton3.isEnabled = false
         
     }
 

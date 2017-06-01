@@ -25,7 +25,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MQH-1N-SmS">
                                 <rect key="frame" x="57.5" y="293" width="260" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvs-rA-3xD">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvs-rA-3xD">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="5wt-Fl-sed"/>
@@ -36,14 +36,14 @@
                                             <action selector="ballTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hdd-gZ-p9T"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEm-fJ-GLc">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEm-fJ-GLc">
                                         <rect key="frame" x="90" y="0.0" width="80" height="80"/>
                                         <state key="normal" image="ball.png"/>
                                         <connections>
                                             <action selector="ballTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FP9-rC-5Ji"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCP-0f-yYh">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCP-0f-yYh">
                                         <rect key="frame" x="180" y="0.0" width="80" height="80"/>
                                         <state key="normal" image="ball.png"/>
                                         <connections>
@@ -58,8 +58,8 @@
                                     <constraint firstItem="sEm-fJ-GLc" firstAttribute="height" secondItem="Fvs-rA-3xD" secondAttribute="height" id="yiQ-SS-v3i"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhk-7J-Obq">
-                                <rect key="frame" x="-0.5" y="442" width="375" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어느 걸로 하겠니?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhk-7J-Obq">
+                                <rect key="frame" x="-0.5" y="442" width="375" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -76,6 +76,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="fJc-uh-gXW"/>
                     <connections>
+                        <outlet property="ballButton1" destination="Fvs-rA-3xD" id="SeZ-Mg-277"/>
+                        <outlet property="ballButton2" destination="sEm-fJ-GLc" id="A0o-pq-agt"/>
+                        <outlet property="ballButton3" destination="lCP-0f-yYh" id="3dP-8K-anZ"/>
                         <outlet property="infoLabel" destination="lhk-7J-Obq" id="msd-Zx-BaX"/>
                         <segue destination="Q0o-bG-vHr" kind="show" identifier="SelectionSegue" id="tsC-ge-vG1"/>
                     </connections>
@@ -111,14 +114,6 @@
                                     <segue destination="wEQ-Ff-pfx" kind="unwind" unwindAction="unwindToSelectionView:" id="BpI-7F-oxk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ir-fW-37H">
-                                <rect key="frame" x="151" y="580" width="73" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="응 너 아니야"/>
-                                <connections>
-                                    <action selector="popBackAction:" destination="Q0o-bG-vHr" eventType="touchUpInside" id="W6L-Q1-LeL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -137,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="1850" y="124"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Pokemon Navigation Controller-->
         <scene sceneID="kWx-S5-XHG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Keq-sy-8ay" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Keq-sy-8ay" customClass="PokemonNavigationController" customModule="PokemonSelect" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="I3z-No-asJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -159,4 +154,5 @@
     <resources>
         <image name="ball.png" width="250" height="247"/>
     </resources>
+    <color key="tintColor" red="1" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
