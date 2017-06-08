@@ -42,7 +42,19 @@ checkOptionalValue(value: noName)
 
 //강제추출. 위험.
 
-var shouldHaveValue = str!
+var shouldHaveValue = str
+str.debugDescription
+str?.description
+str.customMirror
+print(str as Any)
+debugPrint(str!)
+
+var lb:UILabel = UILabel()
+
+debugPrint(lb)
+dump(lb)
+print(lb)
+
 
 if noName != nil { //if로 안전하게.
     shouldHaveValue = noName!
