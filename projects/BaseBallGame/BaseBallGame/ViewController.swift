@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     var ballCount: Int = 0
     var outCount: Int = 0
     var tryCount: Int = 0
+    
+    var someInt: Int = Int.init(3)
 
     override func viewDidLoad() {
         super.viewDidLoad()
