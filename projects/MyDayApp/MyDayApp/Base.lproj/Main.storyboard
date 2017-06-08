@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iRK-6M-cFX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iRK-6M-cFX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -52,11 +52,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Journals" id="eLv-oj-YXf">
-                        <barButtonItem key="leftBarButtonItem" title="CardView" id="Nkj-lB-n81">
-                            <connections>
-                                <segue destination="1Wr-AW-KzZ" kind="presentation" modalTransitionStyle="flipHorizontal" id="Acl-rC-muo"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="R98-qy-u93">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -94,41 +89,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Yo-dg-reu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1918" y="152"/>
-        </scene>
-        <!--Card View Controller-->
-        <scene sceneID="5z2-sj-FUG">
-            <objects>
-                <viewController id="1Wr-AW-KzZ" customClass="CardViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="McT-Kc-R7C"/>
-                        <viewControllerLayoutGuide type="bottom" id="idu-ws-jwr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dlU-bC-h8t">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n5-S1-JTq">
-                                <rect key="frame" x="15" y="26" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backToTableView:" destination="1Wr-AW-KzZ" eventType="touchUpInside" id="5Nh-SK-4ks"/>
-                                    <segue destination="7DD-rE-caP" kind="presentation" modalTransitionStyle="flipHorizontal" id="n6r-B1-B3O"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="cancelButton" destination="5n5-S1-JTq" id="B3m-em-KZV"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mhK-Kx-A48" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-58" y="920"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="3Rk-HH-ZU3">
@@ -203,7 +163,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="n6r-B1-B3O"/>
         <segue reference="os6-ge-GVi"/>
     </inferredMetricsTieBreakers>
 </document>
