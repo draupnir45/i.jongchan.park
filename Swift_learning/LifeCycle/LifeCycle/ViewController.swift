@@ -17,12 +17,12 @@ class ViewController: UIViewController {
         print("awakeFromNib -                   첫번째 뷰가 Nib에서 깨어났습니다.")
     }
     
-    //    override func loadView() {
-    //        // This is where subclasses should create their custom view hierarchy if they aren't using a nib. Should never be called directly.
-    //        // 이 곳은 닙을 사용하지 않을 시 서브클래스들이 각각의 커스텀 뷰 하이어라키를 생성해야 하는 곳입니다. 수동으로 불려져서는 안됩니다.
-    //        super.loadView()
-    //        print("loadView")
-    //    }
+    override func loadView() {
+        // This is where subclasses should create their custom view hierarchy if they aren't using a nib. Should never be called directly.
+        // 이 곳은 닙을 사용하지 않을 시 서브클래스들이 각각의 커스텀 뷰 하이어라키를 생성해야 하는 곳입니다. 수동으로 불려져서는 안됩니다.
+        super.loadView()
+        print("loadView -                       첫 번째 뷰가 로드됩니다.")
+    }
     
     override func viewDidLoad() {
         // Do any additional setup after loading the view, typically from a nib.

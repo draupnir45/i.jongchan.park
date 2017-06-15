@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--하루 200자-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="OTMainViewController" customModule="OneTwoHundredDiary" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,7 @@
                             <constraint firstItem="pmR-RB-cap" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="v6i-dY-Sed"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HDD-iK-He8"/>
+                    <navigationItem key="navigationItem" title="하루 200자" id="HDD-iK-He8"/>
                     <connections>
                         <outlet property="tableView" destination="pmR-RB-cap" id="nbS-d2-RvA"/>
                     </connections>

@@ -15,6 +15,8 @@ class OTDiaryTableViewCell: UITableViewCell {
     
     static let reuseIdentifier: String = "DiaryCell"
     static let nibName: String = "OTDiaryTableViewCell"
+    static let height: Double = 196.0
+    var indexPath: IndexPath!
     override func awakeFromNib() {
         super.awakeFromNib()
         

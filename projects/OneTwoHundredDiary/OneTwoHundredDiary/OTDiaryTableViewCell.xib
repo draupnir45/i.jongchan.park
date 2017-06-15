@@ -29,18 +29,18 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jOA-ad-Ya8">
-                        <rect key="frame" x="8" y="12" width="232" height="56"/>
+                        <rect key="frame" x="16" y="8" width="224" height="63.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="jOA-ad-Ya8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="292-s1-o2G"/>
+                    <constraint firstItem="jOA-ad-Ya8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="292-s1-o2G"/>
                     <constraint firstItem="VjP-ri-3rX" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="FjX-A1-A0s"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="jOA-ad-Ya8" secondAttribute="bottom" constant="4" id="Iju-Gr-Z68"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="jOA-ad-Ya8" secondAttribute="bottom" id="Iju-Gr-Z68"/>
                     <constraint firstItem="VjP-ri-3rX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PsH-5G-u2I"/>
-                    <constraint firstItem="jOA-ad-Ya8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="dVl-NX-js2"/>
+                    <constraint firstItem="jOA-ad-Ya8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="dVl-NX-js2"/>
                     <constraint firstItem="VjP-ri-3rX" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="fd3-9X-hn8"/>
                     <constraint firstItem="VjP-ri-3rX" firstAttribute="leading" secondItem="jOA-ad-Ya8" secondAttribute="trailing" constant="8" id="jaZ-Tc-PrX"/>
                 </constraints>
