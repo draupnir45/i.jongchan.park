@@ -71,6 +71,8 @@ let cost:RecipeCost? = RecipeCost.init(withKRW: 24000)
 let testing: Int! = nil
 let test2: Int? = nil
 
+dump(cost)
+
 type(of: testing)
 type(of: testing) == type(of: test2)
 

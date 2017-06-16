@@ -16,7 +16,7 @@
 		B901B19B1EF0FA6E006C5B84 /* OTDiaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B901B1991EF0FA6E006C5B84 /* OTDiaryTableViewCell.xib */; };
 		B901B19D1EF0FD67006C5B84 /* OTDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901B19C1EF0FD67006C5B84 /* OTDataModel.swift */; };
 		B901B1A11EF10E84006C5B84 /* OTDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901B1A01EF10E84006C5B84 /* OTDataCenter.swift */; };
-		B901B1A31EF11AFB006C5B84 /* SwiftToolBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B901B1A21EF11AFB006C5B84 /* SwiftToolBox.swift */; };
+		B94598F71EF29A2F00CB2E3F /* OTTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94598F61EF29A2F00CB2E3F /* OTTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		B901B1991EF0FA6E006C5B84 /* OTDiaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OTDiaryTableViewCell.xib; sourceTree = "<group>"; };
 		B901B19C1EF0FD67006C5B84 /* OTDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTDataModel.swift; sourceTree = "<group>"; };
 		B901B1A01EF10E84006C5B84 /* OTDataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTDataCenter.swift; sourceTree = "<group>"; };
-		B901B1A21EF11AFB006C5B84 /* SwiftToolBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftToolBox.swift; sourceTree = "<group>"; };
+		B94598F61EF29A2F00CB2E3F /* OTTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +68,9 @@
 				B901B1841EF0F8E5006C5B84 /* OTMainViewController.swift */,
 				B901B1981EF0FA6E006C5B84 /* OTDiaryTableViewCell.swift */,
 				B901B1A01EF10E84006C5B84 /* OTDataCenter.swift */,
+				B94598F61EF29A2F00CB2E3F /* OTTextView.swift */,
 				B901B1991EF0FA6E006C5B84 /* OTDiaryTableViewCell.xib */,
 				B901B19C1EF0FD67006C5B84 /* OTDataModel.swift */,
-				B901B1A21EF11AFB006C5B84 /* SwiftToolBox.swift */,
 				B901B1861EF0F8E5006C5B84 /* Main.storyboard */,
 				B901B1891EF0F8E5006C5B84 /* Assets.xcassets */,
 				B901B18B1EF0F8E5006C5B84 /* LaunchScreen.storyboard */,
@@ -153,8 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94598F71EF29A2F00CB2E3F /* OTTextView.swift in Sources */,
 				B901B1851EF0F8E5006C5B84 /* OTMainViewController.swift in Sources */,
-				B901B1A31EF11AFB006C5B84 /* SwiftToolBox.swift in Sources */,
 				B901B1831EF0F8E5006C5B84 /* AppDelegate.swift in Sources */,
 				B901B1A11EF10E84006C5B84 /* OTDataCenter.swift in Sources */,
 				B901B19D1EF0FD67006C5B84 /* OTDataModel.swift in Sources */,
@@ -322,6 +322,7 @@
 				B901B1931EF0F8E5006C5B84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

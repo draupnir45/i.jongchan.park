@@ -78,7 +78,9 @@
 
 ## API enhancements
 
-#### Swift의 기본타입 아카이브
+### Swift 4 & Foundation 관련
+
+#### 1. Swift의 기본타입 아카이브
 - NSCoding
 - JSON
 - Property lists
@@ -91,3 +93,33 @@
 	
 	```
 
+#### 2. KeyPath 타입
+- 점표기법으로 찾아가는 패스를 타입으로 저장이 가능.
+
+	```swift
+	let copresenterNameKeyPath = \Presenter.copresenter.name
+	eliza[keyPath: copresenterNameKeyPath]  // “Josh”
+	eliza[keyPath: \.copresenter.name]      // “Josh”
+	```
+
+### 시스템 제스처 구분
+- 원래는 화면 하단에서 스와이프 업 해서 컨트롤 센터에 넘어가는 행동을 스테이터스바가 있고 없음에 따라 컨트롤했습니다. 이것을 아래 메서드를 통해 명시적으로 컨트롤 가능.
+
+	```swift
+	class UIViewController {
+		func preferredScreenEdgesDeferringSystemGestures() -> UIRectEdge
+	}
+	```
+
+### 오토 레이아웃 - 스크롤 뷰
+- 기존 스크롤뷰 오토 레이아웃의 경우 스크롤뷰가 추측해서 행동했는데, 새로운 가이드 프로퍼티를 추가해서 좀더 편하게 레이아웃을 잡을 수 있도록 지원.
+
+	```swift
+	class UIScrollView {
+		var contentLayoutGuide: UILayoutGuide { get }
+		var frameLayoutGuide: UILayoutGuide { get }
+	}
+	```
+
+### 다이나믹 타입 지원
+- 
