@@ -65,12 +65,17 @@ class OTMainViewController: UIViewController, UITableViewDelegate, UITableViewDa
         var array:[String] = dictionary[DataKeys.dayArrayKey] as! [String]
         cell.textView.text = array[indexPath.row]
         cell.textView.delegate = self
+//        cell.textView.subclassDelegate = self
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(OTDiaryTableViewCell.height)
+        return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -85,28 +90,30 @@ class OTMainViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    //MARK: - TextView
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        
-        let editingTextView: OTTextView = textView as! OTTextView
-        
-        //받아오기
-        var dayArray:[String] = OTDataCenter.sharedInstance.dataArray[(editingTextView.indexPath?.section)!][DataKeys.dayArrayKey] as! [String]
-        
-        //최신화
-        dayArray[(editingTextView.indexPath?.row)!] = textView.text
-        
-        //반영
-        OTDataCenter.sharedInstance.dataArray[(self.editingIndexPath?.section)!][DataKeys.dayArrayKey] = dayArray
-        
-//        #warning
-        //이게 최선...?
-    }
+    //MARK: - TextViewDelegate Methods
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         let newLength = (textView.text?.characters.count)! + text.characters.count - range.length
         return !(newLength > 200)
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        tableView.beginUpdates()
+        save(changesAt: textView as! OTTextView)
+        
+        tableView.endUpdates()
+    }
+    
+    func save(changesAt textView: OTTextView) {
+        
+        //받아오기
+        var dayArray:[String] = OTDataCenter.sharedInstance.dataArray[(textView.indexPath?.section)!][DataKeys.dayArrayKey] as! [String]
+        
+        //최신화
+        dayArray[(textView.indexPath?.row)!] = textView.text
+        
+        //반영
+        OTDataCenter.sharedInstance.dataArray[(textView.indexPath?.section)!].updateValue(dayArray, forKey: DataKeys.dayArrayKey)
     }
     
 }

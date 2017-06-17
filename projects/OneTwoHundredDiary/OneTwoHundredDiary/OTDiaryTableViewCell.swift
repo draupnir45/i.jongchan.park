@@ -18,7 +18,5 @@ class OTDiaryTableViewCell: UITableViewCell {
     
     static let nibName: String = "OTDiaryTableViewCell"
     
-    static let height: Double = 196.0
-    
 }
 

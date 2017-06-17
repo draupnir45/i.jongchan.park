@@ -122,4 +122,43 @@
 	```
 
 ### 다이나믹 타입 지원
-- 
+- 다이나믹 타입을 커스텀 폰트에도 쉽게 적용할 수 있도록 지원
+
+	```swift
+	//원래 하던 방식
+	let bodyFont = UIFont.preferredFont(forTextStyle: .body)
+	let titleFont = UIFont.preferredFont(forTextStyle: .title1)
+	
+	//새로운 방식
+	let bodyMetrics = UIFontMetrics(forTextStyle: .body)
+	let standardFont = ... // any font you want, for standard type size
+	let font = bodyMetrics.scaledFont(for: standardFont)
+	
+	//레이아웃용 사이즈들에도 적용이 가능
+	let titleMetrics = UIFontMetrics(forTextStyle: .title3)
+	let standardHeight = ... // button height for standard type size
+	let height = titleMetrics.scaledValue(forValue: standardHeight)
+	```
+
+- 오토 레이아웃시 베이스라인을 기준으로 스페이싱이 적용 가능
+
+	```swift
+	let topAnchor = topLabel.lastBaselineAnchor
+	let bottomAnchor = bottomLabel.firstBaselineAnchor
+	bottomAnchor.constraintEqualToSystemSpacing(below: topAnchor)
+	```
+
+	- VFL 적용. (??다시 공부가 필요.)
+	
+		```swift
+		NSLayoutConstraints.constraintsWithVisualFormat(	“V:|-[topLabel]-[bottomLabel]-|”,    
+			// ‘-‘ gives you system spacing	options: [spacingBaselineToBaseline],	metrics: nil,	views: ...)
+		```
+	
+	- 스택뷰 적용
+	
+		```swift
+		stackView.baselineRelativeArrangement = true
+		stackView.spacing = .spacingUseSystem
+		```
+		

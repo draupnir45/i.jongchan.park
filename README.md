@@ -75,6 +75,7 @@
 - [UITableView](learning/UITableViewLog.md)
 - [UIWebView](learning/UIWebView.md)
 - [UIBlurEffect](learning/UIBlurEffect.md)
+- [UISplitViewController](UIKit_learning/BasicSplitViewControllerPractice/BasicSplitViewControllerPractice.md)
 
 ### Storyboard 연습
 - [ScrollingStoryBoard](projects/FreakinAutoLayoutPrac) - 오토 레이아웃으로 뷰를 정렬하고 스크롤뷰에 싣는 것을 연습해 보았습니다.

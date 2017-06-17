@@ -18,7 +18,6 @@
  		implementation
  		return value
  	}
- 	
 	```
 
 - 이름

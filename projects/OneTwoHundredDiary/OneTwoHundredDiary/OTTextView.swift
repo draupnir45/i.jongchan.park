@@ -11,10 +11,17 @@ import UIKit
 class OTTextView: UITextView {
 
     var indexPath: IndexPath?
+    var subclassDelegate: OTTextViewDelegate?
+    
     override var text: String! {
         didSet {
+            subclassDelegate?.textDidChange(self)
             print(text)
         }
     }
 
+}
+
+protocol OTTextViewDelegate {
+    func textDidChange(_ textView: OTTextView)
 }
