@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FHo-BD-EJe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Controls View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ControlsViewController" customModule="UIComponentsPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="g95-SV-ZM6">
+                                <rect key="frame" x="16" y="125.5" width="343" height="480"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDF-B8-qqB">
+                                        <rect key="frame" x="144.5" y="0.0" width="54" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="75" translatesAutoresizingMaskIntoConstraints="NO" id="pMe-qs-iCu">
+                                        <rect key="frame" x="-2" y="56" width="347" height="31"/>
+                                        <color key="minimumTrackTintColor" red="1" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="thumbTintColor" red="0.21213163860000001" green="0.21213163860000001" blue="0.21213163860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="sliderTouchUpInsided:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cnw-qn-rqW"/>
+                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="wUz-h6-WXm"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="슬라이더가 움직이면 여기에 값이 나옵니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glj-m4-Wuv">
+                                        <rect key="frame" x="0.0" y="118" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Switch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaZ-2i-8CF">
+                                        <rect key="frame" x="139.5" y="170.5" width="64" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5QH-YF-hG7">
+                                        <rect key="frame" x="147" y="226.5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ksb-1q-yvp"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스위치를 조절하면 여기에 값이 나옵니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKj-bE-Ptw">
+                                        <rect key="frame" x="0.0" y="289.5" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity Indicator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmo-k2-xZI">
+                                        <rect key="frame" x="92" y="342" width="159" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1sY-Dg-MJU">
+                                        <rect key="frame" x="161.5" y="398" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfw-hd-hFk">
+                                        <rect key="frame" x="0.0" y="450" width="343" height="30"/>
+                                        <state key="normal" title="인디케이터 시작"/>
+                                        <state key="selected" title="인디케이터 종료"/>
+                                        <connections>
+                                            <action selector="indicatorButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q28-6h-OAX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Kfw-hd-hFk" firstAttribute="width" secondItem="g95-SV-ZM6" secondAttribute="width" id="7Eg-fn-c87"/>
+                                    <constraint firstItem="pMe-qs-iCu" firstAttribute="width" secondItem="g95-SV-ZM6" secondAttribute="width" id="fT4-wJ-mQ3"/>
+                                    <constraint firstItem="CKj-bE-Ptw" firstAttribute="width" secondItem="g95-SV-ZM6" secondAttribute="width" id="gKe-9P-o2h"/>
+                                    <constraint firstItem="Glj-m4-Wuv" firstAttribute="width" secondItem="g95-SV-ZM6" secondAttribute="width" id="wDL-X0-DTJ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="g95-SV-ZM6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YMa-FE-5pf"/>
+                            <constraint firstItem="g95-SV-ZM6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="32" id="mBr-UC-hPV"/>
+                            <constraint firstItem="g95-SV-ZM6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-32" id="uny-b4-l6s"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="H6y-MC-EQ7"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="1sY-Dg-MJU" id="LpW-HQ-3eQ"/>
+                        <outlet property="sliderLabel" destination="Glj-m4-Wuv" id="l1l-kU-O96"/>
+                        <outlet property="switchLabel" destination="CKj-bE-Ptw" id="brZ-f4-EEu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="793"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PAE-ji-jUN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FHo-BD-EJe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kjx-Ix-A6E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hBH-Yf-6Nm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QAg-Bq-SKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63.200000000000003" y="792.95352323838085"/>
+        </scene>
+    </scenes>
+</document>
