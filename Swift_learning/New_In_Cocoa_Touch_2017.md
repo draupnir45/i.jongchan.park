@@ -162,3 +162,32 @@
 		stackView.spacing = .spacingUseSystem
 		```
 		
+### Password AutoFill
+- Thank God.
+- [Session](https://developer.apple.com/videos/play/wwdc2017/206/)
+
+
+### Asset Catalogs
+- 컬러를 지원! 이름을 붙일 수 있음.
+- 기존에 확장으로 써야 하는 것을 에셋으로 쓸 수 있게 됨.
+
+	```swift
+	UIColor(named:"SomeColor")
+	```
+
+- Preserve Vector Data : ....아마도 자동으로 압축을 하나보다...? 아마도 그걸 덜 하나보다...? 그래서 손쉬운사용 탭바에 자동적용! 
+
+### ProMotion
+- 특정 패드에 적용. 특정 디바이스에 
+
+	```swift
+	class UIScreen {
+		var maximumFramesPerSecond: Int { get }	}
+	```
+- 인스트루먼트로 테스트!
+- Metal에서도 활용. 잘 모르겠어요.
+
+## Localization
+- LTR 언어를 RTL로 바꾸는 가이드!
+- [가이드](https://developer.apple.com/internationalization/)
+- [한글 가이드](https://developer.apple.com/kr/internationalization/)
