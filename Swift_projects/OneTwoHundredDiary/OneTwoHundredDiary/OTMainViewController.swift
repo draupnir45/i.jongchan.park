@@ -114,6 +114,7 @@ class OTMainViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         //반영
         OTDataCenter.sharedInstance.dataArray[(textView.indexPath?.section)!].updateValue(dayArray, forKey: DataKeys.dayArrayKey)
+
     }
     
 }
