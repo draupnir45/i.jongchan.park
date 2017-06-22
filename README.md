@@ -1,4 +1,4 @@
-# Jongchan Park <a href="url"><img src="learning/images/fc_n_ios.png" align="right" height="40" ></a>
+# Jongchan Park <a href="url"><img src="images/fc_n_ios.png" align="right" height="40" ></a>
 
 ## About Me
 - 현재 - 패스트캠퍼스 iOS School 3기에서 Objective-C를 공부했으며, 5월부터 iOS School 4기에서 조교를 맡으며 Swift를 공부하고 있습니다.
@@ -19,12 +19,12 @@
 
 ### 프로그래밍 일반
 
-- [객체 지향 프로그래밍 기초](learning/Object-Oriented%20Programming.md)
-- [Git](learning/AboutGit.md)
-- [RAM](learning/RAM.md)
-- [한글 인코딩](learning/EncodingHangeul.md)
-- [ActiveX, 공인인증서 그리고 기술적 부채](learning/ActiveX&TechnicalDept.md)
-- [JSON](learning/JSON.md)
+- [객체 지향 프로그래밍 기초](ObjectiveC_learning/Object-Oriented%20Programming.md)
+- [Git](ObjectiveC_learning/AboutGit.md)
+- [RAM](ObjectiveC_learning/RAM.md)
+- [한글 인코딩](ObjectiveC_learning/EncodingHangeul.md)
+- [ActiveX, 공인인증서 그리고 기술적 부채](ObjectiveC_learning/ActiveX&TechnicalDept.md)
+- [JSON](ObjectiveC_learning/JSON.md)
 
 ### Swift
 0. [스위프트에 대하여](Swift_learning/0_AboutSwift.md)
@@ -43,58 +43,58 @@
 13. [클로저](Swift_learning/13_Closure.md)
 
 ### Swift 예제 프로젝트
-- [베이스볼 게임](projects/BaseBallGame)
-- [포켓몬 선택하기 (UIStoryBoardSegue 연습)](projects/PokemonSelect)
-- [시크한 로그인과 회원가입(StackView, ScrollView, UserDefaults)](projects/LoginSignUpPractice)
-- [1-200 Diary](projects/OneTwoHundredDiary)
+- [베이스볼 게임](Swift_projects/BaseBallGame)
+- [포켓몬 선택하기 (UIStoryBoardSegue 연습)](Swift_projects/PokemonSelect)
+- [시크한 로그인과 회원가입(StackView, ScrollView, UserDefaults)](Swift_projects/LoginSignUpPractice)
+- [1-200 Diary](Swift_projects/OneTwoHundredDiary)
 
 ### Objective-C
-- [버블 정렬, 머지 정렬, 퀵 정렬(소스코드)](learning/sorts.md)
-- [Objective-C 클래스, 메서드, 프로퍼티, 객체 그리고 메인 파일](learning/Objective_C_method_property_and_mainfile.md)
-- [Framework Cocoa & Cocoa Touch](learning/AboutCocoa.md)
-- [Design Pattern - 프로토콜(Delegate)](learning/FreakinDelegate.md)
-- [Design Pattern - 싱글톤](learning/Singleton.md)
-- [날짜 표현(NSDate)](learning/NSDate.md)
-- [Literal 문법](learning/LiteralSyntaxes.md)
-- [우리들의 싱글톤 1 - NSUserDefaults](learning/NSUserDefaults.md)
-- [우리들의 싱글톤 2 - NSNotificationCenter](learning/NSNotificationCenter.md)
-- [Block 놀이](learning/Block.md)
+- [버블 정렬, 머지 정렬, 퀵 정렬(소스코드)](ObjectiveC_learning/sorts.md)
+- [Objective-C 클래스, 메서드, 프로퍼티, 객체 그리고 메인 파일](ObjectiveC_learning/Objective_C_method_property_and_mainfile.md)
+- [Framework Cocoa & Cocoa Touch](ObjectiveC_learning/AboutCocoa.md)
+- [Design Pattern - 프로토콜(Delegate)](ObjectiveC_learning/FreakinDelegate.md)
+- [Design Pattern - 싱글톤](ObjectiveC_learning/Singleton.md)
+- [날짜 표현(NSDate)](ObjectiveC_learning/NSDate.md)
+- [Literal 문법](ObjectiveC_learning/LiteralSyntaxes.md)
+- [우리들의 싱글톤 1 - NSUserDefaults](ObjectiveC_learning/NSUserDefaults.md)
+- [우리들의 싱글톤 2 - NSNotificationCenter](ObjectiveC_learning/NSNotificationCenter.md)
+- [Block 놀이](ObjectiveC_learning/Block.md)
 
 
 ### Cocoa Touch Study
-- [Life Cycle Study](Swift_learning/LifeCycle) (project)
-- [UIView](learning/UIView.md)
-- [UILabel](learning/UILabel.md)
-- [UIImageView](learning/UIImageView.md)
-- [UIControl](learning/UIControl.md)
-- [UIButton](learning/UIButton.md)
-- [UITextField](learning/UITextField.md)
-- [UIScrollView](learning/UIScrollView.md)
-- [UIPageControl](learning/UIPageControl.md)
-- [UISwitch](learning/UISwitch.md)
-- [UISegmentedControl](learning/UISegmentedControl.md)
-- [UITableView](learning/UITableViewLog.md)
-- [UIWebView](learning/UIWebView.md)
-- [UIBlurEffect](learning/UIBlurEffect.md)
+- [Life Cycle Study](UIKit_learning/LifeCycle) (project)
+- [UIView](UIKit_learning/UIView.md)
+- [UILabel](UIKit_learning/UILabel.md)
+- [UIImageView](UIKit_learning/UIImageView.md)
+- [UIControl](UIKit_learning/UIControl.md)
+- [UIButton](UIKit_learning/UIButton.md)
+- [UITextField](UIKit_learning/UITextField.md)
+- [UIScrollView](UIKit_learning/UIScrollView.md)
+- [UIPageControl](UIKit_learning/UIPageControl.md)
+- [UISwitch](UIKit_learning/UISwitch.md)
+- [UISegmentedControl](UIKit_learning/UISegmentedControl.md)
+- [UITableView](UIKit_learning/UITableViewLog.md)
+- [UIWebView](UIKit_learning/UIWebView.md)
+- [UIBlurEffect](UIKit_learning/UIBlurEffect.md)
 - [UISplitViewController](UIKit_learning/BasicSplitViewControllerPractice/BasicSplitViewControllerPractice.md)
 
 ### Storyboard 연습
-- [ScrollingStoryBoard](projects/FreakinAutoLayoutPrac) - 오토 레이아웃으로 뷰를 정렬하고 스크롤뷰에 싣는 것을 연습해 보았습니다.
+- [ScrollingStoryBoard](ObjectiveC_projects/FreakinAutoLayoutPrac) - 오토 레이아웃으로 뷰를 정렬하고 스크롤뷰에 싣는 것을 연습해 보았습니다.
 
 ### 잊을만하면 필요할 것만 같은 무언가들
-- [JCCustomClasses](projects/JCCustomClasses)
-- [무언가들](learning/RememberTheCode.md)
-- [마크다운 예제](learning/MarkdownSample/sample.md)
+- [JCCustomClasses](ObjectiveC_projects/JCCustomClasses)
+- [무언가들](ObjectiveC_learning/RememberTheCode.md)
+- [마크다운 예제](ObjectiveC_learning/MarkdownSample/sample.md)
 
 ### 연습 및 과제
 
-- [과제] 커스텀 테이블 뷰 과제 ([CustomTableViewCopy](projects/CustomTableViewCopy), 2017. 2. 19)
-- [연습] 스토리보드 연습 ([Day1TextChange](projects/Day1TextChange))
-- [연습] 클래스 연습 / 전사와 마법사([Day2RolePlayingGame](projects/Day2RolePlayingGame))
-- [연습] 클래스 연습 / 술마시기 게임([DringkingGame](projects/DringkingGame))
-- [연습] 포켓몬을 오브젝티브로 짜보자! ([PokemonByObjectiveC](projects/PokemonByObjectiveC)) (Pending)
-- [연습] 계산기 만들기 ([CalculatorPrac](projects/CalculatorPrac))
-- [연습] `UITextField`와 `UIScrollView`를 이용하여 로그인 뷰 만들기 ([LoginPracByLogo](projects/LoginPracByLogo))
-- [연습] `UIPageControl`, `UISwitch`와 `UISegmentedControl` ([PageControlTest](projects/PageControlTest))
-- [연습] 버블, 머지, 퀵 정렬([SortingPrac](projects/SortingPrac))
-- [MyDay](projects/MyDayApp) : 연습을 위해 만들어 본 메모장 겸 일기장입니다.
+- [과제] 커스텀 테이블 뷰 과제 ([CustomTableViewCopy](ObjectiveC_projects/CustomTableViewCopy), 2017. 2. 19)
+- [연습] 스토리보드 연습 ([Day1TextChange](ObjectiveC_projects/Day1TextChange))
+- [연습] 클래스 연습 / 전사와 마법사([Day2RolePlayingGame](ObjectiveC_projects/Day2RolePlayingGame))
+- [연습] 클래스 연습 / 술마시기 게임([DringkingGame](ObjectiveC_projects/DringkingGame))
+- [연습] 포켓몬을 오브젝티브로 짜보자! ([PokemonByObjectiveC](ObjectiveC_projects/PokemonByObjectiveC)) (Pending)
+- [연습] 계산기 만들기 ([CalculatorPrac](ObjectiveC_projects/CalculatorPrac))
+- [연습] `UITextField`와 `UIScrollView`를 이용하여 로그인 뷰 만들기 ([LoginPracByLogo](ObjectiveC_projects/LoginPracByLogo))
+- [연습] `UIPageControl`, `UISwitch`와 `UISegmentedControl` ([PageControlTest](ObjectiveC_projects/PageControlTest))
+- [연습] 버블, 머지, 퀵 정렬([SortingPrac](ObjectiveC_projects/SortingPrac))
+- [MyDay](ObjectiveC_projects/MyDayApp) : 연습을 위해 만들어 본 메모장 겸 일기장입니다.
