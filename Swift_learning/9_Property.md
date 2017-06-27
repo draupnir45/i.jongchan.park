@@ -39,6 +39,7 @@
 	
 	### 상수 구조체 인스턴스의 저장 프로퍼티
 	- 구조체 인스턴스가 상수로 생성되어 있다면, 내부에 있는 저장 프로퍼티가 변수로 생성되었다고 한들 상관없이 변경이 불가.
+
 	> This behavior is due to structures being value types. When an instance of a value type is marked as a constant, so are all of its properties.
 	> 
 	> 이 행동은 구조체가 값 타입이기 때문입니다. 값 타입의 인스턴스가 상수로 표현된다면, 그 인스턴스의 모든 프로퍼티 역시 동일하게 상수가 됩니다.
@@ -87,6 +88,7 @@
 - 실제 값을 저장하는 것이 아니라, 다른 프로퍼티의 값을 기준으로 `getter` 역할만 하거나 `setter`역할까지 할 수도 있다.
 - `setter`만 할 수는 없다. (read-only만 가능, getter만 있는 경우 키워드 생략 가능.)
 - var로 지정해야 함.
+
 > You must declare computed properties—including read-only computed properties—as variable properties with the var keyword, because their value is not fixed. The let keyword is only used for constant properties, to indicate that their values cannot be changed once they are set as part of instance initialization.
 > 
 > 연산 프로퍼티든 읽기전용 연산 프로퍼티든 var 키워드를 통해 변수로 선언해야 합니다. 왜냐 하면 값이 고정되어 있지 않기 때문입니다. let 키워드는 상수만을 위해서, 인스턴스 초기화 때 설정된 값 이외에는 변경될 수 없음을 나타내기 위해서 사용됩니다.
@@ -179,6 +181,7 @@
 
 	```
 	### 슈퍼클래스 프로퍼티의 옵저버와 자신의 프로퍼티의 옵저버
+
 	> The willSet and didSet observers of superclass properties are called when a property is set in a subclass initializer, after the superclass initializer has been called. They are not called while a class is setting its own properties, before the superclass initializer has been called.
 	> 
 	> 슈퍼클래스 프로퍼티의 willSet과 didSet은 프로퍼티가 슈퍼클래스 초기화 이후 서브클래스 이니셜라이저에서 설정(set)될 때 불립니다.
