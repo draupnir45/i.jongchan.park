@@ -63,7 +63,6 @@
 - [우리들의 싱글톤 2 - NSNotificationCenter](ObjectiveC_learning/NSNotificationCenter.md)
 - [Block 놀이](ObjectiveC_learning/Block.md)
 
-
 ### Cocoa Touch Study
 - [Life Cycle Study](UIKit_learning/LifeCycle) (project)
 - [UIView](UIKit_learning/UIView.md)
@@ -88,6 +87,7 @@
 - [JCCustomClasses](ObjectiveC_projects/JCCustomClasses)
 - [무언가들](ObjectiveC_learning/RememberTheCode.md)
 - [마크다운 예제](ObjectiveC_learning/MarkdownSample/sample.md)
+- [카르타고 활용법](learning/Carthage_usage.md)
 
 ### 연습 및 과제
 
