@@ -83,6 +83,11 @@
 ### Storyboard 연습
 - [ScrollingStoryBoard](ObjectiveC_projects/FreakinAutoLayoutPrac) - 오토 레이아웃으로 뷰를 정렬하고 스크롤뷰에 싣는 것을 연습해 보았습니다.
 
+
+### Realm
+
+- [Realm으로 간단한 주소록 만들기](Swift_projects/RealmCarthagePractice) - Realm을 로컬 저장소로 활용한 첫 번째 연습입니다.
+
 ### 잊을만하면 필요할 것만 같은 무언가들
 - [JCCustomClasses](ObjectiveC_projects/JCCustomClasses)
 - [무언가들](ObjectiveC_learning/RememberTheCode.md)

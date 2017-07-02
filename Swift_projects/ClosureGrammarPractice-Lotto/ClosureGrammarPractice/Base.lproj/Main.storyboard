@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="119"/>
+            <point key="canvasLocation" x="951" y="68"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="Rn0-mf-lBW">
@@ -153,7 +153,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vja-Ae-aav" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1738" y="119"/>
+            <point key="canvasLocation" x="1756" y="68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R95-00-TeR">
@@ -171,7 +171,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JST-Oy-s0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="119.1904047976012"/>
+            <point key="canvasLocation" x="950" y="-685"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.085837811599999994" green="0.62666095290000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
