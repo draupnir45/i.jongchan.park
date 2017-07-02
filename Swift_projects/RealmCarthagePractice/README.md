@@ -69,6 +69,6 @@ var displayingItemIndex: Int! {
 
 //filter를 이용하는 방법! 올린 샘플 프로젝트에는 해당하지 않습니다.
 let displyingItems = realm.objects(Contact.self)
-						  .filter(format: "age > %d", filteringAge)
+			  .filter(format: "age > %d", filteringAge)
 ```
 
