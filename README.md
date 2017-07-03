@@ -76,6 +76,7 @@
 - [UISwitch](UIKit_learning/UISwitch.md)
 - [UISegmentedControl](UIKit_learning/UISegmentedControl.md)
 - [UITableView](UIKit_learning/UITableViewLog.md)
+- [UICollectionView](UIKit_learning/UICollectionView.md)
 - [UIWebView](UIKit_learning/UIWebView.md)
 - [UIBlurEffect](UIKit_learning/UIBlurEffect.md)
 - [UISplitViewController](UIKit_learning/BasicSplitViewControllerPractice/BasicSplitViewControllerPractice.md)

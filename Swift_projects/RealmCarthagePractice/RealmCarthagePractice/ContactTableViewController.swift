@@ -32,7 +32,7 @@ class ContactTableViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: ContactCell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath) as! ContactCell
+        let cell: ContactCell = tableView.dequeueReusableCell(withIdentifier: ContactCell.reuseIdentifier, for: indexPath) as! ContactCell
         
         cell.displayingItem = contactArray[indexPath.row]
         

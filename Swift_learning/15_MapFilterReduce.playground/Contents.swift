@@ -4,15 +4,14 @@ import UIKit
 //: - Map
 var numbers: [Int] = []
 
-for i in 1...10000 {
+for i in 1...10 {
    numbers.append(Int(arc4random_uniform(100)))
 }
 
 print(numbers)
 
-var doubled = numbers.map({ (i: Int) in
-    print(i, "mapped")
-    return i * 3
+var doubled: [Int] = numbers.map({ (i: Int) in
+    return i * 2
 })
 
 print(doubled)
@@ -23,15 +22,27 @@ print(dbld)
 
 
 //: - Filter
+
+//긴 버전
 let evens: [Int] = numbers.filter { (i: Int) -> Bool in
     i % 2 == 0
 }
-
 print(evens)
 
+//짧은 버전
+let evn: [Int] = numbers.filter({$0 / 2 == 0})
+print(evn)
+
+
 //: - Reduce
-var sum: Int = evens.reduce(0) { (result: Int, i: Int) -> Int in
+
+//긴 버전
+var reduced: Int = evens.reduce(0) { (result: Int, i: Int) -> Int in
     return result + i
 }
+print(reduced)
 
-print(sum)
+//짧은 버전
+var rdcd: Int = evens.reduce(0, {$0 + $1})
+print(rdcd)
+

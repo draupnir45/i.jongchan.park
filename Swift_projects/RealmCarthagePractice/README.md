@@ -72,3 +72,4 @@ let displyingItems = realm.objects(Contact.self)
 						  .filter(format: "age > %d", filteringAge)
 ```
 
+로컬 데이터 저장을 위한 세팅은 이것이 전부입니다. 생각보다 굉장히 간단하네요. 물론 좀 더 큰 프로젝트가 되면 해야 할 일이 많아지겠지만, 지금 단계에서는 굉장히 직관적으로 할 수 있어서 좋네요!
