@@ -1,4 +1,15 @@
-## 텍스트필드 스트링 길이 제한
+# 텍스트필드의 글자수 제한
+패스트캠퍼스에서 딜리게이트에 관련된 수업을 진행하던 도중, 텍스트필드의 글자수를 제한하는 것에 관련된 예제를 진행한 적이 있었습니다. 최초에 나온 답변에 대해서 다시 버그를 찾아내고, 그 버그를 픽스하고 하면서 Delegate에 대해서 알아볼 수 있는 굉장히 유익한 시간이었는데요. 해결하고자 하는 요건은 아래와 같았습니다.
+
+- 입력되는 글자수가 10자를 넘지 않을 것.
+- 입력시 커서가 텍스트 내에 어디에 있든 상관없이 작동할 것.
+- 복사해온 스트링을 넣어도 알아서 거부할 것.
+- 삭제 기능이 문제없이 작동할 것.
+
+단순히 잘 해결했다는 느낌을 떠나서, 딜리게이트의 구조를 정확히 알고 또 구현하고자 하는 상황의 의미를 그대로 코드로 자아낸 예제라서 기억에 많이 남습니다. 당시 결론으로 배운 것들을 정리합니다.
+
+## 풀이와 설명
+
 - 결론부터 말하면 답은 아래와 같습니다.
 
 	```swift
@@ -75,9 +86,9 @@
 
 	```swift
 	if (self.delegate?.textField(self, shouldChangeCharactersIn: range, replacementString: string))! {
-	self.text = self.text.replacingCharacters(in: range, with: string)
-	//1. 커서 위치(range.location)에서 (range.length)만큼 문자열을 지운다.
-	//2. 커서 위치(range.location)에 추가할 문자열(string)을 추가한다.
+		self.text = self.text.replacingCharacters(in: range, with: string)
+		//1. 커서 위치(range.location)에서 (range.length)만큼 문자열을 지운다.
+		//2. 커서 위치(range.location)에 추가할 문자열(string)을 추가한다.
 	}
 	```
 	
@@ -86,5 +97,5 @@
 	```swift
 	//변화 후 텍스트 길이 = 현재 텍스트 길이 + 추가되는 텍스트 길이 - 지울 길이
 	let newLength = (textField.text?.characters.count)! + string.characters.count - range.length
-		        return !(newLength > 10)
+	return !(newLength > 10)
 	```
