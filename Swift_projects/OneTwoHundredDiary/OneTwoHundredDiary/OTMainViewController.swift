@@ -65,7 +65,6 @@ class OTMainViewController: UIViewController, UITableViewDelegate, UITableViewDa
         var array:[String] = dictionary[DataKeys.dayArrayKey] as! [String]
         cell.textView.text = array[indexPath.row]
         cell.textView.delegate = self
-//        cell.textView.subclassDelegate = self
         
         return cell
     }
