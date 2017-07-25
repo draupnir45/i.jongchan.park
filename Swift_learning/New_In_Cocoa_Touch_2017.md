@@ -35,7 +35,8 @@
 
 	```swift
 	class UIDocumentBrowserViewController {
-		init(forOpeningFilesWithContentTypes: [String]?)		var delegate: UIDocumentBrowserViewControllerDelegate?
+		init(forOpeningFilesWithContentTypes: [String]?)
+		var delegate: UIDocumentBrowserViewControllerDelegate?
 	}
 	```
 
@@ -89,10 +90,16 @@
 - Property lists
 
 	```swift
-	enum Animal : Codable {	case chicken	case cow	case sheep 
+	enum Animal : Codable {
+	case chicken
+	case cow
+	case sheep 
 	}
 	
-	struct Farm : Codable {    let name: String    let animals: [Animal]	}
+	struct Farm : Codable {
+    let name: String
+    let animals: [Animal]
+	}
 	
 	```
 
@@ -154,8 +161,13 @@
 	- VFL 적용. (??다시 공부가 필요.)
 	
 		```swift
-		NSLayoutConstraints.constraintsWithVisualFormat(	“V:|-[topLabel]-[bottomLabel]-|”,    
-			// ‘-‘ gives you system spacing	options: [spacingBaselineToBaseline],	metrics: nil,	views: ...)
+		NSLayoutConstraints.constraintsWithVisualFormat(
+	“V:|-[topLabel]-[bottomLabel]-|”,    
+			// ‘-‘ gives you system spacing
+	options: [spacingBaselineToBaseline],
+	metrics: nil,
+	views: ...)
+	
 		```
 	
 	- 스택뷰 적용
@@ -184,7 +196,8 @@
 
 	```swift
 	class UIScreen {
-		var maximumFramesPerSecond: Int { get }	}
+		var maximumFramesPerSecond: Int { get }
+	}
 	```
 	
 - 인스트루먼트로 테스트!
