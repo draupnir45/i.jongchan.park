@@ -23,13 +23,21 @@ final class Beer: Object {
     
     convenience init(dictionary: [String:Any]) {
         self.init()
-        self.id = dictionary[BeerResponseKey.id] as! Int
-        self.name = dictionary[BeerResponseKey.name] as! String
-        self.tagline = dictionary[BeerResponseKey.tagLine] as! String
-        self.firstBrewed = dictionary[BeerResponseKey.firstBrewed] as! String
-        self.beerDescription = dictionary[BeerResponseKey.description] as! String
-        self.imageUrlString = dictionary[BeerResponseKey.imageUrl] as! String
-        self.abv = dictionary[BeerResponseKey.abv] as! Double
+        guard let id = dictionary[BeerResponseKey.id] as? Int,
+            let name = dictionary[BeerResponseKey.name] as? String,
+            let tagline = dictionary[BeerResponseKey.tagLine] as? String,
+            let firstBrewed = dictionary[BeerResponseKey.firstBrewed] as? String,
+            let beerDescription = dictionary[BeerResponseKey.description] as? String,
+            let imageUrlString = dictionary[BeerResponseKey.imageUrl] as? String,
+            let abv = dictionary[BeerResponseKey.abv] as? Double else { return }
+        
+        self.id = id
+        self.name = name
+        self.tagline = tagline
+        self.firstBrewed = firstBrewed
+        self.beerDescription = beerDescription
+        self.imageUrlString = imageUrlString
+        self.abv = abv
         self.ibu = dictionary[BeerResponseKey.ibu] as? Double ?? 0.0
     }
     

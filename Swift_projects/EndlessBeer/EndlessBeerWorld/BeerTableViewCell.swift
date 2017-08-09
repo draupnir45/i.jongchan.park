@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 
 class BeerTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var beerImageView: UIImageView!
     @IBOutlet weak var beerNameLabel: UILabel!
     @IBOutlet weak var tagLineLabel: UILabel!
@@ -31,4 +31,5 @@ class BeerTableViewCell: UITableViewCell {
             self.ibuLabel.text = "BITTERNESS \(beerData.ibu)"
         }
     }
+
 }

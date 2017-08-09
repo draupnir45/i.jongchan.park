@@ -53,49 +53,68 @@ class DataCenter {
         
         //URL
         let urlString: String = rootUrl + "?page=\(page)&per_page=\(beerPerPage)"
-        let url: URL = URL.init(string: urlString)!
-        
-        
-        //URLSession
-        let session: URLSession = URLSession.init(configuration: URLSessionConfiguration.default)
+        guard let url: URL = URL.init(string: urlString) else { return }
         
         //URLRequest
         let request: URLRequest = URLRequest.init(url: url)
         
         //URLSessionTask
-        let task: URLSessionTask = session.dataTask(with: request) { [unowned self] (data: Data?, response: URLResponse?, error: Error?) in
-            let statusCode: Int = (response as! HTTPURLResponse).statusCode
-            let rawArray: [[String:Any]] = (try! JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves) as! NSArray) as! [[String:Any]]
+        URLSession.shared.dataTask(with: request) { [unowned self] (data: Data?, response: URLResponse?, error: Error?) in
             
-            if error == nil {
-                if statusCode == 200 {
-                    if rawArray.count > self.lastPageItemCount {
-                        OperationQueue.main.addOperation {
-                            _ = rawArray.map({ (dictionary) in
-                                let item: Beer = Beer.init(dictionary: dictionary)
-                                addToRealm(item)
-                            })
-                            
-                            if rawArray.count < beerPerPage {
-                                self.lastPageItemCount = rawArray.count
-                                UserDefaults.standard.set(rawArray.count, forKey: "lastPageItemCount")
-                            }
-                            
-                            print("total:", self.dataArray.count)
-                            completion(true)
-                        }
-                    } else {
-                        completion(false)
-                        self.shouldRequestPageToServer = false
-                    }
-                }
-            } else {
-                print(error!)
+            //에러가 있으면 종료. 재시도 요청.
+            if let error = error {
+                print(error)
+                return
             }
+            
+            guard let data = data else { return }
+            guard let response = response as? HTTPURLResponse, let status = NetworkResponse.init(rawValue: response.statusCode) else { return }
+            
+            
+
+            
+            switch status {
+            case NetworkResponse.success:
+                var rawArray: [[String:Any]] = []
+                
+                do {
+                    let nsArray = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableLeaves)
+                    if let array = nsArray as? [[String:Any]] {
+                        rawArray = array
+                    } else {
+                        //데이터 캐스팅 실패
+                    }
+                } catch {
+                    //데이터 변환 실패. 재시도 요청.
+                    print(error)
+                }
+                
+                if rawArray.count > self.lastPageItemCount {
+                    OperationQueue.main.addOperation {
+                        _ = rawArray.map({ (dictionary) in
+                            let item: Beer = Beer.init(dictionary: dictionary)
+                            addToRealm(item)
+                        })
+                        
+                        if rawArray.count < beerPerPage {
+                            self.lastPageItemCount = rawArray.count
+                            UserDefaults.standard.set(rawArray.count, forKey: "lastPageItemCount")
+                        }
+                        
+                        print("total:", self.dataArray.count)
+                        completion(true)
+                    }
+                } else {
+                    completion(false)
+                    self.shouldRequestPageToServer = false
+                }
+            case NetworkResponse.fail:
+                print(response, data)
+            }
+            
             self.isRequesting = false
             
-        }
-        task.resume()
+        }.resume()
     }
     
     func getNewPage(completion: BeerDataCompletion?) {
@@ -107,12 +126,12 @@ class DataCenter {
                 if success {
                     UserDefaults.standard.set(nextPage, forKey: "persistedPageIndex")
                     self.persistedPageIndex = nextPage
-                    
-                    if let completion = completion {
-                        completion(true)
-                    }
-                    
+                } else {
+                    //재시도요청
                 }
+                
+                if let completion = completion { completion(success) }
+                
             }
         }
     }
@@ -144,6 +163,7 @@ class DataCenter {
 
 fileprivate let realm: Realm = try! Realm()
 
+
 fileprivate func addToRealm<T: Object>(_ item: T) {
     do {
         try realm.write {
@@ -152,4 +172,10 @@ fileprivate func addToRealm<T: Object>(_ item: T) {
     } catch {
         print(error)
     }
+}
+
+
+enum NetworkResponse: Int {
+    case success = 200
+    case fail = 400
 }
