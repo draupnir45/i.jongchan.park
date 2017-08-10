@@ -44,6 +44,11 @@
 11. [이니셜라이저](Swift_learning/11_Initializer.md)
 12. [접근제한자](Swift_learning/12_AccessControl.md)
 13. [클로저](Swift_learning/13_Closure.md)
+14. [옵셔널 체이닝](Swift_learning/14_OptionalChaining.md)
+15. [맵, 필터, 리듀스](Swift_learning/15_MapFilterReduce.md)
+16. 모나드
+17. [서브스크립트](Swift_learning/17_Subscript.md)
+18. [상속](Swift_learning/18_Inheritance.md)
 
 ### Swift 예제 프로젝트
 - [베이스볼 게임](Swift_projects/BaseBallGame)
