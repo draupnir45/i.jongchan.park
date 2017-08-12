@@ -13,7 +13,7 @@
 	print(doubled)
 	
 	//짧은 버전
-	var dbld: [Int] = numbers.map({$0 * 2})
+	var dbld: [Int] = numbers.map { $0 * 2 }
 	print(dbld)
 	```
 
@@ -28,7 +28,7 @@ let evens: [Int] = numbers.filter { (i: Int) -> Bool in
 print(evens)
 
 //짧은 버전
-let evn: [Int] = numbers.filter({$0 / 2 == 0})
+let evn: [Int] = numbers.filter { $0 / 2 == 0 }
 print(evn)
 ```
 
@@ -43,6 +43,6 @@ var reduced: Int = evens.reduce(0) { (result: Int, i: Int) -> Int in
 print(reduced)
 
 //짧은 버전
-var rdcd: Int = evens.reduce(0, {$0 + $1})
+var rdcd: Int = evens.reduce(0) { $0 + $1 }
 print(rdcd)
 ```
