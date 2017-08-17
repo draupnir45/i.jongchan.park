@@ -69,7 +69,7 @@
 - [Block 놀이](ObjectiveC_learning/Block.md)
 
 ### Cocoa Touch Study
-- [Life Cycle Study](UIKit_learning/LifeCycle) (project)
+- [Life Cycle Study](UIKit_learning/AppViewLifeCycle.md) ([project](UIKit_learning/LifeCycle))
 - [UIView](UIKit_learning/UIView.md)
 - [UILabel](UIKit_learning/UILabel.md)
 - [UIImageView](UIKit_learning/UIImageView.md)

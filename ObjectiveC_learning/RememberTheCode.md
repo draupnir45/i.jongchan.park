@@ -51,3 +51,8 @@
 	    }
 	}
 	```
+	
+	
+### 날짜 형식
+- [공식문서](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/DataFormatting/Articles/dfDateFormatting10_4.html#//apple_ref/doc/uid/TP40002369-SW1)
+- `"YYYY-MM-dd'T'hh:mm:ss"` -> 2017-08-16T07:56:13
