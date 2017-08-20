@@ -56,3 +56,24 @@
 ### 날짜 형식
 - [공식문서](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/DataFormatting/Articles/dfDateFormatting10_4.html#//apple_ref/doc/uid/TP40002369-SW1)
 - `"YYYY-MM-dd'T'hh:mm:ss"` -> 2017-08-16T07:56:13
+
+
+### UIView에서 코너별로 선택해서 Radius를 주고 싶을 때
+- 아래 익스텐션을 이용.
+- 오리지널 코드협찬 ([EdClee](https://github.com/EdCLee/Ed_komptability))
+
+```swift
+extension UIView {
+    func makeRounded(corners: [UIRectCorner], radius: CGFloat) {
+        let rectCorner = UIRectCorner.init(rawValue: corners.reduce(0) { $0 + $1.rawValue })
+        
+        let path = UIBezierPath(roundedRect: self.bounds,
+                                byRoundingCorners: rectCorner,
+                                cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
+    }
+}
+
+```

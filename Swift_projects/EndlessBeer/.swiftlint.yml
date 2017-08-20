@@ -1,0 +1,7 @@
+disabled_rules:
+ - trailing_whitespace
+ - private_over_fileprivate
+
+excluded:
+ - Pods
+
