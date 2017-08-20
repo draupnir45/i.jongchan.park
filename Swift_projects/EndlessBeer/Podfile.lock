@@ -1,4 +1,5 @@
 PODS:
+  - Hero (0.3.6)
   - Realm (2.8.3):
     - Realm/Headers (= 2.8.3)
   - Realm/Headers (2.8.3)
@@ -9,14 +10,16 @@ PODS:
   - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
+  - Hero
   - RealmSwift
   - SDWebImage (~> 3.8)
 
 SPEC CHECKSUMS:
+  Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   Realm: 3601ef091c8c499a31101d8563b991e75546cdce
   RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: ace706e2c274b4d7a296f6f9bf28d5a507ca78bc
+PODFILE CHECKSUM: b78057c89735b26165c1581c8498b8a9f6988eb5
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1

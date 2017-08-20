@@ -9,7 +9,7 @@
 import Foundation
 
 struct BeerResponseKey {
-    static let id: String = "id"
+    static let identifier: String = "id"
     static let name: String = "name"
     static let tagLine: String = "tagline"
     static let firstBrewed: String = "first_brewed"

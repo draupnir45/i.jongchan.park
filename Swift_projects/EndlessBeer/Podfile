@@ -8,5 +8,6 @@ target 'EndlessBeerWorld' do
   # Pods for EndlessBeerWorld
   pod 'SDWebImage', '~>3.8'
   pod 'RealmSwift'
+  pod 'Hero'
 
 end

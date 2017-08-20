@@ -8,27 +8,33 @@
 
 import UIKit
 import SDWebImage
-
+import Hero
 
 class BeerTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+
     @IBOutlet weak var tableView: UITableView!
-    
+
     private var isFreshLoading: Bool = true
+    private var observer: NSObjectProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.isHeroEnabled = true
+        self.navigationController?.heroNavigationAnimationType = .fade 
+        
         //커스텀 셀 닙 파일 등록
-        self.tableView.register(UINib.init(nibName: "BeerTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: BeerTableViewCell.reuseIdentifier)
+        self.tableView.register(UINib.init(nibName: "BeerTableViewCell", bundle: Bundle.main),
+                                forCellReuseIdentifier: BeerTableViewCell.reuseIdentifier)
         
         //맨 첫 페이지 로드를 위한 노티피케이션.
-        NotificationCenter.default.addObserver(forName: initialFetchNotificationName, object: nil, queue: OperationQueue.main) { [unowned self] (notification) in
+        observer = NotificationCenter.default.addObserver(forName: initialFetchNotificationName,
+                                               object: nil,
+                                               queue: OperationQueue.main) { [unowned self] _ in
             self.tableView.reloadData()
             self.animateTableViewFromBottom()
             self.isFreshLoading = false
         }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,20 +43,26 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
             self.tableView.reloadData()
             self.animateTableViewFromBottom()
         } else { //디테일뷰에 갔다가 돌아왔을 때를 위한 애니메이션.
-            self.animateTableViewFromLeft()
+//            self.animateTableViewFromLeft()
         }
     }
-    
-    
-    //MARK: - UITableView
+
+    // MARK: - UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataCenter.shared.dataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: BeerTableViewCell.reuseIdentifier, for: indexPath) as! BeerTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: BeerTableViewCell.reuseIdentifier,
+                                                       for: indexPath) as? BeerTableViewCell else {
+                                                        print("cell Dequeue에 문제 발생!")
+                                                        return UITableViewCell()
+        }
         cell.beerData = DataCenter.shared.dataArray[indexPath.row]
+        cell.beerImageView.heroID = "beerImage" + cell.beerData.name
+        cell.abvLabel.heroID = "abvLabel" + cell.beerData.name
+        cell.ibuLabel.heroID = "ibuLabel" + cell.beerData.name
         return cell
     }
     
@@ -65,8 +77,11 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-        //모든 데이터가 로컬에 들어와있지 않은 상태에서, 현재 로드된 마지막 맥주 데이터의 10개 전 셀이 그려지기 직전이고 동시에 데이터센터가 리퀘스트를 수행중이 아니라면 서버에 새로운 데이터를 요청합니다.
-        if DataCenter.shared.shouldRequestPageToServer && indexPath.row > DataCenter.shared.dataArray.count - 10 && !DataCenter.shared.isRequesting {
+        //모든 데이터가 로컬에 들어와있지 않은 상태에서, 현재 로드된 마지막 맥주 데이터의 10개 전 셀이 그려지기 직전인
+        //동시에 데이터센터가 리퀘스트를 수행중이 아니라면 서버에 새로운 데이터를 요청합니다.
+        if DataCenter.shared.shouldRequestPageToServer &&
+            indexPath.row > DataCenter.shared.dataArray.count - 10 &&
+            !DataCenter.shared.isRequesting {
             
             DataCenter.shared.getNewPage { [unowned self] (success) in
                 if success {
@@ -84,7 +99,7 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
         self.isFreshLoading = false
     }
     
-    //MARK: - IBAction
+    // MARK: - IBAction
     
     @IBAction func refreshButtonTouched(_ sender: UIBarButtonItem) {
         
@@ -102,22 +117,21 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     
-    //MARK: - Navigation
+    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailSegue" {
-            let detailViewController = segue.destination as! BeerDetailViewController
-            
-            detailViewController.beerData = (sender as! BeerTableViewCell).beerData
-            
+            guard let detailViewController = segue.destination as? BeerDetailViewController else { return }
+            guard let cell = sender as? BeerTableViewCell, let beerData = cell.beerData else { return }
+//            detailViewController.beerImageView.heroID = cell.beerImageView.heroID
+            detailViewController.beerData = beerData
         }
     }
     
-    //MARK: - UIView Animation
+    // MARK: - UIView Animation
     
     func animateTableViewFromBottom() {
-        
-        
+
         let visibleCellsArray: [UITableViewCell] = tableView.visibleCells
         let tableHeight: CGFloat = tableView.bounds.size.height
         
@@ -128,8 +142,12 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
         var index = 0.0
         
         for cell in visibleCellsArray {
-            UIView.animate(withDuration: 1.5, delay: 0.05 * index, usingSpringWithDamping: 0.65, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
-                cell.transform = CGAffineTransform(translationX: 0, y: 0);
+            UIView.animate(withDuration: 1.5, delay: 0.05 * index,
+                           usingSpringWithDamping: 0.65,
+                           initialSpringVelocity: 0,
+                           options: UIViewAnimationOptions.curveEaseIn,
+                           animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0)
             }, completion: nil)
             
             index += 1.0
@@ -152,14 +170,16 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
         index = 1.0
         
         for cell in visibleCellsArray {
-            UIView.animate(withDuration: 1.5, delay: 0.05 * index, usingSpringWithDamping: 0.55, initialSpringVelocity: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
-                cell.transform = CGAffineTransform(translationX: 0, y: 0);
+            UIView.animate(withDuration: 1.5,
+                           delay: 0.05 * index,
+                           usingSpringWithDamping: 0.55,
+                           initialSpringVelocity: 0,
+                           options: UIViewAnimationOptions.curveEaseIn,
+                           animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0)
             }, completion: nil)
             
             index += 1.0
         }
     }
-    
-    
 }
-

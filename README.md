@@ -30,6 +30,8 @@
 - [JSON](ObjectiveC_learning/JSON.md)
 
 ### Swift
+
+#### 문법
 0. [스위프트에 대하여](Swift_learning/0_AboutSwift.md)
 1. [기본 규칙](Swift_learning/1_LetAndVar.md)
 2. [기본 데이터 타입](Swift_learning/2_BasicDataTypes.md)
@@ -49,6 +51,10 @@
 16. 모나드
 17. [서브스크립트](Swift_learning/17_Subscript.md)
 18. [상속](Swift_learning/18_Inheritance.md)
+
+#### 그 외
+- [SwiftLint 사용법](Swift_learning/SwiftLint.md)
+- [UnitTesting 사용법 정리](Swift_learning/UnitTesting.md)
 
 ### Swift 예제 프로젝트
 - [베이스볼 게임](Swift_projects/BaseBallGame)

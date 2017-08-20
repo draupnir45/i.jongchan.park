@@ -44,10 +44,9 @@ class DataCenter {
                 }
             })
         }
-        
     }
     
-    private func loadBeerData(page:Int, completion: @escaping BeerDataCompletion) {
+    private func loadBeerData(page: Int, completion: @escaping BeerDataCompletion) {
         
         self.isRequesting = true
         
@@ -59,8 +58,7 @@ class DataCenter {
         let request: URLRequest = URLRequest.init(url: url)
         
         //URLSessionTask
-        URLSession.shared.dataTask(with: request) { [unowned self] (data: Data?, response: URLResponse?, error: Error?) in
-            
+        URLSession.shared.dataTask(with: request) { [unowned self] data, response, error in
             //에러가 있으면 종료. 재시도 요청.
             if let error = error {
                 print(error)
@@ -68,17 +66,15 @@ class DataCenter {
             }
             
             guard let data = data else { return }
-            guard let response = response as? HTTPURLResponse, let status = NetworkResponse.init(rawValue: response.statusCode) else { return }
-            
-            
+            guard let response = response as? HTTPURLResponse,
+                let status = NetworkResponse.init(rawValue: response.statusCode) else { return }
 
-            
             switch status {
             case NetworkResponse.success:
                 var rawArray: [[String:Any]] = []
                 
                 do {
-                    let nsArray = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableLeaves)
+                    let nsArray = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                     if let array = nsArray as? [[String:Any]] {
                         rawArray = array
                     } else {
@@ -93,7 +89,7 @@ class DataCenter {
                     OperationQueue.main.addOperation {
                         _ = rawArray.map({ (dictionary) in
                             let item: Beer = Beer.init(dictionary: dictionary)
-                            addToRealm(item)
+                            self.addToRealm(item)
                         })
                         
                         if rawArray.count < beerPerPage {
@@ -141,7 +137,7 @@ class DataCenter {
             try realm.write {
                 realm.deleteAll()
             }
-        } catch  {
+        } catch {
             print(error)
         }
         
@@ -156,24 +152,31 @@ class DataCenter {
         
     }
     
-}
-
-
-//MARK: - Realm Database
-
-fileprivate let realm: Realm = try! Realm()
-
-
-fileprivate func addToRealm<T: Object>(_ item: T) {
-    do {
-        try realm.write {
-            realm.add(item)
+    func addToRealm<T: Object>(_ item: T) {
+        do {
+            try realm.write {
+                realm.add(item)
+            }
+        } catch {
+            print(error)
         }
-    } catch {
-        print(error)
     }
+    
 }
 
+// MARK: - Realm Instance
+
+let realm: Realm = {
+    var instance: Realm!
+    while instance == nil {
+        do {
+            instance = try Realm()
+        } catch {
+            print(error)
+        }
+    }
+    return instance
+}()
 
 enum NetworkResponse: Int {
     case success = 200

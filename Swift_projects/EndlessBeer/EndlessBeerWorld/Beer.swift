@@ -10,9 +10,9 @@ import Foundation
 import RealmSwift
 import Realm
 
-
 final class Beer: Object {
-    dynamic var id: Int = 0
+
+    dynamic var identifier: Int = 0
     dynamic var name: String = ""
     dynamic var tagline: String = ""
     dynamic var firstBrewed: String = ""
@@ -20,18 +20,18 @@ final class Beer: Object {
     dynamic var imageUrlString: String = ""
     dynamic var abv: Double = 0.0
     dynamic var ibu: Double = 0.0
-    
+
     convenience init(dictionary: [String:Any]) {
         self.init()
-        guard let id = dictionary[BeerResponseKey.id] as? Int,
+        guard let identifier = dictionary[BeerResponseKey.identifier] as? Int,
             let name = dictionary[BeerResponseKey.name] as? String,
             let tagline = dictionary[BeerResponseKey.tagLine] as? String,
             let firstBrewed = dictionary[BeerResponseKey.firstBrewed] as? String,
             let beerDescription = dictionary[BeerResponseKey.description] as? String,
             let imageUrlString = dictionary[BeerResponseKey.imageUrl] as? String,
             let abv = dictionary[BeerResponseKey.abv] as? Double else { return }
-        
-        self.id = id
+
+        self.identifier = identifier
         self.name = name
         self.tagline = tagline
         self.firstBrewed = firstBrewed
@@ -40,11 +40,9 @@ final class Beer: Object {
         self.abv = abv
         self.ibu = dictionary[BeerResponseKey.ibu] as? Double ?? 0.0
     }
-    
+
     override static func primaryKey() -> String? {
-        return "id"
+        return "identifier"
     }
 
 }
-
-
