@@ -32,8 +32,8 @@ SwiftLint를 설치하면 저 코드에만 경고가 4개 뜹니다.
 {...}
 
 ! 두 칸 이상 여백을 띄웠습니다. 
-func someFunc(name varLabel:String){ ! 중괄호 열 때 앞에 여백이 있습니다.
-									 ! 콜론에는 우측에 여백이 무조건 있어야 합니다.
+func someFunc(name varLabel:String){ ! 중괄호 열 때 앞에 여백이 있어야 합니다.
+				     ! 콜론에는 우측에 여백이 무조건 있어야 합니다.
     print(varLabel)
 }
 ! 코드 끝에 공백이 있습니다.
