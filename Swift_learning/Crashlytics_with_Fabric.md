@@ -20,7 +20,7 @@ pod 'Crashlytics'
 <key>Fabric</key>
 <dict>
 	<key>APIKey</key>
-		<string>41340dd38c4c1be6f5b04d902094ce4cd505e0df</string>
+		<string>##################API KEY################</string>
 	<key>Kits</key>
 		<array>
 		<dict>
