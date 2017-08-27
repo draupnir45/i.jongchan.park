@@ -64,6 +64,10 @@ pod 'SwiftLint'
 ![](images/SwiftLint_BuildPhase.png)
 위와 같이 설정해주면 됩니다. 
 
+```
+${PODS_ROOT}/SwiftLint/swiftlint
+```
+
 #### 설정하기
 그런데 이걸 적용해 놓으면 내 코드 뿐 아니라 워크스페이스 전체 코드, 그러니까 Pods 폴더 안에 있는 남의 코드까지(!!) 막 시비를 겁니다. 심지어 빌드를 안 해주기까지 하죠. (옵셔널을 강제 추출하면  강제 빌드 실패입니다.)
 그래서 설정이 필요한데, Git의 .gitignore와 비슷한 방식으로 설정이 가능합니다.
@@ -76,13 +80,14 @@ pod 'SwiftLint'
 
 - 그리고 이런 식으로 설정하면 됩니다. (이렇게 쓰면 끝에 공백이 있는 줄을 무시하고, Pods 폴더 안을 건드리지 않습니다.)
 
-	```
-	disabled_rules:
-	  - trailing_whitespace
+```
+disabled_rules:
+  - trailing_whitespace
+  - line_length
 	
-	opt_in_rules:
-	  - Pods
-	```
+excluded:
+  - Pods
+```
 
 - 내용에 대한 참고는 [여기](https://github.com/realm/SwiftLint)서
 

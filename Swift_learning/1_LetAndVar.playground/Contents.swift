@@ -47,3 +47,7 @@ let 정렬된_한국이름 = 한국_이름들.sorted(by: <)
 
 let height = 174.5
 
+let str = "https://www.okthere.com/validate-email"
+let newString = str.replacingOccurrences(of: "www", with: "m")
+
+print(newString)

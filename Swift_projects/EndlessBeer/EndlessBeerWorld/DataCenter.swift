@@ -10,10 +10,6 @@ import UIKit
 import Realm
 import RealmSwift
 
-fileprivate let rootUrl: String = "https://api.punkapi.com/v2/beers"
-fileprivate let beerPerPage: Int = 26
-typealias BeerDataCompletion = (Bool) -> Void
-
 let initialFetchNotificationName = NSNotification.Name.init(rawValue: "InitialFetch")
 
 class DataCenter {
@@ -22,6 +18,9 @@ class DataCenter {
     static let shared: DataCenter = DataCenter.init()
     
     private(set) var dataArray = realm.objects(Beer.self)
+    private let rootUrl: String = "https://api.punkapi.com/v2/beers"
+    private let beerPerPage: Int = 26
+    typealias BeerDataCompletion = (Bool) -> Void
     
     private var persistedPageIndex: Int
     var shouldRequestPageToServer: Bool = true
@@ -75,7 +74,7 @@ class DataCenter {
                 
                 do {
                     let nsArray = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                    if let array = nsArray as? [[String:Any]] {
+                    if let array: [[String:Any]] = nsArray as? [[String:Any]] {
                         rawArray = array
                     } else {
                         //데이터 캐스팅 실패
@@ -92,7 +91,7 @@ class DataCenter {
                             self.addToRealm(item)
                         })
                         
-                        if rawArray.count < beerPerPage {
+                        if rawArray.count < self.beerPerPage {
                             self.lastPageItemCount = rawArray.count
                             UserDefaults.standard.set(rawArray.count, forKey: "lastPageItemCount")
                         }
