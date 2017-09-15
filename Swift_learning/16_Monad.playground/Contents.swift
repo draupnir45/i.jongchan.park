@@ -36,7 +36,11 @@ let possibleNumberStringArray: [String] = ["2", "아닌데?", "103", "323"]
 
 let numbers = possibleNumberStringArray.map { Int($0) }.flatMap { $0 }
 
+let flatingNumbers = possibleNumberStringArray.flatMap { Int($0) }
+
 print(numbers)
+
+print(flatingNumbers)
 
 let oneLineSumWithFunctionChaining = possibleNumberStringArray.map { Int($0) }.flatMap { $0 }.reduce(0){ $0 + $1 }
 

@@ -64,8 +64,8 @@ class DataCenter {
                 return
             }
             
-            guard let data = data else { return }
-            guard let response = response as? HTTPURLResponse,
+            guard let data = data,
+                let response = response as? HTTPURLResponse,
                 let status = NetworkResponse.init(rawValue: response.statusCode) else { return }
 
             switch status {
@@ -117,10 +117,10 @@ class DataCenter {
         if self.dataArray.count == persistedPageIndex * beerPerPage {
             let nextPage: Int = persistedPageIndex + 1
             
-            loadBeerData(page: nextPage) { [unowned self] (success) in
+            loadBeerData(page: nextPage) { [weak self] (success) in
                 if success {
                     UserDefaults.standard.set(nextPage, forKey: "persistedPageIndex")
-                    self.persistedPageIndex = nextPage
+                    self?.persistedPageIndex = nextPage
                 } else {
                     //재시도요청
                 }

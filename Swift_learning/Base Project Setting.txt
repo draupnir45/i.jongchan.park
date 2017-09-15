@@ -1,6 +1,7 @@
 ========================================================
 
 pod repo update
+pod update
 pod init
 vi Podfile
 

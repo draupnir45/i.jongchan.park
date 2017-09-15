@@ -65,7 +65,7 @@ pod 'SwiftLint'
 위와 같이 설정해주면 됩니다. 
 
 ```
-${PODS_ROOT}/SwiftLint/swiftlint
+"${PODS_ROOT}/SwiftLint/swiftlint"
 ```
 
 #### 설정하기
@@ -84,7 +84,7 @@ ${PODS_ROOT}/SwiftLint/swiftlint
 disabled_rules:
   - trailing_whitespace
   - line_length
-	
+
 excluded:
   - Pods
 ```

@@ -10,22 +10,25 @@ import UIKit
 import SDWebImage
 import Hero
 
-class BeerDetailViewController: UIViewController {
+class BeerDetailViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var beerImageView: UIImageView!
     @IBOutlet weak var abvLabel: UILabel!
     @IBOutlet weak var ibuLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     var beerData: Beer!
     private var viewsForAnimation: [UIView] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.scrollView.delegate = self
 //        self.isHeroEnabled = true
         
-        self.title = beerData.name
+        self.titleLabel.text = beerData.name
+        self.titleLabel.heroID = "beerNameLabel" + self.beerData.name
         self.beerImageView.setShowActivityIndicator(true)
         self.beerImageView.setIndicatorStyle(UIActivityIndicatorViewStyle.white)
         self.beerImageView.sd_setImage(with: URL.init(string: beerData.imageUrlString)!,
@@ -36,8 +39,8 @@ class BeerDetailViewController: UIViewController {
         self.ibuLabel.text = "BITTERNESS \(beerData.ibu)"
         self.ibuLabel.heroID = "ibuLabel" + self.beerData.name
         self.descriptionLabel.text = beerData.beerDescription
-        self.descriptionLabel.heroID = "beerDesc"
-        
+//        self.descriptionLabel.heroID = "beerDesc" + beerData.name
+        self.view.heroID = "bg" + self.beerData.name
         //애니메이션을 위한 어레이
 //        self.viewsForAnimation.append(self.beerImageView)
 //        self.viewsForAnimation.append(self.descriptionLabel)
@@ -47,7 +50,13 @@ class BeerDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        self.animateLabels()
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     func animateLabels() {
@@ -74,6 +83,12 @@ class BeerDetailViewController: UIViewController {
                             viewForAnimation.transform = CGAffineTransform.init(translationX: 0, y: 0)
             }, completion: nil)
             timeDifferentiator += 1.0
+        }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.contentOffset.y < -10.0 {
+            self.navigationController?.popViewController(animated: true)
         }
     }
 }

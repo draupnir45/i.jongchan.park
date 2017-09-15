@@ -9,5 +9,6 @@ target 'EndlessBeerWorld' do
   pod 'SDWebImage', '~>3.8'
   pod 'RealmSwift'
   pod 'Hero'
+  pod 'SwiftLint'
 
 end

@@ -15,7 +15,7 @@ class BeerTableViewCell: UITableViewCell {
     @IBOutlet weak var tagLineLabel: UILabel!
     @IBOutlet weak var abvLabel: UILabel!
     @IBOutlet weak var ibuLabel: UILabel!
-
+    var bgView: UIView!
     static let reuseIdentifier: String = "BeerTableViewCell"
 
     //데이터 세팅
@@ -32,6 +32,18 @@ class BeerTableViewCell: UITableViewCell {
             self.abvLabel.text = "ALCOHOL \(beerData.abv)%"
             self.ibuLabel.text = "BITTERNESS \(beerData.ibu)"
         }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        bgView = UIView.init()
+        bgView.backgroundColor = UIColor.white
+        self.insertSubview(bgView, at: self.subviews.index(of: contentView)!)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.bgView.frame = self.bounds
     }
 
 }

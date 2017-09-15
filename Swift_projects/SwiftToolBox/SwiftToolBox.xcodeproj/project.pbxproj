@@ -7,25 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0810C41F5D16240022AD51 /* SwiftToolBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0810BE1F5D16240022AD51 /* SwiftToolBox.swift */; };
+		4D0810C51F5D16240022AD51 /* UIImage+imageFromColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0810BF1F5D16240022AD51 /* UIImage+imageFromColor.swift */; };
+		4D0810C61F5D16240022AD51 /* UIView+BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0810C01F5D16240022AD51 /* UIView+BackgroundGradient.swift */; };
+		4D0810C71F5D16240022AD51 /* UIView+RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0810C11F5D16240022AD51 /* UIView+RoundCorners.swift */; };
+		4D0810C81F5D16240022AD51 /* UIViewController+AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0810C21F5D16240022AD51 /* UIViewController+AlertController.swift */; };
+		4D0810C91F5D16240022AD51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0810C31F5D16240022AD51 /* ViewController.swift */; };
+		4D4444D61F5D373E00D873B3 /* UITextField+didChangeNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4444D51F5D373E00D873B3 /* UITextField+didChangeNotification.swift */; };
 		B94E46161EDFF03C0042645C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E46151EDFF03C0042645C /* AppDelegate.swift */; };
-		B94E46181EDFF03C0042645C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E46171EDFF03C0042645C /* ViewController.swift */; };
 		B94E461B1EDFF03C0042645C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94E46191EDFF03C0042645C /* Main.storyboard */; };
 		B94E461D1EDFF03C0042645C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94E461C1EDFF03C0042645C /* Assets.xcassets */; };
 		B94E46201EDFF03C0042645C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94E461E1EDFF03C0042645C /* LaunchScreen.storyboard */; };
-		B94E46281EDFF0890042645C /* SwiftToolBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E46271EDFF0890042645C /* SwiftToolBox.swift */; };
 		EE15F9B548BE1E09BB3BBCFA /* Pods_SwiftToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667B3C810F8FB5F94567FFB9 /* Pods_SwiftToolBox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D0810BE1F5D16240022AD51 /* SwiftToolBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftToolBox.swift; sourceTree = "<group>"; };
+		4D0810BF1F5D16240022AD51 /* UIImage+imageFromColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+imageFromColor.swift"; sourceTree = "<group>"; };
+		4D0810C01F5D16240022AD51 /* UIView+BackgroundGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+BackgroundGradient.swift"; sourceTree = "<group>"; };
+		4D0810C11F5D16240022AD51 /* UIView+RoundCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RoundCorners.swift"; sourceTree = "<group>"; };
+		4D0810C21F5D16240022AD51 /* UIViewController+AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertController.swift"; sourceTree = "<group>"; };
+		4D0810C31F5D16240022AD51 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D4444D51F5D373E00D873B3 /* UITextField+didChangeNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+didChangeNotification.swift"; sourceTree = "<group>"; };
 		667B3C810F8FB5F94567FFB9 /* Pods_SwiftToolBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftToolBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94E46121EDFF03C0042645C /* SwiftToolBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftToolBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94E46151EDFF03C0042645C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B94E46171EDFF03C0042645C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B94E461A1EDFF03C0042645C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B94E461C1EDFF03C0042645C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B94E461F1EDFF03C0042645C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B94E46211EDFF03C0042645C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B94E46271EDFF0890042645C /* SwiftToolBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftToolBox.swift; sourceTree = "<group>"; };
 		C0F99B8839C207AAE1FB2F98 /* Pods-SwiftToolBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftToolBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftToolBox/Pods-SwiftToolBox.debug.xcconfig"; sourceTree = "<group>"; };
 		C3001B51D81D779D7A091618 /* Pods-SwiftToolBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftToolBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftToolBox/Pods-SwiftToolBox.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,9 +91,14 @@
 			isa = PBXGroup;
 			children = (
 				B94E46151EDFF03C0042645C /* AppDelegate.swift */,
-				B94E46171EDFF03C0042645C /* ViewController.swift */,
-				B94E46271EDFF0890042645C /* SwiftToolBox.swift */,
 				B94E46191EDFF03C0042645C /* Main.storyboard */,
+				4D0810BE1F5D16240022AD51 /* SwiftToolBox.swift */,
+				4D0810BF1F5D16240022AD51 /* UIImage+imageFromColor.swift */,
+				4D4444D51F5D373E00D873B3 /* UITextField+didChangeNotification.swift */,
+				4D0810C01F5D16240022AD51 /* UIView+BackgroundGradient.swift */,
+				4D0810C11F5D16240022AD51 /* UIView+RoundCorners.swift */,
+				4D0810C21F5D16240022AD51 /* UIViewController+AlertController.swift */,
+				4D0810C31F5D16240022AD51 /* ViewController.swift */,
 				B94E461C1EDFF03C0042645C /* Assets.xcassets */,
 				B94E461E1EDFF03C0042645C /* LaunchScreen.storyboard */,
 				B94E46211EDFF03C0042645C /* Info.plist */,
@@ -218,9 +233,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B94E46181EDFF03C0042645C /* ViewController.swift in Sources */,
+				4D0810C61F5D16240022AD51 /* UIView+BackgroundGradient.swift in Sources */,
+				4D0810C81F5D16240022AD51 /* UIViewController+AlertController.swift in Sources */,
+				4D4444D61F5D373E00D873B3 /* UITextField+didChangeNotification.swift in Sources */,
 				B94E46161EDFF03C0042645C /* AppDelegate.swift in Sources */,
-				B94E46281EDFF0890042645C /* SwiftToolBox.swift in Sources */,
+				4D0810C41F5D16240022AD51 /* SwiftToolBox.swift in Sources */,
+				4D0810C91F5D16240022AD51 /* ViewController.swift in Sources */,
+				4D0810C51F5D16240022AD51 /* UIImage+imageFromColor.swift in Sources */,
+				4D0810C71F5D16240022AD51 /* UIView+RoundCorners.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +406,7 @@
 				B94E46261EDFF03C0042645C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

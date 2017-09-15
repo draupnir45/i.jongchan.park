@@ -59,10 +59,14 @@ class BeerTableViewController: UIViewController, UITableViewDataSource, UITableV
                                                         print("cell Dequeue에 문제 발생!")
                                                         return UITableViewCell()
         }
-        cell.beerData = DataCenter.shared.dataArray[indexPath.row]
-        cell.beerImageView.heroID = "beerImage" + cell.beerData.name
-        cell.abvLabel.heroID = "abvLabel" + cell.beerData.name
-        cell.ibuLabel.heroID = "ibuLabel" + cell.beerData.name
+        let data = DataCenter.shared.dataArray[indexPath.row]
+        cell.beerData = data
+        cell.beerNameLabel.heroID = "beerNameLabel" + data.name
+        cell.beerImageView.heroID = "beerImage" + data.name
+        cell.bgView.heroID = "bg" + data.name
+        cell.abvLabel.heroID = "abvLabel" + data.name
+        cell.ibuLabel.heroID = "ibuLabel" + data.name
+//        cell.tagLineLabel.heroID = "beerDesc" + data.name
         return cell
     }
     
