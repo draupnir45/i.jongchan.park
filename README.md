@@ -1,9 +1,7 @@
-# Jongchan Park <a href="url"><img src="images/fc_n_ios.png" align="right" height="40" ></a>
+# Jongchan Park <a href="url"></a>
 
 ## About Me
-- 현재 - 패스트캠퍼스 iOS School 3기에서 Objective-C를 공부했으며, 5월부터 iOS School 4기에서 조교를 맡으며 Swift를 공부하고 있습니다.
-- 과거 - 모바일 앱을 좋아해서 UI/UX 디자이너가 되었지만, 직접 손으로 만들어보고 싶어서 개발자로 전향하게 되었습니다.
-- 미래 - Apple이 제공하는 플랫폼의 전문가를 목표로 합니다. 여기서 전문가란 iOS, macOS, watchOS, tvOS 등의 어플리케이션 개발을 튼튼하고 효율적으로 구현할 수 있는 실력을 바탕으로, Apple이 제공하는 HIG 등 UX 지식을 더해 사용하기 쉽고 아름다운 고품질 어플리케이션을 설계하고 제작할 수 있는 사람을 뜻합니다.
+시간을 들여서 무언가를 깔끔하게 만드는 것을 좋아합니다. '무언가'말고 다른 것에는 크게 신경쓰고 싶지 않습니다.
 
 ## 프로젝트
 
@@ -20,14 +18,20 @@
 ### WWDC 2017
 - [코코아 터치에 새롭게 도입된 것들 (What's New in Cocoa Touch)](Swift_learning/New_In_Cocoa_Touch_2017.md)
 
-### 프로그래밍 일반
+#### 개발 Note
+- [SwiftLint 사용법](Swift_learning/SwiftLint.md)
+- [UnitTesting 사용법 정리](Swift_learning/UnitTesting.md)
+- [Crashlytics](Swift_learning/Crashlytics_with_Fabric.md)
+- [Configuration 이용해 개발환경 설정하기](Swift_learning/Environment_Setting_with_Configuration.md)
 
+### 프로그래밍 일반
 - [객체 지향 프로그래밍 기초](ObjectiveC_learning/Object-Oriented%20Programming.md)
 - [Git](ObjectiveC_learning/AboutGit.md)
 - [RAM](ObjectiveC_learning/RAM.md)
 - [한글 인코딩](ObjectiveC_learning/EncodingHangeul.md)
 - [ActiveX, 공인인증서 그리고 기술적 부채](ObjectiveC_learning/ActiveX&TechnicalDept.md)
 - [JSON](ObjectiveC_learning/JSON.md)
+- [알고리즘 연습 - 버블 정렬, 머지 정렬, 퀵 정렬( + 소스코드)](ObjectiveC_learning/sorts.md)
 
 ### Swift
 
@@ -52,21 +56,19 @@
 17. [서브스크립트](Swift_learning/17_Subscript.md)
 18. [상속](Swift_learning/18_Inheritance.md)
 
-#### 그 외 & 라이브러리
-- [SwiftLint 사용법](Swift_learning/SwiftLint.md)
-- [UnitTesting 사용법 정리](Swift_learning/UnitTesting.md)
-- [Crashlytics](Swift_learning/Crashlytics_with_Fabric.md)
-
 ### Swift 예제 프로젝트
-- [베이스볼 게임](Swift_projects/BaseBallGame)
-- [포켓몬 선택하기 (UIStoryBoardSegue 연습)](Swift_projects/PokemonSelect)
-- [시크한 로그인과 회원가입(StackView, ScrollView, UserDefaults)](Swift_projects/LoginSignUpPractice)
-- [1-200 Diary](Swift_projects/OneTwoHundredDiary)
+FastCampus 시절 만든 예제들입니다.
+
+- [베이스볼 게임](Swift_projects/BaseBallGame) - 전통적인 야구게임을 Swift로 연습했습니다. 
+- [포켓몬 선택하기 (UIStoryBoardSegue 연습)](Swift_projects/PokemonSelect) - Segue를 활용하는 방법을 설명하기 위해 만든 예제입니다.
+- [시크한 로그인과 회원가입](Swift_projects/LoginSignUpPractice) - 로그인, 회원가입 뷰를 통해 스토리보드와 화면 전환, UserDefault를 연습합니다.
+- [1-200 Diary](Swift_projects/OneTwoHundredDiary) - 테이블뷰를 극단적으로 사용하는 연습입니다.
+- [Realm으로 간단한 주소록 만들기](Swift_projects/RealmCarthagePractice) - Realm을 로컬 저장소로 활용한 첫 번째 연습입니다.
+
 
 ### Objective-C
-- [버블 정렬, 머지 정렬, 퀵 정렬(소스코드)](ObjectiveC_learning/sorts.md)
+
 - [Objective-C 클래스, 메서드, 프로퍼티, 객체 그리고 메인 파일](ObjectiveC_learning/Objective_C_method_property_and_mainfile.md)
-- [Framework Cocoa & Cocoa Touch](ObjectiveC_learning/AboutCocoa.md)
 - [Design Pattern - 프로토콜(Delegate)](ObjectiveC_learning/FreakinDelegate.md)
 - [Design Pattern - 싱글톤](ObjectiveC_learning/Singleton.md)
 - [날짜 표현(NSDate)](ObjectiveC_learning/NSDate.md)
@@ -76,6 +78,7 @@
 - [Block 놀이](ObjectiveC_learning/Block.md)
 
 ### Cocoa Touch Study
+- [Framework Cocoa & Cocoa Touch](ObjectiveC_learning/AboutCocoa.md)
 - [Life Cycle Study](UIKit_learning/AppViewLifeCycle.md) ([project](UIKit_learning/LifeCycle))
 - [UIView](UIKit_learning/UIView.md)
 - [UILabel](UIKit_learning/UILabel.md)
@@ -84,6 +87,7 @@
 - [UIButton](UIKit_learning/UIButton.md)
 - [UITextField](UIKit_learning/UITextField.md)
 - [UIScrollView](UIKit_learning/UIScrollView.md)
+- [UIScrollView in StoryBoard](ObjectiveC_projects/FreakinAutoLayoutPrac)
 - [UIPageControl](UIKit_learning/UIPageControl.md)
 - [UISwitch](UIKit_learning/UISwitch.md)
 - [UISegmentedControl](UIKit_learning/UISegmentedControl.md)
@@ -93,16 +97,8 @@
 - [UIBlurEffect](UIKit_learning/UIBlurEffect.md)
 - [UISplitViewController](UIKit_learning/BasicSplitViewControllerPractice/BasicSplitViewControllerPractice.md)
 
-### Storyboard 연습
-- [ScrollingStoryBoard](ObjectiveC_projects/FreakinAutoLayoutPrac) - 오토 레이아웃으로 뷰를 정렬하고 스크롤뷰에 싣는 것을 연습해 보았습니다.
-
-
-### Realm
-
-- [Realm으로 간단한 주소록 만들기](Swift_projects/RealmCarthagePractice) - Realm을 로컬 저장소로 활용한 첫 번째 연습입니다.
-
 ### 잊을만하면 필요할 것만 같은 무언가들
-- [JCCustomClasses](ObjectiveC_projects/JCCustomClasses)
+- [JCCustomClasses](ObjectiveC_projects/JCCustomClasses) (Deprecated)
 - [무언가들](ObjectiveC_learning/RememberTheCode.md)
 - [마크다운 예제](ObjectiveC_learning/MarkdownSample/sample.md)
 - [카르타고 활용법](learning/Carthage_usage.md)

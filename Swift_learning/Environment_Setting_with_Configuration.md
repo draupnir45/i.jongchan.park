@@ -25,10 +25,52 @@
 말은 거창하지만 생각보다 어려운 일은 아닙니다.
 
 ### 1. Configuration 추가
-먼저 프로젝트를 열고, Project → Info 탭 → Configuration 에서 `+` 버튼을 누릅니다. 그리고 'Duplicate "Debug" Configuration'을 선택합니다.
+먼저 프로젝트를 열고, Project → Info 탭 → Configuration 에서 `+` 버튼을 누릅니다. 그리고 'Duplicate "Debug" Configuration'을 선택합니다. (릴리즈용은 릴리즈때만 쓰는 걸로 하고...)
 
-이렇게 하면, 이름만 다른 새로운 Configuration을 만들 수 있습니다. 저는 이렇게 복사한 컨피겨레이션을 실서버 테스트용으로, 기존에 있는 걸 개발서버 테스트용으로 쓰고자 합니다. 그래서 아래와 같이 설정해 주었어요.
+이렇게 하면, 이름만 다른 새로운 Configuration을 만들 수 있습니다. 저는 이렇게 복사한 Configuration을 실서버 테스트용으로, 기존에 있는 걸 개발서버 테스트용으로 쓰고자 합니다. 그래서 아래와 같이 설정해 주었어요.
 
 ![](images/Configuration-1.png)
 
 ### 2. Scheme 추가
+이제 만든 Configuration을 바탕으로 빌드하는 Scheme를 만들어야 합니다. 상단 플레이와 정지 버튼 옆에 있는 앱 아이콘 모양을 클릭하면 'Manage Scheme'라는 메뉴가 있습니다. 들어가서 복사하고자 하는 스키마를 선택한 후 하단의 톱니바퀴를 눌러 복사합니다. 제 경우는 Debug를 복사했습니다. 이름을 바꾸고, Info 탭에서 Configuration을 아까 넣었던 'Debug:Production'으로 바꾸어 줍니다.
+
+여기까지 하면 'Debug'의 Scheme와 Configuration을 그대로 가진 'Debug:Production'가 만들어진 것입니다.
+
+### 3. Info.plist를 이용해서 Configuration 불러오기.
+
+Info.plist에 아래와 같은 항목을 입력해 줍니다.
+
+```
+<key>Configuration</key>
+<string>$(CONFIGURATION)</string>
+```
+
+이렇게 하면 프로젝트 내 스위프트 파일에서 아래와 같이 Configuration을 불러올 수 있습니다.
+
+```swift
+Bundle.main.object(forInfoDictionaryKey: "Configuration") //Configuration이름을 String으로 반환.
+```
+
+### 4. 실서버와 개발 서버 아이디 연동
+
+이제는 쉽죠!
+
+```swift
+static func apiURL(_ path: Path) -> String {
+	//현재의 빌드 모드에 따라 적절한 URL을 반환
+	let baseURL: String
+	switch SchemeMode.current {
+	case .debug:
+	  baseURL = BaseURL.dev
+	case . debugPrd, .release:
+	  baseURL = BaseURL.release
+	}
+	    
+	return baseURL + APIversion + path.rawValue
+}
+```
+
+
+## 정리
+
+이런 구성은 처음 해보는 거라, 공부하면서 만들어 봤습니다. 서버 변경을 빈번하게 하면서 디버그할 때 유용할 거 같아요.
