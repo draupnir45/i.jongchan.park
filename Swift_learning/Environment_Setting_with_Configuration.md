@@ -40,7 +40,7 @@
 
 Info.plist에 아래와 같은 항목을 입력해 줍니다.
 
-```
+```xml
 <key>Configuration</key>
 <string>$(CONFIGURATION)</string>
 ```

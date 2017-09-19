@@ -20,5 +20,8 @@ mySubView.snp.makeConstraints { make in
 ## 사용법
  - [문서 사이트](http://snapkit.io/docs/)
 
-SnapKit은 3가지 유형의 layout relation을 11가지 유형의 view attribute와 조합하여 사용할 수 있습니다. 위에서 든 예에서 `equalTo`나 `greaterThanOrEqualTo`가 layout relation이고, `width`나 `height`가 view attribute입니다.
+### 제약 걸기
+SnapKit은 3가지 유형의 layout relation을 11가지 유형의 view attribute와 조합하여 사용할 수 있습니다. 위에서 든 예에서 `equalTo`나 `greaterThanOrEqualTo`가 layout relation이고, `width`나 `height`가 view attribute입니다. 써놓고 보니 설명할 게 없네요. Interface Builder의 제약사항과 똑같이 작동합니다.
 
+### 설정 위치
+프레임 베이스의 경우에는 서브뷰를 레이아웃할 때 설정해 주는 것이 일반적입니다. 하지만 이 경우엔 애초에 적용되어 있는 제약 사항을 이용해 레이아웃이 진행되기 때문에 그보다 더 먼저 하는 게 맞습니다. 뷰디드로드나 어웨이크 프롬 닙 같은 곳에서 하면 될 것입니다. 추가적으로 그렇기에 제약사항이 변했을 경우 새롭게 레이아웃을 만들라는 메서드를 수행시녀 주어야 합니다.

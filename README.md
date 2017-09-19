@@ -23,6 +23,7 @@
 - [UnitTesting 사용법 정리](Swift_learning/UnitTesting.md)
 - [Crashlytics](Swift_learning/Crashlytics_with_Fabric.md)
 - [Configuration 이용해 개발환경 설정하기](Swift_learning/Environment_Setting_with_Configuration.md)
+- [Dynamic Type 지원하기](Swift_learning/DynamicTypeForAccessibility.md)
 
 ### 프로그래밍 일반
 - [객체 지향 프로그래밍 기초](ObjectiveC_learning/Object-Oriented%20Programming.md)
