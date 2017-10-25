@@ -56,7 +56,7 @@ extension String {
     ///   - alignment: 정렬입니다. 기본은 .left입니다. 참고 : NSTextAlignment
     ///   - paragraphSpacing: 문단 간의 간격입니다. 넣지 않으면 무시됩니다.
     /// - Returns: 완성된 NSAttributedString를 반환합니다.
-    func attributedString(color: UIColor? = nil, fontName: String? = nil, size: CGFloat = 12.0, weight: CGFloat = UIFontWeightRegular, lineSpacing: CGFloat = 0.0, alignment: NSTextAlignment = .left, paragraphSpacing: CGFloat? = nil) -> NSAttributedString {
+    func attributedString(color: UIColor? = nil, fontName: String? = nil, size: CGFloat = 12.0, weight: UIFont.Weight = UIFont.Weight.regular, lineSpacing: CGFloat = 0.0, alignment: NSTextAlignment = .left, paragraphSpacing: CGFloat? = nil) -> NSAttributedString {
         
         let attributedString = NSMutableAttributedString(string: self)
         
@@ -64,15 +64,15 @@ extension String {
         
         //컬러
         if let color = color {
-            attributedString.addAttribute(NSForegroundColorAttributeName, value: color, range: allRange)
+            attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: color, range: allRange)
         }
         
         //폰트
         if let fontName = fontName, let font = UIFont.init(name: fontName, size: size) {
-            attributedString.addAttribute(NSFontAttributeName, value: font, range: allRange)
+            attributedString.addAttribute(NSAttributedStringKey.font, value: font, range: allRange)
         } else {
             let font = UIFont.systemFont(ofSize: size, weight: weight)
-            attributedString.addAttribute(NSFontAttributeName, value: font, range: allRange)
+            attributedString.addAttribute(NSAttributedStringKey.font, value: font, range: allRange)
         }
         
         //행간,문단간
@@ -82,7 +82,7 @@ extension String {
         if let paragraphSpace = paragraphSpacing {
             paragraphStyle.paragraphSpacing = paragraphSpace
         }
-        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: allRange)
+        attributedString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: allRange)
         
         return attributedString
     }
@@ -101,17 +101,17 @@ extension String {
 ///   - alignment: 정렬입니다. 기본은 .left입니다. 참고 : NSTextAlignment
 ///   - paragraphSpacing: 문단 간의 간격입니다. 넣지 않으면 무시됩니다.
 /// - Returns: 어트리뷰트가 들어 있는 딕셔너리의 형태로 반환됩니다.
-func attributes(color: UIColor? = nil, fontName: String? = nil, size: CGFloat = 12.0, weight: CGFloat = UIFontWeightRegular, lineSpacing: CGFloat = 0.0, alignment: NSTextAlignment = .left, paragraphSpacing: CGFloat? = nil) -> [String : Any] {
-    var attributes: [String : Any] = [:]
+func attributes(color: UIColor? = nil, fontName: String? = nil, size: CGFloat = 12.0, weight: UIFont.Weight = UIFont.Weight.regular, lineSpacing: CGFloat = 0.0, alignment: NSTextAlignment = .left, paragraphSpacing: CGFloat? = nil) -> [NSAttributedStringKey : Any] {
+    var attributes: [NSAttributedStringKey : Any] = [:]
     if let color = color {
-        attributes.updateValue(color, forKey: NSForegroundColorAttributeName)
+        attributes.updateValue(color, forKey: NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue))
     }
     
     if let fontName = fontName, let font = UIFont.init(name: fontName, size: size) {
-        attributes.updateValue(font, forKey: NSFontAttributeName)
+        attributes.updateValue(font, forKey: NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue))
     } else {
         let font = UIFont.systemFont(ofSize: size, weight: weight)
-        attributes.updateValue(font, forKey: NSFontAttributeName)
+        attributes.updateValue(font, forKey: NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue))
     }
     
     let paragraphStyle = NSMutableParagraphStyle()
@@ -120,7 +120,7 @@ func attributes(color: UIColor? = nil, fontName: String? = nil, size: CGFloat = 
     if let paragraphSpace = paragraphSpacing {
         paragraphStyle.paragraphSpacing = paragraphSpace
     }
-    attributes.updateValue(paragraphStyle, forKey: NSParagraphStyleAttributeName)
+    attributes.updateValue(paragraphStyle, forKey: NSAttributedStringKey(rawValue: NSAttributedStringKey.paragraphStyle.rawValue))
     
     return attributes
 }

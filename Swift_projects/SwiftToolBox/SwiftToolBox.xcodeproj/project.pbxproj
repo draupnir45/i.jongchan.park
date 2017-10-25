@@ -18,6 +18,9 @@
 		B94E461B1EDFF03C0042645C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94E46191EDFF03C0042645C /* Main.storyboard */; };
 		B94E461D1EDFF03C0042645C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94E461C1EDFF03C0042645C /* Assets.xcassets */; };
 		B94E46201EDFF03C0042645C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94E461E1EDFF03C0042645C /* LaunchScreen.storyboard */; };
+		B9841EB61F7E1E5B00204EDB /* Double+currencyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9841EB51F7E1E5B00204EDB /* Double+currencyString.swift */; };
+		B9F8D6AD1F7CD8D90012BBC2 /* String+boundingRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8D6AC1F7CD8D90012BBC2 /* String+boundingRect.swift */; };
+		B9F8D6AF1F7CD9090012BBC2 /* UILabel+sizeToFitIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8D6AE1F7CD9090012BBC2 /* UILabel+sizeToFitIn.swift */; };
 		EE15F9B548BE1E09BB3BBCFA /* Pods_SwiftToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667B3C810F8FB5F94567FFB9 /* Pods_SwiftToolBox.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,9 @@
 		B94E461C1EDFF03C0042645C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B94E461F1EDFF03C0042645C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B94E46211EDFF03C0042645C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9841EB51F7E1E5B00204EDB /* Double+currencyString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+currencyString.swift"; sourceTree = "<group>"; };
+		B9F8D6AC1F7CD8D90012BBC2 /* String+boundingRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+boundingRect.swift"; sourceTree = "<group>"; };
+		B9F8D6AE1F7CD9090012BBC2 /* UILabel+sizeToFitIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+sizeToFitIn.swift"; sourceTree = "<group>"; };
 		C0F99B8839C207AAE1FB2F98 /* Pods-SwiftToolBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftToolBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftToolBox/Pods-SwiftToolBox.debug.xcconfig"; sourceTree = "<group>"; };
 		C3001B51D81D779D7A091618 /* Pods-SwiftToolBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftToolBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftToolBox/Pods-SwiftToolBox.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,18 +96,21 @@
 		B94E46141EDFF03C0042645C /* SwiftToolBox */ = {
 			isa = PBXGroup;
 			children = (
+				B94E46211EDFF03C0042645C /* Info.plist */,
 				B94E46151EDFF03C0042645C /* AppDelegate.swift */,
-				B94E46191EDFF03C0042645C /* Main.storyboard */,
+				B9F8D6AC1F7CD8D90012BBC2 /* String+boundingRect.swift */,
 				4D0810BE1F5D16240022AD51 /* SwiftToolBox.swift */,
 				4D0810BF1F5D16240022AD51 /* UIImage+imageFromColor.swift */,
+				B9F8D6AE1F7CD9090012BBC2 /* UILabel+sizeToFitIn.swift */,
 				4D4444D51F5D373E00D873B3 /* UITextField+didChangeNotification.swift */,
 				4D0810C01F5D16240022AD51 /* UIView+BackgroundGradient.swift */,
 				4D0810C11F5D16240022AD51 /* UIView+RoundCorners.swift */,
 				4D0810C21F5D16240022AD51 /* UIViewController+AlertController.swift */,
+				B9841EB51F7E1E5B00204EDB /* Double+currencyString.swift */,
 				4D0810C31F5D16240022AD51 /* ViewController.swift */,
 				B94E461C1EDFF03C0042645C /* Assets.xcassets */,
 				B94E461E1EDFF03C0042645C /* LaunchScreen.storyboard */,
-				B94E46211EDFF03C0042645C /* Info.plist */,
+				B94E46191EDFF03C0042645C /* Main.storyboard */,
 			);
 			path = SwiftToolBox;
 			sourceTree = "<group>";
@@ -136,12 +145,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Jongchan Park";
 				TargetAttributes = {
 					B94E46111EDFF03C0042645C = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 8KDMCH8V2F;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -234,6 +244,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D0810C61F5D16240022AD51 /* UIView+BackgroundGradient.swift in Sources */,
+				B9841EB61F7E1E5B00204EDB /* Double+currencyString.swift in Sources */,
+				B9F8D6AF1F7CD9090012BBC2 /* UILabel+sizeToFitIn.swift in Sources */,
+				B9F8D6AD1F7CD8D90012BBC2 /* String+boundingRect.swift in Sources */,
 				4D0810C81F5D16240022AD51 /* UIViewController+AlertController.swift in Sources */,
 				4D4444D61F5D373E00D873B3 /* UITextField+didChangeNotification.swift in Sources */,
 				B94E46161EDFF03C0042645C /* AppDelegate.swift in Sources */,
@@ -276,7 +289,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -284,7 +299,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -326,7 +345,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -334,7 +355,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -369,7 +394,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jongchanpark.developed.SwiftToolBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -383,7 +409,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jongchanpark.developed.SwiftToolBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

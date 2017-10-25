@@ -24,6 +24,11 @@
 - [Crashlytics](Swift_learning/Crashlytics_with_Fabric.md)
 - [Configuration 이용해 개발환경 설정하기](Swift_learning/Environment_Setting_with_Configuration.md)
 - [Dynamic Type 지원하기](Swift_learning/DynamicTypeForAccessibility.md)
+- [잊을만하면 필요할 것만 같은 무언가들](ObjectiveC_learning/RememberTheCode.md)
+- [마크다운 예제](ObjectiveC_learning/MarkdownSample/sample.md)
+- [카르타고 활용법](learning/Carthage_usage.md)
+- [익스텐션을 통해 localizedString 단순화하기](Swift_learning/SimplifyLocalizedString.md)
+- [JCCustomClasses](ObjectiveC_projects/JCCustomClasses) (Deprecated)
 
 ### 프로그래밍 일반
 - [객체 지향 프로그래밍 기초](ObjectiveC_learning/Object-Oriented%20Programming.md)
@@ -99,10 +104,7 @@ FastCampus 시절 만든 예제들입니다.
 - [UISplitViewController](UIKit_learning/BasicSplitViewControllerPractice/BasicSplitViewControllerPractice.md)
 
 ### 잊을만하면 필요할 것만 같은 무언가들
-- [JCCustomClasses](ObjectiveC_projects/JCCustomClasses) (Deprecated)
-- [무언가들](ObjectiveC_learning/RememberTheCode.md)
-- [마크다운 예제](ObjectiveC_learning/MarkdownSample/sample.md)
-- [카르타고 활용법](learning/Carthage_usage.md)
+
 
 ### 연습 및 과제
 

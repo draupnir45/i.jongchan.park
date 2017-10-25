@@ -27,7 +27,6 @@ class ViewController: UIViewController {
         let attrStr = NSAttributedString.init(string: text, attributes: attr)
         
         testLabel.attributedText = attrStr
-        
         self.view.backgroundColor = .black
         // Do any additional setup after loading the view, typically from a nib.
         //        self.testView.setBackgroundGradient(direction: .vertical, colors: .black, .cyan)
