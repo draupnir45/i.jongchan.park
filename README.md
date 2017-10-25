@@ -18,7 +18,7 @@
 ### WWDC 2017
 - [코코아 터치에 새롭게 도입된 것들 (What's New in Cocoa Touch)](Swift_learning/New_In_Cocoa_Touch_2017.md)
 
-#### 개발 Note
+#### 개발 NOTE
 - [SwiftLint 사용법](Swift_learning/SwiftLint.md)
 - [UnitTesting 사용법 정리](Swift_learning/UnitTesting.md)
 - [Crashlytics](Swift_learning/Crashlytics_with_Fabric.md)
@@ -28,6 +28,7 @@
 - [마크다운 예제](ObjectiveC_learning/MarkdownSample/sample.md)
 - [카르타고 활용법](learning/Carthage_usage.md)
 - [익스텐션을 통해 localizedString 단순화하기](Swift_learning/SimplifyLocalizedString.md)
+- [쉽게 얼러트 띄우기 (UIAlertController Made Easy)](Swift_learning/UIAlertController_made_easy.md)
 - [JCCustomClasses](ObjectiveC_projects/JCCustomClasses) (Deprecated)
 
 ### 프로그래밍 일반
