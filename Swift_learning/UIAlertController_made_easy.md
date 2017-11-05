@@ -1,6 +1,6 @@
 # UIAlertController Made Easy (쉽게 UIAlertController 띄우기)
 
-I love UIAlertController. It's simple, beautiful and well matched to iOS theme. It's also not too difficult to use, but you might need quite an amount of code to implement a fairly simple alert. So I made this UIViewController extension to make implementation just one line, yet not compromise functionalities.
+I love UIAlertController. It's simple, beautiful and matches well to iOS theme. It's also not too difficult to use, but you might need quite an amount of code to implement a fairly simple alert. So I made this UIViewController extension to make implementation just one line, yet not compromise functionalities.
 
 저는 UIAlertController를 되게 좋아합니다. 예쁘고, 기능도 딱 충분할 만큼이어서 복잡하지 않죠. 근데 단 하나. 간단한 거 하나를 띄우려고 해도 너무 많은 코딩이 필요하다는 단점이 있습니다. 뭐 그것도 대단히 긴 줄은 아닙니다만... 어쨌든, 함수 정의의 특성을 이용해서 가장 간단한 얼러트부터 가장 복잡한 얼러트까지 단 한 줄로 해결할 수 있는 extension을 만들어 보았습니다.
 
