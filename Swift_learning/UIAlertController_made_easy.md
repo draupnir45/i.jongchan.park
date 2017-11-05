@@ -80,6 +80,6 @@ self.alert(
 ```
 
 ## Screenshot
-`self.alert(title: "hey"`
+`self.alert(title: "hey")`
 
 <img src="images/AlertScreen.png" height="300" width="300">
