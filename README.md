@@ -5,7 +5,7 @@ iOS, Swift, 파이리를 좋아합니다.
 
 ## 프로젝트
 
-- [**FlameKit**](https://github.com/draupnir45/FlameKit) (*beta*) : 평소에 작업할 때 유용했던 것들을 모아 놓은 라이브러리입니다. 코코아 팟을 지원합니다. 스크롤 뷰를 스택 뷰처럼 사용할 수 있도록 하는 FlameScrollView와 iOS11의 라지타이틀스타일이면서 커스텀하기 좋은 FlameNavigationBar 등을 제공합니다. Swift로 작성되었지만, Objective C도 지원합니다. (Swift)
+- [**FlameKit**](https://github.com/draupnir45/FlameKit) (*beta*) : 평소에 작업할 때 유용했던 것들을 모아 놓은 라이브러리입니다. 코코아 팟을 지원합니다. 대표적으로 스크롤 뷰를 스택 뷰처럼 사용할 수 있도록 하는 FlameScrollView와 iOS11의 라지타이틀스타일이면서 커스텀하기 좋은 FlameNavigationBar 등을 제공합니다. Swift로 작성되었지만, Objective C도 지원합니다. (Swift)
 
 ## 연습 프로젝트
 
