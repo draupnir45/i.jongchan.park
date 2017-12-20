@@ -14,11 +14,21 @@
 		4D0810C81F5D16240022AD51 /* UIViewController+AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0810C21F5D16240022AD51 /* UIViewController+AlertController.swift */; };
 		4D0810C91F5D16240022AD51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0810C31F5D16240022AD51 /* ViewController.swift */; };
 		4D4444D61F5D373E00D873B3 /* UITextField+didChangeNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4444D51F5D373E00D873B3 /* UITextField+didChangeNotification.swift */; };
+		B92045DB1FA178E60016F5AE /* Flame1Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92045DA1FA178E60016F5AE /* Flame1Button.swift */; };
+		B93127E91FB3F52700453BE0 /* UIViewController+listenToTheKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93127E81FB3F52700453BE0 /* UIViewController+listenToTheKeyboard.swift */; };
+		B932A6E31FAAB7E90047F7F0 /* FlameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A6E11FAAB7E80047F7F0 /* FlameButton.swift */; };
+		B932A6E41FAAB7E90047F7F0 /* FlameSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932A6E21FAAB7E90047F7F0 /* FlameSegmentedControl.swift */; };
 		B94E46161EDFF03C0042645C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94E46151EDFF03C0042645C /* AppDelegate.swift */; };
 		B94E461B1EDFF03C0042645C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94E46191EDFF03C0042645C /* Main.storyboard */; };
 		B94E461D1EDFF03C0042645C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94E461C1EDFF03C0042645C /* Assets.xcassets */; };
 		B94E46201EDFF03C0042645C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94E461E1EDFF03C0042645C /* LaunchScreen.storyboard */; };
 		B9841EB61F7E1E5B00204EDB /* Double+currencyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9841EB51F7E1E5B00204EDB /* Double+currencyString.swift */; };
+		B9965E291FCE50FF00B7BD74 /* UIScreen+screenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9965E281FCE50FE00B7BD74 /* UIScreen+screenType.swift */; };
+		B996D7611FBA8AE5009D3DF7 /* String+nsRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = B996D7601FBA8AE5009D3DF7 /* String+nsRange.swift */; };
+		B99D070A1FBD9FF400B68D06 /* String+attributedStringByPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99D07091FBD9FF400B68D06 /* String+attributedStringByPreset.swift */; };
+		B9AE165B1FA2D00C0060C15C /* String+sizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AE165A1FA2D00C0060C15C /* String+sizing.swift */; };
+		B9CB4A071FB324C4009CC674 /* UIDevice+isIphoneX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CB4A061FB324C4009CC674 /* UIDevice+isIphoneX.swift */; };
+		B9F8480D1FB14A550072B3B4 /* LetGetCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8480C1FB14A550072B3B4 /* LetGetCollection.swift */; };
 		B9F8D6AD1F7CD8D90012BBC2 /* String+boundingRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8D6AC1F7CD8D90012BBC2 /* String+boundingRect.swift */; };
 		B9F8D6AF1F7CD9090012BBC2 /* UILabel+sizeToFitIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8D6AE1F7CD9090012BBC2 /* UILabel+sizeToFitIn.swift */; };
 		EE15F9B548BE1E09BB3BBCFA /* Pods_SwiftToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667B3C810F8FB5F94567FFB9 /* Pods_SwiftToolBox.framework */; };
@@ -33,6 +43,10 @@
 		4D0810C31F5D16240022AD51 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D4444D51F5D373E00D873B3 /* UITextField+didChangeNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+didChangeNotification.swift"; sourceTree = "<group>"; };
 		667B3C810F8FB5F94567FFB9 /* Pods_SwiftToolBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftToolBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B92045DA1FA178E60016F5AE /* Flame1Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flame1Button.swift; sourceTree = "<group>"; };
+		B93127E81FB3F52700453BE0 /* UIViewController+listenToTheKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+listenToTheKeyboard.swift"; sourceTree = "<group>"; };
+		B932A6E11FAAB7E80047F7F0 /* FlameButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlameButton.swift; sourceTree = "<group>"; };
+		B932A6E21FAAB7E90047F7F0 /* FlameSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlameSegmentedControl.swift; sourceTree = "<group>"; };
 		B94E46121EDFF03C0042645C /* SwiftToolBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftToolBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94E46151EDFF03C0042645C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B94E461A1EDFF03C0042645C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +54,12 @@
 		B94E461F1EDFF03C0042645C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B94E46211EDFF03C0042645C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9841EB51F7E1E5B00204EDB /* Double+currencyString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+currencyString.swift"; sourceTree = "<group>"; };
+		B9965E281FCE50FE00B7BD74 /* UIScreen+screenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+screenType.swift"; sourceTree = "<group>"; };
+		B996D7601FBA8AE5009D3DF7 /* String+nsRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+nsRange.swift"; sourceTree = "<group>"; };
+		B99D07091FBD9FF400B68D06 /* String+attributedStringByPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+attributedStringByPreset.swift"; sourceTree = "<group>"; };
+		B9AE165A1FA2D00C0060C15C /* String+sizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+sizing.swift"; sourceTree = "<group>"; };
+		B9CB4A061FB324C4009CC674 /* UIDevice+isIphoneX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+isIphoneX.swift"; sourceTree = "<group>"; };
+		B9F8480C1FB14A550072B3B4 /* LetGetCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetGetCollection.swift; sourceTree = "<group>"; };
 		B9F8D6AC1F7CD8D90012BBC2 /* String+boundingRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+boundingRect.swift"; sourceTree = "<group>"; };
 		B9F8D6AE1F7CD9090012BBC2 /* UILabel+sizeToFitIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+sizeToFitIn.swift"; sourceTree = "<group>"; };
 		C0F99B8839C207AAE1FB2F98 /* Pods-SwiftToolBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftToolBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftToolBox/Pods-SwiftToolBox.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +120,15 @@
 				B94E46151EDFF03C0042645C /* AppDelegate.swift */,
 				B9F8D6AC1F7CD8D90012BBC2 /* String+boundingRect.swift */,
 				4D0810BE1F5D16240022AD51 /* SwiftToolBox.swift */,
+				B99D07091FBD9FF400B68D06 /* String+attributedStringByPreset.swift */,
+				B9AE165A1FA2D00C0060C15C /* String+sizing.swift */,
+				B9F8480C1FB14A550072B3B4 /* LetGetCollection.swift */,
+				B9CB4A061FB324C4009CC674 /* UIDevice+isIphoneX.swift */,
+				B932A6E11FAAB7E80047F7F0 /* FlameButton.swift */,
+				B93127E81FB3F52700453BE0 /* UIViewController+listenToTheKeyboard.swift */,
+				B932A6E21FAAB7E90047F7F0 /* FlameSegmentedControl.swift */,
+				B92045DA1FA178E60016F5AE /* Flame1Button.swift */,
+				B9965E281FCE50FE00B7BD74 /* UIScreen+screenType.swift */,
 				4D0810BF1F5D16240022AD51 /* UIImage+imageFromColor.swift */,
 				B9F8D6AE1F7CD9090012BBC2 /* UILabel+sizeToFitIn.swift */,
 				4D4444D51F5D373E00D873B3 /* UITextField+didChangeNotification.swift */,
@@ -107,6 +136,7 @@
 				4D0810C11F5D16240022AD51 /* UIView+RoundCorners.swift */,
 				4D0810C21F5D16240022AD51 /* UIViewController+AlertController.swift */,
 				B9841EB51F7E1E5B00204EDB /* Double+currencyString.swift */,
+				B996D7601FBA8AE5009D3DF7 /* String+nsRange.swift */,
 				4D0810C31F5D16240022AD51 /* ViewController.swift */,
 				B94E461C1EDFF03C0042645C /* Assets.xcassets */,
 				B94E461E1EDFF03C0042645C /* LaunchScreen.storyboard */,
@@ -244,13 +274,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D0810C61F5D16240022AD51 /* UIView+BackgroundGradient.swift in Sources */,
+				B92045DB1FA178E60016F5AE /* Flame1Button.swift in Sources */,
+				B9F8480D1FB14A550072B3B4 /* LetGetCollection.swift in Sources */,
 				B9841EB61F7E1E5B00204EDB /* Double+currencyString.swift in Sources */,
+				B932A6E41FAAB7E90047F7F0 /* FlameSegmentedControl.swift in Sources */,
+				B93127E91FB3F52700453BE0 /* UIViewController+listenToTheKeyboard.swift in Sources */,
 				B9F8D6AF1F7CD9090012BBC2 /* UILabel+sizeToFitIn.swift in Sources */,
+				B996D7611FBA8AE5009D3DF7 /* String+nsRange.swift in Sources */,
+				B932A6E31FAAB7E90047F7F0 /* FlameButton.swift in Sources */,
 				B9F8D6AD1F7CD8D90012BBC2 /* String+boundingRect.swift in Sources */,
+				B9965E291FCE50FF00B7BD74 /* UIScreen+screenType.swift in Sources */,
 				4D0810C81F5D16240022AD51 /* UIViewController+AlertController.swift in Sources */,
+				B99D070A1FBD9FF400B68D06 /* String+attributedStringByPreset.swift in Sources */,
 				4D4444D61F5D373E00D873B3 /* UITextField+didChangeNotification.swift in Sources */,
 				B94E46161EDFF03C0042645C /* AppDelegate.swift in Sources */,
 				4D0810C41F5D16240022AD51 /* SwiftToolBox.swift in Sources */,
+				B9AE165B1FA2D00C0060C15C /* String+sizing.swift in Sources */,
+				B9CB4A071FB324C4009CC674 /* UIDevice+isIphoneX.swift in Sources */,
 				4D0810C91F5D16240022AD51 /* ViewController.swift in Sources */,
 				4D0810C51F5D16240022AD51 /* UIImage+imageFromColor.swift in Sources */,
 				4D0810C71F5D16240022AD51 /* UIView+RoundCorners.swift in Sources */,

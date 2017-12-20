@@ -13,16 +13,15 @@
 	- 단계를
 		- 구분합니다.
 
-	>인용도 탭에 따라 구분됩니다.
+	> 인용도 탭에 따라 구분됩니다.
 	
 ```swift
 //코드는 이렇게 쓰시면 됩니다.
 let laughing: String = "깔깔깔"
 ```
 
-`swift
-//코드는 이렇게 쓰시면 됩니다.
-let laughing: String = "깔깔깔"
+`
+inlineCode // 인라인은 이렇게.
 `
 
 
@@ -65,3 +64,4 @@ let laughing: String = "깔깔깔"
 | 음 | 음 | 음 |
 
 [더 궁금하신 분들은 여기로](https://nolboo.kim/blog/2014/03/25/github-flavored-markdown/)
+

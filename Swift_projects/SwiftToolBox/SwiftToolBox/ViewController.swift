@@ -32,6 +32,15 @@ class ViewController: UIViewController {
         //        self.testView.setBackgroundGradient(direction: .vertical, colors: .black, .cyan)
         self.testView.setBackgroundGradient(direction: .topRightToBottomLeft, colors: .red, .black)
         
+//      let button = FlameButton.init(frame: CGRect(x: 50.0, y: 50.0, width: 100.0, height: 100.0))
+//      self.view.addSubview(button)
+//      button.backgroundColor = .white
+//      button.registerOnTouch {[weak self] button in
+//        guard let `self` = self else { return }
+//        print(button.description)
+//        self.alert(title: "Hi!")
+//      }
+      
     }
     
     override func didReceiveMemoryWarning() {

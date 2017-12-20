@@ -9,10 +9,11 @@
 import UIKit
 
 extension String {
-    
-    func boundingRect(in size: CGSize, font: UIFont) -> CGSize {
-        let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
-        let bounds = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font : font], context: nil)
-        return bounds.size
-    }
+  
+  func boundingRect(in size: CGSize, font: UIFont) -> CGSize {
+    let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
+    let bounds = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font : font], context: nil)
+    return bounds.size
+  }
+  
 }

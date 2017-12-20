@@ -1,7 +1,7 @@
 ========================================================
 
-pod repo update
-pod init
+pod repo update --verbose
+pod init --verbose
 vi Podfile
 
 
@@ -11,7 +11,7 @@ vi Podfile
 
 ========================================================
 
-pod install
+pod install --verbose
 vi .swiftlint.yml
 
 

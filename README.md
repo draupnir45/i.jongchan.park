@@ -1,15 +1,19 @@
-# Jongchan Park <a href="url"></a>
+# Jongchan Park🔥
 
 ## About Me
-시간을 들여서 무언가를 깔끔하게 만드는 것을 좋아합니다. '무언가'말고 다른 것에는 크게 신경쓰고 싶지 않습니다.
+iOS, Swift, 파이리를 좋아합니다.
 
 ## 프로젝트
 
-- [수북 for iOS](https://github.com/draupnir45/SooBook_iOS) : 패스트캠퍼스 iOS 스쿨 최종 결과물입니다. (Objective- C)
+- [**FlameKit**](https://github.com/draupnir45/FlameKit) (*beta*) : 평소에 작업할 때 유용했던 것들을 모아 놓은 라이브러리입니다. 코코아 팟을 지원합니다. 스크롤 뷰를 스택 뷰처럼 사용할 수 있도록 하는 FlameScrollView와 iOS11의 라지타이틀스타일이면서 커스텀하기 좋은 FlameNavigationBar 등을 제공합니다. Swift로 작성되었지만, Objective C도 지원합니다. (Swift)
 
-- [혼술집 for iOS](https://github.com/draupnir45/honsulzip) : 패스트캠퍼스 iOS 스쿨의 해커톤 결과입니다. (Objective- C)
+## 연습 프로젝트
 
-- [PokéDex for iOS](https://github.com/draupnir45/Poke-dex) : 탭바와 네비바 컨트롤을 연습하면서 만든 포켓몬 도감입니다. (Objective- C)
+- [**수북 for iOS**](https://github.com/draupnir45/SooBook_iOS) : 패스트캠퍼스 iOS 스쿨 최종 결과물입니다. (Objective- C)
+
+- [**혼술집 for iOS**](https://github.com/draupnir45/honsulzip) : 패스트캠퍼스 iOS 스쿨의 해커톤 결과입니다. (Objective- C)
+
+- [**PokéDex for iOS**](https://github.com/draupnir45/Poke-dex) : 탭바와 네비바 컨트롤을 연습하면서 만든 포켓몬 도감입니다. (Objective- C)
 
 
 
