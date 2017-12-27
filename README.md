@@ -23,6 +23,7 @@ iOS, Swift, 파이리를 좋아합니다.
 - [코코아 터치에 새롭게 도입된 것들 (What's New in Cocoa Touch)](Swift_learning/New_In_Cocoa_Touch_2017.md)
 
 #### 개발 NOTE
+- [Closure 내에서 `self` 상호참조 피하기](Swift_learning/Avoid_Retain_Cycle_in_Closure.md)
 - [SwiftLint 사용법](Swift_learning/SwiftLint.md)
 - [UnitTesting 사용법 정리](Swift_learning/UnitTesting.md)
 - [Crashlytics](Swift_learning/Crashlytics_with_Fabric.md)
